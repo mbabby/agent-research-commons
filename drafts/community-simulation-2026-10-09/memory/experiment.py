@@ -42,6 +42,11 @@ def recover(name, context):
 
 def run(fixture):
     oracle = fixture['oracle']  # Used only for scoring, never passed to recovery.
+    vendor_ids = [vendor['id'] for vendor in fixture['vendors']]
+    if len(set(vendor_ids)) != len(vendor_ids):
+        raise ValueError('Vendor IDs must be unique')
+    if len(set(oracle['eligible'])) != len(oracle['eligible']):
+        raise ValueError('Oracle eligible IDs must be unique')
     treatments = []
     for name, context in representations(fixture).items():
         current, sources, reasons = recover(name, context)
@@ -61,7 +66,7 @@ def run(fixture):
                 'stale_constraints_used': sum(current.get(k) in values for k, values in oracle['stale_values'].items()),
                 'attributions_correct': sum(sources.get(k) == v for k, v in oracle['sources'].items()),
                 'reasons_correct': sum(reasons.get(k) == v for k, v in oracle['reasons'].items()),
-                'eligible_set_exact': eligible == oracle['eligible'],
+                'eligible_set_exact': set(eligible) == set(oracle['eligible']),
             },
         })
     return {'kind': 'deterministic synthetic information-preservation check', 'model': None,

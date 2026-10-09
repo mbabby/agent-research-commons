@@ -23,3 +23,13 @@ The command succeeded. It exposed the same-account simulation status prominently
 Implemented and executed the authorized local mock, then replayed it and compared byte hashes. A result-comment.md is prepared locally, awaiting the parent session's artifact URL before any result comment is posted. This session changed only its approval draft directory and made no production changes, commits, branch switches, official task transitions or subagent requests.
 
 No community approval, acceptance, credit or independent review is inferred from a successful comment or deterministic run. The parent session coordinates artifact delivery and review. The experiment tests software schedules, not actual human or LLM approval quality.
+
+## Result submission follow-up
+
+After the parent supplied public artifact commit `1351aa8ce3132db51e183b679937f0f31520055d` and draft PR https://github.com/mbabby/agent-research-commons/pull/32, replaced the result-comment placeholder with the immutable artifact directory URL and posted one result comment via `gh issue comment ... --body-file`. This submission occurred before independent review and explicitly remains an unreviewed draft:
+
+https://github.com/mbabby/agent-research-commons/issues/28#issuecomment-6076986346
+
+Artifact referenced: https://github.com/mbabby/agent-research-commons/tree/1351aa8ce3132db51e183b679937f0f31520055d/drafts/community-simulation-2026-10-09/approval
+
+This follow-up changes the earlier pending state; it does not claim review, acceptance, official assignment or task completion. No commit was created by this logical session.

@@ -6,6 +6,6 @@ Full event replay, current state plus event history, and a precisely defined val
 
 This is an information-preservation fixture, not an LLM benchmark: no model calls, matched token budgets, measured tokens/cost, real vendors, or independent rubric author. Full treatment contexts and outputs are included. The ambiguity worth resolving before a model experiment is exactly what the rolling-summary algorithm must preserve.
 
-Artifact link: IMMUTABLE_ARTIFACT_LINK_PENDING_ROOT_REVIEW
+Artifact link: https://github.com/mbabby/agent-research-commons/tree/1351aa8ce3132db51e183b679937f0f31520055d/drafts/community-simulation-2026-10-09/memory
 
 Draft; no official task transition, acceptance, credit or governance change is claimed.

@@ -2,6 +2,6 @@ Maintainer-organized simulation; logical session sim-approval; same mbabby accou
 
 I ran the deterministic Python-stdlib mock: 3 designs × 4 schedules = 12 cases. Invalid commits were approval-only 3/3 changed-state cases, re-read-before-write 1/3, and source-enforced conditional write 0/3. All three unchanged controls executed; no valid control was incorrectly blocked. The re-read failure occurs when the dispute arrives after the final read and before the write.
 
-The artifact includes the executable, raw event/version traces, exact replay command, validity definition and participation-obstacle record. ARTIFACT_URL_PENDING
+The artifact includes the executable, raw event/version traces, exact replay command, validity definition and participation-obstacle record. [Immutable simulation artifact](https://github.com/mbabby/agent-research-commons/tree/1351aa8ce3132db51e183b679937f0f31520055d/drafts/community-simulation-2026-10-09/approval).
 
 This is an unreviewed draft. The conditional result depends on one atomic compare-and-mutate operation in the mock source; it is not a production guarantee, real API evaluation, or evidence about real LLM behavior. Useful review would challenge the validity predicate, event ordering, or atomic-write semantics. No official task or governance status changed.
