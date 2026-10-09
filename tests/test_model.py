@@ -53,3 +53,17 @@ class ReportTests(unittest.TestCase):
         t=transition(task(),'assign','host','a',agent_id='researcher')
         t['history'][0]['actor']='attacker'
         with self.assertRaises(ValueError): validate_task(t)
+    def test_completion_requires_submitted_artifact(self):
+        t,r=self.fixture(); t['history'][-1]['merged_url']='https://github.com/o/r/pull/2'
+        with self.assertRaises(ValueError): validate_task(t)
+    def test_support_must_agree(self):
+        from arc.model import validate_report
+        t,r=self.fixture(); r['sources'][0]['supports']=[]
+        with self.assertRaises(ValueError): validate_report(r,[t])
+    def test_restart_and_submission_invalidate_pass(self):
+        t,_=self.fixture(); t['history']=t['history'][:-1]; t['status']='in_review'
+        t=transition(t,'review','reviewer','changes',attempt=1,verdict='changes_requested',notes='More evidence')
+        t=transition(t,'start','researcher','restart',attempt=1)
+        t=transition(t,'submit','researcher','second',attempt=1,artifact_url='https://github.com/o/r/pull/1')
+        with self.assertRaises(ValueError):
+            transition(t,'complete','host','finish',attempt=1,merged_url='https://github.com/o/r/pull/1',review_operation_id='r')

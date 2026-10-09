@@ -10,7 +10,7 @@ from test_model import task
 
 class CLITests(unittest.TestCase):
     def issue(self,t=None,author='owner'):
-        return dict(number=1,user={'login':author},labels=[{'name':'arc:task'},{'name':'keep'}],body=body(t or task()))
+        return dict(number=1,user={'login':author},labels=[{'name':'arc:task'},{'name':'keep'},{'name':'status:open'}],body=body(t or task()))
     def test_transport_and_owner_filter(self):
         response=subprocess.CompletedProcess([],0,json.dumps([self.issue(),self.issue(author='attacker')]),'')
         with patch('subprocess.run',return_value=response) as run:
@@ -40,3 +40,27 @@ class CLITests(unittest.TestCase):
     def test_tampered_state_rejected(self):
         t=task(); t['status']='completed'
         with self.assertRaises(ValueError): GitHub('owner/repo').parse(self.issue(t))
+    def test_markdown_round_trip(self):
+        t=task(); t['question']='Explain ```python print(1) ```'
+        issue=self.issue(t); pass
+        self.assertEqual(GitHub('owner/repo').parse(issue),t)
+    def test_status_labels_conflict(self):
+        issue=self.issue(); issue['labels'] += [{'name':'status:open'},{'name':'status:assigned'}]
+        with self.assertRaises(ValueError): GitHub('owner/repo').parse(issue)
+    def test_sync_verifies_completion(self):
+        from test_model import ReportTests
+        t,_=ReportTests().fixture()
+        issue=self.issue(t); issue['labels'][-1]['name']='status:completed'
+        github=GitHub('o/r',owner='owner')
+        with patch.object(github,'api',side_effect=[[issue],{'merged':False}]):
+            with self.assertRaises(ValueError): github.tasks()
+        with patch.object(github,'api',side_effect=[[issue],{'merged':True,'merged_at':'2026-10-09'}]) as api:
+            self.assertEqual(github.tasks()[0]['status'],'completed')
+            self.assertEqual(api.call_args.args[0],'repos/o/r/pulls/1')
+        for url in ('https://example.org/no-pr','https://github.com/other/repo/pull/1'):
+            for event in t['history']:
+                if event['action']=='submit': event['artifact_url']=url
+                if event['action']=='complete': event['merged_url']=url
+            issue['body']=body(t)
+            with patch.object(github,'api',return_value=[issue]):
+                with self.assertRaises(ValueError): github.tasks()

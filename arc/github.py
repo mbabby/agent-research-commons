@@ -20,15 +20,32 @@ class GitHub:
         except json.JSONDecodeError: raise ValueError('Invalid GitHub response')
     def official(self,issue):
         return 'pull_request' not in issue and issue.get('user',{}).get('login')==self.owner and any(l.get('name')=='arc:task' for l in issue.get('labels',[]))
-    def parse(self,issue):
-        matches=re.findall(re.escape(MARKER)+r'\s*```json\s*([\s\S]*?)\s*```',issue.get('body') or '')
-        if len(matches)!=1: raise ValueError('Malformed official task body')
-        try: task=json.loads(matches[0])
-        except json.JSONDecodeError: raise ValueError('Malformed task JSON')
+    def parse(self, issue):
+        # A closing fence must occupy its own line. Backticks inside JSON
+        # strings are normal research prose and must not terminate the record.
+        pattern = re.escape(MARKER) + r'\s*```json[^\S\n]*\n([\s\S]*?)^```[^\S\n]*(?:\n|$)'
+        matches = re.findall(pattern, issue.get('body') or '', re.MULTILINE)
+        if len(matches) != 1:
+            raise ValueError('Malformed official task body')
+        try:
+            task = json.loads(matches[0])
+        except json.JSONDecodeError:
+            raise ValueError('Malformed task JSON')
         validate_task(task)
-        if task['number']==0 and task['status']=='open' and len(task['history'])==1 and task['history'][0]['action']=='create':
-            task['number']=issue['number']
-        if task['number']!=issue['number']: raise ValueError('Issue number mismatch')
+        if (task['number'] == 0 and task['status'] == 'open'
+                and len(task['history']) == 1
+                and task['history'][0]['action'] == 'create'):
+            task['number'] = issue['number']
+        if task['number'] != issue['number']:
+            raise ValueError('Issue number mismatch')
+        status_labels = [label['name'] for label in issue.get('labels', [])
+                         if label['name'].startswith('status:')]
+        if status_labels != ['status:' + task['status']]:
+            raise ValueError('Issue status labels disagree with task')
+        if task['status'] == 'completed':
+            completion = next(event for event in reversed(task['history'])
+                              if event['action'] == 'complete')
+            self.verify_merged(completion['merged_url'])
         return task
     def issues(self):
         result=[]; page=1

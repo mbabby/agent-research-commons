@@ -63,7 +63,7 @@ def transition(task, action, actor, operation_id, **fields):
         require(isinstance(fields.get('agent_id'),str) and fields['agent_id'],'Agent required')
         t['agent_id']=fields['agent_id']; t['attempt']+=1; t['status']='assigned'
     elif action=='start':
-        require(researcher and status=='assigned','Start requires assigned researcher'); t['status']='in_progress'
+        require(researcher and status in {'assigned', 'changes_requested'},'Start requires assigned researcher'); t['status']='in_progress'
     elif action=='submit':
         require(researcher and status in {'in_progress','changes_requested'},'Submission requires active researcher')
         link(fields.get('artifact_url'),True); t['status']='in_review'
@@ -74,7 +74,10 @@ def transition(task, action, actor, operation_id, **fields):
     elif action=='complete':
         require(coordinator and status=='in_review','Completion requires coordinator and passed review')
         link(fields.get('merged_url'),True)
-        reviews=[e for e in t['history'] if e['action']=='review' and e['attempt']==t['attempt']]
+        submissions = [e for e in t['history'] if e['action'] == 'submit' and e['attempt'] == t['attempt']]
+        require(submissions and fields['merged_url'] == submissions[-1]['artifact_url'], 'Completion PR must match latest artifact')
+        latest_submission = max(i for i, e in enumerate(t['history']) if e['action'] == 'submit' and e['attempt'] == t['attempt'])
+        reviews = [e for e in t['history'][latest_submission + 1:] if e['action'] == 'review' and e['attempt'] == t['attempt']]
         require(reviews and reviews[-1].get('verdict')=='pass' and reviews[-1]['operation_id']==fields.get('review_operation_id'),'Passing review reference required'); t['status']='completed'
     elif action=='release':
         require((coordinator or researcher) and status not in {'open','completed','cancelled'},'Release unauthorized')
@@ -109,11 +112,18 @@ def validate_report(report, tasks):
     for source in report['sources']:
         require(isinstance(source,dict) and {'id','title','url','accessed_at','published_at','supports','note'} <= source.keys(),'Invalid source')
         require(isinstance(source['id'],str) and source['id'] and source['id'] not in sources,'Duplicate source'); link(source['url']); sources[source['id']]=source
-        require(isinstance(source['supports'],list),'Invalid source support')
+        require(isinstance(source['supports'], list) and source['supports'] and all(isinstance(c, str) and c for c in source['supports']), 'Invalid source support')
+        for key in ('title', 'accessed_at'):
+            require(isinstance(source[key], str) and source[key].strip(), 'Invalid source ' + key)
+        require(source['published_at'] is None or isinstance(source['published_at'], str) and source['published_at'].strip(), 'Invalid source published_at')
+        require(isinstance(source['note'], str), 'Invalid source note')
     for claim in report['claims']:
         require(isinstance(claim,dict) and {'id','kind','text','source_ids'} <= claim.keys(),'Invalid claim')
         require(isinstance(claim['id'],str) and claim['id'] and claim['id'] not in claims,'Duplicate claim')
         require(claim['kind'] in {'fact','inference'} and isinstance(claim['text'],str) and claim['text'].strip(),'Invalid claim kind/text')
         require(isinstance(claim['source_ids'],list) and all(s in sources for s in claim['source_ids']),'Unknown source')
         require(claim['kind']!='fact' or bool(claim['source_ids']),'Fact lacks source'); claims[claim['id']]=claim
-    for source in sources.values(): require(all(c in claims for c in source['supports']),'Unknown supported claim')
+    for source in sources.values():
+        require(all(c in claims for c in source['supports']), 'Unknown supported claim')
+        for claim in claims.values():
+            require((source['id'] in claim['source_ids']) == (claim['id'] in source['supports']), 'Claim and source support disagree')
