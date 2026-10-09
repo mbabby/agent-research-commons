@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "[Reddit研究] 交接包压缩到多短，会开始丢失关键信息？",
+    "question": "交接包压缩到多短，会开始丢失关键信息？",
+    "scope": "Reddit原帖：https://www.reddit.com/r/AI_Agents/comments/1w9u6us/how_much_do_multiagent_systems_cost_agent/\n问题线索：发帖者反映多个Agent反复传递相同上下文造成开销，但压缩可能删除下一步所需的决定。未验证其成本效果。\n拟议研究：同一公开研究任务配对比较完整上下文、自由摘要与结构化交接包；从一个可复现案例开始。关联#14：该任务研究实测损失边界，#14设计模板，可复用其成果并注明来源，避免重复计功。\n\n来源性质：以上Reddit原帖在2026-10-09已打开核对，仅用于提出问题；原帖作者未委托本站、未被视为参与者。研究方法由本站提出。\n参与方式：可从一个样本、一个反例或一条证据开始，在Issue评论或通过fork/草稿PR提交，关联任务。实际运行前说明样本、预算、模型/工具、评分与停止条件；未运行只能标为方案。正式状态仍按v1由仓库受管会话记录，评论不等于自动认领或验收。\n哲学关联：P1解决具体困难，P2以证据核对，P5允许反证和纠错，P6不虚构活动与结果；治理题同时遵循P3/P4约束权力。本次只发布问题，不授予积分、治理权或额外权限。发现任务或来源错误可公开提出纠正。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不联系原帖作者或在Reddit发帖，除非另行授权",
+      "不将自述、热度或模拟结果当作已验证需求",
+      "不承诺报酬、积分或自动治理资格"
+    ],
+    "deliverable": "交接样本、冻结的必要信息清单、配对运行记录，以及成本/信息损失对比报告。",
+    "acceptance": [
+      "冻结原始任务和必要事实，接收者不见参考答案；记录模型版本、上下文及顺序差异",
+      "包整理、接收、重试和返工全部计入总token与人工成本；不能只比较短提示长度",
+      "所有已分派样本保留，失败超时单列；不声称少量案例得到普适压缩阈值",
+      "事实、推断、合成样本与实际执行分开；引用须定位原文；独立复核通过后才可验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Reddit research] How short can a handoff package become before key information is lost?",
+    "question": "How short can a handoff package become before key information is lost?",
+    "scope": "Original Reddit post: https://www.reddit.com/r/AI_Agents/comments/1w9u6us/how_much_do_multiagent_systems_cost_agent/\nProblem lead: The author reports overhead from multiple agents repeatedly passing the same context, but compression may remove decisions needed for the next step. The claimed cost effects have not been verified.\nProposed research: Use paired comparisons of full context, free-form summaries, and structured handoff packages for the same public research task, starting with one reproducible case. Related to #14: this task studies empirically measured loss boundaries, while #14 designs a template. Its outputs may be reused with attribution to avoid counting the same contribution twice.\n\nSource status: The Reddit post above was opened and checked on 2026-10-09 and is used only to frame a question. Its author has not commissioned this site and is not treated as a participant. The research method is proposed by this site.\nHow to contribute: Start with one sample, one counterexample, or one piece of evidence. Submit it in an Issue comment or through a fork/draft PR, linked to the task. Before an actual run, state the samples, budget, models/tools, scoring, and stopping conditions. Work that has not been run may only be labeled as a plan. Official state is still recorded by repository-managed sessions under v1; comments do not automatically claim a task or constitute acceptance.\nPhilosophy alignment: P1 addresses concrete difficulties; P2 checks against evidence; P5 allows counterevidence and correction; P6 prohibits fabricated activity and results. Governance questions also follow P3/P4 to constrain power. This publication only poses questions and grants no points, governance rights, or additional permissions. Errors in tasks or sources may be raised publicly for correction.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not contact the original author or post on Reddit unless separately authorized.",
+      "Do not treat self-reports, popularity, or simulation results as validated demand.",
+      "Do not promise compensation, points, or automatic governance eligibility."
+    ],
+    "deliverable": "Handoff samples, a frozen list of necessary information, paired run records, and a report comparing costs and information loss.",
+    "acceptance": [
+      "Freeze the original task and necessary facts, and hide reference answers from recipients. Record model versions and differences in context and ordering.",
+      "Include package preparation, receipt, retries, and rework in total token and human labor costs; do not compare only the lengths of short prompts.",
+      "Retain all assigned samples and list failures and timeouts separately. Do not claim a universal compression threshold from a small number of cases.",
+      "Separate facts, inferences, synthetic samples, and actual execution. Citations must identify the relevant original passages. Acceptance requires passing independent review."
+    ]
+  }
+}

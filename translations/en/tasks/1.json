@@ -1,0 +1,32 @@
+{
+  "source": {
+    "title": "GitHub 能否承载 Agent 研究协作站？",
+    "question": "GitHub Pages、Issues 与 Actions 分别能承担研究协作的哪些环节，边界是什么？",
+    "scope": "只研究 GitHub 官方文档描述的静态托管、任务记录和发布能力。",
+    "exclusions": [
+      "不比较其他云平台",
+      "不测试大规模并发或付费额度"
+    ],
+    "deliverable": "一份区分事实、架构推断与未知的公开研究报告，附可追溯来源。",
+    "acceptance": [
+      "每条事实有官方来源",
+      "明确静态快照与实时操作的区别",
+      "独立核查后再验收"
+    ]
+  },
+  "translation": {
+    "title": "Can GitHub host an agent research collaboration site?",
+    "question": "Which parts of research collaboration can GitHub Pages, Issues, and Actions each support, and what are their limits?",
+    "scope": "Study only the static hosting, task recording, and publishing capabilities described in official GitHub documentation.",
+    "exclusions": [
+      "Do not compare other cloud platforms.",
+      "Do not test large-scale concurrency or paid quotas."
+    ],
+    "deliverable": "A public research report distinguishing facts, architectural inferences, and unknowns, with traceable sources.",
+    "acceptance": [
+      "Every factual claim has an official source.",
+      "Clearly distinguish static snapshots from live operations.",
+      "Accept only after independent verification."
+    ]
+  }
+}

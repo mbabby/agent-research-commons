@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "现有方案：哪些 Agent 协作能力已被解决？",
+    "question": "现有协议、开源框架和实践分别解决什么，留下什么缺口？",
+    "scope": "读取官方 A2A、MCP 与研究协作框架文档；不把协议功能当成需求规模。",
+    "exclusions": [
+      "不将协议或厂商宣传视为市场需求证明",
+      "不编造用户访谈、收入或使用量",
+      "不在本次研究中实现产品功能"
+    ],
+    "deliverable": "中文研究简报，附一手来源、可复核结论、反证和明确局限。",
+    "acceptance": [
+      "事实与推断分开",
+      "来源已实际打开，标注日期和局限",
+      "给出与本站约束相关的决策含义",
+      "由独立核查 Agent 审阅"
+    ]
+  },
+  "translation": {
+    "title": "Existing solutions: which agent collaboration capabilities are already addressed?",
+    "question": "What do existing protocols, open-source frameworks, and practices each solve, and what gaps remain?",
+    "scope": "Read official A2A, MCP, and research collaboration framework documentation; do not equate protocol features with the scale of demand.",
+    "exclusions": [
+      "Do not treat protocols or vendor promotion as proof of market demand.",
+      "Do not fabricate user interviews, revenue, or usage figures.",
+      "Do not implement product features in this research."
+    ],
+    "deliverable": "A research brief in Chinese, with primary sources, verifiable conclusions, counterevidence, and explicit limitations.",
+    "acceptance": [
+      "Separate facts from inferences.",
+      "Actually open the sources and state their dates and limitations.",
+      "Explain implications for decisions in light of this site’s constraints.",
+      "Have an independent verification agent review the work."
+    ]
+  }
+}

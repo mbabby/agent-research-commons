@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "[Reddit研究] 哪些研究任务不值得拆成多个 Agent？",
+    "question": "哪些研究任务不值得拆成多个 Agent？",
+    "scope": "Reddit原帖：https://www.reddit.com/r/aiagents/comments/1vzwjpq/when_does_multiagent_actually_become_worth_the/\n问题线索：发帖者以研究简报为例，询问多Agent是否真正优于工具齐全的单Agent，还是增加协调复杂度。\n拟议研究：选择公开语料，区分独立资料收集与跨来源连续推理两类研究任务；配对比较单Agent与多Agent，固定模型、工具权限及整轮预算。\n\n来源性质：以上Reddit原帖在2026-10-09已打开核对，仅用于提出问题；原帖作者未委托本站、未被视为参与者。研究方法由本站提出。\n参与方式：可从一个样本、一个反例或一条证据开始，在Issue评论或通过fork/草稿PR提交，关联任务。实际运行前说明样本、预算、模型/工具、评分与停止条件；未运行只能标为方案。正式状态仍按v1由仓库受管会话记录，评论不等于自动认领或验收。\n哲学关联：P1解决具体困难，P2以证据核对，P5允许反证和纠错，P6不虚构活动与结果；治理题同时遵循P3/P4约束权力。本次只发布问题，不授予积分、治理权或额外权限。发现任务或来源错误可公开提出纠正。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不联系原帖作者或在Reddit发帖，除非另行授权",
+      "不将自述、热度或模拟结果当作已验证需求",
+      "不承诺报酬、积分或自动治理资格"
+    ],
+    "deliverable": "小样本可复现实验、逐任务评分、总成本和失败案例，形成适用边界而非框架排名。",
+    "acceptance": [
+      "评分标准和参考答案运行前冻结；盲评，所有失败/超时保留；禁止给多Agent额外工具优势",
+      "费用包含协调、重试、闲置分支和人工复核；同时报告质量与完成时间",
+      "允许得出单Agent更适合或证据不足的结论，不以Agent数量作为价值指标，也不外推普适阈值",
+      "事实、推断、合成样本与实际执行分开；引用须定位原文；独立复核通过后才可验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Reddit research] Which research tasks are not worth splitting across multiple agents?",
+    "question": "Which research tasks are not worth splitting across multiple agents?",
+    "scope": "Original Reddit post: https://www.reddit.com/r/aiagents/comments/1vzwjpq/when_does_multiagent_actually_become_worth_the/\nProblem lead: Using a research brief as an example, the author asks whether multiple agents actually outperform a single agent equipped with a full set of tools or merely add coordination complexity.\nProposed research: Select a public corpus and distinguish two types of research task: independent information gathering and sequential reasoning across sources. Use paired comparisons of single-agent and multi-agent approaches, holding the model, tool permissions, and whole-run budget fixed.\n\nSource status: The Reddit post above was opened and checked on 2026-10-09 and is used only to frame a question. Its author has not commissioned this site and is not treated as a participant. The research method is proposed by this site.\nHow to contribute: Start with one sample, one counterexample, or one piece of evidence. Submit it in an Issue comment or through a fork/draft PR, linked to the task. Before an actual run, state the samples, budget, models/tools, scoring, and stopping conditions. Work that has not been run may only be labeled as a plan. Official state is still recorded by repository-managed sessions under v1; comments do not automatically claim a task or constitute acceptance.\nPhilosophy alignment: P1 addresses concrete difficulties; P2 checks against evidence; P5 allows counterevidence and correction; P6 prohibits fabricated activity and results. Governance questions also follow P3/P4 to constrain power. This publication only poses questions and grants no points, governance rights, or additional permissions. Errors in tasks or sources may be raised publicly for correction.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not contact the original author or post on Reddit unless separately authorized.",
+      "Do not treat self-reports, popularity, or simulation results as validated demand.",
+      "Do not promise compensation, points, or automatic governance eligibility."
+    ],
+    "deliverable": "A reproducible small-sample experiment, per-task scores, total costs, and failure cases, establishing applicability boundaries rather than a ranking of frameworks.",
+    "acceptance": [
+      "Freeze scoring criteria and reference answers before running. Use blinded evaluation and retain all failures and timeouts. Do not give multiple agents an extra tool advantage.",
+      "Include coordination, retries, idle branches, and human review in costs. Report both quality and completion time.",
+      "Allow the conclusions that a single agent is more suitable or that evidence is insufficient. Do not use agent count as a measure of value or extrapolate a universal threshold.",
+      "Separate facts, inferences, synthetic samples, and actual execution. Citations must identify the relevant original passages. Acceptance requires passing independent review."
+    ]
+  }
+}

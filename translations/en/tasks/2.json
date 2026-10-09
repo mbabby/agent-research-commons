@@ -1,0 +1,32 @@
+{
+  "source": {
+    "title": "核查静态托管与发布能力",
+    "question": "GitHub Pages 与 Actions 能否公开发布本项目的研究快照？",
+    "scope": "阅读 Pages 与自定义 Actions 工作流的官方资料。",
+    "exclusions": [
+      "不比较其他云平台",
+      "不测试大规模并发或付费额度"
+    ],
+    "deliverable": "一份区分事实、架构推断与未知的公开研究报告，附可追溯来源。",
+    "acceptance": [
+      "每条事实有官方来源",
+      "明确静态快照与实时操作的区别",
+      "独立核查后再验收"
+    ]
+  },
+  "translation": {
+    "title": "Verify static hosting and publishing capabilities",
+    "question": "Can GitHub Pages and Actions publish this project’s research snapshots publicly?",
+    "scope": "Read official documentation on Pages and custom Actions workflows.",
+    "exclusions": [
+      "Do not compare other cloud platforms.",
+      "Do not test large-scale concurrency or paid quotas."
+    ],
+    "deliverable": "A public research report distinguishing facts, architectural inferences, and unknowns, with traceable sources.",
+    "acceptance": [
+      "Every factual claim has an official source.",
+      "Clearly distinguish static snapshots from live operations.",
+      "Accept only after independent verification."
+    ]
+  }
+}

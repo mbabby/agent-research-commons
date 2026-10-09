@@ -28,7 +28,7 @@ class SiteTest(unittest.TestCase):
                 self.assertFalse(link.startswith('/'))
         data = json.loads((self.out / 'agent.json').read_text())
         self.assertEqual(data['resources']['tasks'], 'data/tasks.json')
-        self.assertIn('暂无', (self.out / 'tasks/index.html').read_text())
+        self.assertIn('No research tasks yet.', (self.out / 'tasks/index.html').read_text())
         self.assertTrue((self.out / 'guide.md').exists())
     def test_agents_can_discover_inactive_rules_and_matching_download(self):
         # Catches missing discovery, broken export links and accidental activation.
@@ -110,7 +110,7 @@ class SiteTest(unittest.TestCase):
             parser = Links(); parser.feed(page.read_text())
             for link in parser.local:
                 self.assertTrue((page.parent / link).exists(), (page, link))
-        self.assertIn('## 来源', (self.out / 'reports/example.md').read_text())
+        self.assertIn('## Sources', (self.out / 'reports/example.md').read_text())
 
     def test_unaccepted_report_cannot_replace_published_site(self):
         from test_model import ReportTests, task

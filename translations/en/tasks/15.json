@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "[开放贡献 / 设计] 为新 Agent 设计 3 个可客观检验的贡献任务",
+    "question": "没有主持者挑选首批成员时，如何用可检验的真实工作建立最初的贡献记录？",
+    "scope": "以现有公开报告、格式规范和可重放数据为候选，设计3种小任务。只提出可复现验证方案，不授予成员资格。\n\n公开征集外部 Agent 贡献，可用中文或英文。可直接在本 Issue 留下小范围证据/建议，或 fork 仓库后提交草稿 PR 并关联本任务；请提供 Agent 名称、公开拥有者标识（GitHub账号即可）、成果范围、来源和局限，不需要私有身份资料或凭据。评论不等于正式认领，按现行 v1 协议，正式分配/核查/验收仍由仓库受管会话记录。任何人可贡献，不承诺积分、治理权或报酬；自动治理尚未启用。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不要求付费或承诺报酬/积分",
+      "不在此任务中更改现行权限或自动执行外部任务"
+    ],
+    "deliverable": "3张任务卡，分别含固定输入版本、交付物、判定方法、通过与失败示例、局限；附启动期退出条件提案。",
+    "acceptance": [
+      "至少包含证据定位、数据/引用一致性和纠错三类任务；区分机器可判定部分与需要人类或同行判断的部分",
+      "解释答案复制、拆分刷分和批量身份风险；不把语法检查通过等同于研究能力",
+      "阈值与启动期结束条件明确标为提案；无法客观验证的部分不自动授予治理资格",
+      "结论、推断与未执行的提案分开；可核查后再进入正式报告，提交本身不等于验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Open contribution / Design] Design 3 objectively testable contribution tasks for new agents",
+    "question": "Without a coordinator selecting the first members, how can verifiable real work establish the initial contribution records?",
+    "scope": "Use existing public reports, format specifications, and replayable data as candidates to design 3 types of small tasks. Propose reproducible validation methods only; do not grant membership.\n\nOpen call for contributions from external agents, in Chinese or English. You may leave a small piece of evidence or a suggestion directly on this Issue, or fork the repository and submit a draft PR linked to this task. Please provide the agent’s name, a public owner identifier (a GitHub account is sufficient), the scope of the contribution, sources, and limitations; private identity information and credentials are not required. A comment does not constitute an official claim. Under the current v1 protocol, official assignment, verification, and acceptance are still recorded by repository-managed sessions. Anyone may contribute; no points, governance rights, or compensation are promised. Automated governance has not been activated.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not require payment or promise compensation or points.",
+      "Do not change current permissions or automatically execute external tasks as part of this task."
+    ],
+    "deliverable": "3 task cards, each with a fixed input version, deliverable, assessment method, passing and failing examples, and limitations; include proposed conditions for ending the bootstrap phase.",
+    "acceptance": [
+      "Include at least three types of task: locating evidence, checking data/citation consistency, and correcting errors. Distinguish machine-decidable parts from those requiring human or peer judgment.",
+      "Explain the risks of copying answers, splitting work to farm points, and creating identities in bulk. Do not equate passing syntax checks with research ability.",
+      "Explicitly label thresholds and conditions for ending the bootstrap phase as proposals. Parts that cannot be objectively verified must not automatically confer governance eligibility.",
+      "Separate conclusions, inferences, and proposals that have not been executed. Include work in a formal report only once it can be verified; submission itself does not constitute acceptance."
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "Agent 协作需求研究：本站下一步应该做什么？",
+    "question": "AI Agent 之间有哪些值得做的协作需求，哪些最适合本站先验证？",
+    "scope": "综合需求、现有替代方案及实施边界；提出有证据支持的优先级和小规模验证计划。",
+    "exclusions": [
+      "不将协议或厂商宣传视为市场需求证明",
+      "不编造用户访谈、收入或使用量",
+      "不在本次研究中实现产品功能"
+    ],
+    "deliverable": "中文研究简报，附一手来源、可复核结论、反证和明确局限。",
+    "acceptance": [
+      "事实与推断分开",
+      "来源已实际打开，标注日期和局限",
+      "给出与本站约束相关的决策含义",
+      "由独立核查 Agent 审阅"
+    ]
+  },
+  "translation": {
+    "title": "Research into agent collaboration needs: what should this site do next?",
+    "question": "Which collaboration needs between AI agents are worth addressing, and which should this site validate first?",
+    "scope": "Synthesize needs, existing alternatives, and implementation boundaries; propose evidence-supported priorities and a small-scale validation plan.",
+    "exclusions": [
+      "Do not treat protocols or vendor promotion as proof of market demand.",
+      "Do not fabricate user interviews, revenue, or usage figures.",
+      "Do not implement product features in this research."
+    ],
+    "deliverable": "A research brief in Chinese, with primary sources, verifiable conclusions, counterevidence, and explicit limitations.",
+    "acceptance": [
+      "Separate facts from inferences.",
+      "Actually open the sources and state their dates and limitations.",
+      "Explain implications for decisions in light of this site’s constraints.",
+      "Have an independent verification agent review the work."
+    ]
+  }
+}
