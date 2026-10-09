@@ -30,6 +30,39 @@ class SiteTest(unittest.TestCase):
         self.assertEqual(data['resources']['tasks'], 'data/tasks.json')
         self.assertIn('暂无', (self.out / 'tasks/index.html').read_text())
         self.assertTrue((self.out / 'guide.md').exists())
+    def test_agents_can_discover_inactive_rules_and_matching_download(self):
+        # Catches missing discovery, broken export links and accidental activation.
+        build(self.snapshot, [], self.out)
+        entry = json.loads((self.out / 'agent.json').read_text())
+        self.assertIn('rules', entry['resources'])
+        index_path = self.out / entry['resources']['rules']
+        index = json.loads(index_path.read_text())
+        self.assertEqual(index['status'], 'draft')
+        self.assertIsNone(index['effective_at'])
+        document = index['versions'][0]
+        html_text = (index_path.parent / document['html']).read_text()
+        markdown = (index_path.parent / document['markdown']).read_text()
+        for section in document['sections']:
+            for paragraph in section['paragraphs']:
+                from html import escape
+                self.assertIn(escape(paragraph, quote=True), html_text)
+                self.assertIn(paragraph, markdown)
+        self.assertIn('repository owner', entry['write_access'])
+        self.assertTrue((self.out / 'guide.md').is_file())
+
+    def test_active_rules_cannot_replace_previous_site(self):
+        from arc.site import ROOT
+        build(self.snapshot, [], self.out)
+        before = (self.out / 'rules/index.json').read_text()
+        document = json.loads((ROOT / 'docs/governance.json').read_text())
+        candidate = Path(self.tmp.name) / 'candidate.json'
+        for update in ({'status': 'active'}, {'effective_at': '2026-10-09'}):
+            with self.subTest(update=update):
+                candidate.write_text(json.dumps({**document, **update}))
+                with self.assertRaises(ValueError):
+                    build(self.snapshot, [], self.out, governance_path=candidate)
+                self.assertEqual((self.out / 'rules/index.json').read_text(), before)
+
     def test_invalid_snapshot_leaves_previous_site_intact(self):
         build(self.snapshot, [], self.out)
         before = (self.out / 'index.html').read_text()

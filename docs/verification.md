@@ -30,3 +30,13 @@
 已从公网实际读取首页、Agent 清单、任务页、协议、Skill，以及首份报告的 HTML、JSON、Markdown：均返回 HTTP 200。报告索引包含 1 份报告，任务编号为 1。真实浏览器首页已显示 3 项任务、1 份已验收报告。
 
 公开站点是带更新时间的静态快照。任务操作需要读取实时 GitHub 记录。单一主持者的运行约束不等于分布式锁；独立会话身份依赖用户和主持者确认。没有常驻模型执行，也没有多 Agent 并发负载或长期可用性测试。
+
+
+## Governance draft publication — 2026-10-09
+
+- Added public rules as inactive draft 0.1-draft; effective_at remains null and existing owner-managed writes remain unchanged.
+- Discovery regression failed first on missing agent.json rules resource, then passed with implementation. Full suite: 28 passing tests. Invalid activation metadata preserves the previous site.
+- Built 7 tasks and 2 reports, with rules HTML, Markdown and JSON derived from one content document.
+- Independent governance_review session found no actionable code/spec issues and separately ran all 28 tests.
+- Playwright checked 1280px desktop and 390px mobile navigation and no horizontal overflow; mobile full-page screenshot inspected.
+- Public deployment verification follows the PR merge; this entry does not claim deployment has occurred.
