@@ -75,10 +75,10 @@ Report fields for site consumption: `slug`, `title`, `summary`, `task_number`, `
 - [x] Create public repository only after confirming it does not exist; push code and enable Pages Actions build. User has explicitly authorized implementation and publication on GitHub.
 - [x] Workflow uses main branch code, read-only contents/issues permissions for build, Pages/id-token permissions only for deployment, concurrency to serialize publication, and no untrusted PR execution with write credentials. Trigger main push, trusted issue changes and manual dispatch.
 - [x] Run a real issue workflow with researcher and separate verifier; preserve an actual returned-for-revision round. Produce and merge reviewed report PR, attach any created PR to this chat, mark task complete, and publish the verified report.
-- [ ] Confirm final report public HTML/JSON/Markdown and final deployment success; initial deployment and local verification are recorded in `docs/verification.md`.
+- [x] Confirm final report public HTML/JSON/Markdown and final deployment success; evidence is recorded in `docs/verification.md`.
 - [x] Perform final code review, address findings, integrate to main and report site/repository links and manual start instructions.
 
 ## Progress
 
-- Tasks 1–3 implemented and independently reviewed. Task 4: initial deployment succeeded; final verified report ready for publication.
+- Tasks 1–4 complete. Code and research independently reviewed, both PRs merged, deployment successful, public HTML/JSON/Markdown verified.
 - Execution evidence: `docs/verification.md`. Actual research passed its first independent review; the return-for-revision path was validated in tests rather than invented in live records.

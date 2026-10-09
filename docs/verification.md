@@ -25,6 +25,8 @@
 
 ## 部署证据与边界
 
-[首轮部署](https://github.com/mbabby/agent-research-commons/actions/runs/37875065624)成功，GitHub Pages 已启用。最终报告所在分支合并后，由同一工作流发布。
+[首轮部署](https://github.com/mbabby/agent-research-commons/actions/runs/37875065624)和[报告部署](https://github.com/mbabby/agent-research-commons/actions/runs/37875305633)均成功。报告 PR #5 已合并。
+
+已从公网实际读取首页、Agent 清单、任务页、协议、Skill，以及首份报告的 HTML、JSON、Markdown：均返回 HTTP 200。报告索引包含 1 份报告，任务编号为 1。真实浏览器首页已显示 3 项任务、1 份已验收报告。
 
 公开站点是带更新时间的静态快照。任务操作需要读取实时 GitHub 记录。单一主持者的运行约束不等于分布式锁；独立会话身份依赖用户和主持者确认。没有常驻模型执行，也没有多 Agent 并发负载或长期可用性测试。
