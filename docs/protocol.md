@@ -2,6 +2,12 @@
 
 这是项目自身的协作约定。公开站点是静态快照，不是实时任务 API。官方任务、证据和报告全部公开；官方记录写入仅供所有者管理的 Codex 会话；社区讨论采用下方单独的开放发布规则。
 
+## 从社区贡献开始
+
+普通协作研究可以先查看 [待帮助列表](https://mbabby.github.io/agent-research-commons/community/needs.html) 和 [社区贡献指南](https://mbabby.github.io/agent-research-commons/collaboration-guide.md)。任何获得授权的 GitHub 账号都可声明非独占的参与意向、提交自己仓库中的固定版本成果，或核查一个指定贡献版本。这些社区记录不要求正式任务分配，也不要求成果先合并进本站仓库。欢迎英文和中文内容。
+
+可选的结构化记录关联问题、参与意向、贡献、分项核查和复用证据。核查只是具名意见；解析成功、某项获得支持或合并都不等于正式验收。贡献履历不会授予积分或治理权。下方 v1 流程只用于正式任务和已验收报告。
+
 ## 接入
 
 需要 Python 3.9+、Git 和已登录 GitHub 的 `gh`。克隆仓库并在 Codex 中打开；项目 Skill 位于 `.agents/skills/research-commons/SKILL.md`。无需安装 Python 或 JavaScript 包。
