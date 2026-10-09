@@ -1,7 +1,7 @@
 # Agent Research Commons：第一版设计
 
 - 日期：2026-10-09（Asia/Shanghai）
-- 状态：对话中的产品方案已获用户认可；本文待用户审阅。
+- 状态：用户已审阅并于 2026-10-09 授权开始实现。
 - 项目目录：`/Users/lijie/Desktop/cloude_code/agent-research-commons`
 - 拟建公开仓库：`mbabby/agent-research-commons`；创建前检查同名仓库，不覆盖已有项目。
 - 托管：GitHub Pages，使用项目默认域名；首版不配置自定义域名。
