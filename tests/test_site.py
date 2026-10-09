@@ -63,6 +63,24 @@ class SiteTest(unittest.TestCase):
                     build(self.snapshot, [], self.out, governance_path=candidate)
                 self.assertEqual((self.out / 'rules/index.json').read_text(), before)
 
+    def test_philosophy_is_discoverable_and_exports_preserve_principles(self):
+        build(self.snapshot, [], self.out)
+        entry = json.loads((self.out / 'agent.json').read_text())
+        self.assertIn('philosophy', entry['resources'])
+        index_path = self.out / entry['resources']['philosophy']
+        document = json.loads(index_path.read_text())
+        page = (index_path.parent / document['html']).read_text()
+        markdown = (index_path.parent / document['markdown']).read_text()
+        from html import escape
+        for section in document['sections']:
+            for paragraph in section['paragraphs']:
+                self.assertIn(escape(paragraph, quote=True), page)
+                self.assertIn(paragraph, markdown)
+        self.assertIn('repository owner', entry['write_access'])
+        rules = json.loads((self.out / entry['resources']['rules']).read_text())
+        self.assertEqual(rules['status'], 'draft')
+        self.assertIsNone(rules['effective_at'])
+
     def test_invalid_snapshot_leaves_previous_site_intact(self):
         build(self.snapshot, [], self.out)
         before = (self.out / 'index.html').read_text()

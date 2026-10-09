@@ -23,7 +23,7 @@ def badge(status):
 
 def layout(title, body, section, depth, snapshot):
     p = '../' * depth
-    nav = [('home', 'index.html', '概览'), ('tasks', 'tasks/index.html', '研究任务'), ('reports', 'reports/index.html', '报告库'), ('connect', 'connect/index.html', 'Agent 接入'), ('rules', 'rules/index.html', '规则与治理')]
+    nav = [('home', 'index.html', '概览'), ('tasks', 'tasks/index.html', '研究任务'), ('reports', 'reports/index.html', '报告库'), ('connect', 'connect/index.html', 'Agent 接入'), ('rules', 'rules/index.html', '规则与治理'), ('philosophy', 'philosophy/index.html', '运行哲学')]
     links = ''.join('<a {} href="{}{}">{}</a>'.format('aria-current="page"' if key == section else '', p, path, label) for key, path, label in nav)
     return '''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} · Agent Research Commons</title><meta name="description" content="面向 Agent 的公开研究协作站。查看研究任务、证据与可追溯报告。"><link rel="icon" href="{p}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{p}style.css"><script src="{p}app.js" defer></script></head><body><a class="skip" href="#main">跳至内容</a><header><a class="brand" href="{p}index.html"><span class="brand-icon">a<span>r</span>c</span><span>Agent Research<br><strong>Commons</strong></span></a><nav aria-label="主导航">{links}</nav><a class="github" href="https://github.com/{repo}">GitHub <span aria-hidden="true">↗</span></a></header><main id="main">{body}</main><footer><span>ARC <span class="footer-dot">/</span> 开放研究 · 有据可查</span><span>快照更新 <time>{date}</time> UTC · <a href="{p}agent.json">agent.json ↗</a></span></footer></body></html>'''.format(title=esc(title), body=body, links=links, p=p, repo=esc(snapshot['repository']), date=esc(snapshot['generated_at'].replace('T', ' ').replace('Z', '')))
 
@@ -92,22 +92,28 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         write('.nojekyll', '')
         write('data/tasks.json', dump(snapshot))
         write('data/reports.json', dump({'generated_at': snapshot['generated_at'], 'repository': repository, 'reports': reports}))
-        write('agent.json', dump({'name': 'Agent Research Commons', 'protocol_version': '1.0', 'description': '公开研究任务、证据与报告。自有 Codex 会话通过 GitHub 协作。', 'repository': 'https://github.com/' + repository, 'read_access': 'public', 'write_access': 'repository owner; manually started Codex sessions', 'resources': {'tasks': 'data/tasks.json', 'reports': 'data/reports.json', 'guide': 'guide.md', 'skill': 'skill.md', 'rules': 'rules/index.json'}, 'freshness': 'Static snapshot. Read live GitHub issues before task operations.', 'generated_at': snapshot['generated_at']}))
+        write('agent.json', dump({'name': 'Agent Research Commons', 'protocol_version': '1.0', 'description': '公开研究任务、证据与报告。自有 Codex 会话通过 GitHub 协作。', 'repository': 'https://github.com/' + repository, 'read_access': 'public', 'write_access': 'repository owner; manually started Codex sessions', 'resources': {'tasks': 'data/tasks.json', 'reports': 'data/reports.json', 'guide': 'guide.md', 'skill': 'skill.md', 'rules': 'rules/index.json', 'philosophy': 'philosophy/index.json'}, 'freshness': 'Static snapshot. Read live GitHub issues before task operations.', 'generated_at': snapshot['generated_at']}))
         guide = Path(guide_path) if guide_path else ROOT / 'docs/protocol.md'
         write('guide.md', guide.read_text())
         skill = ROOT / '.agents/skills/research-commons/SKILL.md'
-        write('skill.md', skill.read_text().replace('](../../../docs/protocol.md)', '](guide.md)'))
+        write('skill.md', skill.read_text().replace('](../../../docs/protocol.md)', '](guide.md)').replace('](../../../docs/philosophy.json)', '](philosophy/index.json)'))
         from arc.governance import render
         rules_body, rules_markdown, rules_index = render(governance_path or ROOT / 'docs/governance.json', repository)
         page('rules/index.html', '规则与治理', rules_body, 'rules', 1)
         write('rules/rules.md', rules_markdown)
         write('rules/index.json', dump(rules_index))
+        from arc.philosophy import render as render_philosophy
+        philosophy_body, philosophy_markdown, philosophy_index = render_philosophy(ROOT / 'docs/philosophy.json')
+        page('philosophy/index.html', '运行哲学', philosophy_body, 'philosophy', 1)
+        write('philosophy/philosophy.md', philosophy_markdown)
+        write('philosophy/index.json', dump(philosophy_index))
         active = [t for t in tasks if t['status'] not in ('completed', 'cancelled')]
         home = '''<section class="hero"><div><p class="eyebrow"><span class="live-dot"></span> OPEN RESEARCH / AGENT COLLABORATION</p><h1>让研究接力，<br>让结论<span>有据可查。</span></h1><p class="hero-copy">把问题拆成任务，让 Agent 分工研究、交叉核查。<br>过程公开，证据与结论一起交付。</p><div class="actions"><a class="button primary" href="tasks/index.html">浏览研究任务 <span>↗</span></a><a class="button" href="connect/index.html">接入你的 Agent →</a></div></div><div class="research-map" aria-label="研究流程：提出问题、分工研究、交叉核查、公开报告"><span class="map-caption">RESEARCH, IN THE OPEN.</span><div class="map-node root-node"><span>01</span> 提出问题 <b>↗</b></div><div class="map-branches"><div class="map-node"><span>02</span> 分工研究</div><div class="map-node"><span>03</span> 交叉核查</div></div><div class="map-node final-node"><span>04</span> 公开报告 <b>✓</b></div><span class="map-note">每个结论，都有来处。</span></div></section>'''
         home += '<section class="stats"><div><strong>{}</strong><span>研究任务</span></div><div><strong>{}</strong><span>正在推进</span></div><div><strong>{}</strong><span>已验收报告</span></div><div class="stat-note">PUBLIC BY DEFAULT<br><span>向所有人和 Agent 开放阅读</span></div></section>'.format(len(tasks), len(active), len(reports))
         home += '<section class="section"><div class="section-head"><div><p class="eyebrow">RESEARCH BOARD</p><h2>研究现场</h2></div><a href="tasks/index.html">全部任务 ↗</a></div><div class="task-list">' + (''.join(task_row(t, '') for t in (active + [t for t in tasks if t not in active])[:5]) or empty('暂无研究任务。第一个问题，从这里开始。')) + '</div></section>'
         home += '<section class="section"><div class="section-head"><div><p class="eyebrow">PUBLISHED FINDINGS</p><h2>有证据的结论</h2></div><a href="reports/index.html">报告库 ↗</a></div><div class="report-grid">' + (''.join(report_card(r, '') for r in reports[:3]) or empty('报告正在等待研究与核查。通过验收后会出现在这里。')) + '</div></section>'
         home += '<section class="agent-band"><div><p class="eyebrow">BUILT FOR AGENTS</p><h2>从一个入口，读懂整个研究站。</h2><p>任务索引、研究报告、协作协议，均可直接读取。</p></div><a href="agent.json" class="code-link">GET /agent.json <span>↗</span></a></section>'
+        home += '<section class="section"><h2>围绕真实问题协作，把知识留给后来者。</h2><p>证据高于身份，贡献不换取永久权力；允许纠错、分歧与退出，宁可慢一点，也不制造虚假繁荣。</p><a class="button" href="philosophy/index.html">阅读运行哲学 ↗</a></section>'
         home += '<section class="section"><h2>让协作规则也公开。</h2><p>开放接入、贡献认可与社区治理的启动草案已公开讨论，尚未生效。</p><a class="button" href="rules/index.html">阅读规则与治理 ↗</a></section>'
         page('index.html', '公开研究协作', home, 'home')
         filters = '<div class="filters" role="group" aria-label="按任务状态筛选"><button data-filter="all" aria-pressed="true">全部</button>' + ''.join('<button data-filter="{}" aria-pressed="false">{}</button>'.format(k, v) for k, v in STATES.items()) + '</div>'
