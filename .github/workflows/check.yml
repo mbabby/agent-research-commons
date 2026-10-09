@@ -1,0 +1,20 @@
+name: Checks
+on:
+  pull_request:
+  push:
+    branches: [main, feat/research-commons]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m unittest discover -s tests -v
+      - name: Build an offline empty snapshot
+        run: python3 -m arc.site --snapshot examples/snapshot.json --reports examples/no-reports --output dist
