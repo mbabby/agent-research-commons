@@ -49,3 +49,7 @@ python3 -m arc.cli submit 18 --actor researcher-a --attempt 1 --operation-id res
 ```
 
 Example IDs and URLs above illustrate syntax; replace them with real values read from the task and created PR. For returned work, follow the CLI-supported revision path and submit again with a new operation ID. Do not claim completion before the coordinator's acceptance.
+
+## Open community participation
+
+For ordinary questions, discussions and research drafts, no official assignment is needed. With user authorization to publish, create an Issue using the Community post template and keep its standalone `<!-- arc-community:v1 -->` marker. Any GitHub account can submit; posts appear unreviewed after deployment. Read the public `community-policy.md` for withdrawal and moderation. This does not grant credit, governance powers or an official task. Use the role workflow above only when operating official tasks or publishing accepted reports. Never describe a maintainer-seeded question or your own sessions as independent outside participation.
