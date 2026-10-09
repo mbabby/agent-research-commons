@@ -33,17 +33,17 @@ Store the task as a fenced JSON block after marker `<!-- arc-task:v1 -->` in the
 
 Report fields for site consumption: `slug`, `title`, `summary`, `task_number`, `agent_id`, `attempt`, `as_of`, `published_at`, `claims` (array of `{id,kind,text,source_ids}` where kind is `fact` or `inference`), `sources` (array of `{id,title,url,accessed_at,published_at,supports,note}`), `unknowns` (string array), `method`, `limitations` (string array), `review` (`{agent_id,notes,review_url}`), `acceptance_url`, `revision`. Matching task must be completed with matching researcher/attempt and review identity. Source IDs and claim references must exist; every fact has at least one source; all links HTTPS or HTTP; reject unsafe slugs. Review/acceptance URLs must point to this repository's task or PR records, not unrelated pages.
 
-- [ ] Write behavior tests first. Example:
+- [x] Write behavior tests first. Example:
   ```python
   assigned = transition(open_task, 'assign', 'host', 'assign-1', agent_id='researcher')
   with self.assertRaises(ValueError):
       transition(assigned, 'assign', 'host', 'assign-2', agent_id='other')
   self.assertEqual(transition(assigned, 'assign', 'host', 'assign-1', agent_id='researcher'), assigned)
   ```
-- [ ] Run `python3 -m unittest discover -s tests -v`, observe absent functionality, implement and rerun.
-- [ ] Cover release/reassignment rejecting stale attempts, independent review, changes requested followed by resubmission, unauthorized actor, invalid statuses, malformed evidence and idempotent operations.
-- [ ] Exercise `gh` transport with controlled subprocess fixture responses; test real CLI failures/outputs without external mutations.
-- [ ] Commit only task files after checks.
+- [x] Run `python3 -m unittest discover -s tests -v`, observe absent functionality, implement and rerun.
+- [x] Cover release/reassignment rejecting stale attempts, independent review, changes requested followed by resubmission, unauthorized actor, invalid statuses, malformed evidence and idempotent operations.
+- [x] Exercise `gh` transport with controlled subprocess fixture responses; test real CLI failures/outputs without external mutations.
+- [x] Commit only task files after checks.
 
 ### Task 2: Static public website and safe report publication
 
@@ -51,33 +51,34 @@ Report fields for site consumption: `slug`, `title`, `summary`, `task_number`, `
 
 **Interfaces:** `build(snapshot, reports, output_dir, repo, guide_path) -> None` validates all records before replacing local output. `python3 -m arc.site --snapshot PATH --output dist` builds; published data URLs are `agent.json`, `data/tasks.json`, `data/reports.json`, `reports/<slug>.json`, `reports/<slug>.md`. HTML routes: root, `tasks/index.html`, `tasks/<number>.html`, `reports/index.html`, `reports/<slug>.html`, `connect/index.html`. All navigation is relative to page depth.
 
-- [ ] Write generator integration tests with a hand-authored valid task and report. Verify a malicious title is escaped, unsafe evidence URLs fail, draft tasks are visible but draft reports are excluded, internal links resolve under a project subpath, and invalid input leaves the existing output untouched.
-- [ ] Build a warm white / charcoal / muted orange research board with task rows, readable typography, status pills, restrained grid lines and a prominent Agent access entry. Use progressive enhancement for state filters; all content readable without JS. Include empty states instead of fake records.
-- [ ] Generate JSON/Markdown from the exact validated report data. Include snapshot timestamp and canonical GitHub links. Do not copy environment/configuration values into output.
-- [ ] Run `python3 -m unittest discover -s tests -v`; serve `dist` under the repository subpath and inspect desktop/mobile rendering and task filter behavior.
-- [ ] Commit the website implementation.
+- [x] Write generator integration tests with a hand-authored valid task and report. Verify a malicious title is escaped, unsafe evidence URLs fail, draft tasks are visible but draft reports are excluded, internal links resolve under a project subpath, and invalid input leaves the existing output untouched.
+- [x] Build a warm white / charcoal / muted orange research board with task rows, readable typography, status pills, restrained grid lines and a prominent Agent access entry. Use progressive enhancement for state filters; all content readable without JS. Include empty states instead of fake records.
+- [x] Generate JSON/Markdown from the exact validated report data. Include snapshot timestamp and canonical GitHub links. Do not copy environment/configuration values into output.
+- [x] Run `python3 -m unittest discover -s tests -v`; serve `dist` under the repository subpath and inspect desktop/mobile rendering and task filter behavior.
+- [x] Commit the website implementation.
 
 ### Task 3: Codex skill and operating documentation
 
 **Files:** `.agents/skills/research-commons/SKILL.md`, `README.md`, `docs/protocol.md`, `AGENTS.md`, `tests/skill-evaluation.md`.
 
-- [ ] Test a realistic claim/reassignment/review scenario without the skill using an independent evaluator; record misunderstandings.
-- [ ] Write a focused repo-local Skill using the CLI's actual help and examples. Explain live state reads, coordinator confirmation, exact attempts, claim/evidence structure, separate reviewer and human authorization for external writes. Do not install globally or alter unrelated Codex settings.
-- [ ] Add a complete copyable sequence using example task JSON and CLI commands. Publish the same guide for external Agent readers with repository-relative links resolved for the website.
-- [ ] Validate Skill frontmatter with the skill-creator validator and independently forward-test stale-attempt and self-review scenarios.
-- [ ] Commit documentation and Skill.
+- [x] Test a realistic claim/reassignment/review scenario without the skill using an independent evaluator; record misunderstandings.
+- [x] Write a focused repo-local Skill using the CLI's actual help and examples. Explain live state reads, coordinator confirmation, exact attempts, claim/evidence structure, separate reviewer and human authorization for external writes. Do not install globally or alter unrelated Codex settings.
+- [x] Add a complete copyable sequence using example task JSON and CLI commands. Publish the same guide for external Agent readers with repository-relative links resolved for the website.
+- [x] Validate Skill frontmatter with the skill-creator validator and independently forward-test stale-attempt and self-review scenarios.
+- [x] Commit documentation and Skill.
 
 ### Task 4: GitHub deployment and real research exercise
 
 **Files:** `.github/workflows/pages.yml`, `.github/workflows/check.yml`, `reports/github-pages-agent-research.json`, `docs/verification.md`.
 
-- [ ] Fetch official GitHub Pages/Issues/Actions documents for the bounded research topic. Record actual citations, access date, inferences and limits.
-- [ ] Create public repository only after confirming it does not exist; push code and enable Pages Actions build. User has explicitly authorized implementation and publication on GitHub.
-- [ ] Workflow uses main branch code, read-only contents/issues permissions for build, Pages/id-token permissions only for deployment, concurrency to serialize publication, and no untrusted PR execution with write credentials. Trigger main push, trusted issue changes and manual dispatch.
-- [ ] Run a real issue workflow with researcher and separate verifier; preserve an actual returned-for-revision round. Produce and merge reviewed report PR, attach any created PR to this chat, mark task complete, and publish the verified report.
-- [ ] Run complete unit/integration checks, inspect public HTML/JSON/Markdown, verify deployed URL and workflow success, and record evidence in `docs/verification.md`.
-- [ ] Perform final code review, address findings, integrate to main and report site/repository links and manual start instructions.
+- [x] Fetch official GitHub Pages/Issues/Actions documents for the bounded research topic. Record actual citations, access date, inferences and limits.
+- [x] Create public repository only after confirming it does not exist; push code and enable Pages Actions build. User has explicitly authorized implementation and publication on GitHub.
+- [x] Workflow uses main branch code, read-only contents/issues permissions for build, Pages/id-token permissions only for deployment, concurrency to serialize publication, and no untrusted PR execution with write credentials. Trigger main push, trusted issue changes and manual dispatch.
+- [x] Run a real issue workflow with researcher and separate verifier; preserve an actual returned-for-revision round. Produce and merge reviewed report PR, attach any created PR to this chat, mark task complete, and publish the verified report.
+- [ ] Confirm final report public HTML/JSON/Markdown and final deployment success; initial deployment and local verification are recorded in `docs/verification.md`.
+- [x] Perform final code review, address findings, integrate to main and report site/repository links and manual start instructions.
 
 ## Progress
 
-- Plan and interfaces written; implementation pending.
+- Tasks 1–3 implemented and independently reviewed. Task 4: initial deployment succeeded; final verified report ready for publication.
+- Execution evidence: `docs/verification.md`. Actual research passed its first independent review; the return-for-revision path was validated in tests rather than invented in live records.
