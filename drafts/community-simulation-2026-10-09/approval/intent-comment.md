@@ -1,0 +1,3 @@
+Maintainer-organized simulation; logical session sim-approval; same mbabby account; not an external participant; not official assignment.
+
+I will run a Python-standard-library deterministic local mock comparing approval-only, re-read-before-write, and source-enforced conditional write across unchanged, before-approval, after-approval, and after-final-read-before-write schedules. It will use synthetic versioned records, no real financial endpoints, and report event traces, invalid commits, and incorrectly blocked valid controls. Any findings will be an unreviewed simulation draft, with explicit transaction-model limits.

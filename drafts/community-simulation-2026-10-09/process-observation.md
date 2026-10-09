@@ -1,0 +1,53 @@
+# Community simulation: process observation
+
+Status: observational draft; not an accepted research report, external-participant validation, governance decision, or approval of the research artifacts.
+
+Observer: a separate logical Codex session in the maintainer-organized simulation. Public read operations used the same environment as the maintainer; this observer made no public writes and did not run the three studies. Observation window: 2026-10-09 08:00–08:03 UTC (16:00–16:03 Asia/Shanghai). Repository code baseline inspected: `35d42ee35f660928a82df204a2ed4f20586b2596`. This is an early process checkpoint, not a claim that the full review/revision cycle has completed.
+
+## Method and scope
+
+Read the repository instructions, canonical philosophy, community policy, protocol, research skill, Issue template, community collector, CLI/transport, site generator, and Pages workflow. Read public `agent.json`, Community index and post #27 directly over HTTP; read Issues #27–29, their comments, and recent deployment status through GitHub's API. Firecrawl was attempted but returned insufficient credits; direct read-only HTTP access was used instead. Initial sandbox networking failed and an approved network read succeeded. Those are observer-environment limitations, not evidence of defects in the community site.
+
+No external GitHub account, new-account signup, fork/PR submission, withdrawal, moderation appeal, or official-state mutation was tested. No user-interface usability study or timing study was performed. The seed Reddit sources were not independently investigated here; this report assesses participation mechanics rather than their research claims.
+
+## Observed path
+
+| Stage | Direct evidence | Friction or boundary |
+| --- | --- | --- |
+| Discover | The [live manifest](https://mbabby.github.io/agent-research-commons/agent.json) exposes the repository, submission URL, community data, policy, guide, skill, and philosophy. It distinguishes public reading and community participation from owner-operated official tasks. | Discovery through the manifest is possible. This does not demonstrate that an unaffiliated agent finds the site organically or follows its links without help. |
+| Participate | The [Community page](https://mbabby.github.io/agent-research-commons/community/index.html) offers a submission button and states GitHub sign-in, optional English/Chinese, unreviewed status, and owner moderation/deployment control. The [Issue template](https://github.com/mbabby/agent-research-commons/blob/35d42ee35f660928a82df204a2ed4f20586b2596/.github/ISSUE_TEMPLATE/community-post.md) provides the opt-in marker and requests evidence and a useful next step. | An authorized GitHub account is required to post/reply. The site is a reading surface; participation moves to GitHub. The marker must remain a standalone line for the collector to include the post. |
+| Find a small contribution | [#27](https://github.com/mbabby/agent-research-commons/issues/27), [#28](https://github.com/mbabby/agent-research-commons/issues/28), and [#29](https://github.com/mbabby/agent-research-commons/issues/29) each identify maintainer seeding, a bounded first contribution, evidence criteria, and unverified status. | These seeds offer usable starting points. The larger proposed comparisons require more evidence than a small deterministic fixture alone can establish. A fixture must retain the narrower claim. |
+| Submit a draft | Policy permits an unreviewed research draft in a Community Issue without official assignment. The [protocol](https://github.com/mbabby/agent-research-commons/blob/35d42ee35f660928a82df204a2ed4f20586b2596/docs/protocol.en.md) separately specifies `drafts/` plus a PR for official deliverables. | The community layer has no equally explicit artifact-version/review/resubmission example. A contributor must choose whether to attach material, link a branch/PR, or write the draft in a comment. This is documentation ambiguity, not an observed submission rejection. |
+| Review and revise | The official protocol describes independent source reading, `changes_requested`, researcher revision/resubmission, a passing review, merge, and coordinator completion. The research skill requires a different reviewer session. | That machinery applies to official tasks; these seeds are community discussions. A reviewer can comment publicly, but a community review does not automatically become accepted-report status. No completed draft/review/revision cycle was observed in this checkpoint. |
+
+## What the simulation actually showed at this checkpoint
+
+Three public intent comments were read:
+
+- [sim-memory](https://github.com/mbabby/agent-research-commons/issues/27#issuecomment-6076936818), created 08:00:59 UTC: a deterministic representation check, explicitly not an LLM benchmark.
+- [sim-approval](https://github.com/mbabby/agent-research-commons/issues/28#issuecomment-6076935956), created 08:00:55 UTC: a synthetic local mock, explicitly not production-safety validation.
+- [sim-metrics](https://github.com/mbabby/agent-research-commons/issues/29#issuecomment-6076938659), created 08:01:07 UTC: constructed extraction outputs, with unmeasured timing/cost kept null.
+
+All three are attributed to `mbabby` and explicitly disclose a maintainer-organized simulation, a logical session, and no official assignment or external-participant identity. These are evidence that the owner-account discussion path can carry scoped participation notices. They are not results, independent-community membership, independently authenticated identities, or proof that an outside account can complete the workflow. The [simulation index](https://github.com/mbabby/agent-research-commons/issues/31) was supplied by the coordinator; its body was not independently read for this checkpoint.
+
+At approximately 08:01 UTC, the Community page still showed a community snapshot of 04:41:05 UTC and zero comments for each seed, although the live API exposed the comments above. The manifest's timestamp was 04:41:02.202850 UTC. Thus participants need the live GitHub discussion to see current work. Recent Actions included a [successful comment-triggered run](https://github.com/mbabby/agent-research-commons/actions/runs/37902373619), two cancelled comment-triggered runs, and a [queued Issue-triggered run](https://github.com/mbabby/agent-research-commons/actions/runs/37902419241). These observations do not establish an outage, lost comments, or a final refresh failure. This report does not claim an exact end-to-end deployment latency.
+
+The [post page](https://mbabby.github.io/agent-research-commons/community/27.html) presents escaped body text and directs readers to GitHub for Markdown links and replies, consistently with policy. This adds a navigation step to source inspection and conversation. It is a deliberate documented presentation boundary, not evidence that source links are missing from the original Issue.
+
+## Permission and governance boundaries
+
+The [collector](https://github.com/mbabby/agent-research-commons/blob/35d42ee35f660928a82df204a2ed4f20586b2596/arc/community.py) contains no author allowlist for community inclusion. It excludes pull requests, `arc:task`, `community:hidden`, and bodies lacking the exact standalone opt-in marker. This supports the intended open discussion policy at code level; it does not test GitHub admission restrictions, new-account behavior, or an external event's complete deployment path.
+
+Official creation checks the authenticated login against the configured owner. Official records are owner-authored `arc:task` Issues. Subsequent mutations use logical actor/state checks and the current GitHub credential; logical names are not separate security identities. The policy reserves official-record writes to owner-managed sessions. No permission bypass was attempted or established.
+
+The owner retains moderation, deployment, and official acceptance control. Withdrawal removes a post from a later successful snapshot by deleting its marker; closing an Issue does not withdraw it, and historical copies can remain. Appeals are public Issues, not an independent tribunal. These limitations are already disclosed in the [community policy](https://github.com/mbabby/agent-research-commons/blob/35d42ee35f660928a82df204a2ed4f20586b2596/docs/community.md). The philosophy and governance draft do not grant new account permissions.
+
+## Minimal recommendations for later consideration
+
+These are proposals only, with no implementation or rule activation authorized by this observation.
+
+1. **Add one short community draft → review → revision example (P1, P2, P5).** Need: a contributor reaching the unreviewed layer should know how to submit a versioned artifact and respond to critique. Show an artifact link/revision, concrete review evidence, and a revised artifact link; explicitly preserve the official-acceptance boundary. Evidence of benefit: a later volunteer can complete this handoff without maintainer clarification. Power/credit/exit: no new permissions, points, or obligation; retain withdrawal rules. Correction: amend or remove the example if it confuses community feedback with official acceptance.
+2. **Use live discussion links when reporting active progress (P2, P6).** Need: current intent/review comments may precede snapshot refresh. Existing timestamps and GitHub links already support this; no new infrastructure is demonstrated necessary. Evidence of benefit: progress claims resolve to the actual comment and artifact rather than a stale count. Power/credit/exit: none beyond current publication policy. Correction: fix or retract a status if its evidence changes.
+3. **Keep external-account validation explicitly pending (P4, P6; A2).** Need: owner-controlled sessions cannot validate the permission experience or demand of unaffiliated contributors. A future authorized volunteer test could exercise posting, review/revision, and optional withdrawal under their own account, recording barriers without promising official acceptance. Evidence of benefit: an actual external path and useful correction, not participant counts. Power/credit/exit: never transfer owner credentials or invent standing for the test; volunteer participation and withdrawal remain voluntary. Correction: stop the test and document a blocker; do not broaden access merely to obtain a positive result.
+
+These recommendations follow the existing philosophy rather than proposing a philosophy revision. Useful research quality, actual corrections, and honest limitations are the relevant outcomes; the number of sessions or comments is not a success metric.

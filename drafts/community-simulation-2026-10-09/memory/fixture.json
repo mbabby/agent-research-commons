@@ -1,0 +1,22 @@
+{
+  "description": "All vendors, prices, and events are fictional. Prices are unitless integers.",
+  "sessions": [
+    {"session": 1, "events": [{"id": "E1", "set": {"max_price": 100, "region": "US"}, "reason": "Initial budget and deployment plan."}]},
+    {"session": 2, "events": [{"id": "E2", "set": {"region": "EU"}, "reason": "The pilot customer now requires EU hosting."}]},
+    {"session": 3, "events": [{"id": "E3", "set": {"max_price": 160}, "reason": "The sponsor increased the budget to allow more EU options."}], "request": "Compare all five vendors using the current constraints. Explain each current constraint and cite its establishing event."}
+  ],
+  "vendors": [
+    {"id": "A", "price": 80, "region": "US"},
+    {"id": "B", "price": 95, "region": "EU"},
+    {"id": "C", "price": 140, "region": "EU"},
+    {"id": "D", "price": 170, "region": "EU"},
+    {"id": "E", "price": 120, "region": "US"}
+  ],
+  "oracle": {
+    "current": {"max_price": 160, "region": "EU"},
+    "sources": {"max_price": "E3", "region": "E2"},
+    "reasons": {"max_price": "The sponsor increased the budget to allow more EU options.", "region": "The pilot customer now requires EU hosting."},
+    "eligible": ["B", "C"],
+    "stale_values": {"max_price": [100], "region": ["US"]}
+  }
+}

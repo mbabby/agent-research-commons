@@ -1,0 +1,239 @@
+{
+  "kind": "deterministic synthetic information-preservation check",
+  "model": null,
+  "token_measurement": null,
+  "cost_measurement": null,
+  "treatments": [
+    {
+      "name": "transcript_replay",
+      "context": {
+        "events": [
+          {
+            "id": "E1",
+            "set": {
+              "max_price": 100,
+              "region": "US"
+            },
+            "reason": "Initial budget and deployment plan."
+          },
+          {
+            "id": "E2",
+            "set": {
+              "region": "EU"
+            },
+            "reason": "The pilot customer now requires EU hosting."
+          },
+          {
+            "id": "E3",
+            "set": {
+              "max_price": 160
+            },
+            "reason": "The sponsor increased the budget to allow more EU options."
+          }
+        ]
+      },
+      "answer": {
+        "current": {
+          "max_price": 160,
+          "region": "EU"
+        },
+        "sources": {
+          "max_price": "E3",
+          "region": "E2"
+        },
+        "reasons": {
+          "max_price": "The sponsor increased the budget to allow more EU options.",
+          "region": "The pilot customer now requires EU hosting."
+        },
+        "decisions": [
+          {
+            "vendor": "A",
+            "eligible": false,
+            "price_pass": true,
+            "region_pass": false
+          },
+          {
+            "vendor": "B",
+            "eligible": true,
+            "price_pass": true,
+            "region_pass": true
+          },
+          {
+            "vendor": "C",
+            "eligible": true,
+            "price_pass": true,
+            "region_pass": true
+          },
+          {
+            "vendor": "D",
+            "eligible": false,
+            "price_pass": false,
+            "region_pass": true
+          },
+          {
+            "vendor": "E",
+            "eligible": false,
+            "price_pass": true,
+            "region_pass": false
+          }
+        ]
+      },
+      "scores": {
+        "current_constraints_correct": 2,
+        "current_constraints_total": 2,
+        "stale_constraints_used": 0,
+        "attributions_correct": 2,
+        "reasons_correct": 2,
+        "eligible_set_exact": true
+      }
+    },
+    {
+      "name": "current_state_plus_history",
+      "context": {
+        "current": {
+          "max_price": 160,
+          "region": "EU"
+        },
+        "sources": {
+          "max_price": "E3",
+          "region": "E2"
+        },
+        "events": [
+          {
+            "id": "E1",
+            "set": {
+              "max_price": 100,
+              "region": "US"
+            },
+            "reason": "Initial budget and deployment plan."
+          },
+          {
+            "id": "E2",
+            "set": {
+              "region": "EU"
+            },
+            "reason": "The pilot customer now requires EU hosting."
+          },
+          {
+            "id": "E3",
+            "set": {
+              "max_price": 160
+            },
+            "reason": "The sponsor increased the budget to allow more EU options."
+          }
+        ]
+      },
+      "answer": {
+        "current": {
+          "max_price": 160,
+          "region": "EU"
+        },
+        "sources": {
+          "max_price": "E3",
+          "region": "E2"
+        },
+        "reasons": {
+          "max_price": "The sponsor increased the budget to allow more EU options.",
+          "region": "The pilot customer now requires EU hosting."
+        },
+        "decisions": [
+          {
+            "vendor": "A",
+            "eligible": false,
+            "price_pass": true,
+            "region_pass": false
+          },
+          {
+            "vendor": "B",
+            "eligible": true,
+            "price_pass": true,
+            "region_pass": true
+          },
+          {
+            "vendor": "C",
+            "eligible": true,
+            "price_pass": true,
+            "region_pass": true
+          },
+          {
+            "vendor": "D",
+            "eligible": false,
+            "price_pass": false,
+            "region_pass": true
+          },
+          {
+            "vendor": "E",
+            "eligible": false,
+            "price_pass": true,
+            "region_pass": false
+          }
+        ]
+      },
+      "scores": {
+        "current_constraints_correct": 2,
+        "current_constraints_total": 2,
+        "stale_constraints_used": 0,
+        "attributions_correct": 2,
+        "reasons_correct": 2,
+        "eligible_set_exact": true
+      }
+    },
+    {
+      "name": "rolling_summary_values_only",
+      "context": {
+        "current": {
+          "max_price": 160,
+          "region": "EU"
+        }
+      },
+      "answer": {
+        "current": {
+          "max_price": 160,
+          "region": "EU"
+        },
+        "sources": {},
+        "reasons": {},
+        "decisions": [
+          {
+            "vendor": "A",
+            "eligible": false,
+            "price_pass": true,
+            "region_pass": false
+          },
+          {
+            "vendor": "B",
+            "eligible": true,
+            "price_pass": true,
+            "region_pass": true
+          },
+          {
+            "vendor": "C",
+            "eligible": true,
+            "price_pass": true,
+            "region_pass": true
+          },
+          {
+            "vendor": "D",
+            "eligible": false,
+            "price_pass": false,
+            "region_pass": true
+          },
+          {
+            "vendor": "E",
+            "eligible": false,
+            "price_pass": true,
+            "region_pass": false
+          }
+        ]
+      },
+      "scores": {
+        "current_constraints_correct": 2,
+        "current_constraints_total": 2,
+        "stale_constraints_used": 0,
+        "attributions_correct": 0,
+        "reasons_correct": 0,
+        "eligible_set_exact": true
+      }
+    }
+  ]
+}
