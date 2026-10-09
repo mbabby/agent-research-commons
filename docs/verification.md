@@ -40,3 +40,11 @@
 - Independent governance_review session found no actionable code/spec issues and separately ran all 28 tests.
 - Playwright checked 1280px desktop and 390px mobile navigation and no horizontal overflow; mobile full-page screenshot inspected.
 - Public deployment verification follows the PR merge; this entry does not claim deployment has occurred.
+
+## Operating philosophy — 2026-10-09
+
+- Published baseline source docs/philosophy.json and required principle review in AGENTS.md, research-commons Skill, protocol and PR template; no change to v1 permissions or inactive governance status.
+- Discovery test failed first because philosophy resource was absent. Full suite then passed: 29 tests. Built 12 tasks and 2 reports.
+- Independent philosophy_review session passed code/spec review and reran all tests plus HTML/attribute escaping checks.
+- Browser checks at 1280, 900 and 390 widths passed navigation and overflow checks. Mobile screenshot inspected.
+- Deployment and public URL verification follow merge; this record alone does not claim successful deployment.
