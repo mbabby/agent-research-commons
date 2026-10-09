@@ -1,0 +1,3 @@
+Maintainer-organized simulation; logical session sim-memory; same mbabby account; not an external participant; not an official assignment.
+
+I will contribute a bounded Python-standard-library fixture: three synthetic sessions, five fictional vendors, two explicit requirement changes, and a final comparison. I will compare information recoverable from full event replay, current state with event provenance, and a precisely specified lossy rolling summary. This will be a deterministic representation check, not an LLM benchmark or evidence of vendor capabilities. I will preserve expected answers and rationale-event links, report limitations and actual discovery obstacles, and hold the result for separate review before posting it.

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "provenance": "All documents, answer keys, outputs, claims, failure and retry events deliberately authored; not recorded model behavior.",
+  "instruction": "Extract exactly invoice_id (string), due_date (YYYY-MM-DD string), amount_cents (integer). Ignore issue date. No extra fields.",
+  "tasks": [
+    {
+      "id": "T1",
+      "document": "Invoice A-101. Due date 2026-10-15. Amount due USD 12.50.",
+      "expected": {
+        "invoice_id": "A-101",
+        "due_date": "2026-10-15",
+        "amount_cents": 1250
+      },
+      "disposition": "accepted",
+      "attempts": [
+        {
+          "output": {
+            "invoice_id": "A-101",
+            "due_date": "2026-10-15",
+            "amount_cents": 1250
+          },
+          "claimed_complete": true
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "document": "Invoice A-102. Issue date 2026-10-01. Due date 2026-11-01. Amount due USD 42.00.",
+      "expected": {
+        "invoice_id": "A-102",
+        "due_date": "2026-11-01",
+        "amount_cents": 4200
+      },
+      "disposition": "failed",
+      "attempts": [
+        {
+          "output": {
+            "invoice_id": "A-102",
+            "due_date": "2026-10-01",
+            "amount_cents": 4200
+          },
+          "claimed_complete": true
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "document": "Invoice A-103. Due date 2026-10-20. Amount due USD 10.05.",
+      "expected": {
+        "invoice_id": "A-103",
+        "due_date": "2026-10-20",
+        "amount_cents": 1005
+      },
+      "disposition": "requires_correction_not_performed",
+      "attempts": [
+        {
+          "output": {
+            "invoice_id": "A-103",
+            "due_date": "2026-10-20",
+            "amount_cents": 1050
+          },
+          "claimed_complete": true
+        }
+      ],
+      "proposed_correction": {
+        "amount_cents": 1005
+      },
+      "correction_executed": false
+    },
+    {
+      "id": "T4",
+      "document": "Invoice A-104. Due date 2026-10-31. Amount due USD 8.00.",
+      "expected": {
+        "invoice_id": "A-104",
+        "due_date": "2026-10-31",
+        "amount_cents": 800
+      },
+      "disposition": "accepted_after_retry",
+      "attempts": [
+        {
+          "output": null,
+          "claimed_complete": false
+        },
+        {
+          "output": {
+            "invoice_id": "A-104",
+            "due_date": "2026-10-31",
+            "amount_cents": 800
+          },
+          "claimed_complete": true
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "document": "Invoice A-105. Due date 2026-12-01. Amount due USD 1.25.",
+      "expected": {
+        "invoice_id": "A-105",
+        "due_date": "2026-12-01",
+        "amount_cents": 125
+      },
+      "disposition": "abandoned_before_attempt",
+      "attempts": []
+    }
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "status": "unreviewed_simulation_draft",
+  "logical_session": "sim-approval",
+  "case_count": 12,
+  "counts": {
+    "approval_only": {
+      "valid_commit": 1,
+      "invalid_commit": 3,
+      "invalid_blocked": 0,
+      "valid_incorrectly_blocked": 0
+    },
+    "reread_before_write": {
+      "valid_commit": 1,
+      "invalid_commit": 1,
+      "invalid_blocked": 2,
+      "valid_incorrectly_blocked": 0
+    },
+    "source_conditional_write": {
+      "valid_commit": 1,
+      "invalid_commit": 0,
+      "invalid_blocked": 3,
+      "valid_incorrectly_blocked": 0
+    }
+  },
+  "cases": [
+    {
+      "design": "approval_only",
+      "schedule": "unchanged",
+      "outcome": "valid_commit",
+      "committed": true,
+      "valid_at_boundary": true,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "reuse_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 4,
+          "event": "client_decision",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 5,
+          "event": "source_commit",
+          "source": {
+            "version": 2,
+            "disputed": false,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": true,
+          "atomic_conditional": false
+        }
+      ]
+    },
+    {
+      "design": "approval_only",
+      "schedule": "before_approval",
+      "outcome": "invalid_commit",
+      "committed": true,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 3,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 4,
+          "event": "reuse_captured_snapshot",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 6,
+          "event": "source_commit",
+          "source": {
+            "version": 3,
+            "disputed": true,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": false,
+          "atomic_conditional": false
+        }
+      ]
+    },
+    {
+      "design": "approval_only",
+      "schedule": "after_approval",
+      "outcome": "invalid_commit",
+      "committed": true,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 4,
+          "event": "reuse_captured_snapshot",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 6,
+          "event": "source_commit",
+          "source": {
+            "version": 3,
+            "disputed": true,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": false,
+          "atomic_conditional": false
+        }
+      ]
+    },
+    {
+      "design": "approval_only",
+      "schedule": "after_read_before_write",
+      "outcome": "invalid_commit",
+      "committed": true,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "reuse_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 4,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 6,
+          "event": "source_commit",
+          "source": {
+            "version": 3,
+            "disputed": true,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": false,
+          "atomic_conditional": false
+        }
+      ]
+    },
+    {
+      "design": "reread_before_write",
+      "schedule": "unchanged",
+      "outcome": "valid_commit",
+      "committed": true,
+      "valid_at_boundary": true,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "final_read",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 4,
+          "event": "client_decision",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 5,
+          "event": "source_commit",
+          "source": {
+            "version": 2,
+            "disputed": false,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": true,
+          "atomic_conditional": false
+        }
+      ]
+    },
+    {
+      "design": "reread_before_write",
+      "schedule": "before_approval",
+      "outcome": "invalid_blocked",
+      "committed": false,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 3,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 4,
+          "event": "final_read",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "observed_version": 2
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": false
+        },
+        {
+          "step": 6,
+          "event": "client_skip",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "valid_at_boundary": false
+        }
+      ]
+    },
+    {
+      "design": "reread_before_write",
+      "schedule": "after_approval",
+      "outcome": "invalid_blocked",
+      "committed": false,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 4,
+          "event": "final_read",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "observed_version": 2
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": false
+        },
+        {
+          "step": 6,
+          "event": "client_skip",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "valid_at_boundary": false
+        }
+      ]
+    },
+    {
+      "design": "reread_before_write",
+      "schedule": "after_read_before_write",
+      "outcome": "invalid_commit",
+      "committed": true,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "final_read",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 4,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 6,
+          "event": "source_commit",
+          "source": {
+            "version": 3,
+            "disputed": true,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": false,
+          "atomic_conditional": false
+        }
+      ]
+    },
+    {
+      "design": "source_conditional_write",
+      "schedule": "unchanged",
+      "outcome": "valid_commit",
+      "committed": true,
+      "valid_at_boundary": true,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "final_read",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 4,
+          "event": "client_decision",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 5,
+          "event": "source_commit",
+          "source": {
+            "version": 2,
+            "disputed": false,
+            "executed": true
+          },
+          "expected_version": 1,
+          "valid_at_boundary": true,
+          "atomic_conditional": true
+        }
+      ]
+    },
+    {
+      "design": "source_conditional_write",
+      "schedule": "before_approval",
+      "outcome": "invalid_blocked",
+      "committed": false,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 3,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 4,
+          "event": "final_read",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "observed_version": 2
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": false
+        },
+        {
+          "step": 6,
+          "event": "client_skip",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "valid_at_boundary": false
+        }
+      ]
+    },
+    {
+      "design": "source_conditional_write",
+      "schedule": "after_approval",
+      "outcome": "invalid_blocked",
+      "committed": false,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 4,
+          "event": "final_read",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "observed_version": 2
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": false
+        },
+        {
+          "step": 6,
+          "event": "client_skip",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "valid_at_boundary": false
+        }
+      ]
+    },
+    {
+      "design": "source_conditional_write",
+      "schedule": "after_read_before_write",
+      "outcome": "invalid_blocked",
+      "committed": false,
+      "valid_at_boundary": false,
+      "trace": [
+        {
+          "step": 1,
+          "event": "capture_for_approval",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "captured_version": 1
+        },
+        {
+          "step": 2,
+          "event": "approve_captured_snapshot",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "approved": true,
+          "approved_version": 1
+        },
+        {
+          "step": 3,
+          "event": "final_read",
+          "source": {
+            "version": 1,
+            "disputed": false,
+            "executed": false
+          },
+          "observed_version": 1
+        },
+        {
+          "step": 4,
+          "event": "external_dispute",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          }
+        },
+        {
+          "step": 5,
+          "event": "client_decision",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "allow": true
+        },
+        {
+          "step": 6,
+          "event": "source_reject",
+          "source": {
+            "version": 2,
+            "disputed": true,
+            "executed": false
+          },
+          "expected_version": 1,
+          "valid_at_boundary": false,
+          "atomic_conditional": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "provenance": "Synthetic authored inputs and outputs; actual deterministic scorer execution only",
+  "assigned_task_count": 5,
+  "attempt_count": 5,
+  "retry_count": 1,
+  "claimed_completion_all_assigned": {
+    "numerator": 4,
+    "denominator": 5,
+    "rate": 0.8
+  },
+  "accepted_all_assigned": {
+    "numerator": 2,
+    "denominator": 5,
+    "rate": 0.4
+  },
+  "false_final_completion_claims": {
+    "numerator": 2,
+    "denominator": 4,
+    "rate": 0.5
+  },
+  "false_final_completion_claims_all_assigned": {
+    "numerator": 2,
+    "denominator": 5,
+    "rate": 0.4
+  },
+  "attempt_acceptance": {
+    "numerator": 2,
+    "denominator": 5,
+    "rate": 0.4
+  },
+  "false_attempt_completion_claims": {
+    "numerator": 2,
+    "denominator": 4,
+    "rate": 0.5
+  },
+  "denominator_sensitivity": {
+    "exclude_unattempted_abandonment": {
+      "numerator": 2,
+      "denominator": 4,
+      "rate": 0.5
+    },
+    "condition_on_final_completion_claim": {
+      "numerator": 2,
+      "denominator": 4,
+      "rate": 0.5
+    },
+    "retain_only_accepted_tasks_circular": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    }
+  },
+  "human_correction_minutes": null,
+  "human_intervention_count": null,
+  "waiting_minutes": null,
+  "task_latency_seconds": null,
+  "total_measured_cost_per_accepted_outcome": null,
+  "manual_work_baseline": null,
+  "ledger": [
+    {
+      "task_id": "T1",
+      "disposition": "accepted",
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_complete": true,
+          "accepted": true,
+          "errors": []
+        }
+      ],
+      "retry_count": 0,
+      "final_claimed_complete": true,
+      "final_accepted": true,
+      "human_correction_minutes": null,
+      "human_intervention_count": null,
+      "waiting_minutes": null,
+      "task_latency_seconds": null,
+      "total_cost": null
+    },
+    {
+      "task_id": "T2",
+      "disposition": "failed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_complete": true,
+          "accepted": false,
+          "errors": [
+            "incorrect field: due_date"
+          ]
+        }
+      ],
+      "retry_count": 0,
+      "final_claimed_complete": true,
+      "final_accepted": false,
+      "human_correction_minutes": null,
+      "human_intervention_count": null,
+      "waiting_minutes": null,
+      "task_latency_seconds": null,
+      "total_cost": null
+    },
+    {
+      "task_id": "T3",
+      "disposition": "requires_correction_not_performed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_complete": true,
+          "accepted": false,
+          "errors": [
+            "incorrect field: amount_cents"
+          ]
+        }
+      ],
+      "retry_count": 0,
+      "final_claimed_complete": true,
+      "final_accepted": false,
+      "human_correction_minutes": null,
+      "human_intervention_count": null,
+      "waiting_minutes": null,
+      "task_latency_seconds": null,
+      "total_cost": null
+    },
+    {
+      "task_id": "T4",
+      "disposition": "accepted_after_retry",
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_complete": false,
+          "accepted": false,
+          "errors": [
+            "missing structured output"
+          ]
+        },
+        {
+          "attempt": 2,
+          "claimed_complete": true,
+          "accepted": true,
+          "errors": []
+        }
+      ],
+      "retry_count": 1,
+      "final_claimed_complete": true,
+      "final_accepted": true,
+      "human_correction_minutes": null,
+      "human_intervention_count": null,
+      "waiting_minutes": null,
+      "task_latency_seconds": null,
+      "total_cost": null
+    },
+    {
+      "task_id": "T5",
+      "disposition": "abandoned_before_attempt",
+      "attempts": [],
+      "retry_count": 0,
+      "final_claimed_complete": false,
+      "final_accepted": false,
+      "human_correction_minutes": null,
+      "human_intervention_count": null,
+      "waiting_minutes": null,
+      "task_latency_seconds": null,
+      "total_cost": null
+    }
+  ]
+}
