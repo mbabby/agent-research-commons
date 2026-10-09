@@ -8,3 +8,16 @@
 @media(max-width:1000px){header{flex-wrap:wrap;padding-top:18px}header>.github{margin-left:auto}nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:0 20px}nav a{padding:18px 0 13px;white-space:nowrap}}
 
 .community-body { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 80ch; }
+
+/* Evidence panels stay readable without scripts or horizontal tables. */
+.community-nav{display:flex;margin:0;gap:12px 24px;flex-wrap:wrap;padding:16px 0;border-block:1px solid var(--line)}
+.community-nav a{padding:8px 0;font-size:14px;color:var(--green)}
+.collaboration-panel{border:1px solid var(--line);border-radius:6px;padding:24px;margin:24px 0;background:#fbfaf7;overflow-wrap:anywhere}
+.collaboration-panel h2,.collaboration-panel h3{line-height:1.4;margin-top:0}
+.collaboration-panel a,.collaboration-timeline a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.collaboration-panel code{font-size:13px;overflow-wrap:anywhere}
+.collaboration-panel .actions{flex-wrap:wrap;margin-top:18px}
+.review-checks{margin:20px 0}.review-checks>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;border-top:1px solid var(--line);padding:16px 0}
+.review-checks dt{font-weight:600}.review-checks dd{margin:0}.review-checks p{white-space:pre-wrap;margin-bottom:0}
+.collaboration-timeline li{padding:10px 0}.collaboration-timeline p{font-size:14px;color:var(--muted);margin:4px 0}
+@media(max-width:720px){.collaboration-panel{padding:18px}.review-checks>div{grid-template-columns:1fr;gap:8px}.actions{flex-wrap:wrap}.community-nav{gap:0 20px}}

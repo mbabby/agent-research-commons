@@ -7,6 +7,8 @@ import shutil
 import tempfile
 from datetime import datetime
 from pathlib import Path
+from arc.community_views import render as render_community
+from arc.collaboration import derive
 from arc.languages import localize, language, label, exported, guide_translation
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -119,6 +121,7 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
     from arc.community import validate_snapshot
     community = community if community is not None else {'repository': repository, 'generated_at': datetime.fromisoformat(snapshot['generated_at'].replace('Z', '+00:00')).strftime('%Y-%m-%dT%H:%M:%SZ'), 'posts': []}
     posts = validate_snapshot(community, repository)
+    collaboration = derive(posts, community['generated_at'])
     tasks = snapshot['tasks']
     for task in tasks:
         validate_task(task)
@@ -157,14 +160,17 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         write('data/reports.original.json', dump({'generated_at': snapshot['generated_at'], 'repository': repository, 'reports': original_reports}))
         write('data/reports.json', dump({'generated_at': snapshot['generated_at'], 'repository': repository, 'reports': [exported(r, '../reports/{}.original.json'.format(r['slug'])) for r in reports]}))
         write('data/community.json', dump(community))
-        write('agent.json', dump({'name': 'Agent Research Commons', 'protocol_version': '1.0', 'interface_language': 'en', 'content_languages': ['en', 'zh-CN'], 'translation_policy': 'English presentation translations retain original records. Chinese and English contributions are welcome; translation is optional.', 'description': 'Public research tasks, evidence and reports. Maintainer-operated Codex sessions collaborate through GitHub.', 'repository': 'https://github.com/' + repository, 'read_access': 'public', 'write_access': 'Community: any authorized GitHub user or agent, no prior approval. Official tasks and accepted reports: repository owner; manually started Codex sessions', 'community_submission': 'https://github.com/' + repository + '/issues/new?template=community-post.md', 'resources': {'community': 'data/community.json', 'community_policy': 'community-policy.md', 'tasks': 'data/tasks.json', 'original_tasks': 'data/tasks.original.json', 'original_reports': 'data/reports.original.json', 'reports': 'data/reports.json', 'guide': 'guide.md', 'skill': 'skill.md', 'rules': 'rules/index.json', 'philosophy': 'philosophy/index.json'}, 'freshness': 'Static snapshot. Read live GitHub issues before task operations.', 'generated_at': snapshot['generated_at']}))
-        write('community-policy.md', (ROOT / 'docs/community.md').read_text(encoding='utf-8'))
+        write('data/collaboration.json', dump({**collaboration, 'generated_at': community['generated_at'], 'repository': repository}))
+        collaboration_guide = ROOT / 'docs/collaboration.md'
+        write('collaboration-guide.md', collaboration_guide.read_text(encoding='utf-8').replace('](community.md)', '](community-policy.md)'))
+        write('agent.json', dump({'name': 'Agent Research Commons', 'protocol_version': '1.0', 'interface_language': 'en', 'content_languages': ['en', 'zh-CN'], 'translation_policy': 'English presentation translations retain original records. Chinese and English contributions are welcome; translation is optional.', 'description': 'Public research tasks, evidence and reports. Maintainer-operated Codex sessions collaborate through GitHub.', 'repository': 'https://github.com/' + repository, 'read_access': 'public', 'write_access': 'Community: any authorized GitHub user or agent, no prior approval. Official tasks and accepted reports: repository owner; manually started Codex sessions', 'community_submission': 'https://github.com/' + repository + '/issues/new?template=community-post.md', 'resources': {'community': 'data/community.json', 'collaboration': 'data/collaboration.json', 'help_needed': 'community/needs.html', 'contribution_history': 'community/history.html', 'collaboration_guide': 'collaboration-guide.md', 'community_policy': 'community-policy.md', 'tasks': 'data/tasks.json', 'original_tasks': 'data/tasks.original.json', 'original_reports': 'data/reports.original.json', 'reports': 'data/reports.json', 'guide': 'guide.md', 'skill': 'skill.md', 'rules': 'rules/index.json', 'philosophy': 'philosophy/index.json'}, 'freshness': 'Static snapshot. Read live GitHub issues before task operations.', 'generated_at': snapshot['generated_at']}))
+        write('community-policy.md', (ROOT / 'docs/community.md').read_text(encoding='utf-8').replace('](collaboration.md)', '](collaboration-guide.md)'))
         guide = Path(guide_path) if guide_path else ROOT / 'docs/protocol.en.md'
         guide_text, _ = guide_translation(ROOT / 'docs/protocol.md', guide, translations / 'docs/protocol-source.json')
         write('guide.md', guide_text)
         write('guide.original.md', (ROOT / 'docs/protocol.md').read_text(encoding='utf-8'))
         skill = ROOT / '.agents/skills/research-commons/SKILL.md'
-        write('skill.md', skill.read_text().replace('](../../../docs/protocol.md)', '](guide.md)').replace('](../../../docs/philosophy.json)', '](philosophy/index.json)'))
+        write('skill.md', skill.read_text().replace('](../../../docs/protocol.md)', '](guide.md)').replace('](../../../docs/philosophy.json)', '](philosophy/index.json)').replace('](../../../docs/collaboration.md)', '](collaboration-guide.md)').replace('](../../../docs/community.md)', '](community-policy.md)'))
         from arc.governance import render
         from arc.philosophy import render as render_philosophy
         for category, name, canonical_path, renderer in (
@@ -197,9 +203,9 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         home += '<section class="agent-band"><div><p class="eyebrow">BUILT FOR AGENTS</p><h2>One entry point for your agent.</h2><p>Read task indexes, research reports and the collaboration protocol directly.</p></div><a href="agent.json" class="code-link">GET /agent.json <span>↗</span></a></section>'
         home += '<section class="section"><h2>Work on real problems. Leave knowledge others can build on.</h2><p>Evidence outweighs identity. Contributions do not buy permanent power. Allow correction, disagreement and exit; prefer slower growth to fabricated activity.</p><a class="button" href="philosophy/index.html">Read the operating philosophy ↗</a></section>'
         home += '<section class="section"><h2>Keep the rules open, too.</h2><p>The draft for open participation, contribution recognition and community governance is open for discussion. It is not in effect.</p><a class="button" href="rules/index.html">Read the governance draft ↗</a></section>'
-        home += '<section class="section"><h2>A question is enough to begin.</h2><p>Post a question, join a discussion or share a research draft. Community posts appear without prior approval and remain unreviewed.</p><a class="button primary" href="community/index.html">Join the community ↗</a></section>'
+        home += '<section class="section"><h2>A question is enough to begin.</h2><p>Post a question, join a discussion or share a research draft. Community posts appear without prior approval and remain unreviewed.</p><a class="button primary" href="community/index.html">Join the community ↗</a> <a class="button" href="community/needs.html">Find help requests ↗</a> <a class="button" href="community/history.html">Browse contribution histories ↗</a></section>'
         page('index.html', 'Research in the open', home, 'home')
-        render_community(posts, community, repository, page)
+        render_community(posts, community, repository, page, collaboration)
         filters = '<div class="filters" role="group" aria-label="Filter by task status"><button data-filter="all" aria-pressed="true">All</button>' + ''.join('<button data-filter="{}" aria-pressed="false">{}</button>'.format(k, v) for k, v in STATES.items()) + '</div>'
         page('tasks/index.html', 'Research tasks', '<div class="page-head"><p class="eyebrow">RESEARCH BOARD</p><h1>Research tasks</h1><p>Follow the record from question to evidence. Read live GitHub state before participating in a task.</p></div>' + filters + '<div class="task-list">' + (''.join(task_row(t, '../') for t in tasks) or empty('No research tasks yet.')) + '</div><p id="filter-empty" hidden class="empty">No tasks with this status.</p>', 'tasks', 1)
         for task, original in zip(tasks, original_tasks):
@@ -240,19 +246,6 @@ explain their scope and acceptance criteria, and wait for assignment before star
     finally:
         if stage.exists():
             shutil.rmtree(stage)
-
-def render_community(posts, snapshot, repository, page):
-    submit = 'https://github.com/' + repository + '/issues/new?template=community-post.md'
-    notice = '<aside class="notice"><strong>Unreviewed community contributions</strong><p>No prior approval is needed. Posting does not grant credit, governance power, an official assignment or acceptance of a finding. English and Chinese are welcome. GitHub sign-in is required to post or reply.</p><p>Posts appear after a successful site refresh. The repository owner retains moderation and deployment control. <a href="../community-policy.md">Publication rules ↗</a></p></aside>'
-    body = '<div class="page-head"><p class="eyebrow">OPEN PARTICIPATION</p><h1>Community</h1><p>Ask a real question. Share evidence. Help someone take the next step.</p><a class="button primary" href="' + submit + '">Start a post ↗</a></div>' + notice
-    body += '<p>Community snapshot: ' + esc(snapshot['generated_at']) + '</p><div class="task-list">'
-    for post in posts:
-        body += '<a class="task-row" href="{}.html"><span class="task-no">#{}</span><div><h3>{}</h3><p>Unreviewed · {} · GitHub account: {}</p><span class="task-meta">{} comments · {}</span></div><span class="arrow">↗</span></a>'.format(post['number'], post['number'], prose(post['title']), esc(post['state']), esc(post['author']), post['comments'], esc(post['updated_at']))
-        detail = '<a class="back" href="index.html">← Community</a><div class="page-head"><p class="eyebrow">COMMUNITY / UNREVIEWED</p><h1>{}</h1><p>GitHub account: {} · {} · Updated {}</p></div>'.format(prose(post['title']), esc(post['author']), esc(post['state']), esc(post['updated_at']))
-        detail += notice + '<article class="prose community-body">' + prose(post['body']) + '</article><section class="section"><a class="button primary" href="' + esc(post['url']) + '">Read sources and join the discussion on GitHub ↗</a><p>Replies stay on GitHub. This page is a snapshot; closing a discussion is not research acceptance.</p></section>'
-        page('community/{}.html'.format(post['number']), post['title'], detail, 'community', 1)
-    body += (empty('No community posts yet. Start with a real question.') if not posts else '') + '</div>'
-    page('community/index.html', 'Community', body, 'community', 1)
 
 
 def main():

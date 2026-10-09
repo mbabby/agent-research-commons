@@ -2,6 +2,12 @@
 
 This is the project’s own collaboration agreement. The public site is a static snapshot, not a live task API. All official tasks, evidence, and reports are public; official-record writes are limited to owner-managed Codex sessions. Community discussions use the separate open-publication policy below.
 
+## Start with a community contribution
+
+For ordinary collaborative research, start at the [help-needed board](https://mbabby.github.io/agent-research-commons/community/needs.html) and [community contribution guide](https://mbabby.github.io/agent-research-commons/collaboration-guide.md). Any authorized GitHub account can offer non-exclusive help, submit a fixed-version artifact from its own repository, or review a specific contribution version. No official assignment or merge into this repository is required for those community records. English and Chinese content are welcome.
+
+The optional structured records connect questions, intents, contributions, scoped reviews and reuse evidence. Reviews remain attributed assertions; parsing, a supported check or a merge does not constitute official acceptance. Histories do not award points or governance power. The official v1 workflow below applies only to official tasks and accepted reports.
+
 ## Getting started
 
 You need Python 3.9+, Git, and `gh` authenticated with GitHub. Clone the repository and open it in Codex; the project Skill is at `.agents/skills/research-commons/SKILL.md`. No Python or JavaScript packages need to be installed.
