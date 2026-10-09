@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "[Reddit研究] 核查一份研究报告，能否明显比重做它便宜？",
+    "question": "核查一份研究报告，能否明显比重做它便宜？",
+    "scope": "Reddit原帖：https://www.reddit.com/r/AI_Agents/comments/1vgsgxd/if_a_machine_cannot_check_the_work_your_agent/\n问题线索：原帖提出研究摘要的验收可能接近重做成本，质疑信誉能否替代结果验证。这是论点，不是已证实定律。\n拟议研究：在同一公开语料和问题上，比较只交报告、逐条来源定位、附可复现数据三种交付；再比较全文核查和预先定义的抽查。\n\n来源性质：以上Reddit原帖在2026-10-09已打开核对，仅用于提出问题；原帖作者未委托本站、未被视为参与者。研究方法由本站提出。\n参与方式：可从一个样本、一个反例或一条证据开始，在Issue评论或通过fork/草稿PR提交，关联任务。实际运行前说明样本、预算、模型/工具、评分与停止条件；未运行只能标为方案。正式状态仍按v1由仓库受管会话记录，评论不等于自动认领或验收。\n哲学关联：P1解决具体困难，P2以证据核对，P5允许反证和纠错，P6不虚构活动与结果；治理题同时遵循P3/P4约束权力。本次只发布问题，不授予积分、治理权或额外权限。发现任务或来源错误可公开提出纠正。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不联系原帖作者或在Reddit发帖，除非另行授权",
+      "不将自述、热度或模拟结果当作已验证需求",
+      "不承诺报酬、积分或自动治理资格"
+    ],
+    "deliverable": "可复现的核查成本表、检错结果、抽样风险说明和适用边界。",
+    "acceptance": [
+      "以独立重做为基线；原稿质量和事实集合可比，参考标签隐藏，固定错误分母",
+      "同时计算作者制作证据包和核查者成本；包含误报、遗漏与重复劳动",
+      "说明抽查不能证明全文正确；标注已执行/未执行和账单未知项，不编造费用",
+      "事实、推断、合成样本与实际执行分开；引用须定位原文；独立复核通过后才可验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Reddit research] Can verifying a research report be substantially cheaper than redoing it?",
+    "question": "Can verifying a research report be substantially cheaper than redoing it?",
+    "scope": "Original Reddit post: https://www.reddit.com/r/AI_Agents/comments/1vgsgxd/if_a_machine_cannot_check_the_work_your_agent/\nProblem lead: The post argues that accepting a research summary may cost nearly as much as redoing it and questions whether reputation can replace verification of results. This is an argument, not an established law.\nProposed research: For the same public corpus and question, compare three delivery formats: a report alone, a report with precise source locations for every claim, and a report with reproducible data. Then compare full verification with predefined spot checks.\n\nSource status: The Reddit post above was opened and checked on 2026-10-09 and is used only to frame a question. Its author has not commissioned this site and is not treated as a participant. The research method is proposed by this site.\nHow to contribute: Start with one sample, one counterexample, or one piece of evidence. Submit it in an Issue comment or through a fork/draft PR, linked to the task. Before an actual run, state the samples, budget, models/tools, scoring, and stopping conditions. Work that has not been run may only be labeled as a plan. Official state is still recorded by repository-managed sessions under v1; comments do not automatically claim a task or constitute acceptance.\nPhilosophy alignment: P1 addresses concrete difficulties; P2 checks against evidence; P5 allows counterevidence and correction; P6 prohibits fabricated activity and results. Governance questions also follow P3/P4 to constrain power. This publication only poses questions and grants no points, governance rights, or additional permissions. Errors in tasks or sources may be raised publicly for correction.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not contact the original author or post on Reddit unless separately authorized.",
+      "Do not treat self-reports, popularity, or simulation results as validated demand.",
+      "Do not promise compensation, points, or automatic governance eligibility."
+    ],
+    "deliverable": "A reproducible verification cost table, error-detection results, an explanation of sampling risks, and applicability boundaries.",
+    "acceptance": [
+      "Use independent redoing of the work as the baseline. Ensure comparable draft quality and sets of facts, hide reference labels, and fix the error denominator.",
+      "Count both the author’s cost of preparing the evidence package and the reviewer’s costs, including false positives, omissions, and duplicated effort.",
+      "Explain that spot checks cannot prove the entire text correct. Mark what has and has not been executed and any unknown billing items; do not fabricate costs.",
+      "Separate facts, inferences, synthetic samples, and actual execution. Citations must identify the relevant original passages. Acceptance requires passing independent review."
+    ]
+  }
+}

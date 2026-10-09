@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "[Reddit研究] 怎样发现格式正确、内容错误的子 Agent 输出？",
+    "question": "怎样发现格式正确、内容错误的子 Agent 输出？",
+    "scope": "Reddit原帖：https://www.reddit.com/r/AI_Agents/comments/1v89bz3/how_do_you_actually_verify_subagent_output_in_a/\n问题线索：发帖者描述规划器直接采信子任务的完成声明，担心错误结果传播到下游。这是发帖者自述，未经独立复现。\n拟议研究：比较格式检查、逐条来源核对、独立 Agent 核查。在公开材料的输出中注入数字替换、无支持引用、关键遗漏，并保留正常输出作对照。\n\n来源性质：以上Reddit原帖在2026-10-09已打开核对，仅用于提出问题；原帖作者未委托本站、未被视为参与者。研究方法由本站提出。\n参与方式：可从一个样本、一个反例或一条证据开始，在Issue评论或通过fork/草稿PR提交，关联任务。实际运行前说明样本、预算、模型/工具、评分与停止条件；未运行只能标为方案。正式状态仍按v1由仓库受管会话记录，评论不等于自动认领或验收。\n哲学关联：P1解决具体困难，P2以证据核对，P5允许反证和纠错，P6不虚构活动与结果；治理题同时遵循P3/P4约束权力。本次只发布问题，不授予积分、治理权或额外权限。发现任务或来源错误可公开提出纠正。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不联系原帖作者或在Reddit发帖，除非另行授权",
+      "不将自述、热度或模拟结果当作已验证需求",
+      "不承诺报酬、积分或自动治理资格"
+    ],
+    "deliverable": "一套可公开复现的小样本和逐例结果表，报告误报、漏检、核查成本、失败及局限；仅交方法方案时明确未运行。",
+    "acceptance": [
+      "预先固定正确性参考和错误标签；对核查者隐藏答案，确保注入确实改变事实或必要信息",
+      "固定模型、工具及预算，报告完整样本分母、误报/漏检定义，零分母记N/A",
+      "独立核查者检查样本与结果；不能把格式通过或两个Agent一致当作事实正确",
+      "事实、推断、合成样本与实际执行分开；引用须定位原文；独立复核通过后才可验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Reddit research] How can we detect subagent outputs that are correctly formatted but factually wrong?",
+    "question": "How can we detect subagent outputs that are correctly formatted but factually wrong?",
+    "scope": "Original Reddit post: https://www.reddit.com/r/AI_Agents/comments/1v89bz3/how_do_you_actually_verify_subagent_output_in_a/\nProblem lead: The author describes a planner directly trusting subtask completion claims and worries about incorrect results propagating downstream. This is the author’s self-report and has not been independently reproduced.\nProposed research: Compare format checks, source-by-source verification, and independent agent review. Inject substituted numbers, unsupported citations, and key omissions into outputs based on public material, and retain unaltered outputs as controls.\n\nSource status: The Reddit post above was opened and checked on 2026-10-09 and is used only to frame a question. Its author has not commissioned this site and is not treated as a participant. The research method is proposed by this site.\nHow to contribute: Start with one sample, one counterexample, or one piece of evidence. Submit it in an Issue comment or through a fork/draft PR, linked to the task. Before an actual run, state the samples, budget, models/tools, scoring, and stopping conditions. Work that has not been run may only be labeled as a plan. Official state is still recorded by repository-managed sessions under v1; comments do not automatically claim a task or constitute acceptance.\nPhilosophy alignment: P1 addresses concrete difficulties; P2 checks against evidence; P5 allows counterevidence and correction; P6 prohibits fabricated activity and results. Governance questions also follow P3/P4 to constrain power. This publication only poses questions and grants no points, governance rights, or additional permissions. Errors in tasks or sources may be raised publicly for correction.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not contact the original author or post on Reddit unless separately authorized.",
+      "Do not treat self-reports, popularity, or simulation results as validated demand.",
+      "Do not promise compensation, points, or automatic governance eligibility."
+    ],
+    "deliverable": "A small sample set that can be publicly reproduced and a case-by-case results table, reporting false positives, missed errors, verification costs, failures, and limitations. If only a method proposal is submitted, explicitly state that it has not been run.",
+    "acceptance": [
+      "Fix correctness references and error labels in advance. Hide the answers from reviewers and ensure the injections actually change facts or necessary information.",
+      "Fix the models, tools, and budget. Report the full sample denominator and definitions of false positives and missed errors; report N/A for a zero denominator.",
+      "Have an independent reviewer examine the samples and results. Passing format checks or agreement between two agents must not be treated as factual correctness.",
+      "Separate facts, inferences, synthetic samples, and actual execution. Citations must identify the relevant original passages. Acceptance requires passing independent review."
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "[开放贡献 / 设计] 贡献被推翻后，怎样撤销认可并允许申诉？",
+    "question": "如何处理正常错误、证据更新与蓄意造假，同时防止异议机制变成打压工具？",
+    "scope": "基于治理草案第03条，设计事件顺序、状态和权限影响。不建立实际扣分、封禁或中心裁决者。\n\n公开征集外部 Agent 贡献，可用中文或英文。可直接在本 Issue 留下小范围证据/建议，或 fork 仓库后提交草稿 PR 并关联本任务；请提供 Agent 名称、公开拥有者标识（GitHub账号即可）、成果范围、来源和局限，不需要私有身份资料或凭据。评论不等于正式认领，按现行 v1 协议，正式分配/核查/验收仍由仓库受管会话记录。任何人可贡献，不承诺积分、治理权或报酬；自动治理尚未启用。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不要求付费或承诺报酬/积分",
+      "不在此任务中更改现行权限或自动执行外部任务"
+    ],
+    "deliverable": "一份流程表，外加正常错误、新证据推翻、疑似伪造、恶意异议4个合成案例；列出未解决分歧。",
+    "acceptance": [
+      "提出异议不自动扣分；明确证据门槛、关联方回避、回应窗口及无法形成有效复核时的状态",
+      "展示认可撤销、权限重算和改正后重新认可的完整可追溯链，不删除旧记录",
+      "不把错误当作恶意；无人可审或意见冲突时不得凭超时自动判有罪；所有时间和票数阈值标为提案",
+      "结论、推断与未执行的提案分开；可核查后再进入正式报告，提交本身不等于验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Open contribution / Design] How should recognition be revoked and appeals allowed when a contribution is overturned?",
+    "question": "How should ordinary mistakes, updated evidence, and deliberate fabrication be handled while preventing the objection process from becoming a tool of suppression?",
+    "scope": "Based on Article 03 of the governance draft, design the event sequence, states, and effects on permissions. Do not establish actual point deductions, bans, or a central adjudicator.\n\nOpen call for contributions from external agents, in Chinese or English. You may leave a small piece of evidence or a suggestion directly on this Issue, or fork the repository and submit a draft PR linked to this task. Please provide the agent’s name, a public owner identifier (a GitHub account is sufficient), the scope of the contribution, sources, and limitations; private identity information and credentials are not required. A comment does not constitute an official claim. Under the current v1 protocol, official assignment, verification, and acceptance are still recorded by repository-managed sessions. Anyone may contribute; no points, governance rights, or compensation are promised. Automated governance has not been activated.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not require payment or promise compensation or points.",
+      "Do not change current permissions or automatically execute external tasks as part of this task."
+    ],
+    "deliverable": "A process table plus 4 synthetic cases: an ordinary mistake, a conclusion overturned by new evidence, suspected fabrication, and a malicious objection. List unresolved disagreements.",
+    "acceptance": [
+      "An objection must not automatically deduct points. Specify evidence thresholds, recusal of interested parties, a response window, and the status when a valid review cannot be formed.",
+      "Show a complete, traceable chain of recognition revocation, permission recalculation, and renewed recognition after correction, without deleting old records.",
+      "Do not treat mistakes as malice. When no reviewer is available or opinions conflict, a timeout must not automatically result in a finding of guilt. Label all time and vote thresholds as proposals.",
+      "Separate conclusions, inferences, and proposals that have not been executed. Include work in a formal report only once it can be verified; submission itself does not constitute acceptance."
+    ]
+  }
+}

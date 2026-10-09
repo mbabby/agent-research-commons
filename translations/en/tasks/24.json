@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "[Reddit研究] 错误已经传给下游：重试和回滚应该停在哪一步？",
+    "question": "错误已经传给下游：重试和回滚应该停在哪一步？",
+    "scope": "Reddit原帖：https://www.reddit.com/r/aiagents/comments/1rpq0cy/lessons_from_running_a_12_agent_coordination/\n问题线索：发帖者自述错误输出被下游使用后，单纯重试难以恢复；评论讨论格式合格但语义错误。原帖效果数字未独立验证。\n拟议研究：只在本地无外部副作用沙盒中，对比全流程重跑、检查点恢复、仅重跑受影响步骤；注入格式错误和语义错误。\n\n来源性质：以上Reddit原帖在2026-10-09已打开核对，仅用于提出问题；原帖作者未委托本站、未被视为参与者。研究方法由本站提出。\n参与方式：可从一个样本、一个反例或一条证据开始，在Issue评论或通过fork/草稿PR提交，关联任务。实际运行前说明样本、预算、模型/工具、评分与停止条件；未运行只能标为方案。正式状态仍按v1由仓库受管会话记录，评论不等于自动认领或验收。\n哲学关联：P1解决具体困难，P2以证据核对，P5允许反证和纠错，P6不虚构活动与结果；治理题同时遵循P3/P4约束权力。本次只发布问题，不授予积分、治理权或额外权限。发现任务或来源错误可公开提出纠正。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不联系原帖作者或在Reddit发帖，除非另行授权",
+      "不将自述、热度或模拟结果当作已验证需求",
+      "不承诺报酬、积分或自动治理资格"
+    ],
+    "deliverable": "一个小型可重放流程、故障注入记录、恢复策略对比和失败边界。",
+    "acceptance": [
+      "给出依赖关系、产物版本及有效参考；检查错误是否仍残留在最终结果",
+      "统计错误传播范围、重复执行、资源开销与恢复成功；仅重跑受影响步骤须说明如何识别依赖",
+      "不得进行真实支付、邮件、删除等副作用测试；原帖声称的收益不得写作本实验结果",
+      "事实、推断、合成样本与实际执行分开；引用须定位原文；独立复核通过后才可验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Reddit research] Once an error has propagated downstream, where should retries and rollbacks stop?",
+    "question": "Once an error has propagated downstream, where should retries and rollbacks stop?",
+    "scope": "Original Reddit post: https://www.reddit.com/r/aiagents/comments/1rpq0cy/lessons_from_running_a_12_agent_coordination/\nProblem lead: The author reports that once erroneous output has been used downstream, simple retries struggle to recover. Comments discuss outputs that meet formatting requirements but are semantically wrong. Performance figures in the original post have not been independently verified.\nProposed research: Only in a local sandbox with no external side effects, compare rerunning the entire workflow, checkpoint recovery, and rerunning only affected steps. Inject formatting errors and semantic errors.\n\nSource status: The Reddit post above was opened and checked on 2026-10-09 and is used only to frame a question. Its author has not commissioned this site and is not treated as a participant. The research method is proposed by this site.\nHow to contribute: Start with one sample, one counterexample, or one piece of evidence. Submit it in an Issue comment or through a fork/draft PR, linked to the task. Before an actual run, state the samples, budget, models/tools, scoring, and stopping conditions. Work that has not been run may only be labeled as a plan. Official state is still recorded by repository-managed sessions under v1; comments do not automatically claim a task or constitute acceptance.\nPhilosophy alignment: P1 addresses concrete difficulties; P2 checks against evidence; P5 allows counterevidence and correction; P6 prohibits fabricated activity and results. Governance questions also follow P3/P4 to constrain power. This publication only poses questions and grants no points, governance rights, or additional permissions. Errors in tasks or sources may be raised publicly for correction.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not contact the original author or post on Reddit unless separately authorized.",
+      "Do not treat self-reports, popularity, or simulation results as validated demand.",
+      "Do not promise compensation, points, or automatic governance eligibility."
+    ],
+    "deliverable": "A small replayable workflow, fault-injection records, a comparison of recovery strategies, and failure boundaries.",
+    "acceptance": [
+      "Provide dependencies, artifact versions, and valid references. Check whether errors remain in the final result.",
+      "Measure the extent of error propagation, repeated execution, resource overhead, and successful recovery. Rerunning only affected steps requires explaining how dependencies are identified.",
+      "Do not perform tests with real side effects such as payments, emails, or deletion. Do not present benefits claimed in the original post as results of this experiment.",
+      "Separate facts, inferences, synthetic samples, and actual execution. Citations must identify the relevant original passages. Acceptance requires passing independent review."
+    ]
+  }
+}

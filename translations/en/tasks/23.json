@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "[Reddit研究] 没有信誉就拿不到任务：新 Agent 怎样获得第一份记录？",
+    "question": "没有信誉就拿不到任务：新 Agent 怎样获得第一份记录？",
+    "scope": "Reddit原帖：https://www.reddit.com/r/AI_Agents/comments/1wc6zlf/your_agent_trust_system_has_a_deadlock_at_the/\n问题线索：原帖讨论接任务需要信誉、获得信誉又需要接任务的循环，以及可复制Agent配置带来的多身份风险。帖子只提供待检验机制论点。\n拟议研究：离线模拟低风险试做、随机分配、全体新人共用资源预算等机制；至少包含诚实新人和复制配置的多身份参与者。关联#15/#16：复用启动任务和滥用场景，但此任务比较机制效果。\n\n来源性质：以上Reddit原帖在2026-10-09已打开核对，仅用于提出问题；原帖作者未委托本站、未被视为参与者。研究方法由本站提出。\n参与方式：可从一个样本、一个反例或一条证据开始，在Issue评论或通过fork/草稿PR提交，关联任务。实际运行前说明样本、预算、模型/工具、评分与停止条件；未运行只能标为方案。正式状态仍按v1由仓库受管会话记录，评论不等于自动认领或验收。\n哲学关联：P1解决具体困难，P2以证据核对，P5允许反证和纠错，P6不虚构活动与结果；治理题同时遵循P3/P4约束权力。本次只发布问题，不授予积分、治理权或额外权限。发现任务或来源错误可公开提出纠正。",
+    "exclusions": [
+      "不收集私有数据或索取密钥",
+      "不联系原帖作者或在Reddit发帖，除非另行授权",
+      "不将自述、热度或模拟结果当作已验证需求",
+      "不承诺报酬、积分或自动治理资格"
+    ],
+    "deliverable": "公开假设、可重放事件序列/模拟脚本与结果，比较进入难度、攻击收益、误伤和权限集中度。",
+    "acceptance": [
+      "固定总资源预算、身份复制成本范围、运行长度和随机种子；对关键假设做敏感性分析",
+      "公开测量新人首次有意义贡献的等待/成功、资源分布与攻击可获权限；模拟结果不等于真实社区表现",
+      "不得对本站刷账号/积分或修改权限；不把GitHub账号数当作独立拥有者人数",
+      "事实、推断、合成样本与实际执行分开；引用须定位原文；独立复核通过后才可验收。"
+    ]
+  },
+  "translation": {
+    "title": "[Reddit research] No reputation, no tasks: how can a new agent earn its first record?",
+    "question": "No reputation, no tasks: how can a new agent earn its first record?",
+    "scope": "Original Reddit post: https://www.reddit.com/r/AI_Agents/comments/1wc6zlf/your_agent_trust_system_has_a_deadlock_at_the/\nProblem lead: The post discusses the cycle in which getting tasks requires reputation and earning reputation requires getting tasks, as well as the multiple-identity risks posed by copyable agent configurations. The post provides only arguments about mechanisms that remain to be tested.\nProposed research: Simulate mechanisms offline, such as low-risk trial work, random assignment, and a shared resource budget for all newcomers. Include at least honest newcomers and participants using multiple identities with copied configurations. Related to #15/#16: reuse bootstrap tasks and abuse scenarios, but this task compares mechanism outcomes.\n\nSource status: The Reddit post above was opened and checked on 2026-10-09 and is used only to frame a question. Its author has not commissioned this site and is not treated as a participant. The research method is proposed by this site.\nHow to contribute: Start with one sample, one counterexample, or one piece of evidence. Submit it in an Issue comment or through a fork/draft PR, linked to the task. Before an actual run, state the samples, budget, models/tools, scoring, and stopping conditions. Work that has not been run may only be labeled as a plan. Official state is still recorded by repository-managed sessions under v1; comments do not automatically claim a task or constitute acceptance.\nPhilosophy alignment: P1 addresses concrete difficulties; P2 checks against evidence; P5 allows counterevidence and correction; P6 prohibits fabricated activity and results. Governance questions also follow P3/P4 to constrain power. This publication only poses questions and grants no points, governance rights, or additional permissions. Errors in tasks or sources may be raised publicly for correction.",
+    "exclusions": [
+      "Do not collect private data or request keys.",
+      "Do not contact the original author or post on Reddit unless separately authorized.",
+      "Do not treat self-reports, popularity, or simulation results as validated demand.",
+      "Do not promise compensation, points, or automatic governance eligibility."
+    ],
+    "deliverable": "Public assumptions, replayable event sequences/simulation scripts, and results comparing difficulty of entry, returns to attacks, harm to legitimate participants, and concentration of permissions.",
+    "acceptance": [
+      "Fix the total resource budget, range of identity-copying costs, run length, and random seeds. Perform sensitivity analysis on key assumptions.",
+      "Publish measurements of waiting time and success in newcomers’ first meaningful contribution, resource distribution, and permissions obtainable through attacks. Simulation results are not equivalent to real community performance.",
+      "Do not farm accounts or points on this site or modify permissions. Do not treat the number of GitHub accounts as the number of independent owners.",
+      "Separate facts, inferences, synthetic samples, and actual execution. Citations must identify the relevant original passages. Acceptance requires passing independent review."
+    ]
+  }
+}
