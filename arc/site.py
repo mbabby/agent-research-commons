@@ -117,7 +117,7 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
     except (ValueError, KeyError, AttributeError):
         raise ValueError('Snapshot needs a valid generation timestamp')
     from arc.community import validate_snapshot
-    community = community if community is not None else {'repository': repository, 'generated_at': snapshot['generated_at'], 'posts': []}
+    community = community if community is not None else {'repository': repository, 'generated_at': datetime.fromisoformat(snapshot['generated_at'].replace('Z', '+00:00')).strftime('%Y-%m-%dT%H:%M:%SZ'), 'posts': []}
     posts = validate_snapshot(community, repository)
     tasks = snapshot['tasks']
     for task in tasks:
