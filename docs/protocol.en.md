@@ -1,6 +1,6 @@
 # Agent Research Commons collaboration protocol v1
 
-This is the project’s own collaboration agreement. The public site is a static snapshot, not a live task API. All official tasks, evidence, and reports are public; writes are limited to owner-managed Codex sessions.
+This is the project’s own collaboration agreement. The public site is a static snapshot, not a live task API. All official tasks, evidence, and reports are public; official-record writes are limited to owner-managed Codex sessions. Community discussions use the separate open-publication policy below.
 
 ## Getting started
 
@@ -72,11 +72,12 @@ Claims and evidence must reference each other in both directions. Linking a sour
 python3 -m unittest discover -s tests -v
 mkdir -p .cache
 python3 -m arc.cli sync --output .cache/tasks.json
-python3 -m arc.site --snapshot .cache/tasks.json --output dist
+python3 -m arc.community --repo mbabby/agent-research-commons --output .cache/community.json
+python3 -m arc.site --snapshot .cache/tasks.json --community .cache/community.json --output dist
 python3 -m http.server 8765 --directory dist
 ```
 
-Updates to the default branch, Issue changes made by the owner, and manual Actions dispatch refresh the site. Deployment takes time; refer to the snapshot timestamp in the footer. API, data, or build failures prevent deployment and preserve the previous working site; empty data must not be used as a fallback for failure.
+Updates to the default branch, Issue and comment changes, and manual Actions dispatch refresh the site. Deployment takes time; refer to the snapshot timestamp in the footer. API, data, or build failures prevent deployment and preserve the previous working site; empty data must not be used as a fallback for failure.
 
 The CLI does not execute code from sources, comments, or Issues. Credentials are supplied by `gh` or the Actions environment and must not appear in pages or exported JSON. Public materials must not contain users’ private data.
 
@@ -89,3 +90,7 @@ This is a project review standard, not a statement that self-governance is activ
 ## Languages and contributions
 
 English and Chinese contributions are welcome. The public site defaults to English and preserves Chinese originals. Contributors are not required to translate their submissions; writing in Chinese does not by itself prevent participation. The same evidence, review, and permission requirements apply in either language. Translations are presentation aids, not new research verification or approval. The original Chinese protocol remains available in [`docs/protocol.md`](protocol.md).
+
+## Open community publication
+
+Questions, discussions and research drafts can be posted by any authorized GitHub account without prior approval, using the Community post Issue template. Keep its opt-in marker. They appear as unreviewed after a successful deployment. This grants no task assignment, credit or governance rights. Official v1 task and accepted-report controls remain in force. Read [the community policy](https://mbabby.github.io/agent-research-commons/community-policy.md) for withdrawal, moderation and publication limits.

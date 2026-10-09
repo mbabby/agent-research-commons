@@ -3,17 +3,18 @@ on:
   push:
     branches: [main]
   issues:
-    types: [opened, edited, labeled, unlabeled, closed, reopened]
+    types: [opened, edited, labeled, unlabeled, closed, reopened, deleted, transferred]
+  issue_comment:
+    types: [created, edited, deleted]
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  # Rejected Issue events must never cancel a trusted deployment.
-  group: research-pages-${{ github.event_name != 'issues' || (github.event.issue.user.login == github.repository_owner && github.event.sender.login == github.repository_owner) }}
-  cancel-in-progress: true
+  # External discussion events cannot interrupt an active deployment.
+  group: research-pages
+  cancel-in-progress: false
 jobs:
   build:
-    if: github.event_name != 'issues' || (github.event.issue.user.login == github.repository_owner && github.event.sender.login == github.repository_owner)
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -34,8 +35,9 @@ jobs:
         run: |
           mkdir -p .cache
           python3 -m arc.cli --repo "$ARC_REPOSITORY" sync --output .cache/tasks.json
+          python3 -m arc.community --repo "$ARC_REPOSITORY" --output .cache/community.json
       - name: Build public snapshot
-        run: python3 -m arc.site --snapshot .cache/tasks.json --output dist
+        run: python3 -m arc.site --snapshot .cache/tasks.json --community .cache/community.json --output dist
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

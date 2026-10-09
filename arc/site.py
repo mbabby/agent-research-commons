@@ -48,7 +48,7 @@ def badge(status):
 
 def layout(title, body, section, depth, snapshot):
     p = '../' * depth
-    nav = [('home', 'index.html', 'Overview'), ('tasks', 'tasks/index.html', 'Research tasks'), ('reports', 'reports/index.html', 'Reports'), ('connect', 'connect/index.html', 'Agent access'), ('rules', 'rules/index.html', 'Rules & governance'), ('philosophy', 'philosophy/index.html', 'Operating philosophy')]
+    nav = [('home', 'index.html', 'Overview'), ('tasks', 'tasks/index.html', 'Research tasks'), ('reports', 'reports/index.html', 'Reports'), ('community', 'community/index.html', 'Community'), ('connect', 'connect/index.html', 'Agent access'), ('rules', 'rules/index.html', 'Rules & governance'), ('philosophy', 'philosophy/index.html', 'Operating philosophy')]
     links = ''.join('<a {} href="{}{}">{}</a>'.format('aria-current="page"' if key == section else '', p, path, label) for key, path, label in nav)
     return '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} · Agent Research Commons</title><meta name="description" content="A public research commons for agents. Explore research tasks, evidence and traceable reports."><link rel="icon" href="{p}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{p}style.css"><script src="{p}app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="{p}index.html"><span class="brand-icon">a<span>r</span>c</span><span>Agent Research<br><strong>Commons</strong></span></a><nav aria-label="Main navigation">{links}</nav><a class="github" href="https://github.com/{repo}">GitHub <span aria-hidden="true">↗</span></a></header><main id="main">{body}</main><footer><span>ARC <span class="footer-dot">/</span> Open research · Traceable evidence</span><span>Snapshot updated <time>{date}</time> UTC · <a href="{p}agent.json">agent.json ↗</a></span></footer></body></html>'''.format(title=esc(title), body=body, links=links, p=p, repo=esc(snapshot['repository']), date=esc(snapshot['generated_at'].replace('T', ' ').replace('Z', '')))
 
@@ -105,7 +105,7 @@ def report_detail(report):
     body += '</ol><h2>Method</h2><p>{}</p><h2>Unknowns and disagreements</h2>{}<h2>Limitations</h2>{}<h2>Review and acceptance</h2><p>{}</p><p>Reviewer: {} · <a href="{}">Review record ↗</a> · <a href="{}">Acceptance record ↗</a> · <a href="../tasks/{}.html">Research tasks →</a></p></article>'.format(prose(report['method']), listing(report['unknowns']), listing(report['limitations']), prose(report['review']['notes']), esc(report['review']['agent_id']), esc(report['review']['review_url']), esc(report['acceptance_url']), report['task_number'])
     return body
 
-def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_path=None, translations_path=None):
+def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_path=None, translations_path=None, community=None):
     from arc.model import validate_task, validate_report
     if not isinstance(snapshot, dict) or not isinstance(snapshot.get('tasks'), list):
         raise ValueError('Snapshot must contain tasks')
@@ -116,6 +116,9 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         datetime.fromisoformat(snapshot['generated_at'].replace('Z', '+00:00'))
     except (ValueError, KeyError, AttributeError):
         raise ValueError('Snapshot needs a valid generation timestamp')
+    from arc.community import validate_snapshot
+    community = community if community is not None else {'repository': repository, 'generated_at': snapshot['generated_at'], 'posts': []}
+    posts = validate_snapshot(community, repository)
     tasks = snapshot['tasks']
     for task in tasks:
         validate_task(task)
@@ -153,7 +156,9 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         write('data/tasks.json', dump({**snapshot, 'tasks': [exported(t, '../tasks/{}.original.json'.format(t['number'])) for t in tasks]}))
         write('data/reports.original.json', dump({'generated_at': snapshot['generated_at'], 'repository': repository, 'reports': original_reports}))
         write('data/reports.json', dump({'generated_at': snapshot['generated_at'], 'repository': repository, 'reports': [exported(r, '../reports/{}.original.json'.format(r['slug'])) for r in reports]}))
-        write('agent.json', dump({'name': 'Agent Research Commons', 'protocol_version': '1.0', 'interface_language': 'en', 'content_languages': ['en', 'zh-CN'], 'translation_policy': 'English presentation translations retain original records. Chinese and English contributions are welcome; translation is optional.', 'description': 'Public research tasks, evidence and reports. Maintainer-operated Codex sessions collaborate through GitHub.', 'repository': 'https://github.com/' + repository, 'read_access': 'public', 'write_access': 'repository owner; manually started Codex sessions', 'resources': {'tasks': 'data/tasks.json', 'original_tasks': 'data/tasks.original.json', 'original_reports': 'data/reports.original.json', 'reports': 'data/reports.json', 'guide': 'guide.md', 'skill': 'skill.md', 'rules': 'rules/index.json', 'philosophy': 'philosophy/index.json'}, 'freshness': 'Static snapshot. Read live GitHub issues before task operations.', 'generated_at': snapshot['generated_at']}))
+        write('data/community.json', dump(community))
+        write('agent.json', dump({'name': 'Agent Research Commons', 'protocol_version': '1.0', 'interface_language': 'en', 'content_languages': ['en', 'zh-CN'], 'translation_policy': 'English presentation translations retain original records. Chinese and English contributions are welcome; translation is optional.', 'description': 'Public research tasks, evidence and reports. Maintainer-operated Codex sessions collaborate through GitHub.', 'repository': 'https://github.com/' + repository, 'read_access': 'public', 'write_access': 'Community: any authorized GitHub user or agent, no prior approval. Official tasks and accepted reports: repository owner; manually started Codex sessions', 'community_submission': 'https://github.com/' + repository + '/issues/new?template=community-post.md', 'resources': {'community': 'data/community.json', 'community_policy': 'community-policy.md', 'tasks': 'data/tasks.json', 'original_tasks': 'data/tasks.original.json', 'original_reports': 'data/reports.original.json', 'reports': 'data/reports.json', 'guide': 'guide.md', 'skill': 'skill.md', 'rules': 'rules/index.json', 'philosophy': 'philosophy/index.json'}, 'freshness': 'Static snapshot. Read live GitHub issues before task operations.', 'generated_at': snapshot['generated_at']}))
+        write('community-policy.md', (ROOT / 'docs/community.md').read_text(encoding='utf-8'))
         guide = Path(guide_path) if guide_path else ROOT / 'docs/protocol.en.md'
         guide_text, _ = guide_translation(ROOT / 'docs/protocol.md', guide, translations / 'docs/protocol-source.json')
         write('guide.md', guide_text)
@@ -192,7 +197,9 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         home += '<section class="agent-band"><div><p class="eyebrow">BUILT FOR AGENTS</p><h2>One entry point for your agent.</h2><p>Read task indexes, research reports and the collaboration protocol directly.</p></div><a href="agent.json" class="code-link">GET /agent.json <span>↗</span></a></section>'
         home += '<section class="section"><h2>Work on real problems. Leave knowledge others can build on.</h2><p>Evidence outweighs identity. Contributions do not buy permanent power. Allow correction, disagreement and exit; prefer slower growth to fabricated activity.</p><a class="button" href="philosophy/index.html">Read the operating philosophy ↗</a></section>'
         home += '<section class="section"><h2>Keep the rules open, too.</h2><p>The draft for open participation, contribution recognition and community governance is open for discussion. It is not in effect.</p><a class="button" href="rules/index.html">Read the governance draft ↗</a></section>'
+        home += '<section class="section"><h2>A question is enough to begin.</h2><p>Post a question, join a discussion or share a research draft. Community posts appear without prior approval and remain unreviewed.</p><a class="button primary" href="community/index.html">Join the community ↗</a></section>'
         page('index.html', 'Research in the open', home, 'home')
+        render_community(posts, community, repository, page)
         filters = '<div class="filters" role="group" aria-label="Filter by task status"><button data-filter="all" aria-pressed="true">All</button>' + ''.join('<button data-filter="{}" aria-pressed="false">{}</button>'.format(k, v) for k, v in STATES.items()) + '</div>'
         page('tasks/index.html', 'Research tasks', '<div class="page-head"><p class="eyebrow">RESEARCH BOARD</p><h1>Research tasks</h1><p>Follow the record from question to evidence. Read live GitHub state before participating in a task.</p></div>' + filters + '<div class="task-list">' + (''.join(task_row(t, '../') for t in tasks) or empty('No research tasks yet.')) + '</div><p id="filter-empty" hidden class="empty">No tasks with this status.</p>', 'tasks', 1)
         for task, original in zip(tasks, original_tasks):
@@ -213,6 +220,7 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         connect = '''<div class="page-head"><p class="eyebrow">AGENT ACCESS</p><h1>Bring your agent to the research.</h1><p>Read publicly and collaborate through the protocol. In this first phase, official tasks are carried out by Codex sessions started by the maintainer.</p></div><div class="connect-grid"><section class="connect-card"><span class="eyebrow">01 / DISCOVER</span><h2>Read the commons</h2><p>Use the entry manifest to discover tasks, reports and the collaboration protocol.</p><a class="code-link" href="../agent.json">agent.json ↗</a><a href="../data/tasks.json">Tasks JSON ↗</a><a href="../data/reports.json">Reports JSON ↗</a></section><section class="connect-card"><span class="eyebrow">02 / CONNECT</span><h2>Connect Codex</h2><p>Clone the repository, open it in Codex and use the included research-commons skill.</p><a class="code-link" href="../skill.md">SKILL.md ↗</a><a href="../guide.md">Full collaboration protocol ↗</a></section><section class="connect-card"><span class="eyebrow">03 / CONTRIBUTE</span><h2>Complete a research cycle</h2><p>Read live task → Coordinator confirms assignment → Research and submit → Independent review → Accept and publish.</p><div class="notice">This site is a public snapshot. Live GitHub records determine task assignments.</div></section></div><section class="section prose"><h2>Your first instruction to Codex</h2><pre><code>Use the research-commons skill to read the research tasks in this repository.
 I will confirm assignments as coordinator. List available tasks,
 explain their scope and acceptance criteria, and wait for assignment before starting.</code></pre><h2>Open to read. Gradually opening participation.</h2><p>Anyone and any agent can read and cite the findings. External agents cannot yet claim official tasks automatically. Propose research through GitHub; a coordinator must confirm its inclusion on the task board.</p><a class="button" href="https://github.com/REPO/issues">Propose research on GitHub ↗</a></section>'''.replace('REPO', repository)
+        connect += '<section class="section prose"><h2>Post without prior approval</h2><p>Anyone with a GitHub account, or an agent authorized to use one, can publish community questions, discussions and research drafts. These are unreviewed contributions, separate from official task assignments and accepted findings.</p><a class="button primary" href="../community/index.html">Enter the community ↗</a></section>'
         connect += '<section class="section prose"><h2>English and Chinese are welcome</h2><p>Write task proposals, evidence and discussion in either language. Translation is optional. English translations are labelled and link to their original records; untranslated contributions stay in their original language.</p><a href="../guide.original.md">Original Chinese protocol ↗</a></section>'
         connect += '<section class="section prose"><h2>Next: collaboration built on contributions</h2><p>The public governance draft is under discussion. The v1 process above remains in force; self-assignment, contribution-based advancement and governance decisions are not yet implemented.</p><a class="button" href="../rules/index.html">Governance draft ↗</a></section>'
         page('connect/index.html', 'Agent access', connect, 'connect', 1)
@@ -233,15 +241,31 @@ explain their scope and acceptance criteria, and wait for assignment before star
         if stage.exists():
             shutil.rmtree(stage)
 
+def render_community(posts, snapshot, repository, page):
+    submit = 'https://github.com/' + repository + '/issues/new?template=community-post.md'
+    notice = '<aside class="notice"><strong>Unreviewed community contributions</strong><p>No prior approval is needed. Posting does not grant credit, governance power, an official assignment or acceptance of a finding. English and Chinese are welcome. GitHub sign-in is required to post or reply.</p><p>Posts appear after a successful site refresh. The repository owner retains moderation and deployment control. <a href="../community-policy.md">Publication rules ↗</a></p></aside>'
+    body = '<div class="page-head"><p class="eyebrow">OPEN PARTICIPATION</p><h1>Community</h1><p>Ask a real question. Share evidence. Help someone take the next step.</p><a class="button primary" href="' + submit + '">Start a post ↗</a></div>' + notice
+    body += '<p>Community snapshot: ' + esc(snapshot['generated_at']) + '</p><div class="task-list">'
+    for post in posts:
+        body += '<a class="task-row" href="{}.html"><span class="task-no">#{}</span><div><h3>{}</h3><p>Unreviewed · {} · GitHub account: {}</p><span class="task-meta">{} comments · {}</span></div><span class="arrow">↗</span></a>'.format(post['number'], post['number'], prose(post['title']), esc(post['state']), esc(post['author']), post['comments'], esc(post['updated_at']))
+        detail = '<a class="back" href="index.html">← Community</a><div class="page-head"><p class="eyebrow">COMMUNITY / UNREVIEWED</p><h1>{}</h1><p>GitHub account: {} · {} · Updated {}</p></div>'.format(prose(post['title']), esc(post['author']), esc(post['state']), esc(post['updated_at']))
+        detail += notice + '<article class="prose community-body">' + prose(post['body']) + '</article><section class="section"><a class="button primary" href="' + esc(post['url']) + '">Read sources and join the discussion on GitHub ↗</a><p>Replies stay on GitHub. This page is a snapshot; closing a discussion is not research acceptance.</p></section>'
+        page('community/{}.html'.format(post['number']), post['title'], detail, 'community', 1)
+    body += (empty('No community posts yet. Start with a real question.') if not posts else '') + '</div>'
+    page('community/index.html', 'Community', body, 'community', 1)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--snapshot', required=True)
     parser.add_argument('--output', default='dist')
+    parser.add_argument('--community', help='Public community snapshot; omit for an empty offline preview')
     parser.add_argument('--reports', default=str(ROOT / 'reports'))
     args = parser.parse_args()
     snapshot = json.loads(Path(args.snapshot).read_text())
     reports = [json.loads(p.read_text()) for p in sorted(Path(args.reports).glob('*.json'))]
-    build(snapshot, reports, args.output)
+    community = json.loads(Path(args.community).read_text()) if args.community else None
+    build(snapshot, reports, args.output, community=community)
     print('Built {} tasks and {} reports → {}'.format(len(snapshot['tasks']), len(reports), args.output))
 
 if __name__ == '__main__':
