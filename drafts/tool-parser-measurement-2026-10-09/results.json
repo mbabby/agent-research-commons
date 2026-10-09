@@ -1,0 +1,1013 @@
+{
+  "summary": {
+    "envelope_json_only": {
+      "canonical": {
+        "correct": 6,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 3,
+        "false_calls": 0,
+        "no_call_cases": 3,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 0
+      },
+      "alternate": {
+        "correct": 3,
+        "total": 6,
+        "missed_expected_calls": 3,
+        "expected_call_cases": 3,
+        "false_calls": 0,
+        "no_call_cases": 3,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 0
+      },
+      "control": {
+        "correct": 6,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 0,
+        "false_calls": 0,
+        "no_call_cases": 0,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 6
+      }
+    },
+    "text_scanning_fallback": {
+      "canonical": {
+        "correct": 3,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 3,
+        "false_calls": 3,
+        "no_call_cases": 3,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 0
+      },
+      "alternate": {
+        "correct": 6,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 3,
+        "false_calls": 0,
+        "no_call_cases": 3,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 0
+      },
+      "control": {
+        "correct": 5,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 0,
+        "false_calls": 0,
+        "no_call_cases": 0,
+        "invalid_calls_accepted": 1,
+        "invalid_cases": 6
+      }
+    },
+    "envelope_normalizer": {
+      "canonical": {
+        "correct": 6,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 3,
+        "false_calls": 0,
+        "no_call_cases": 3,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 0
+      },
+      "alternate": {
+        "correct": 6,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 3,
+        "false_calls": 0,
+        "no_call_cases": 3,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 0
+      },
+      "control": {
+        "correct": 6,
+        "total": 6,
+        "missed_expected_calls": 0,
+        "expected_call_cases": 0,
+        "false_calls": 0,
+        "no_call_cases": 0,
+        "invalid_calls_accepted": 0,
+        "invalid_cases": 6
+      }
+    }
+  },
+  "records": [
+    {
+      "strategy": "envelope_json_only",
+      "id": "canonical-call-1",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "canonical-call-2",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Lima\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "canonical-call-3",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Tokyo\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "canonical-restraint-1",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Oslo\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "canonical-restraint-2",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Lima\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "canonical-restraint-3",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Tokyo\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "alternate-call-1",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Oslo\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": false
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "alternate-call-2",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Lima\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": false
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "alternate-call-3",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Tokyo\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": false
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "alternate-restraint-1",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "alternate-restraint-2",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "alternate-restraint-3",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "control-truncated",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "control-wrong-tool",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "control-wrong-type",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":true}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "control-extra-argument",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\",\"shell\":\"unused\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "control-duplicate-key",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_json_only",
+      "id": "control-surrounded-call",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "Please run [get_weather(city=\"Oslo\")] now.",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "canonical-call-1",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "canonical-call-2",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Lima\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "canonical-call-3",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Tokyo\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "canonical-restraint-1",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Oslo\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": false
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "canonical-restraint-2",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Lima\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "correct": false
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "canonical-restraint-3",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Tokyo\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "correct": false
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "alternate-call-1",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Oslo\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "alternate-call-2",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Lima\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "alternate-call-3",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Tokyo\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "alternate-restraint-1",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "alternate-restraint-2",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "alternate-restraint-3",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "control-truncated",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "control-wrong-tool",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "control-wrong-type",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":true}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "control-extra-argument",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\",\"shell\":\"unused\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "control-duplicate-key",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "text_scanning_fallback",
+      "id": "control-surrounded-call",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "Please run [get_weather(city=\"Oslo\")] now.",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": false
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "canonical-call-1",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "canonical-call-2",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Lima\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "canonical-call-3",
+      "profile": "canonical",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Tokyo\"}}",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "canonical-restraint-1",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Oslo\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "canonical-restraint-2",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Lima\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "canonical-restraint-3",
+      "profile": "canonical",
+      "channel": "assistant_text",
+      "raw": "Documentation example only: [get_weather(city=\"Tokyo\")]. Do not run this example.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "alternate-call-1",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Oslo\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Oslo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "alternate-call-2",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Lima\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Lima"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "alternate-call-3",
+      "profile": "alternate",
+      "channel": "tool_call",
+      "raw": "[get_weather(city=\"Tokyo\")]",
+      "expected": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "parsed": {
+        "status": "call",
+        "name": "get_weather",
+        "arguments": {
+          "city": "Tokyo"
+        }
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "alternate-restraint-1",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "alternate-restraint-2",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "alternate-restraint-3",
+      "profile": "alternate",
+      "channel": "assistant_text",
+      "raw": "No tool is needed; use the supplied context.",
+      "expected": {
+        "status": "no_call"
+      },
+      "parsed": {
+        "status": "no_call"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "control-truncated",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "control-wrong-tool",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "control-wrong-type",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":true}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "control-extra-argument",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\",\"shell\":\"unused\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "control-duplicate-key",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "{\"name\":\"get_weather\",\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    },
+    {
+      "strategy": "envelope_normalizer",
+      "id": "control-surrounded-call",
+      "profile": "control",
+      "channel": "tool_call",
+      "raw": "Please run [get_weather(city=\"Oslo\")] now.",
+      "expected": {
+        "status": "reject"
+      },
+      "parsed": {
+        "status": "reject"
+      },
+      "correct": true
+    }
+  ],
+  "status": "synthetic_method_experiment",
+  "fixtures_sha256": "6b09e6b5a00f2a265a91807e24ccc85561d5dd93cab8c3cd791aa1773c92f3b2",
+  "python": "3.9.6",
+  "fixture_count": 18,
+  "strategy_count": 3,
+  "model_calls": 0,
+  "dispatched_tools": 0
+}

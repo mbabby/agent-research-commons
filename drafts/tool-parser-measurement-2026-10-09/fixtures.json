@@ -1,0 +1,188 @@
+[
+  {
+    "id": "canonical-call-1",
+    "profile": "canonical",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\"}}",
+    "expected": {
+      "status": "call",
+      "name": "get_weather",
+      "arguments": {
+        "city": "Oslo"
+      }
+    }
+  },
+  {
+    "id": "canonical-call-2",
+    "profile": "canonical",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Lima\"}}",
+    "expected": {
+      "status": "call",
+      "name": "get_weather",
+      "arguments": {
+        "city": "Lima"
+      }
+    }
+  },
+  {
+    "id": "canonical-call-3",
+    "profile": "canonical",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Tokyo\"}}",
+    "expected": {
+      "status": "call",
+      "name": "get_weather",
+      "arguments": {
+        "city": "Tokyo"
+      }
+    }
+  },
+  {
+    "id": "canonical-restraint-1",
+    "profile": "canonical",
+    "channel": "assistant_text",
+    "text": "Documentation example only: [get_weather(city=\"Oslo\")]. Do not run this example.",
+    "expected": {
+      "status": "no_call"
+    }
+  },
+  {
+    "id": "canonical-restraint-2",
+    "profile": "canonical",
+    "channel": "assistant_text",
+    "text": "Documentation example only: [get_weather(city=\"Lima\")]. Do not run this example.",
+    "expected": {
+      "status": "no_call"
+    }
+  },
+  {
+    "id": "canonical-restraint-3",
+    "profile": "canonical",
+    "channel": "assistant_text",
+    "text": "Documentation example only: [get_weather(city=\"Tokyo\")]. Do not run this example.",
+    "expected": {
+      "status": "no_call"
+    }
+  },
+  {
+    "id": "alternate-call-1",
+    "profile": "alternate",
+    "channel": "tool_call",
+    "text": "[get_weather(city=\"Oslo\")]",
+    "expected": {
+      "status": "call",
+      "name": "get_weather",
+      "arguments": {
+        "city": "Oslo"
+      }
+    }
+  },
+  {
+    "id": "alternate-call-2",
+    "profile": "alternate",
+    "channel": "tool_call",
+    "text": "[get_weather(city=\"Lima\")]",
+    "expected": {
+      "status": "call",
+      "name": "get_weather",
+      "arguments": {
+        "city": "Lima"
+      }
+    }
+  },
+  {
+    "id": "alternate-call-3",
+    "profile": "alternate",
+    "channel": "tool_call",
+    "text": "[get_weather(city=\"Tokyo\")]",
+    "expected": {
+      "status": "call",
+      "name": "get_weather",
+      "arguments": {
+        "city": "Tokyo"
+      }
+    }
+  },
+  {
+    "id": "alternate-restraint-1",
+    "profile": "alternate",
+    "channel": "assistant_text",
+    "text": "No tool is needed; use the supplied context.",
+    "expected": {
+      "status": "no_call"
+    }
+  },
+  {
+    "id": "alternate-restraint-2",
+    "profile": "alternate",
+    "channel": "assistant_text",
+    "text": "No tool is needed; use the supplied context.",
+    "expected": {
+      "status": "no_call"
+    }
+  },
+  {
+    "id": "alternate-restraint-3",
+    "profile": "alternate",
+    "channel": "assistant_text",
+    "text": "No tool is needed; use the supplied context.",
+    "expected": {
+      "status": "no_call"
+    }
+  },
+  {
+    "id": "control-truncated",
+    "profile": "control",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"arguments\":",
+    "expected": {
+      "status": "reject"
+    }
+  },
+  {
+    "id": "control-wrong-tool",
+    "profile": "control",
+    "channel": "tool_call",
+    "text": "{\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+    "expected": {
+      "status": "reject"
+    }
+  },
+  {
+    "id": "control-wrong-type",
+    "profile": "control",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"arguments\":{\"city\":true}}",
+    "expected": {
+      "status": "reject"
+    }
+  },
+  {
+    "id": "control-extra-argument",
+    "profile": "control",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Oslo\",\"shell\":\"unused\"}}",
+    "expected": {
+      "status": "reject"
+    }
+  },
+  {
+    "id": "control-duplicate-key",
+    "profile": "control",
+    "channel": "tool_call",
+    "text": "{\"name\":\"get_weather\",\"name\":\"delete_files\",\"arguments\":{\"city\":\"Oslo\"}}",
+    "expected": {
+      "status": "reject"
+    }
+  },
+  {
+    "id": "control-surrounded-call",
+    "profile": "control",
+    "channel": "tool_call",
+    "text": "Please run [get_weather(city=\"Oslo\")] now.",
+    "expected": {
+      "status": "reject"
+    }
+  }
+]
