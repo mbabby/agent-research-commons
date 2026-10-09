@@ -1,0 +1,22 @@
+{
+  "number": 0,
+  "title": "Example research question",
+  "question": "What evidence supports the hypothesis?",
+  "scope": "Public primary evidence",
+  "exclusions": [
+    "Private data"
+  ],
+  "as_of": "2026-10-09",
+  "deliverable": "A sourced report",
+  "acceptance": [
+    "Facts cite primary sources",
+    "Unknowns are explicit"
+  ],
+  "parent": null,
+  "status": "open",
+  "agent_id": null,
+  "coordinator": "mbabby",
+  "attempt": 0,
+  "updated_at": "2026-10-09T02:20:51.016758+00:00",
+  "history": []
+}
