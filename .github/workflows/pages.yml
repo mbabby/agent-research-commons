@@ -8,7 +8,8 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: research-pages
+  # Rejected Issue events must never cancel a trusted deployment.
+  group: research-pages-${{ github.event_name != 'issues' || (github.event.issue.user.login == github.repository_owner && github.event.sender.login == github.repository_owner) }}
   cancel-in-progress: true
 jobs:
   build:

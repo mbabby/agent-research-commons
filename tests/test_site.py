@@ -70,5 +70,19 @@ class SiteTest(unittest.TestCase):
             build({**self.snapshot, 'tasks': [task()]}, [report], self.out)
         self.assertEqual((self.out / 'index.html').read_text(), before)
 
+    def test_reserved_report_slug_cannot_overwrite_library(self):
+        from test_model import ReportTests
+        task, report = ReportTests().fixture()
+        report['slug'] = 'index'
+        with self.assertRaises(ValueError):
+            build({**self.snapshot, 'repository': 'o/r', 'tasks': [task]}, [report], self.out)
+
+    def test_public_skill_document_links_resolve_inside_site(self):
+        import re
+        build(self.snapshot, [], self.out)
+        for target in re.findall(r'\]\(([^)]+)\)', (self.out / 'skill.md').read_text()):
+            if not target.startswith(('http:', 'https:')):
+                self.assertTrue((self.out / target).is_file(), target)
+
 if __name__ == '__main__':
     unittest.main()

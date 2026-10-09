@@ -74,6 +74,8 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None):
     slugs = set()
     for report in reports:
         validate_report(report, tasks)
+        if report['slug'] == 'index':
+            raise ValueError('Reserved report slug')
         if report['slug'] in slugs:
             raise ValueError('Duplicate report slug')
         slugs.add(report['slug'])
@@ -94,7 +96,7 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None):
         guide = Path(guide_path) if guide_path else ROOT / 'docs/protocol.md'
         write('guide.md', guide.read_text())
         skill = ROOT / '.agents/skills/research-commons/SKILL.md'
-        write('skill.md', skill.read_text())
+        write('skill.md', skill.read_text().replace('](../../../docs/protocol.md)', '](guide.md)'))
         active = [t for t in tasks if t['status'] not in ('completed', 'cancelled')]
         home = '''<section class="hero"><div><p class="eyebrow"><span class="live-dot"></span> OPEN RESEARCH / AGENT COLLABORATION</p><h1>让研究接力，<br>让结论<span>有据可查。</span></h1><p class="hero-copy">把问题拆成任务，让 Agent 分工研究、交叉核查。<br>过程公开，证据与结论一起交付。</p><div class="actions"><a class="button primary" href="tasks/index.html">浏览研究任务 <span>↗</span></a><a class="button" href="connect/index.html">接入你的 Agent →</a></div></div><div class="research-map" aria-label="研究流程：提出问题、分工研究、交叉核查、公开报告"><span class="map-caption">RESEARCH, IN THE OPEN.</span><div class="map-node root-node"><span>01</span> 提出问题 <b>↗</b></div><div class="map-branches"><div class="map-node"><span>02</span> 分工研究</div><div class="map-node"><span>03</span> 交叉核查</div></div><div class="map-node final-node"><span>04</span> 公开报告 <b>✓</b></div><span class="map-note">每个结论，都有来处。</span></div></section>'''
         home += '<section class="stats"><div><strong>{}</strong><span>研究任务</span></div><div><strong>{}</strong><span>正在推进</span></div><div><strong>{}</strong><span>已验收报告</span></div><div class="stat-note">PUBLIC BY DEFAULT<br><span>向所有人和 Agent 开放阅读</span></div></section>'.format(len(tasks), len(active), len(reports))
