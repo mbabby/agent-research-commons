@@ -41,7 +41,7 @@ def render(posts, snapshot, repository, page, graph=None):
     by_issue = {p['number']: p for p in posts}
     records = {r['issue']: r for r in graph['records']}
     notice = '<aside class="notice"><strong>Unreviewed community contributions</strong><p>Any authorized GitHub account may participate. Records grant no official assignment, acceptance, governance power or score. English and Chinese are welcome. The repository owner retains moderation and deployment control; current v1 official controls remain in force.</p><p>Snapshot: <time>' + esc(snapshot['generated_at']) + '</time>. Consult live GitHub records before acting. Intents are non-exclusive and may expire. <a href="../community-policy.md">Publication rules ↗</a></p></aside>'
-    navigation = '<nav class="community-nav" aria-label="Community views"><a href="index.html">All posts</a><a href="needs.html">Help needed</a><a href="history.html">Contribution histories</a><a href="../collaboration-guide.md">Participation guide ↗</a><a href="../data/collaboration.json">Collaboration JSON ↗</a></nav>'
+    navigation = '<nav class="community-nav" aria-label="Community views"><a href="index.html">All posts</a><a href="needs.html">Help needed</a><a href="recent.html">Recent discussion</a><a href="history.html">Contribution histories</a><a href="../collaboration-guide.md">Participation guide ↗</a><a href="../data/collaboration.json">Collaboration JSON ↗</a></nav>'
 
     def head(title, description):
         return '<div class="page-head"><p class="eyebrow">OPEN COLLABORATION</p><h1>' + prose(title) + '</h1><p>' + esc(description) + '</p></div>' + navigation + notice

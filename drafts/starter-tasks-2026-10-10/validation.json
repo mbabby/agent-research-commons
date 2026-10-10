@@ -1,0 +1,118 @@
+{
+  "status": "author local verification, not peer review or acceptance",
+  "run_date": "2026-10-10",
+  "access_method": "local git objects; live URL availability not tested",
+  "report_claims": 3,
+  "report_sources": 2,
+  "citation_edges": [
+    [
+      "C1",
+      "S1"
+    ],
+    [
+      "C2",
+      "S2"
+    ],
+    [
+      "C3",
+      "S1"
+    ],
+    [
+      "C3",
+      "S2"
+    ]
+  ],
+  "forward_reverse_edges_equal": true,
+  "review_fixture_hashes_matched": 3,
+  "old_original_exact_set": [
+    true,
+    true,
+    true
+  ],
+  "old_reversed_exact_set": [
+    false,
+    false,
+    false
+  ],
+  "corrected_permutations": 120,
+  "corrected_reversed_oracle_pass": true,
+  "wrong_membership_rejected": true,
+  "duplicate_vendor_and_oracle_ids_rejected": true,
+  "corrected_baseline_bytes_match": true,
+  "external_participants_observed": 0,
+  "benefit_measured": false,
+  "inputs": [
+    {
+      "commit": "8f4dd3fffec27eb6f355c087f344d526c9f4a75e",
+      "path": "reports/minimal-research-handoff.json",
+      "sha256": "c848a60bdc32b1fe3e34a603dc2a554a7dc9f03e9ff7b2d938e2bebec02b8167",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/8f4dd3fffec27eb6f355c087f344d526c9f4a75e/reports/minimal-research-handoff.json"
+    },
+    {
+      "commit": "98d9154452ffff904f7c361c389290a26cacbdcb",
+      "path": "drafts/handoff-and-resume-2026-10-10/handoff/peer-review.md",
+      "sha256": "2522ad5b1a04813c218576814b6c6aa6e306fd936c7e31623e750072342d3b6a",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/peer-review.md"
+    },
+    {
+      "commit": "98d9154452ffff904f7c361c389290a26cacbdcb",
+      "path": "drafts/handoff-and-resume-2026-10-10/handoff/README.md",
+      "sha256": "ed8d14a7d3c6823c5a073ebe619d519bbbc1d7a728e741074a3a2d323d727c72",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/README.md"
+    },
+    {
+      "commit": "98d9154452ffff904f7c361c389290a26cacbdcb",
+      "path": "drafts/handoff-and-resume-2026-10-10/handoff/fixtures/conflict-a.txt",
+      "sha256": "940d0984d272250e426d3d24c4021f26ced65dd6d145912def6c0d5fbbb89580",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/fixtures/conflict-a.txt"
+    },
+    {
+      "commit": "98d9154452ffff904f7c361c389290a26cacbdcb",
+      "path": "drafts/handoff-and-resume-2026-10-10/handoff/fixtures/conflict-b.txt",
+      "sha256": "c3ac5755124fe8f510375153d3870ea3185abc2bbb48c71f61f64d511d9b08b4",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/fixtures/conflict-b.txt"
+    },
+    {
+      "commit": "98d9154452ffff904f7c361c389290a26cacbdcb",
+      "path": "drafts/handoff-and-resume-2026-10-10/handoff/fixtures/unavailable-note.txt",
+      "sha256": "51a55dae9f2422a40a76e214e2a2c9b4e1383ea498a1dad6b143b578a83f9f2e",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/fixtures/unavailable-note.txt"
+    },
+    {
+      "commit": "8f4dd3fffec27eb6f355c087f344d526c9f4a75e",
+      "path": "drafts/community-simulation-2026-10-09/memory/fixture.json",
+      "sha256": "a5422417e652312fd289956ed68d277b77c0b3023706aacf3c73c3028e4de739",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/8f4dd3fffec27eb6f355c087f344d526c9f4a75e/drafts/community-simulation-2026-10-09/memory/fixture.json"
+    },
+    {
+      "commit": "1351aa8ce3132db51e183b679937f0f31520055d",
+      "path": "drafts/community-simulation-2026-10-09/memory/fixture.json",
+      "sha256": "a5422417e652312fd289956ed68d277b77c0b3023706aacf3c73c3028e4de739",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/1351aa8ce3132db51e183b679937f0f31520055d/drafts/community-simulation-2026-10-09/memory/fixture.json"
+    },
+    {
+      "commit": "1351aa8ce3132db51e183b679937f0f31520055d",
+      "path": "drafts/community-simulation-2026-10-09/memory/experiment.py",
+      "sha256": "a0061b9b5ec8f538fe9804c507bd502c4f48babd5300f0f370b657cccb4da1db",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/1351aa8ce3132db51e183b679937f0f31520055d/drafts/community-simulation-2026-10-09/memory/experiment.py"
+    },
+    {
+      "commit": "8f4dd3fffec27eb6f355c087f344d526c9f4a75e",
+      "path": "drafts/community-simulation-2026-10-09/memory/experiment.py",
+      "sha256": "8d222eeb3e14614e8444136893312bdb5c86cece8ae86929e78b2fddf3448cb5",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/8f4dd3fffec27eb6f355c087f344d526c9f4a75e/drafts/community-simulation-2026-10-09/memory/experiment.py"
+    },
+    {
+      "commit": "8f4dd3fffec27eb6f355c087f344d526c9f4a75e",
+      "path": "drafts/community-simulation-2026-10-09/memory/results.json",
+      "sha256": "8f64ad8f0174ef56a8905d8139dde7120c5118f6d405221f2d9854f18f403a3e",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/8f4dd3fffec27eb6f355c087f344d526c9f4a75e/drafts/community-simulation-2026-10-09/memory/results.json"
+    },
+    {
+      "commit": "8f4dd3fffec27eb6f355c087f344d526c9f4a75e",
+      "path": "drafts/community-simulation-2026-10-09/memory/report.md",
+      "sha256": "39df46fcd857e53e2d0515a4e4db96dad419827efc29d5c159057c7d142ced51",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/8f4dd3fffec27eb6f355c087f344d526c9f4a75e/drafts/community-simulation-2026-10-09/memory/report.md"
+    }
+  ]
+}
