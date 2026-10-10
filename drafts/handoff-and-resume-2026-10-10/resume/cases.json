@@ -1,0 +1,136 @@
+[
+  {
+    "id": "original-pinned",
+    "bundle": "old",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    }
+  },
+  {
+    "id": "all-new-on-new-checkpoint",
+    "bundle": "new",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    },
+    "checkpoint": "new"
+  },
+  {
+    "id": "new-on-old-checkpoint",
+    "bundle": "new",
+    "expected": {
+      "status": "checkpoint-rejected",
+      "charged_cents": 0
+    }
+  },
+  {
+    "id": "new-with-explicit-migration",
+    "bundle": "new",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    },
+    "migrate": true
+  },
+  {
+    "id": "compatible-prompt",
+    "bundle": "old",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    },
+    "substitute": {
+      "prompt": "p1b"
+    }
+  },
+  {
+    "id": "compatible-schema",
+    "bundle": "old",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    },
+    "substitute": {
+      "schema": "s1b"
+    }
+  },
+  {
+    "id": "compatible-tool",
+    "bundle": "old",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    },
+    "substitute": {
+      "tool": "t1b"
+    }
+  },
+  {
+    "id": "compatible-model",
+    "bundle": "old",
+    "expected": {
+      "status": "charged",
+      "charged_cents": 1250
+    },
+    "substitute": {
+      "model": "model-alternative-metadata"
+    }
+  },
+  {
+    "id": "mixed-prompt",
+    "bundle": "old",
+    "expected": {
+      "status": "checkpoint-rejected",
+      "charged_cents": 0
+    },
+    "substitute": {
+      "prompt": "p2"
+    }
+  },
+  {
+    "id": "mixed-schema",
+    "bundle": "old",
+    "expected": {
+      "status": "tool-contract-rejected",
+      "charged_cents": 0
+    },
+    "substitute": {
+      "schema": "s2"
+    }
+  },
+  {
+    "id": "mixed-tool",
+    "bundle": "old",
+    "expected": {
+      "status": "tool-contract-rejected",
+      "charged_cents": 0
+    },
+    "substitute": {
+      "tool": "t2"
+    }
+  },
+  {
+    "id": "bad-prompt-field",
+    "bundle": "old",
+    "expected": {
+      "status": "schema-rejected",
+      "charged_cents": 0
+    },
+    "substitute": {
+      "prompt": "p-bad-field"
+    }
+  },
+  {
+    "id": "unsafe-tool-mix",
+    "bundle": "old",
+    "expected": {
+      "status": "wrong-charge",
+      "charged_cents": 125000
+    },
+    "substitute": {
+      "tool": "t2"
+    },
+    "unsafe": true
+  }
+]

@@ -1,0 +1,3 @@
+SYNTHETIC FIXTURE B — not an external source.
+Study: S-17; reporting window: day 1; measure: completed cases.
+Reported count: 21. Definition of completed: not supplied.
