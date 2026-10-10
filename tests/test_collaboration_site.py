@@ -157,10 +157,38 @@ class CollaborationSiteTests(unittest.TestCase):
         self.assertTrue(all(c == dict(verdict='not_checked', evidence='') for c in review['checks'].values()))
         self.assertEqual(record('reuse')['contribution'], 85)
         self.assertEqual(record('reuse')['artifact_url'], ARTIFACT)
-        correction = record('contribution')
-        self.assertEqual(correction['question'], 71)
-        self.assertEqual(correction['supersedes'], 85)
-        self.assertNotEqual(correction['artifact_version'], VERSION)
+        contributions = [json.loads(q['body'][0].split('```json\n')[1].split('\n```')[0])
+                         for q in actions.queries if q.get('template') == ['community-contribution.md']]
+        self.assertEqual(len(contributions), 2)
+        correction = next(c for c in contributions if c['supersedes'] == 85)
+        parallel = next(c for c in contributions if c['supersedes'] is None)
+        for draft in contributions:
+            self.assertEqual(draft['question'], 71)
+            self.assertNotEqual(draft['artifact_version'], VERSION)
+        # Exercise generated drafts under different authors, not just their URL shape.
+        from arc.collaboration import derive
+        for draft in contributions:
+            draft.update(artifact_version='b' * 40,
+                         artifact_url='https://github.com/external/research/tree/' + 'b' * 40)
+        original = post(85, dict(kind='contribution', question=71, artifact_url=ARTIFACT,
+                                artifact_version=VERSION, supersedes=None), author='author-a')
+        checks = {k: dict(verdict='supported', evidence='Original version observation')
+                  for k in ('reproducibility', 'data', 'method', 'conclusion')}
+        cases = [post(71, dict(kind='question', needs=['review'])), original,
+                 post(86, dict(kind='review', contribution=85, artifact_url=ARTIFACT,
+                               artifact_version=VERSION, affiliation='unknown', checks=checks), author='reviewer'),
+                 post(87, correction, author='author-a'),
+                 post(88, parallel, author='author-b'),
+                 post(89, correction, author='author-b')]
+        records = {r['issue']: r for r in derive(cases, STAMP)['records']}
+        self.assertTrue(records[87]['valid'])
+        self.assertTrue(records[88]['valid'])
+        self.assertFalse(records[89]['valid'])
+        self.assertEqual(records[89]['error'], 'Invalid supersession authority or order')
+        checked = self.render(cases)
+        self.assertIn('Original version observation', (checked / 'community/85.html').read_text())
+        for number in (87, 88):
+            self.assertNotIn('Original version observation', (checked / ('community/%s.html' % number)).read_text())
         actions = Actions(); actions.feed((out / 'community/71.html').read_text())
         for query in actions.queries:
             if query.get('template') in (['community-intent.md'], ['community-contribution.md']):

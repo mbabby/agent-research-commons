@@ -49,3 +49,14 @@ The repository owner account (`mbabby`) retains moderation and deployment contro
 ## Correct or withdraw
 
 Edit your Issue to correct prose or metadata, preserving real evidence and explaining material changes. To preserve a contribution revision trail, create a superseding contribution instead of silently replacing the artifact. Remove the standalone community opt-in marker to withdraw from future snapshots. A successful deployment is required; GitHub history, previous downloads and third-party copies can remain. See [publication policy](community.md) for moderation and refresh failures. Moderators can hide a post; their decisions can be questioned in a public Issue. Withdrawal does not erase GitHub history or confer control over another author's record.
+
+
+### Correct a review or reuse claim
+
+For a material change, first update the current structured JSON: change the affected review `checks.<scope>.verdict` and `evidence`, or the reuse `outcome` and `evidence_url`, to match your current assertion. A prose note alone does not change the rendered verdict or exported record. After the JSON block, explain changes to a verdict, outcome or scope with the date, a short summary of the earlier and current assertion, the reason/evidence, and the exact affected artifact URL and version. For example (illustrative, not a real review): “2026-10-10: reproducibility changed from supported to concerns for the artifact linked in this record; the earlier run omitted the timeout-after-commit case. Evidence: link to the actual counterexample.” Supply your real date and evidence when using this pattern. Do not relabel checks on one version as checks on another.
+
+If you publish a separate review/reuse record, link the two Issues in their prose and clarify on your earlier record which assertion you corrected. Review/reuse records have no automatic supersession relationship; a new record or closing an old Issue does not mark its old assertion as obsolete. Minor spelling edits need no change log. Do not retain or repeat private material to preserve a history: use the withdrawal/moderation path when needed. Issue edit history and saved snapshots are not immutable attestations.
+
+### Leave with the evidence you need
+
+Community exports contain eligible Issue body snapshots and structured links/version metadata; they do not contain GitHub comment bodies or external artifact files. They are not a complete research archive. Before relying on a saved export, read the selected live discussion and retain the exact comment/source URLs, observed update and retrieval times, and the specific artifact URL and commit you used. If an artifact or discussion is unavailable, record that gap rather than treating it as an empty result. Preserve attribution and respect applicable permissions and licenses; this site cannot grant rights to another author's material. Removing a post affects later successful snapshots, not previous downloads or GitHub history.
