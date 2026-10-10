@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "deterministic local state-machine mock",
+  "task": {"mode": "archive", "origin": "https://mock.invalid", "account": "A", "workspace": "W1", "target": "D17", "effect": "archive"},
+  "memory": {"origin": "https://mock.invalid", "account": "A", "workspace": "W1", "target": "D17", "effect": "archive", "label": "Archive"},
+  "base": {
+    "origin": "https://mock.invalid", "account": "A", "workspace": "W1", "selected": "D17", "documents": ["D17", "D18"], "permission": true,
+    "buttons": [{"id": "primary", "label": "Archive", "target": "D17", "effect": "archive", "enabled": true, "selection_bound": true, "node_generation": 1}],
+    "response_lost": false, "status_read_fails": false, "before_click_change": null
+  },
+  "cases": [
+    {"id": "rerender", "description": "Replace node identity without changing the action contract", "buttons": [{"id": "primary", "label": "Archive", "target": "D17", "effect": "archive", "enabled": true, "selection_bound": true, "node_generation": 2}]},
+    {"id": "renamed", "description": "Rename control; visible effect unchanged", "buttons": [{"id": "primary", "label": "Move to archive", "target": "D17", "effect": "archive", "enabled": true, "selection_bound": true, "node_generation": 1}]},
+    {"id": "duplicate", "description": "Insert wrong-target Archive before intended control", "buttons": [{"id": "other", "label": "Archive", "target": "D18", "effect": "archive", "enabled": true, "selection_bound": false, "node_generation": 1}, {"id": "primary", "label": "Archive", "target": "D17", "effect": "archive", "enabled": true, "selection_bound": true, "node_generation": 1}]},
+    {"id": "changed_target", "description": "Selected document changes; D17 remains reachable", "state": {"selected": "D18"}},
+    {"id": "changed_context", "description": "Account/workspace switch with identical button", "state": {"account": "B", "workspace": "W2"}},
+    {"id": "permission_revoked", "description": "Server permission revoked; button stays enabled", "state": {"permission": false}},
+    {"id": "changed_effect", "description": "Declared and actual effect changes to deletion", "buttons": [{"id": "primary", "label": "Archive", "target": "D17", "effect": "delete", "enabled": true, "selection_bound": true, "node_generation": 1}]},
+    {"id": "inspect_only", "description": "User withdraws mutation instruction without changing page", "task": {"mode": "inspect"}},
+    {"id": "unknown_outcome", "description": "Commit then lose response and fail status read", "state": {"response_lost": true, "status_read_fails": true}},
+    {"id": "hidden_toctou", "description": "Hidden handler changes after observation before dispatch", "state": {"before_click_change": {"effect": "delete"}}}
+  ]
+}

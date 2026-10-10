@@ -1,0 +1,727 @@
+{
+  "kind": "synthetic_evaluator_execution",
+  "executed_at_utc": "2026-10-10T14:03:34.727892+00:00",
+  "python_version": "3.9.6",
+  "source_sha256": {
+    "protocol.md": "f07c29e41dda09d3d2750bca874197c65b1fd2f247eaf322b84d785a48c2ff17",
+    "fixtures.json": "c57093ac25b3c68fa8e2a5e1aaa04548907655de370bac51ea04e6a2728de7b4",
+    "experiment.py": "a79d3e164f3c6e612777ec37004cc8d45357d584dcf73b98341c79c7f6d8ea4a"
+  },
+  "observations": {
+    "rows": {
+      "overwrite": [
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-incident",
+          "candidate": "incident",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-status",
+          "candidate": "status_update",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-original",
+          "candidate": "procedure",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v2-incident",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "pass",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v2-status",
+          "candidate": "status_update",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v2-original",
+          "candidate": "procedure",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "wrong-dataset",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "inapplicable_scope",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "wrong-release",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "inapplicable_rule",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "historical-v1",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-incident",
+          "candidate": "incident",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-status",
+          "candidate": "status_update",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-original",
+          "candidate": "procedure",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v2-incident",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "pass",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v2-status",
+          "candidate": "status_update",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v2-original",
+          "candidate": "procedure",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "wrong-dataset",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "inapplicable_scope",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "wrong-release",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "inapplicable_rule",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "historical-v1",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        }
+      ],
+      "retained": [
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-incident",
+          "candidate": "incident",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-status",
+          "candidate": "status_update",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-original",
+          "candidate": "procedure",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v2-incident",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "pass",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v2-status",
+          "candidate": "status_update",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v2-original",
+          "candidate": "procedure",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "wrong-dataset",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "inapplicable_scope",
+          "expected": "inapplicable_scope",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "wrong-release",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "inapplicable_rule",
+          "expected": "inapplicable_rule",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "historical-v1",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-incident",
+          "candidate": "incident",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-status",
+          "candidate": "status_update",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-original",
+          "candidate": "procedure",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v2-incident",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "pass",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v2-status",
+          "candidate": "status_update",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v2-original",
+          "candidate": "procedure",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "fail",
+          "expected": "fail",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "wrong-dataset",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "inapplicable_scope",
+          "expected": "inapplicable_scope",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "wrong-release",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "inapplicable_rule",
+          "expected": "inapplicable_rule",
+          "matches_expected": true
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "historical-v1",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "unresolved",
+          "expected": "unresolved",
+          "matches_expected": true
+        }
+      ]
+    },
+    "coverage": {
+      "overwrite": {
+        "decided": 18,
+        "unresolved": 0,
+        "inapplicable": 0,
+        "invalid_output": 0,
+        "total": 18,
+        "decided_coverage": 1.0,
+        "matches_fixture_expectation": 6
+      },
+      "retained": {
+        "decided": 6,
+        "unresolved": 8,
+        "inapplicable": 4,
+        "invalid_output": 0,
+        "total": 18,
+        "decided_coverage": 0.3333333333333333,
+        "matches_fixture_expectation": 18
+      }
+    },
+    "order_sensitive_queries": {
+      "overwrite": [
+        "v1-incident",
+        "v1-status"
+      ],
+      "retained": []
+    },
+    "retained_claims": [
+      {
+        "order": [
+          "c1",
+          "c2"
+        ],
+        "claims_after_v2": [
+          {
+            "id": "c1",
+            "actor": "fictional-expert-A",
+            "proposed_output": "incident",
+            "rule_version": "v1",
+            "applicability": "release 1-2; fictional-demo-notes/en",
+            "source": "fixture:/input; fixture:/rules/v1",
+            "rationale": "The error episode is the main subject.",
+            "status": "disputed"
+          },
+          {
+            "id": "c2",
+            "actor": "fictional-expert-B",
+            "proposed_output": "status_update",
+            "rule_version": "v1",
+            "applicability": "release 1-2; fictional-demo-notes/en",
+            "source": "fixture:/input; fixture:/rules/v1",
+            "rationale": "The final current-condition report is the main subject.",
+            "status": "disputed"
+          }
+        ],
+        "matches_original_claims": true
+      },
+      {
+        "order": [
+          "c2",
+          "c1"
+        ],
+        "claims_after_v2": [
+          {
+            "id": "c2",
+            "actor": "fictional-expert-B",
+            "proposed_output": "status_update",
+            "rule_version": "v1",
+            "applicability": "release 1-2; fictional-demo-notes/en",
+            "source": "fixture:/input; fixture:/rules/v1",
+            "rationale": "The final current-condition report is the main subject.",
+            "status": "disputed"
+          },
+          {
+            "id": "c1",
+            "actor": "fictional-expert-A",
+            "proposed_output": "incident",
+            "rule_version": "v1",
+            "applicability": "release 1-2; fictional-demo-notes/en",
+            "source": "fixture:/input; fixture:/rules/v1",
+            "rationale": "The error episode is the main subject.",
+            "status": "disputed"
+          }
+        ],
+        "matches_original_claims": true
+      }
+    ]
+  },
+  "negative_controls": {
+    "premature_adjudication": {
+      "detected": true,
+      "failed_checks": [
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-incident",
+          "candidate": "incident",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-status",
+          "candidate": "status_update",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "v1-original",
+          "candidate": "procedure",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "historical-v1",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-incident",
+          "candidate": "incident",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-status",
+          "candidate": "status_update",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "v1-original",
+          "candidate": "procedure",
+          "stage": "before_change",
+          "rule_version": "v1",
+          "actual": "fail",
+          "expected": "unresolved",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "historical-v1",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v1",
+          "actual": "pass",
+          "expected": "unresolved",
+          "matches_expected": false
+        }
+      ]
+    },
+    "scope_bypass": {
+      "detected": true,
+      "failed_checks": [
+        {
+          "order": [
+            "c1",
+            "c2"
+          ],
+          "query": "wrong-dataset",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "inapplicable_scope",
+          "matches_expected": false
+        },
+        {
+          "order": [
+            "c2",
+            "c1"
+          ],
+          "query": "wrong-dataset",
+          "candidate": "incident",
+          "stage": "after_change",
+          "rule_version": "v2",
+          "actual": "pass",
+          "expected": "inapplicable_scope",
+          "matches_expected": false
+        }
+      ]
+    }
+  },
+  "checks": {
+    "all_retained_expectations_match": true,
+    "retained_order_invariant": true,
+    "claims_preserved": true,
+    "negative_controls_detected": true
+  },
+  "all_checks_pass": true,
+  "limitations": [
+    "No real experts, model calls or external adoption data.",
+    "Expected labels and scope are stipulated, not scientifically validated.",
+    "Baseline deliberately omits provenance/version/scope, so result does not compare all evaluator designs."
+  ]
+}

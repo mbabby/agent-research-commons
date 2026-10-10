@@ -1,0 +1,171 @@
+{
+  "case_id": "illustrative-note-01",
+  "evidence_kind": "fictional",
+  "input": "After error E17 I restarted the demo; it is running normally now.",
+  "original_output": "procedure",
+  "output_contract": {
+    "labels": [
+      "procedure",
+      "incident",
+      "status_update"
+    ],
+    "count": 1
+  },
+  "scope": {
+    "dataset": "fictional-demo-notes",
+    "language": "en"
+  },
+  "rules": {
+    "v1": {
+      "text": "Label by main subject: instructions=procedure; operational failure=incident; current condition=status_update.",
+      "applies_to_release": [
+        1,
+        2
+      ]
+    },
+    "v2": {
+      "text": "Any note describing an error episode is incident even when resolved; otherwise use v1.",
+      "applies_to_release": [
+        3,
+        null
+      ],
+      "replaces_for_future_use": "v1"
+    }
+  },
+  "corrections": [
+    {
+      "id": "c1",
+      "actor": "fictional-expert-A",
+      "proposed_output": "incident",
+      "rule_version": "v1",
+      "applicability": "release 1-2; fictional-demo-notes/en",
+      "source": "fixture:/input; fixture:/rules/v1",
+      "rationale": "The error episode is the main subject.",
+      "status": "disputed"
+    },
+    {
+      "id": "c2",
+      "actor": "fictional-expert-B",
+      "proposed_output": "status_update",
+      "rule_version": "v1",
+      "applicability": "release 1-2; fictional-demo-notes/en",
+      "source": "fixture:/input; fixture:/rules/v1",
+      "rationale": "The final current-condition report is the main subject.",
+      "status": "disputed"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d1",
+      "rule_version": "v1",
+      "status": "unresolved",
+      "selected_label": null,
+      "considered_corrections": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "d2",
+      "rule_version": "v2",
+      "status": "selected_in_fixture",
+      "selected_label": "incident",
+      "actor": "fictional-dataset-owner",
+      "source": "fixture:/rules/v2",
+      "reason": "Apply explicit error-episode priority from release 3.",
+      "settles_v1_dispute": false
+    }
+  ],
+  "queries": [
+    {
+      "id": "v1-incident",
+      "stage": "before_change",
+      "release": 2,
+      "rule_version": "v1",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "incident",
+      "expected": "unresolved"
+    },
+    {
+      "id": "v1-status",
+      "stage": "before_change",
+      "release": 2,
+      "rule_version": "v1",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "status_update",
+      "expected": "unresolved"
+    },
+    {
+      "id": "v1-original",
+      "stage": "before_change",
+      "release": 2,
+      "rule_version": "v1",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "procedure",
+      "expected": "unresolved"
+    },
+    {
+      "id": "v2-incident",
+      "stage": "after_change",
+      "release": 3,
+      "rule_version": "v2",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "incident",
+      "expected": "pass"
+    },
+    {
+      "id": "v2-status",
+      "stage": "after_change",
+      "release": 3,
+      "rule_version": "v2",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "status_update",
+      "expected": "fail"
+    },
+    {
+      "id": "v2-original",
+      "stage": "after_change",
+      "release": 3,
+      "rule_version": "v2",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "procedure",
+      "expected": "fail"
+    },
+    {
+      "id": "wrong-dataset",
+      "stage": "after_change",
+      "release": 3,
+      "rule_version": "v2",
+      "dataset": "other-notes",
+      "language": "en",
+      "candidate": "incident",
+      "expected": "inapplicable_scope"
+    },
+    {
+      "id": "wrong-release",
+      "stage": "after_change",
+      "release": 3,
+      "rule_version": "v1",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "incident",
+      "expected": "inapplicable_rule"
+    },
+    {
+      "id": "historical-v1",
+      "stage": "after_change",
+      "release": 2,
+      "rule_version": "v1",
+      "dataset": "fictional-demo-notes",
+      "language": "en",
+      "candidate": "incident",
+      "expected": "unresolved"
+    }
+  ]
+}
