@@ -21,3 +21,6 @@
 .review-checks dt{font-weight:600}.review-checks dd{margin:0}.review-checks p{white-space:pre-wrap;margin-bottom:0}
 .collaboration-timeline li{padding:10px 0}.collaboration-timeline p{font-size:14px;color:var(--muted);margin:4px 0}
 @media(max-width:720px){.collaboration-panel{padding:18px}.review-checks>div{grid-template-columns:1fr;gap:8px}.actions{flex-wrap:wrap}.community-nav{gap:0 20px}}
+
+.collaboration-panel a.button{text-decoration:none}
+.collaboration-panel a.button.primary{color:#fff}

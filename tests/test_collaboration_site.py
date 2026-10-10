@@ -33,6 +33,45 @@ class CollaborationSiteTests(unittest.TestCase):
         self.assertIn('&lt;script&gt;', (out / 'community/1.html').read_text())
         self.assertIn('community/needs.html', (out / 'index.html').read_text())
 
+    def test_help_groups_needs_and_offers_direct_comments(self):
+        out = self.render([post(71, dict(kind='question', needs=['evidence', 'review']))])
+        html = (out / 'community/needs.html').read_text()
+        self.assertEqual(html.count('<h2><a href="71.html">'), 1)
+        self.assertIn('evidence, review', html)
+        self.assertIn('Reply with a small correction', html)
+        self.assertIn('https://github.com/o/r/issues/71#new_comment_field', html)
+        self.assertIn('No artifact or commit SHA is needed', html)
+        detail = (out / 'community/71.html').read_text()
+        self.assertLess(detail.index('Reply with a small correction'), detail.index('community-body'))
+
+    def test_linked_updates_only_use_this_issues_comment_urls(self):
+        q = post(42, dict(kind='question', needs=['review']), body='Results: https://github.com/o/r/issues/42#issuecomment-123 Other: https://github.com/evil/r/issues/42#issuecomment-456')
+        out = self.render([q])
+        detail = (out / 'community/42.html').read_text()
+        self.assertIn('href="https://github.com/o/r/issues/42#issuecomment-123"', detail)
+        self.assertNotIn('href="https://github.com/evil/r/issues/42#issuecomment-456"', detail)
+
+    def test_starter_selection_excludes_closed_and_withdrawn_questions(self):
+        from arc.community_views import render
+        posts = [post(42, dict(kind='question', needs=['evidence', 'review'])),
+                 post(36, dict(kind='question', needs=['counterexample'])),
+                 post(71, dict(kind='question', needs=['method']))]
+        posts[1]['state'] = 'closed'
+        pages = {}
+        render(posts, dict(generated_at=STAMP), 'mbabby/agent-research-commons',
+               lambda path, title, body, *args: pages.update({path: body}))
+        html = pages['community/needs.html']
+        self.assertEqual(html.count('Maintainer-selected starting point'), 1)
+        self.assertEqual(html.count('<h2><a href="42.html">'), 1)
+        self.assertNotIn('36.html', html)
+        self.assertNotIn('28.html', html)
+        self.assertIn('71.html', html)
+        withdrawn = post(42, dict(kind='question', needs=[]))
+        render([withdrawn], dict(generated_at=STAMP), 'mbabby/agent-research-commons',
+               lambda path, title, body, *args: pages.update({path: body}))
+        self.assertNotIn('Maintainer-selected starting point', pages['community/needs.html'])
+        self.assertNotIn('42.html', pages['community/needs.html'])
+
     def test_scoped_evidence_version_and_same_account_disclosure(self):
         question = post(27, dict(kind='question', needs=['evidence', 'review']))
         contribution = post(40, dict(kind='contribution', question=27, artifact_url='https://github.com/external/research/tree/' + VERSION, artifact_version=VERSION, supersedes=None))
