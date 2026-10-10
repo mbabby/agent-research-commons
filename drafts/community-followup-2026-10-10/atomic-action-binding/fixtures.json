@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "deterministic hypothetical atomic-server state-machine MOCK",
+  "task": {"origin": "https://mock.invalid", "account": "A", "workspace": "W1", "target": "D17", "effect": "archive"},
+  "base": {"origin": "https://mock.invalid", "account": "A", "workspace": "W1", "target": "D17", "effect": "archive", "action_version": 1, "global_version": 1, "permission": true, "ui_counter": 0},
+  "cases": [
+    {"id": "unchanged", "events": []},
+    {"id": "before_observe_effect", "events": [{"when": "before_observe", "set": {"effect": "delete"}, "version_scope": "action"}]},
+    {"id": "between_context", "events": [{"when": "before_commit", "set": {"account": "B", "workspace": "W2"}, "version_scope": "action"}]},
+    {"id": "between_target", "events": [{"when": "before_commit", "set": {"target": "D18"}, "version_scope": "action"}]},
+    {"id": "between_effect", "events": [{"when": "before_commit", "set": {"effect": "delete"}, "version_scope": "action"}]},
+    {"id": "between_version", "events": [{"when": "before_commit", "set": {}, "version_scope": "action"}]},
+    {"id": "between_revocation", "events": [{"when": "before_commit", "set": {"permission": false}, "version_scope": "action"}]},
+    {"id": "between_unrelated", "events": [{"when": "before_commit", "set": {"ui_counter": 1}, "version_scope": "global"}]},
+    {"id": "after_commit_change", "events": [{"when": "after_commit", "set": {"effect": "delete", "permission": false}, "version_scope": "action"}]},
+    {"id": "lost_response_after_commit", "events": [], "response_lost": true, "receipt_read_fails": true}
+  ]
+}

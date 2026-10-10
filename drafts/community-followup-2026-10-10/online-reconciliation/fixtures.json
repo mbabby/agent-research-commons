@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "deadline": 4,
+  "scope": {
+    "account": "acct1",
+    "environment": "mock",
+    "operation": "A"
+  },
+  "cases": [
+    {
+      "initial_commit": true,
+      "receipt_at": 2,
+      "failed_reads": [],
+      "deduplication_contract": false,
+      "key_expires_at": 10,
+      "authorization_events": [],
+      "id": "receipt_at_2",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 3,
+          "retry_submissions": 0,
+          "unresolved": 0,
+          "resolved": 1
+        }
+      }
+    },
+    {
+      "initial_commit": true,
+      "receipt_at": 4,
+      "failed_reads": [],
+      "deduplication_contract": false,
+      "key_expires_at": 10,
+      "authorization_events": [],
+      "id": "receipt_at_deadline",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 5,
+          "retry_submissions": 0,
+          "unresolved": 0,
+          "resolved": 1
+        }
+      }
+    },
+    {
+      "initial_commit": true,
+      "receipt_at": 5,
+      "failed_reads": [],
+      "deduplication_contract": false,
+      "key_expires_at": 10,
+      "authorization_events": [],
+      "id": "receipt_after_deadline",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 5,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        }
+      }
+    },
+    {
+      "initial_commit": true,
+      "receipt_at": 1,
+      "failed_reads": [
+        0,
+        1
+      ],
+      "deduplication_contract": false,
+      "key_expires_at": 10,
+      "authorization_events": [],
+      "id": "failed_reads_then_receipt",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 3,
+          "retry_submissions": 0,
+          "unresolved": 0,
+          "resolved": 1
+        }
+      }
+    },
+    {
+      "initial_commit": true,
+      "receipt_at": 3,
+      "failed_reads": [],
+      "deduplication_contract": true,
+      "key_expires_at": 0,
+      "authorization_events": [],
+      "id": "expired_key_late_receipt",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 4,
+          "retry_submissions": 0,
+          "unresolved": 0,
+          "resolved": 1
+        }
+      }
+    },
+    {
+      "initial_commit": false,
+      "receipt_at": 2,
+      "failed_reads": [
+        0
+      ],
+      "deduplication_contract": true,
+      "key_expires_at": 10,
+      "authorization_events": [
+        {
+          "tick": 1,
+          "mutation": false
+        }
+      ],
+      "id": "mutation_withdrawn",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 0,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 0,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 5,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        }
+      }
+    },
+    {
+      "initial_commit": true,
+      "receipt_at": 2,
+      "failed_reads": [],
+      "deduplication_contract": false,
+      "key_expires_at": 10,
+      "authorization_events": [
+        {
+          "tick": 1,
+          "read": false
+        }
+      ],
+      "id": "read_withdrawn",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        }
+      }
+    },
+    {
+      "initial_commit": false,
+      "receipt_at": 1,
+      "failed_reads": [],
+      "deduplication_contract": true,
+      "key_expires_at": 3,
+      "authorization_events": [],
+      "id": "protected_retry_response_lost",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 1,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 2,
+          "retry_submissions": 1,
+          "unresolved": 0,
+          "resolved": 1
+        }
+      }
+    },
+    {
+      "initial_commit": false,
+      "receipt_at": 2,
+      "failed_reads": [],
+      "deduplication_contract": false,
+      "key_expires_at": 10,
+      "authorization_events": [],
+      "id": "no_receipt_no_contract",
+      "expected": {
+        "one_shot": {
+          "historical_effects": 0,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 1,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "online": {
+          "historical_effects": 0,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 5,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        }
+      }
+    }
+  ]
+}
