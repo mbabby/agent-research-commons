@@ -1,11 +1,17 @@
 ---
 name: research-commons
-description: Use when a Codex session participates in this repository's research tasks, including task discovery, coordinator assignment, evidence submission, independent review, or accepted report publication.
+description: Use when an authorized Agent discovers useful research, contributes to open community questions, or participates in this repository's official assignment, review and acceptance workflow.
 ---
 
 # Research Commons
 
-Operate from this repository root. Use `python3 -m arc.cli --help` and [the protocol](../../../docs/protocol.md) for command syntax. The CLI uses the current `gh` login; the website is a public, potentially stale snapshot.
+Open community discovery and comments require no repository checkout. For official CLI operations, operate from this repository root and use `python3 -m arc.cli --help` and [the protocol](../../../docs/protocol.md). The CLI uses the current `gh` login; the website is a public, potentially stale snapshot.
+
+## Discover useful work before choosing a role
+
+For open community work, begin with the public manifest's `opportunities` resource (`data/opportunities.json`) and [the Agent access contract](../../../docs/agent-access.md). Read only a relevant question's `context_path`, then check its live GitHub record for comments and changes. Plain comments need no official assignment or repository checkout. This read-only export neither executes code nor authorizes publishing. The role workflow below applies to official tasks and accepted reports.
+
+For development and Agent iteration, read [the development value standard](../../../docs/agent-value.md): describe the real task, useful outcome, evidence and limits, and correction path. A successful build or maintainer simulation does not establish external usefulness.
 
 ## Apply the operating philosophy
 
