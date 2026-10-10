@@ -1,0 +1,2096 @@
+{
+  "kind": "synthetic online reconciliation",
+  "protocol_version": 1,
+  "source_sha256": {
+    "protocol.md": "565e6b6fe05e6eb22517ef9e1777e8e40082b7cd294cfa886aff6675c3eea5b3",
+    "fixtures.json": "ce21075481786ae8862467c15c88d05053140c044388c77b26055927b3a6114c",
+    "experiment.py": "fdbddb4d71ff9a69971afd34dca1ae53c9569ef8ff82aa1ac4184aa306f66810",
+    "test_experiment.py": "d7343872346512928ffb7e5c5b21775ec51beb7ac9cc334629cc2e6a38417268"
+  },
+  "runs": [
+    {
+      "case": "receipt_at_2",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "receipt_at_2",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 2,
+      "stop_reason": "bound_receipt",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 3,
+        "retry_submissions": 0,
+        "unresolved": 0,
+        "resolved": 1
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          },
+          "action": "resolve"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "receipt_at_deadline",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "receipt_at_deadline",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 4,
+      "stop_reason": "bound_receipt",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 5,
+        "retry_submissions": 0,
+        "unresolved": 0,
+        "resolved": 1
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 3,
+          "context": {
+            "tick": 3,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 4,
+          "context": {
+            "tick": 4,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          },
+          "action": "resolve"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 3,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 4,
+          "event": "read",
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "receipt_after_deadline",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "receipt_after_deadline",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 4,
+      "stop_reason": "deadline",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 5,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 3,
+          "context": {
+            "tick": 3,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 4,
+          "context": {
+            "tick": 4,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 3,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 4,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "failed_reads_then_receipt",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "read_failed"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "read_failed"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "failed_reads_then_receipt",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 2,
+      "stop_reason": "bound_receipt",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 3,
+        "retry_submissions": 0,
+        "unresolved": 0,
+        "resolved": 1
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "read_failed"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "read_failed"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          },
+          "action": "resolve"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "read_failed"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "read_failed"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "expired_key_late_receipt",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 0
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "key_expired"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "expired_key_late_receipt",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 3,
+      "stop_reason": "bound_receipt",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 4,
+        "retry_submissions": 0,
+        "unresolved": 0,
+        "resolved": 1
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 0
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 0
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 0
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 3,
+          "context": {
+            "tick": 3,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 0
+          },
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          },
+          "action": "resolve"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "key_expired"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 3,
+          "event": "read",
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "mutation_withdrawn",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 0,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "read_failed"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "tick": -1,
+          "event": "initial_request_dropped"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "read_failed"
+          }
+        }
+      ],
+      "history": []
+    },
+    {
+      "case": "mutation_withdrawn",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 4,
+      "stop_reason": "deadline",
+      "metrics": {
+        "historical_effects": 0,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 5,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "read_failed"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": false,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": false,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 3,
+          "context": {
+            "tick": 3,
+            "mutation_authorized": false,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 4,
+          "context": {
+            "tick": 4,
+            "mutation_authorized": false,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "tick": -1,
+          "event": "initial_request_dropped"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "read_failed"
+          }
+        },
+        {
+          "tick": 1,
+          "mutation": false,
+          "event": "authorization_change"
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 3,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 4,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": []
+    },
+    {
+      "case": "read_withdrawn",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "read_withdrawn",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 1,
+      "stop_reason": "read_authorization_withdrawn",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": false,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "action": "stop_without_read"
+        }
+      ],
+      "provider_trace": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 1,
+          "read": false,
+          "event": "authorization_change"
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": -1,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "initial"
+        }
+      ]
+    },
+    {
+      "case": "protected_retry_response_lost",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 1,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 3
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "retry"
+        }
+      ],
+      "provider_trace": [
+        {
+          "tick": -1,
+          "event": "initial_request_dropped"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": 0,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "retry_original_key",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "retry_response",
+          "response": {
+            "status": "response_lost"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": 0,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "retry_original_key"
+        }
+      ]
+    },
+    {
+      "case": "protected_retry_response_lost",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 1,
+      "stop_reason": "bound_receipt",
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 2,
+        "retry_submissions": 1,
+        "unresolved": 0,
+        "resolved": 1
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 3
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "retry"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": true,
+            "key_expires_at": 3
+          },
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          },
+          "action": "resolve"
+        }
+      ],
+      "provider_trace": [
+        {
+          "tick": -1,
+          "event": "initial_request_dropped"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": 0,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "retry_original_key",
+          "event": "commit"
+        },
+        {
+          "tick": 0,
+          "event": "retry_response",
+          "response": {
+            "status": "response_lost"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "status": "succeeded",
+            "resource": "resource-1"
+          }
+        }
+      ],
+      "history": [
+        {
+          "account": "acct1",
+          "environment": "mock",
+          "operation": "A",
+          "tick": 0,
+          "authorized": true,
+          "resource": "resource-1",
+          "origin": "retry_original_key"
+        }
+      ]
+    },
+    {
+      "case": "no_receipt_no_contract",
+      "policy": "one_shot",
+      "deadline": 4,
+      "last_tick": 0,
+      "stop_reason": "one_shot_budget",
+      "metrics": {
+        "historical_effects": 0,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 1,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "tick": -1,
+          "event": "initial_request_dropped"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": []
+    },
+    {
+      "case": "no_receipt_no_contract",
+      "policy": "online",
+      "deadline": 4,
+      "last_tick": 4,
+      "stop_reason": "deadline",
+      "metrics": {
+        "historical_effects": 0,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unauthorized_read_attempts": 0,
+        "reads": 5,
+        "retry_submissions": 0,
+        "unresolved": 1,
+        "resolved": 0
+      },
+      "decisions": [
+        {
+          "tick": 0,
+          "context": {
+            "tick": 0,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 1,
+          "context": {
+            "tick": 1,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 2,
+          "context": {
+            "tick": 2,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 3,
+          "context": {
+            "tick": 3,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        },
+        {
+          "tick": 4,
+          "context": {
+            "tick": 4,
+            "mutation_authorized": true,
+            "read_authorized": true,
+            "deduplication_contract": false,
+            "key_expires_at": 10
+          },
+          "observation": {
+            "status": "unknown"
+          },
+          "action": "wait"
+        }
+      ],
+      "provider_trace": [
+        {
+          "tick": -1,
+          "event": "initial_request_dropped"
+        },
+        {
+          "tick": 0,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 1,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 2,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 3,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        },
+        {
+          "tick": 4,
+          "event": "read",
+          "observation": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "history": []
+    }
+  ],
+  "totals": {
+    "one_shot": {
+      "historical_effects": 7,
+      "duplicates": 0,
+      "unauthorized_effects": 0,
+      "unauthorized_read_attempts": 0,
+      "reads": 9,
+      "retry_submissions": 1,
+      "unresolved": 9,
+      "resolved": 0
+    },
+    "online": {
+      "historical_effects": 7,
+      "duplicates": 0,
+      "unauthorized_effects": 0,
+      "unauthorized_read_attempts": 0,
+      "reads": 33,
+      "retry_submissions": 1,
+      "unresolved": 4,
+      "resolved": 5
+    }
+  },
+  "negative_controls": [
+    {
+      "detected_violation": "duplicates",
+      "result": {
+        "case": "expired_key_late_receipt",
+        "policy": "retry_expired_key",
+        "deadline": 4,
+        "last_tick": 3,
+        "stop_reason": "bound_receipt",
+        "metrics": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 0,
+          "reads": 4,
+          "retry_submissions": 1,
+          "unresolved": 0,
+          "resolved": 0
+        },
+        "decisions": [
+          {
+            "tick": 0,
+            "context": {
+              "tick": 0,
+              "mutation_authorized": true,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 0
+            },
+            "observation": {
+              "status": "unknown"
+            },
+            "action": "retry"
+          },
+          {
+            "tick": 1,
+            "context": {
+              "tick": 1,
+              "mutation_authorized": true,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 0
+            },
+            "observation": {
+              "status": "unknown"
+            },
+            "action": "wait"
+          },
+          {
+            "tick": 2,
+            "context": {
+              "tick": 2,
+              "mutation_authorized": true,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 0
+            },
+            "observation": {
+              "status": "unknown"
+            },
+            "action": "wait"
+          },
+          {
+            "tick": 3,
+            "context": {
+              "tick": 3,
+              "mutation_authorized": true,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 0
+            },
+            "observation": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "status": "succeeded",
+              "resource": "resource-1"
+            },
+            "action": "resolve"
+          }
+        ],
+        "provider_trace": [
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": -1,
+            "authorized": true,
+            "resource": "resource-1",
+            "origin": "initial",
+            "event": "commit"
+          },
+          {
+            "tick": 0,
+            "event": "key_expired"
+          },
+          {
+            "tick": 0,
+            "event": "read",
+            "observation": {
+              "status": "unknown"
+            }
+          },
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": 0,
+            "authorized": true,
+            "resource": "resource-2",
+            "origin": "retry_original_key",
+            "event": "commit"
+          },
+          {
+            "tick": 0,
+            "event": "retry_response",
+            "response": {
+              "status": "response_lost"
+            }
+          },
+          {
+            "tick": 1,
+            "event": "key_expired"
+          },
+          {
+            "tick": 1,
+            "event": "read",
+            "observation": {
+              "status": "unknown"
+            }
+          },
+          {
+            "tick": 2,
+            "event": "read",
+            "observation": {
+              "status": "unknown"
+            }
+          },
+          {
+            "tick": 3,
+            "event": "read",
+            "observation": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "status": "succeeded",
+              "resource": "resource-1"
+            }
+          }
+        ],
+        "history": [
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": -1,
+            "authorized": true,
+            "resource": "resource-1",
+            "origin": "initial"
+          },
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": 0,
+            "authorized": true,
+            "resource": "resource-2",
+            "origin": "retry_original_key"
+          }
+        ]
+      }
+    },
+    {
+      "detected_violation": "unauthorized_effects",
+      "result": {
+        "case": "mutation_withdrawn",
+        "policy": "ignore_mutation_withdrawal",
+        "deadline": 4,
+        "last_tick": 2,
+        "stop_reason": "bound_receipt",
+        "metrics": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 1,
+          "unauthorized_read_attempts": 0,
+          "reads": 3,
+          "retry_submissions": 1,
+          "unresolved": 0,
+          "resolved": 0
+        },
+        "decisions": [
+          {
+            "tick": 0,
+            "context": {
+              "tick": 0,
+              "mutation_authorized": true,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 10
+            },
+            "observation": {
+              "status": "read_failed"
+            },
+            "action": "wait"
+          },
+          {
+            "tick": 1,
+            "context": {
+              "tick": 1,
+              "mutation_authorized": false,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 10
+            },
+            "observation": {
+              "status": "unknown"
+            },
+            "action": "retry"
+          },
+          {
+            "tick": 2,
+            "context": {
+              "tick": 2,
+              "mutation_authorized": false,
+              "read_authorized": true,
+              "deduplication_contract": true,
+              "key_expires_at": 10
+            },
+            "observation": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "status": "succeeded",
+              "resource": "resource-1"
+            },
+            "action": "resolve"
+          }
+        ],
+        "provider_trace": [
+          {
+            "tick": -1,
+            "event": "initial_request_dropped"
+          },
+          {
+            "tick": 0,
+            "event": "read",
+            "observation": {
+              "status": "read_failed"
+            }
+          },
+          {
+            "tick": 1,
+            "mutation": false,
+            "event": "authorization_change"
+          },
+          {
+            "tick": 1,
+            "event": "read",
+            "observation": {
+              "status": "unknown"
+            }
+          },
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": 1,
+            "authorized": false,
+            "resource": "resource-1",
+            "origin": "retry_original_key",
+            "event": "commit"
+          },
+          {
+            "tick": 1,
+            "event": "retry_response",
+            "response": {
+              "status": "response_lost"
+            }
+          },
+          {
+            "tick": 2,
+            "event": "read",
+            "observation": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "status": "succeeded",
+              "resource": "resource-1"
+            }
+          }
+        ],
+        "history": [
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": 1,
+            "authorized": false,
+            "resource": "resource-1",
+            "origin": "retry_original_key"
+          }
+        ]
+      }
+    },
+    {
+      "detected_violation": "unauthorized_read_attempts",
+      "result": {
+        "case": "read_withdrawn",
+        "policy": "ignore_read_withdrawal",
+        "deadline": 4,
+        "last_tick": 1,
+        "stop_reason": "read_denied",
+        "metrics": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unauthorized_read_attempts": 1,
+          "reads": 2,
+          "retry_submissions": 0,
+          "unresolved": 1,
+          "resolved": 0
+        },
+        "decisions": [
+          {
+            "tick": 0,
+            "context": {
+              "tick": 0,
+              "mutation_authorized": true,
+              "read_authorized": true,
+              "deduplication_contract": false,
+              "key_expires_at": 10
+            },
+            "observation": {
+              "status": "unknown"
+            },
+            "action": "wait"
+          },
+          {
+            "tick": 1,
+            "context": {
+              "tick": 1,
+              "mutation_authorized": true,
+              "read_authorized": false,
+              "deduplication_contract": false,
+              "key_expires_at": 10
+            },
+            "observation": {
+              "status": "read_denied"
+            },
+            "action": "stop_unknown"
+          }
+        ],
+        "provider_trace": [
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": -1,
+            "authorized": true,
+            "resource": "resource-1",
+            "origin": "initial",
+            "event": "commit"
+          },
+          {
+            "tick": 0,
+            "event": "read",
+            "observation": {
+              "status": "unknown"
+            }
+          },
+          {
+            "tick": 1,
+            "read": false,
+            "event": "authorization_change"
+          },
+          {
+            "tick": 1,
+            "event": "read",
+            "observation": {
+              "status": "read_denied"
+            }
+          }
+        ],
+        "history": [
+          {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "tick": -1,
+            "authorized": true,
+            "resource": "resource-1",
+            "origin": "initial"
+          }
+        ]
+      }
+    }
+  ]
+}

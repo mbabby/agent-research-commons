@@ -1,0 +1,19 @@
+2026-10-10 local verification
+Command: python3 -B drafts/community-followup-2026-10-10/atomic-action-binding/experiment.py
+Captured stdout in memory; compared byte-for-byte against results.json.
+Result: identical, 50 deterministic runs.
+
+Command: python3 -B -m unittest discover -s drafts/community-followup-2026-10-10/atomic-action-binding -v
+test_all_reject_control_exposes_incomplete_normal_case (test_experiment.AtomicBindingTests) ... ok
+test_atomic_binding_stops_target_race_bypass_exposes_wrong_effect (test_experiment.AtomicBindingTests) ... ok
+test_each_binding_field_matters_without_relying_on_version_difference (test_experiment.AtomicBindingTests) ... ok
+test_global_version_overrejects_unrelated_change (test_experiment.AtomicBindingTests) ... ok
+test_postcommit_change_does_not_retroactively_revoke_action (test_experiment.AtomicBindingTests) ... ok
+test_response_loss_is_unknown_after_one_valid_effect (test_experiment.AtomicBindingTests) ... ok
+test_revocation_before_commit_denies_even_baseline (test_experiment.AtomicBindingTests) ... ok
+test_version_only_change_is_not_laundered_as_correct_action (test_experiment.AtomicBindingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
