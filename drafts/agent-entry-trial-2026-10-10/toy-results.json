@@ -1,0 +1,72 @@
+{
+  "python": "3.9.6",
+  "reused_four_cases": [
+    {
+      "case": "valid_cumulative",
+      "expected": true,
+      "last_names": false,
+      "union_names": true,
+      "final_contents": true
+    },
+    {
+      "case": "undo_prior",
+      "expected": false,
+      "last_names": true,
+      "union_names": true,
+      "final_contents": false
+    },
+    {
+      "case": "wrong_value",
+      "expected": false,
+      "last_names": true,
+      "union_names": true,
+      "final_contents": false
+    },
+    {
+      "case": "no_progress",
+      "expected": false,
+      "last_names": false,
+      "union_names": false,
+      "final_contents": false
+    }
+  ],
+  "scores": {
+    "last_names": {
+      "false_rejections": 1,
+      "valid_cases": 1,
+      "false_acceptances": 2,
+      "invalid_cases": 3
+    },
+    "union_names": {
+      "false_rejections": 0,
+      "valid_cases": 1,
+      "false_acceptances": 2,
+      "invalid_cases": 3
+    },
+    "final_contents": {
+      "false_rejections": 0,
+      "valid_cases": 1,
+      "false_acceptances": 0,
+      "invalid_cases": 3
+    }
+  },
+  "no_op_retry": {
+    "before": {
+      "last_names": true,
+      "union_names": true,
+      "final_contents": true
+    },
+    "after": {
+      "last_names": false,
+      "union_names": true,
+      "final_contents": true
+    }
+  },
+  "fingerprint_checks": {
+    "whole_record_changes_on_bookkeeping": true,
+    "evidence_stable_on_bookkeeping": true,
+    "evidence_changes_on_state_change": true,
+    "evidence_changes_on_contract_change": true
+  },
+  "scope": "Synthetic stipulated final-state contract only, not original verifier reproduction."
+}

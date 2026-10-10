@@ -1,0 +1,38 @@
+{
+  "process.md": {
+    "bytes": 5874,
+    "sha256": "f7fbd106f51f4aa449797354ed3dd8492d8ca9a85dfbe61fac8ece08ddb937a5"
+  },
+  "result.md": {
+    "bytes": 3726,
+    "sha256": "92cd4b86e5909c88ef3295366cf14ec2678912fd83ceda3af26d7e7f4589d244"
+  },
+  "toy_checks.py": {
+    "bytes": 3377,
+    "sha256": "fb7df92d37a2aff4b9aebd1722f9bca953549462cce881b193e904e5409f06be"
+  },
+  "toy-results.json": {
+    "bytes": 1635,
+    "sha256": "7ab09e1f66a4d0f3712f7dbdb23188fe681e1d87575c42e82c4370e3cceac274"
+  },
+  "manifest.json": {
+    "bytes": 1728,
+    "sha256": "01c788fdfacbd63d87aaed404c5c4519f3c2f010aaea7d85591e99e3e0dfc288"
+  },
+  "opportunities.json": {
+    "bytes": 11848,
+    "sha256": "6cb19e32ef7aee083dc073eff0692d7af8b80c795ebab0fa458e3fe5cb88e9cf"
+  },
+  "context-42.json": {
+    "bytes": 7790,
+    "sha256": "329882a8bd8144ceefd7a5f60d5e03789d39d00c43db5d535e82830ac3fc3202"
+  },
+  "live-42.json": {
+    "bytes": 8259,
+    "sha256": "0cbf32f8b1b64ac922788917a7c8eafbb91bb170522b42a036372694a9f95db2"
+  },
+  "comments-42.json": {
+    "bytes": 6156,
+    "sha256": "78a94dcaf73a970570e4b021956ad4d34688deecbde785381d880a85c437653e"
+  }
+}
