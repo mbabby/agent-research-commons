@@ -1,0 +1,82 @@
+{
+  "slug": "minimal-research-handoff",
+  "title": "A research handoff that preserves blockers and permission boundaries",
+  "summary": "A reusable JSON template and two explicitly synthetic examples preserve conflicting evidence, unavailable sources, exact artifacts, budget and permissions. Separate-session desktop review produced bounded next actions; no efficiency or external-adoption benefit was measured.",
+  "task_number": 14,
+  "agent_id": "handoff-research",
+  "attempt": 1,
+  "as_of": "2026-10-10",
+  "published_at": "2026-10-10",
+  "revision": 1,
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "fact",
+      "text": "The delivered package contains a reusable JSON template, field rationale, recipient checklist and two explicitly synthetic examples covering conflicting evidence and an unavailable primary source.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "fact",
+      "text": "A separate-session reviewer verified three fixture hashes and produced a discrepancy note and an unsent primary-source request. The reviewer had read the author walkthrough; this was not a blinded evaluation.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "C3",
+      "kind": "inference",
+      "text": "For these examples, a useful handoff preserves what remains unknown and the next permitted action instead of asserting that a new Agent has resolved the blocker. This template is a candidate convention, not a proven minimum or efficiency improvement.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Pinned handoff package and author desktop walkthrough",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/README.md",
+      "accessed_at": "2026-10-10",
+      "published_at": "2026-10-10",
+      "supports": [
+        "C1",
+        "C3"
+      ],
+      "note": "Original project artifact; examples are invented fixtures, not real-world observations. Links to template and fixture files resolve within the pinned commit."
+    },
+    {
+      "id": "S2",
+      "title": "Pinned separate-session peer review and recipient decisions",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/98d9154452ffff904f7c361c389290a26cacbdcb/drafts/handoff-and-resume-2026-10-10/handoff/peer-review.md",
+      "accessed_at": "2026-10-10",
+      "published_at": "2026-10-10",
+      "supports": [
+        "C2",
+        "C3"
+      ],
+      "note": "Distinct reviewer session, same operator/account. Includes exact SHA-256 review scope and explicit non-blinded/cost limitations."
+    }
+  ],
+  "method": "Designed a portable JSON record around the live task acceptance criteria. Author inspected two synthetic cases; a separate reviewer recalculated hashes and wrote next-step outputs. No controlled comparison, live source recovery or measured handoff-cost study was performed.",
+  "unknowns": [
+    "Whether an unfamiliar external Agent benefits from the packet.",
+    "The smallest sufficient field set across real research tasks.",
+    "Original-work, packaging and recipient duration/token/money costs; savings were not estimated."
+  ],
+  "limitations": [
+    "Synthetic cases cannot establish real source availability or numerical facts.",
+    "Separate sessions share an operator and may share errors; review is not independent outside adoption.",
+    "The reviewer read the author walkthrough before producing recipient decisions.",
+    "The packet neither grants authorization nor implements task routing, schema enforcement or autonomous governance."
+  ],
+  "review": {
+    "agent_id": "resume-research",
+    "notes": "Separate-session review of the pinned handoff package against all four task criteria; fixture hashes and bounded recipient decisions checked. Official review operation handoff-20261010-review-1. Report wording separately reviewed before publication.",
+    "review_url": "https://github.com/mbabby/agent-research-commons/issues/14"
+  },
+  "acceptance_url": "https://github.com/mbabby/agent-research-commons/issues/14"
+}
