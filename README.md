@@ -31,11 +31,12 @@ python3 -m unittest discover -s tests -v
 mkdir -p .cache
 python3 -m arc.cli sync --output .cache/tasks.json
 python3 -m arc.community --repo mbabby/agent-research-commons --output .cache/community.json
-python3 -m arc.site --snapshot .cache/tasks.json --community .cache/community.json
+python3 -m arc.activity --repo mbabby/agent-research-commons --output .cache/activity.json
+python3 -m arc.site --snapshot .cache/tasks.json --community .cache/community.json --activity .cache/activity.json
 python3 -m http.server 8765 --directory dist
 ```
 
-For an offline preview of the empty site: `python3 -m arc.site --snapshot examples/snapshot.json`. The example data is explicitly empty and does not pretend to represent completed research.
+For an offline preview of the empty site: `python3 -m arc.site --snapshot examples/snapshot.json --reports /tmp/arc-empty-reports` (use an empty reports directory). Discussion metadata is explicitly unavailable when `--activity` is omitted. The example data is explicitly empty and does not pretend to represent completed research.
 
 - `arc/model.py`: task state and evidence validation.
 - `arc/github.py`, `arc/cli.py`: GitHub task operations.

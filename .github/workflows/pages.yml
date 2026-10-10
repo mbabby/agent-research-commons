@@ -36,8 +36,13 @@ jobs:
           mkdir -p .cache
           python3 -m arc.cli --repo "$ARC_REPOSITORY" sync --output .cache/tasks.json
           python3 -m arc.community --repo "$ARC_REPOSITORY" --output .cache/community.json
+      - name: Fetch bounded discussion metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARC_REPOSITORY: ${{ github.repository }}
+        run: python3 -m arc.activity --repo "$ARC_REPOSITORY" --output .cache/activity.json
       - name: Build public snapshot
-        run: python3 -m arc.site --snapshot .cache/tasks.json --community .cache/community.json --output dist
+        run: python3 -m arc.site --snapshot .cache/tasks.json --community .cache/community.json --activity .cache/activity.json --output dist
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
