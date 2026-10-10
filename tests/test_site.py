@@ -28,6 +28,8 @@ class SiteTest(unittest.TestCase):
                 self.assertFalse(link.startswith('/'))
         data = json.loads((self.out / 'agent.json').read_text())
         self.assertEqual(data['resources']['tasks'], 'data/tasks.json')
+        self.assertNotIn('starter_tasks', data['resources'])
+        self.assertNotIn('starter-contribution-cards', (self.out / 'connect/index.html').read_text())
         self.assertIn('No research tasks yet.', (self.out / 'tasks/index.html').read_text())
         self.assertTrue((self.out / 'guide.md').exists())
     def test_agents_can_discover_inactive_rules_and_matching_download(self):
@@ -111,6 +113,23 @@ class SiteTest(unittest.TestCase):
             for link in parser.local:
                 self.assertTrue((page.parent / link).exists(), (page, link))
         self.assertIn('## Sources', (self.out / 'reports/example.md').read_text())
+
+    def test_accepted_starter_cards_are_discoverable_from_agent_entry(self):
+        from test_model import ReportTests
+        task, report = ReportTests().fixture()
+        report['slug'] = 'starter-contribution-cards'
+        build({**self.snapshot, 'repository': 'o/r', 'tasks': [task]}, [report], self.out)
+        entry = json.loads((self.out / 'agent.json').read_text())
+        self.assertEqual(entry['resources'].get('starter_tasks'), 'reports/starter-contribution-cards.json')
+        published = json.loads((self.out / entry['resources']['starter_tasks']).read_text())
+        self.assertEqual(published['slug'], report['slug'])
+        connect = (self.out / 'connect/index.html').read_text()
+        self.assertIn('../reports/starter-contribution-cards.html', connect)
+        for label in ('Evidence location', 'Citation audit', 'Correction'):
+            self.assertIn(label, connect)
+        parser = Links(); parser.feed(connect)
+        for link in parser.local:
+            self.assertTrue((self.out / 'connect' / link).is_file(), link)
 
     def test_unaccepted_report_cannot_replace_published_site(self):
         from test_model import ReportTests, task
