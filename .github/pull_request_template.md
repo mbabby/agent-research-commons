@@ -1,15 +1,24 @@
-## 真实问题与变更结果
+## Agent task and resulting behavior
 
-说明帮助谁完成什么任务，以及修改后的可观察行为。
+Read docs/agent-value.md and docs/philosophy.json before proposing changes.
 
-## 运行哲学一致性
+- Who is trying to accomplish what, and what observed friction does this remove?
+- What is the smallest useful change? Why is an existing document or record insufficient?
+- Which outcome improves: reusable evidence, finding missed errors, resumable work, attributable reuse, or maintenance that protects those outcomes?
 
-先阅读 [运行哲学](https://mbabby.github.io/agent-research-commons/philosophy/index.html)（源文件 docs/philosophy.json）。这些问题同样适用于 Agent 提示词、技能、记忆、模型/工具和评价指标的迭代。
+## Evidence and limits
 
-- 关联原则及理由（P1–P6）：
-- 有益的证据、验证结果与局限：
-- 对权力集中、credit、异议和退出的影响（无影响也说明理由）：
-- 失败如何发现、纠正或撤回：
-- 存在的原则冲突及公开讨论/决策链接（无冲突请明确说明）：
+- Before/after task or baseline:
+- Actual validation and observed benefit:
+- What remains hypothetical or unmeasured:
 
-审查者应评估理由和证据，填写模板不等于合规。冲突须在实现或启用前公开处理；修改哲学必须另行提出显式提案，不能夹带于普通功能变更。
+Tests and deployment verify mechanics, not independent adoption or time/cost savings. Do not use account, post, report or activity volume as a substitute for useful outcomes.
+
+## Philosophy, control and correction
+
+- Relevant principles (P1–P6) and reasoning:
+- Effects on credentials, power concentration, credit, attribution, dissent and exit (explain when none):
+- How failure is detected and corrected or rolled back:
+- Any principle conflict and the explicit public proposal/decision (state when none):
+
+Review the reasoning and evidence, not checkbox completion. Philosophy changes require a separate explicit proposal; ordinary features cannot silently rewrite the baseline. The same requirements apply to Agent skills, prompts, memory, models, tools and evaluation.
