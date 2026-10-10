@@ -1,6 +1,7 @@
 """English advisory views of public records; source prose is always escaped."""
 from html import escape
 import json
+import re
 from urllib.parse import quote, urlencode
 from arc.collaboration import derive, display_body
 from arc.languages import language
@@ -89,6 +90,10 @@ def render(posts, snapshot, repository, page, graph=None):
         number = post['number']; item = records.get(number)
         body += '<a class="task-row" href="{}.html"><span class="task-no">#{}</span><div><h3>{}</h3><p>Unreviewed · {} · GitHub account: {}</p><span class="task-meta">{} comments · {}</span></div></a>'.format(number, number, prose(post['title']), esc(post['state']), esc(post['author']), post['comments'], esc(post['updated_at']))
         detail = head(post['title'], 'GitHub account: ' + post['author'] + ' · ' + post['state'] + ' · Updated ' + post['updated_at'])
+        detail += '<section class="collaboration-panel"><h2>Start with one small reply</h2><p>Share one counterexample, correct one assumption, or ask for clarification. No artifact or commit SHA is needed for a comment. English and Chinese are welcome.</p>' + external(post['url'] + '#new_comment_field', 'Reply with a small correction', 'button primary') + '<p>Latest replies and experiment updates are on GitHub; this page shows the Issue body snapshot.</p>' + external(post['url'], 'Read the latest discussion', 'button') + '</section>'
+        updates = dict.fromkeys(re.findall(re.escape(post['url']) + r'#issuecomment-[0-9]+\b', post['body']))
+        if updates:
+            detail += '<section class="collaboration-panel"><h2>Linked discussion updates</h2><p>Links supplied in this Issue body; not independently verified.</p>' + ''.join(external(url, 'Open linked experiment or discussion update', 'button') for url in updates) + '</section>'
         detail += '<article class="prose community-body">' + prose(display_body(post['body'])) + '</article>'
         if item:
             detail += panel(item)
@@ -105,8 +110,24 @@ def render(posts, snapshot, repository, page, graph=None):
     page('community/index.html', 'Community', body, 'community', 1)
 
     needs = head('Help needed', 'Concrete requests from open questions. Parallel contributions and non-exclusive intents are welcome.')
+    needs += '<section class="collaboration-panel"><h2>Your first contribution can be a comment</h2><p>Pick a question and reply with one counterexample, one corrected assumption, or one source with an explanation. No artifact or commit SHA is needed for a comment. You do not need to declare an intent. English and Chinese are welcome.</p><p>For a complete research artifact, use the versioned contribution form. A comment alone is not a scoped review or accepted finding.</p></section>'
+    grouped = {}
     for need in graph['needs']:
-        needs += '<article class="collaboration-panel"><h2>' + link(need['question']) + '</h2><p>Requested help: <strong>' + esc(need['need']) + '</strong></p><p>Active non-exclusive intents: ' + (', '.join(link(n) for n in need['intents']) or 'None recorded') + '</p><div class="actions">' + action(repository, 'intent', 'Declare an intent', question=need['question']) + action(repository, 'contribution', 'Contribute evidence', question=need['question']) + '</div></article>'
+        entry = grouped.setdefault(need['question'], {'needs': [], 'intents': []})
+        entry['needs'].append(need['need'])
+        for intent in need['intents']:
+            if intent not in entry['intents']:
+                entry['intents'].append(intent)
+    # Maintainer-selected starting points, not rankings or endorsements.
+    starters = {42: 'Correct one assumption in the two-attempt retry example.',
+                36: 'Share one sanitized tool-call output and the decision you expected.',
+                28: 'Describe one state change that should invalidate an earlier approval.'} if repository == 'mbabby/agent-research-commons' else {}
+    for number in sorted(grouped, key=lambda n: (n not in starters, list(starters).index(n) if n in starters else n)):
+        need = grouped[number]
+        needs += '<article class="collaboration-panel"><h2>' + link(number) + '</h2>'
+        if number in starters:
+            needs += '<p><strong>Maintainer-selected starting point</strong> · Not a ranking or endorsement.</p><p>' + esc(starters[number]) + '</p>'
+        needs += '<p>Requested help: <strong>' + esc(', '.join(need['needs'])) + '</strong></p><p>Active non-exclusive intents: ' + (', '.join(link(n) for n in need['intents']) or 'None recorded') + '</p><div class="actions">' + external(by_issue[number]['url'] + '#new_comment_field', 'Reply with a small correction', 'button primary') + action(repository, 'contribution', 'Share a versioned artifact', question=number) + '</div><p>Optional: ' + action(repository, 'intent', 'Declare a non-exclusive intent', question=number) + '</p></article>'
     if not graph['needs']:
         needs += '<p class="empty">No current help requests. No participation is implied.</p>'
     page('community/needs.html', 'Help needed', needs, 'community', 1)
