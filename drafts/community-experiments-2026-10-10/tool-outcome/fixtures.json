@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "scope": {
+    "account": "acct1",
+    "environment": "mock"
+  },
+  "read_authorized": true,
+  "cases": [
+    {
+      "id": "before_commit",
+      "events": [
+        "drop:A",
+        "timeout",
+        "observe:timeout"
+      ],
+      "deduplication_protected": true,
+      "expected": {
+        "blind": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 1
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 1
+        }
+      }
+    },
+    {
+      "id": "after_commit",
+      "events": [
+        "commit:A",
+        "timeout",
+        "observe:receipt"
+      ],
+      "deduplication_protected": true,
+      "expected": {
+        "blind": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 1
+        }
+      }
+    },
+    {
+      "id": "delayed_visibility",
+      "events": [
+        "commit:A",
+        "hide:A",
+        "timeout",
+        "observe:lookup",
+        "reveal:A",
+        "observe:receipt"
+      ],
+      "deduplication_protected": true,
+      "expected": {
+        "blind": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 1
+        }
+      }
+    },
+    {
+      "id": "identical_request",
+      "events": [
+        "drop:A",
+        "commit:B",
+        "timeout",
+        "observe:lookup"
+      ],
+      "deduplication_protected": false,
+      "expected": {
+        "blind": {
+          "historical_effects": 2,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 1
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 1,
+          "completion": 0
+        }
+      }
+    },
+    {
+      "id": "manual_deletion",
+      "events": [
+        "commit:A",
+        "timeout",
+        "delete:A",
+        "observe:lookup"
+      ],
+      "deduplication_protected": false,
+      "expected": {
+        "blind": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 1,
+          "completion": 0
+        }
+      }
+    },
+    {
+      "id": "failed_read",
+      "events": [
+        "commit:A",
+        "timeout",
+        "observe:read_error"
+      ],
+      "deduplication_protected": false,
+      "expected": {
+        "blind": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 1,
+          "completion": 0
+        }
+      }
+    },
+    {
+      "id": "expired_key",
+      "events": [
+        "commit:A",
+        "timeout",
+        "expire:A",
+        "observe:timeout"
+      ],
+      "deduplication_protected": false,
+      "expected": {
+        "blind": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0
+        },
+        "evidence": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 1,
+          "completion": 0
+        }
+      }
+    },
+    {
+      "id": "authorization_withdrawn",
+      "events": [
+        "drop:A",
+        "timeout",
+        "withdraw",
+        "observe:timeout"
+      ],
+      "deduplication_protected": true,
+      "expected": {
+        "blind": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 1,
+          "unresolved": 0,
+          "completion": 0
+        },
+        "evidence": {
+          "historical_effects": 0,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 1,
+          "completion": 0
+        }
+      }
+    }
+  ]
+}

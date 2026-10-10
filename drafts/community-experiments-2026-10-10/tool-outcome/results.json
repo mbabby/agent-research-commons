@@ -1,0 +1,1363 @@
+{
+  "synthetic": true,
+  "protocol_version": 1,
+  "input_sha256": {
+    "protocol.md": "a9b21866fd4a72339365ab900eeee771dce1e0523b5465b812019f831d646e8c",
+    "fixtures.json": "d13f33965056b88878463750c9a844990b13efc77598301b1635f171166b4687",
+    "experiment.py": "f7fef315dbf3ff9a95269a669530a37668fcebc42b9a454cea84c0d074fd4384"
+  },
+  "runs": [
+    {
+      "case": "before_commit",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "timeout"
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "drop:A"
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:timeout"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 1,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "before_commit",
+      "policy": "evidence",
+      "action": "same_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "timeout"
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "drop:A"
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:timeout"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 1,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "after_commit",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-2",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:receipt"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        },
+        "resource-2": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 2,
+        "duplicates": 1,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "after_commit",
+      "policy": "evidence",
+      "action": "claim_success",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:receipt"
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 1,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "delayed_visibility",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "lookup",
+          "matches": []
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-2",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "hide:A"
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:lookup"
+        },
+        {
+          "event": "reveal:A"
+        },
+        {
+          "event": "observe:receipt"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        },
+        "resource-2": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 2,
+        "duplicates": 1,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "delayed_visibility",
+      "policy": "evidence",
+      "action": "claim_success",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "lookup",
+          "matches": []
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "hide:A"
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:lookup"
+        },
+        {
+          "event": "reveal:A"
+        },
+        {
+          "event": "observe:receipt"
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 1,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "identical_request",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "lookup",
+          "matches": [
+            "P"
+          ]
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-2",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "drop:A"
+        },
+        {
+          "event": "commit:B"
+        },
+        {
+          "event": "committed",
+          "operation": "B",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:lookup"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "B",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "B",
+          "payload": "P",
+          "visible": true
+        },
+        "resource-2": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 2,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 1,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "identical_request",
+      "policy": "evidence",
+      "action": "stop_unknown",
+      "classification": "unknown",
+      "observations": [
+        {
+          "kind": "lookup",
+          "matches": [
+            "P"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "event": "drop:A"
+        },
+        {
+          "event": "commit:B"
+        },
+        {
+          "event": "committed",
+          "operation": "B",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:lookup"
+        }
+      ],
+      "history": [
+        {
+          "operation": "B",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "B",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 1,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "manual_deletion",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "lookup",
+          "matches": []
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-2",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "delete:A"
+        },
+        {
+          "event": "observe:lookup"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-2": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 2,
+        "duplicates": 1,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "manual_deletion",
+      "policy": "evidence",
+      "action": "stop_unknown",
+      "classification": "unknown",
+      "observations": [
+        {
+          "kind": "lookup",
+          "matches": []
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "delete:A"
+        },
+        {
+          "event": "observe:lookup"
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {},
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 1,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "failed_read",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "read_error"
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-2",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:read_error"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        },
+        "resource-2": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 2,
+        "duplicates": 1,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "failed_read",
+      "policy": "evidence",
+      "action": "stop_unknown",
+      "classification": "unknown",
+      "observations": [
+        {
+          "kind": "read_error"
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "observe:read_error"
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 1,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "expired_key",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "timeout"
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-2",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "expire:A"
+        },
+        {
+          "event": "observe:timeout"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "operation": "A",
+          "resource": "resource-2",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        },
+        "resource-2": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 2,
+        "duplicates": 1,
+        "unauthorized_effects": 0,
+        "unresolved": 0,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "expired_key",
+      "policy": "evidence",
+      "action": "stop_unknown",
+      "classification": "unknown",
+      "observations": [
+        {
+          "kind": "timeout"
+        }
+      ],
+      "events": [
+        {
+          "event": "commit:A"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "expire:A"
+        },
+        {
+          "event": "observe:timeout"
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": true
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 1,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "authorization_withdrawn",
+      "policy": "blind",
+      "action": "fresh_retry",
+      "classification": "succeeded",
+      "observations": [
+        {
+          "kind": "timeout"
+        },
+        {
+          "kind": "receipt",
+          "value": {
+            "account": "acct1",
+            "environment": "mock",
+            "operation": "A",
+            "resource": "resource-1",
+            "status": "succeeded"
+          }
+        }
+      ],
+      "events": [
+        {
+          "event": "drop:A"
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "withdraw"
+        },
+        {
+          "event": "observe:timeout"
+        },
+        {
+          "event": "committed",
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": false
+        }
+      ],
+      "history": [
+        {
+          "operation": "A",
+          "resource": "resource-1",
+          "authorized": false
+        }
+      ],
+      "remaining_resources": {
+        "resource-1": {
+          "operation": "A",
+          "payload": "P",
+          "visible": true
+        }
+      },
+      "metrics": {
+        "historical_effects": 1,
+        "duplicates": 0,
+        "unauthorized_effects": 1,
+        "unresolved": 0,
+        "completion": 0,
+        "false_success": 0
+      }
+    },
+    {
+      "case": "authorization_withdrawn",
+      "policy": "evidence",
+      "action": "stop_unknown",
+      "classification": "unknown",
+      "observations": [
+        {
+          "kind": "timeout"
+        }
+      ],
+      "events": [
+        {
+          "event": "drop:A"
+        },
+        {
+          "event": "timeout"
+        },
+        {
+          "event": "withdraw"
+        },
+        {
+          "event": "observe:timeout"
+        }
+      ],
+      "history": [],
+      "remaining_resources": {},
+      "metrics": {
+        "historical_effects": 0,
+        "duplicates": 0,
+        "unauthorized_effects": 0,
+        "unresolved": 1,
+        "completion": 0,
+        "false_success": 0
+      }
+    }
+  ],
+  "aggregates": {
+    "blind": {
+      "historical_effects": 14,
+      "duplicates": 5,
+      "unauthorized_effects": 1,
+      "unresolved": 0,
+      "completion": 2,
+      "false_success": 0
+    },
+    "evidence": {
+      "historical_effects": 7,
+      "duplicates": 0,
+      "unauthorized_effects": 0,
+      "unresolved": 5,
+      "completion": 3,
+      "false_success": 0
+    }
+  },
+  "negative_controls": [
+    {
+      "expected_violation": "false_success",
+      "detected_violation": "false_success",
+      "result": {
+        "case": "identical_request",
+        "policy": "content_is_success",
+        "action": "claim_success",
+        "classification": "succeeded",
+        "observations": [
+          {
+            "kind": "lookup",
+            "matches": [
+              "P"
+            ]
+          }
+        ],
+        "events": [
+          {
+            "event": "drop:A"
+          },
+          {
+            "event": "commit:B"
+          },
+          {
+            "event": "committed",
+            "operation": "B",
+            "resource": "resource-1",
+            "authorized": true
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "observe:lookup"
+          }
+        ],
+        "history": [
+          {
+            "operation": "B",
+            "resource": "resource-1",
+            "authorized": true
+          }
+        ],
+        "remaining_resources": {
+          "resource-1": {
+            "operation": "B",
+            "payload": "P",
+            "visible": true
+          }
+        },
+        "metrics": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0,
+          "false_success": 1
+        }
+      }
+    },
+    {
+      "expected_violation": "unauthorized_effects",
+      "detected_violation": "unauthorized_effects",
+      "result": {
+        "case": "authorization_withdrawn",
+        "policy": "ignore_authorization",
+        "action": "same_retry",
+        "classification": "succeeded",
+        "observations": [
+          {
+            "kind": "timeout"
+          },
+          {
+            "kind": "receipt",
+            "value": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "resource": "resource-1",
+              "status": "succeeded"
+            }
+          }
+        ],
+        "events": [
+          {
+            "event": "drop:A"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "withdraw"
+          },
+          {
+            "event": "observe:timeout"
+          },
+          {
+            "event": "committed",
+            "operation": "A",
+            "resource": "resource-1",
+            "authorized": false
+          }
+        ],
+        "history": [
+          {
+            "operation": "A",
+            "resource": "resource-1",
+            "authorized": false
+          }
+        ],
+        "remaining_resources": {
+          "resource-1": {
+            "operation": "A",
+            "payload": "P",
+            "visible": true
+          }
+        },
+        "metrics": {
+          "historical_effects": 1,
+          "duplicates": 0,
+          "unauthorized_effects": 1,
+          "unresolved": 0,
+          "completion": 0,
+          "false_success": 0
+        }
+      }
+    },
+    {
+      "expected_violation": "duplicates",
+      "detected_violation": "duplicates",
+      "result": {
+        "case": "manual_deletion",
+        "policy": "absence_is_failure",
+        "action": "fresh_retry",
+        "classification": "succeeded",
+        "observations": [
+          {
+            "kind": "lookup",
+            "matches": []
+          },
+          {
+            "kind": "receipt",
+            "value": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "resource": "resource-2",
+              "status": "succeeded"
+            }
+          }
+        ],
+        "events": [
+          {
+            "event": "commit:A"
+          },
+          {
+            "event": "committed",
+            "operation": "A",
+            "resource": "resource-1",
+            "authorized": true
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "delete:A"
+          },
+          {
+            "event": "observe:lookup"
+          },
+          {
+            "event": "committed",
+            "operation": "A",
+            "resource": "resource-2",
+            "authorized": true
+          }
+        ],
+        "history": [
+          {
+            "operation": "A",
+            "resource": "resource-1",
+            "authorized": true
+          },
+          {
+            "operation": "A",
+            "resource": "resource-2",
+            "authorized": true
+          }
+        ],
+        "remaining_resources": {
+          "resource-2": {
+            "operation": "A",
+            "payload": "P",
+            "visible": true
+          }
+        },
+        "metrics": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0,
+          "false_success": 0
+        }
+      }
+    },
+    {
+      "expected_violation": "duplicates",
+      "detected_violation": "duplicates",
+      "result": {
+        "case": "expired_key",
+        "policy": "expired_is_safe",
+        "action": "same_retry",
+        "classification": "succeeded",
+        "observations": [
+          {
+            "kind": "timeout"
+          },
+          {
+            "kind": "receipt",
+            "value": {
+              "account": "acct1",
+              "environment": "mock",
+              "operation": "A",
+              "resource": "resource-2",
+              "status": "succeeded"
+            }
+          }
+        ],
+        "events": [
+          {
+            "event": "commit:A"
+          },
+          {
+            "event": "committed",
+            "operation": "A",
+            "resource": "resource-1",
+            "authorized": true
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "expire:A"
+          },
+          {
+            "event": "observe:timeout"
+          },
+          {
+            "event": "committed",
+            "operation": "A",
+            "resource": "resource-2",
+            "authorized": true
+          }
+        ],
+        "history": [
+          {
+            "operation": "A",
+            "resource": "resource-1",
+            "authorized": true
+          },
+          {
+            "operation": "A",
+            "resource": "resource-2",
+            "authorized": true
+          }
+        ],
+        "remaining_resources": {
+          "resource-1": {
+            "operation": "A",
+            "payload": "P",
+            "visible": true
+          },
+          "resource-2": {
+            "operation": "A",
+            "payload": "P",
+            "visible": true
+          }
+        },
+        "metrics": {
+          "historical_effects": 2,
+          "duplicates": 1,
+          "unauthorized_effects": 0,
+          "unresolved": 0,
+          "completion": 0,
+          "false_success": 0
+        }
+      }
+    }
+  ]
+}

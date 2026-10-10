@@ -1,0 +1,5449 @@
+{
+  "experiment_sha256": "17ba20b4d00cf4257b58365fbc9248ace73e5ec6ee2b36df83c5f59bcdfdf34a",
+  "frozen_sha256": {
+    "fixtures.json": "184d056f054a6f1898ed9ecd3e9822d08eabf9a74b60c24b2469543431cf336f",
+    "protocol.md": "f37a925777ec27bf733ba0daefb4f5d96c816f7255ad9062478818dac36c3bbd"
+  },
+  "kind": "deterministic state-machine MOCK, not browser evidence",
+  "python_version": "3.9.6",
+  "run_count": 50,
+  "runs": [
+    {
+      "case": "rerender",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 2,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "rerender",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 2,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "rerender",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 2,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "rerender",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 1,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 2,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "rerender",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 2,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "renamed",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Move to archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "renamed",
+      "decision": {
+        "locator_repairs": 1,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 1,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Move to archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "renamed",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Move to archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "renamed",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 1,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Move to archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "renamed",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Move to archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "archived",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D18",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "other",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": false,
+                "target": "D18"
+              },
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "other",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D18",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "other",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": false,
+                "target": "D18"
+              },
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "other",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": false,
+                "target": "D18"
+              },
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 1,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "other",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": false,
+                "target": "D18"
+              },
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "archived",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D18",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "other",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": false,
+                "target": "D18"
+              },
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "other",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D18",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_target",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "archived",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D18",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D18"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D18",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D18",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_target",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 4,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D18"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D18",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "open_document",
+          "argument": "D17",
+          "kind": "call",
+          "result": {
+            "status": "opened"
+          }
+        },
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_target",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "success"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 4,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D18"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D18",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "open_document",
+          "argument": "D17",
+          "kind": "call",
+          "result": {
+            "status": "opened"
+          }
+        },
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_target",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 1,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D18"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D18",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_target",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "archived",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D18",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D18"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D18",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D18",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_context",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "archived",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "B",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W2"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W2"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W2"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_context",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "context_mismatch",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W2"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_context",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "context_mismatch",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W2"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_context",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W2"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_context",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "archived",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "B",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W2"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W2"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "B",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W2"
+          }
+        }
+      ]
+    },
+    {
+      "case": "permission_revoked",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "rejected"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "active",
+          "before": "active",
+          "changed": false,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "rejected",
+          "permission": false,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": false,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "reason": "permission",
+            "status": "rejected"
+          }
+        }
+      ]
+    },
+    {
+      "case": "permission_revoked",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "permission",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": false,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "permission_revoked",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "permission",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": false,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "permission_revoked",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": false,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "permission_revoked",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "rejected"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "active",
+          "before": "active",
+          "changed": false,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "rejected",
+          "permission": false,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": false,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "reason": "permission",
+            "status": "rejected"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_effect",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "deleted",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "deleted",
+          "before": "active",
+          "changed": true,
+          "effect": "delete",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "delete",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "deleted",
+            "before": "active",
+            "changed": true,
+            "effect": "delete",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_effect",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "no_unique_intended_action",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "delete",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_effect",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "no_unique_intended_action",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "delete",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_effect",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 1,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "delete",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "changed_effect",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "deleted",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "deleted",
+          "before": "active",
+          "changed": true,
+          "effect": "delete",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "delete",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "deleted",
+            "before": "active",
+            "changed": true,
+            "effect": "delete",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "inspect_only",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "inspect",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "inspect_only",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "current_instruction",
+        "status": "inspected"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "inspect",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "inspect_only",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "current_instruction",
+        "status": "inspected"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": true,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "inspect",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "inspect_only",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "inspect",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "inspect_only",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "inspect",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "archived",
+            "before": "active",
+            "changed": true,
+            "effect": "archive",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "unknown_outcome",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "no_operation_receipt",
+        "status": "unknown"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        },
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "archived",
+          "changed": false,
+          "effect": "archive",
+          "operation_id": "op2",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 2,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 1,
+        "submissions": 2,
+        "synthetic_calls": 4,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 1,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "status": "timeout"
+          }
+        },
+        {
+          "action": "status",
+          "argument": "A/W1/D17",
+          "kind": "call",
+          "result": {
+            "status": "read_failed"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "status": "timeout"
+          }
+        }
+      ]
+    },
+    {
+      "case": "unknown_outcome",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "no_operation_receipt",
+        "status": "unknown"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 3,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 1,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "status": "timeout"
+          }
+        },
+        {
+          "action": "status",
+          "argument": "A/W1/D17",
+          "kind": "call",
+          "result": {
+            "status": "read_failed"
+          }
+        }
+      ]
+    },
+    {
+      "case": "unknown_outcome",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "no_operation_receipt",
+        "status": "unknown"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 3,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 1,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "status": "timeout"
+          }
+        },
+        {
+          "action": "status",
+          "argument": "A/W1/D17",
+          "kind": "call",
+          "result": {
+            "status": "read_failed"
+          }
+        }
+      ]
+    },
+    {
+      "case": "unknown_outcome",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 1,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "unknown_outcome",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "no_operation_receipt",
+        "status": "unknown"
+      },
+      "final_documents": {
+        "A/W1/D17": "archived",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "active",
+          "changed": true,
+          "effect": "archive",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        },
+        {
+          "account": "A",
+          "after": "archived",
+          "before": "archived",
+          "changed": false,
+          "effect": "archive",
+          "operation_id": "op2",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 2,
+        "desired_state_achieved": true,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 1,
+        "submissions": 2,
+        "synthetic_calls": 4,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 1,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 0
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "status": "timeout"
+          }
+        },
+        {
+          "action": "status",
+          "argument": "A/W1/D17",
+          "kind": "call",
+          "result": {
+            "status": "read_failed"
+          }
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "status": "timeout"
+          }
+        }
+      ]
+    },
+    {
+      "case": "hidden_toctou",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "deleted",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "deleted",
+          "before": "active",
+          "changed": true,
+          "effect": "delete",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "naive_saved",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "change": {
+            "effect": "delete"
+          },
+          "kind": "hidden_transition"
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "deleted",
+            "before": "active",
+            "changed": true,
+            "effect": "delete",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "hidden_toctou",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "deleted",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "deleted",
+          "before": "active",
+          "changed": true,
+          "effect": "delete",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "guarded_recipe",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "change": {
+            "effect": "delete"
+          },
+          "kind": "hidden_transition"
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "deleted",
+            "before": "active",
+            "changed": true,
+            "effect": "delete",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "hidden_toctou",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "deleted",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "deleted",
+          "before": "active",
+          "changed": true,
+          "effect": "delete",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "fresh_discovery",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "change": {
+            "effect": "delete"
+          },
+          "kind": "hidden_transition"
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "deleted",
+            "before": "active",
+            "changed": true,
+            "effect": "delete",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "hidden_toctou",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "negative_control",
+        "status": "abstained"
+      },
+      "final_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [],
+      "metrics": {
+        "changed_state_effects": 0,
+        "committed_calls": 0,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 0,
+        "synthetic_calls": 1,
+        "unauthorized_attempts": 0,
+        "unauthorized_effects": 0,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 1,
+        "wrong_effects": 0
+      },
+      "policy": "always_abstain",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    },
+    {
+      "case": "hidden_toctou",
+      "decision": {
+        "locator_repairs": 0,
+        "reason": "observed_response",
+        "status": "unexpected_effect"
+      },
+      "final_documents": {
+        "A/W1/D17": "deleted",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "initial_documents": {
+        "A/W1/D17": "active",
+        "A/W1/D18": "active",
+        "A/W2/D17": "active",
+        "A/W2/D18": "active",
+        "B/W1/D17": "active",
+        "B/W1/D18": "active",
+        "B/W2/D17": "active",
+        "B/W2/D18": "active"
+      },
+      "ledger": [
+        {
+          "account": "A",
+          "after": "deleted",
+          "before": "active",
+          "changed": true,
+          "effect": "delete",
+          "operation_id": "op1",
+          "origin": "https://mock.invalid",
+          "outcome": "committed",
+          "permission": true,
+          "target": "D17",
+          "workspace": "W1"
+        }
+      ],
+      "metrics": {
+        "changed_state_effects": 1,
+        "committed_calls": 1,
+        "desired_state_achieved": false,
+        "justified_abstentions": 0,
+        "known_correct_completion": false,
+        "locator_repairs": 0,
+        "redundant_committed_noops": 0,
+        "submissions": 1,
+        "synthetic_calls": 2,
+        "unauthorized_attempts": 1,
+        "unauthorized_effects": 1,
+        "unknown_outcomes": 0,
+        "unnecessary_abstentions": 0,
+        "wrong_effects": 1
+      },
+      "policy": "unguarded_mutant",
+      "task": {
+        "account": "A",
+        "effect": "archive",
+        "mode": "archive",
+        "origin": "https://mock.invalid",
+        "target": "D17",
+        "workspace": "W1"
+      },
+      "trace": [
+        {
+          "action": "observe",
+          "argument": null,
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "buttons": [
+              {
+                "effect": "archive",
+                "enabled": true,
+                "id": "primary",
+                "label": "Archive",
+                "node_generation": 1,
+                "selection_bound": true,
+                "target": "D17"
+              }
+            ],
+            "documents": [
+              "D17",
+              "D18"
+            ],
+            "origin": "https://mock.invalid",
+            "permission": true,
+            "selected": "D17",
+            "workspace": "W1"
+          }
+        },
+        {
+          "change": {
+            "effect": "delete"
+          },
+          "kind": "hidden_transition"
+        },
+        {
+          "action": "click",
+          "argument": "primary",
+          "kind": "call",
+          "result": {
+            "account": "A",
+            "after": "deleted",
+            "before": "active",
+            "changed": true,
+            "effect": "delete",
+            "operation_id": "op1",
+            "origin": "https://mock.invalid",
+            "outcome": "committed",
+            "permission": true,
+            "status": "receipt",
+            "target": "D17",
+            "workspace": "W1"
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "always_abstain": {
+      "changed_state_effects": 0,
+      "committed_calls": 0,
+      "desired_state_achieved": 1,
+      "justified_abstentions": 3,
+      "known_correct_completion": 0,
+      "locator_repairs": 0,
+      "redundant_committed_noops": 0,
+      "submissions": 0,
+      "synthetic_calls": 10,
+      "unauthorized_attempts": 0,
+      "unauthorized_effects": 0,
+      "unknown_outcomes": 0,
+      "unnecessary_abstentions": 6,
+      "wrong_effects": 0
+    },
+    "fresh_discovery": {
+      "changed_state_effects": 6,
+      "committed_calls": 6,
+      "desired_state_achieved": 6,
+      "justified_abstentions": 3,
+      "known_correct_completion": 5,
+      "locator_repairs": 0,
+      "redundant_committed_noops": 0,
+      "submissions": 6,
+      "synthetic_calls": 19,
+      "unauthorized_attempts": 1,
+      "unauthorized_effects": 1,
+      "unknown_outcomes": 1,
+      "unnecessary_abstentions": 0,
+      "wrong_effects": 1
+    },
+    "guarded_recipe": {
+      "changed_state_effects": 6,
+      "committed_calls": 6,
+      "desired_state_achieved": 6,
+      "justified_abstentions": 3,
+      "known_correct_completion": 5,
+      "locator_repairs": 1,
+      "redundant_committed_noops": 0,
+      "submissions": 6,
+      "synthetic_calls": 19,
+      "unauthorized_attempts": 1,
+      "unauthorized_effects": 1,
+      "unknown_outcomes": 1,
+      "unnecessary_abstentions": 0,
+      "wrong_effects": 1
+    },
+    "naive_saved": {
+      "changed_state_effects": 9,
+      "committed_calls": 10,
+      "desired_state_achieved": 3,
+      "justified_abstentions": 0,
+      "known_correct_completion": 2,
+      "locator_repairs": 0,
+      "redundant_committed_noops": 1,
+      "submissions": 11,
+      "synthetic_calls": 22,
+      "unauthorized_attempts": 7,
+      "unauthorized_effects": 6,
+      "unknown_outcomes": 1,
+      "unnecessary_abstentions": 0,
+      "wrong_effects": 6
+    },
+    "unguarded_mutant": {
+      "changed_state_effects": 9,
+      "committed_calls": 10,
+      "desired_state_achieved": 3,
+      "justified_abstentions": 0,
+      "known_correct_completion": 2,
+      "locator_repairs": 0,
+      "redundant_committed_noops": 1,
+      "submissions": 11,
+      "synthetic_calls": 22,
+      "unauthorized_attempts": 7,
+      "unauthorized_effects": 6,
+      "unknown_outcomes": 1,
+      "unnecessary_abstentions": 0,
+      "wrong_effects": 6
+    }
+  }
+}

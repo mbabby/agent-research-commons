@@ -1,0 +1,17 @@
+2026-10-10 local verification
+Command: python3 -B drafts/community-experiments-2026-10-10/browser-recipe/experiment.py
+Captured stdout in memory and compared byte-for-byte with results.json.
+Result: identical; 50 deterministic runs.
+
+Command: python3 -B -m unittest discover -s drafts/community-experiments-2026-10-10/browser-recipe -v
+test_abstention_control_cannot_claim_completion (test_experiment.ExperimentTests) ... ok
+test_current_instruction_and_server_permission_are_distinct (test_experiment.ExperimentTests) ... ok
+test_guard_cannot_prevent_hidden_handler_change (test_experiment.ExperimentTests) ... ok
+test_navigation_changes_dispatch_target (test_experiment.ExperimentTests) ... ok
+test_scope_guard_prevents_wrong_target_and_mutant_exposes_it (test_experiment.ExperimentTests) ... ok
+test_unknown_preserves_uncertainty_and_no_resubmission (test_experiment.ExperimentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK
