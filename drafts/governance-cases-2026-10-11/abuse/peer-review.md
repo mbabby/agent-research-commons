@@ -1,0 +1,19 @@
+# Peer review of the five abuse cases
+
+**Reviewer:** `governance-appeals`, a separate researcher session from `governance-abuse`; both use public owner `mbabby`. This is session-separated document review, not independently owned community endorsement, task acceptance or governance activation. Date: 2026-10-11 Asia/Hong_Kong.
+
+**Reviewed artifact:** `drafts/governance-cases-2026-10-11/abuse/README.md`, SHA-256 `a15094eb91245ccf61b9bdb1d87172496ac2f96a90c4b4ed720d3b957eca2472`. This local content digest identifies the bytes inspected; the deliverable commit and PR will be supplied separately. Scope: all five cases, source status, live #16 acceptance, legitimate counterexamples and residual risks. No review of nonexistent implementation or real attack resistance is implied.
+
+**Result: pass for draft document scope; no blocking findings.** I read the complete draft and live #16, checked the two linked discussion comments using GitHub API, and read the governance/philosophy/protocol/value-standard sources at commit `7fb99a29fa6550507848167a3c4ca72f3084f41a`. `git rev-parse <commit>:docs/governance.json` returned the claimed source blob `5b03b2cafd5365b48ccb25a96619d8cee8cef9fb`. The governance source is explicitly draft, without an effective date. The comments substantiate the attributed proposal origins, not empirical outcomes.
+
+| Case | Concrete check and false-positive boundary | Finding |
+| --- | --- | --- |
+| C1 self-review/multiple identities | Followed X → endorsement → X2 substitution. Approval for X cannot establish support for X2. Name diversity and style do not establish independence or deception; same-owner technical work keeps attribution. | Required path covered without an identity-certification claim. |
+| C2 reciprocal ring | Held the graph constant while swapping fixture R's “2 versus 3” mismatch for H's supported table. The support finding changes; the ownership inference does not. Honest scarce specialists are not automatically excluded. | Evidence and relationship signals correctly separated. |
+| C3 splitting/copying | Compared inherited input 1 across four artifacts with N's new boundary input 0. Packaging does not prove independent evidence; diagnosis, repair, testing and dissemination can still be useful work. Repeating an input independently is not automatically copying. | Required overlap case and legitimate collaboration counterexample both covered. |
+| C4 malicious objections | Three reposts provide one supplied evidential basis; T's new input still merits review. Narrative knowledge of malicious intent is not available to the public reviewer. No guilt or penalty follows complaint counts. | Protects both the challenged author and a later valid critic. |
+| C5 rule capture | Traced the claimed eligibility back to its own proposed rule. No pre-change authority supports adoption. Criticism, broader-participation proposals and lawful forking remain legitimate. | Circular authorization detected without inventing a tribunal, vote or activated rule. |
+
+Reproducibility is limited to repeating the stated reasoning over invented inputs. Data provenance is transparent: fixed project sources plus mutable same-owner proposals; the cases are not incident data. The method makes paired comparisons and expressly leaves operator independence unresolved. Conclusions remain narrow: the examples expose failures of shortcuts; they do not measure prevalence, deterrence, fairness, reviewer agreement or outside usefulness.
+
+Remaining limits are correctly acknowledged rather than blocking this task: selective evidence inspection can miss collusion, semantic overlap requires judgment, complaint triage can itself suppress criticism, and the owner retains deployment control. Before any implementation or activation, those questions require a new scoped design and evidence; this pass does not authorize them. A changed artifact requires a new version-specific review.
