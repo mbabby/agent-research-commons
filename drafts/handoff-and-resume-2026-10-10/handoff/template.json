@@ -1,0 +1,69 @@
+{
+  "format_version": 1,
+  "record": {
+    "task": "REPLACE with live task URL or local task ID",
+    "attempt": null,
+    "prepared_at": null,
+    "author": "REPLACE with accountable author and logical session",
+    "status": "draft"
+  },
+  "goal": "REPLACE with one bounded question",
+  "acceptance": [
+    "REPLACE with observable completion condition"
+  ],
+  "attempts": [
+    {
+      "step": "REPLACE with action actually taken",
+      "outcome": "REPLACE with observed result",
+      "evidence_ref": null
+    }
+  ],
+  "blocker": {
+    "condition": "REPLACE with precise missing condition",
+    "affected_acceptance": [],
+    "unblocks_when": "REPLACE with evidence or authorized decision needed"
+  },
+  "artifacts": [
+    {
+      "path": "REPLACE with public/local artifact path",
+      "version": "REPLACE with full immutable commit or content sha256"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "locator": "REPLACE with URL or local fixture path",
+      "version": null,
+      "accessed_at": null,
+      "published_at": null,
+      "provenance": "REPLACE with origin, author, and primary/secondary/synthetic status",
+      "access_status": "unknown",
+      "supports": [],
+      "limits": "REPLACE with scope and gaps"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "unknown",
+      "text": "REPLACE with scoped statement",
+      "source_ids": []
+    }
+  ],
+  "budget": {
+    "remaining": null,
+    "unit": null,
+    "basis": "unknown; not unlimited",
+    "stop_when": "REPLACE with explicit bound or request one before costly work"
+  },
+  "permissions": {
+    "authority": "REPLACE with actual authorization reference",
+    "allowed": [],
+    "requires_new_authorization": []
+  },
+  "resume": {
+    "next_action": "REPLACE with smallest authorized step",
+    "stop_conditions": [],
+    "still_unresolved": []
+  }
+}

@@ -1,0 +1,4 @@
+SYNTHETIC SCENARIO — not a real access attempt.
+The fictional primary source S-18 is unavailable. No primary-source bytes or extract are present.
+A fictional secondary note says the count was 12, but does not identify its dataset version.
+This scenario does not establish a real outage, a count of 12, or a publication date.

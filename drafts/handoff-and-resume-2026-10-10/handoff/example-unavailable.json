@@ -1,0 +1,105 @@
+{
+  "format_version": 1,
+  "record": {
+    "task": "synthetic-local-scenario",
+    "attempt": 1,
+    "prepared_at": "2026-10-10",
+    "author": "handoff-research (owner-managed session); scenario participants are fictional",
+    "status": "synthetic_draft"
+  },
+  "budget": {
+    "remaining": 1,
+    "unit": "local evidence comparison pass",
+    "basis": "scenario design limit, not a measured account balance",
+    "stop_when": "one pass ends, or evidence/permission is missing"
+  },
+  "permissions": {
+    "authority": "synthetic scenario scope only; does not grant any real authorization",
+    "allowed": [
+      "Read the supplied local text fixtures and draft a qualified finding."
+    ],
+    "requires_new_authorization": [
+      "Contact a source owner.",
+      "Spend money, request credentials, or publish a claim.",
+      "Change the task scope or acceptance condition."
+    ]
+  },
+  "goal": "Verify the completed-case count for S-18 against a primary record.",
+  "acceptance": [
+    "Accessible primary evidence fixes the count and dataset version."
+  ],
+  "attempts": [
+    {
+      "step": "Scenario sender recorded that the fictional primary source could not be obtained.",
+      "outcome": "No primary bytes were obtained; the scenario supplies only a secondary-note fixture. No real network request was performed.",
+      "evidence_ref": "S1"
+    }
+  ],
+  "blocker": {
+    "condition": "Primary source and dataset version are absent.",
+    "affected_acceptance": [
+      0
+    ],
+    "unblocks_when": "A lawfully accessible primary record with a verifiable version is supplied, or the authorized task owner explicitly revises acceptance."
+  },
+  "artifacts": [
+    {
+      "path": "fixtures/unavailable-note.txt",
+      "version": "sha256:51a55dae9f2422a40a76e214e2a2c9b4e1383ea498a1dad6b143b578a83f9f2e"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "locator": "fixtures/unavailable-note.txt",
+      "version": "sha256:51a55dae9f2422a40a76e214e2a2c9b4e1383ea498a1dad6b143b578a83f9f2e",
+      "accessed_at": "2026-10-10",
+      "published_at": null,
+      "provenance": "Locally authored synthetic scenario note; fictional secondary statement, not primary evidence.",
+      "access_status": "available_local",
+      "supports": [
+        "C1"
+      ],
+      "limits": "Contains no primary extract or reproducible dataset version."
+    },
+    {
+      "id": "S2",
+      "locator": "fictional source S-18; no real URL supplied",
+      "version": null,
+      "accessed_at": null,
+      "published_at": null,
+      "provenance": "Unobtained fictional primary source.",
+      "access_status": "unavailable_in_scenario",
+      "supports": [],
+      "limits": "No inspected contents; cannot support any count."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "fixture_observation",
+      "text": "The scenario note attributes a count of 12 to an unversioned secondary statement.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "unknown",
+      "text": "The primary-source count is unverified.",
+      "source_ids": []
+    }
+  ],
+  "resume": {
+    "next_action": "Verify and inspect the supplied note; record that primary evidence is missing and prepare an unsent request specifying the needed record and version.",
+    "stop_conditions": [
+      "Do not infer primary contents from the note or a title.",
+      "Stop before access restrictions, payment, credentials, contact, or publication."
+    ],
+    "still_unresolved": [
+      "The count and dataset version.",
+      "Whether primary evidence can be obtained.",
+      "Whether revised acceptance would still answer the original question."
+    ]
+  }
+}

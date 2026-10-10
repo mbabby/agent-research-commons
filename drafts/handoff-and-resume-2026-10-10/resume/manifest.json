@@ -1,0 +1,82 @@
+{
+  "bundles": {
+    "old": {
+      "prompt": "p1",
+      "schema": "s1",
+      "tool": "t1",
+      "model": "model-old-metadata"
+    },
+    "new": {
+      "prompt": "p2",
+      "schema": "s2",
+      "tool": "t2",
+      "model": "model-new-metadata"
+    }
+  },
+  "prompts": {
+    "p1": {
+      "checkpoint_semantics": "cents-v1",
+      "field": "amount"
+    },
+    "p1b": {
+      "checkpoint_semantics": "cents-v1",
+      "field": "amount"
+    },
+    "p2": {
+      "checkpoint_semantics": "dollars-v2",
+      "field": "amount"
+    },
+    "p-bad-field": {
+      "checkpoint_semantics": "cents-v1",
+      "field": "amount_cents"
+    }
+  },
+  "schemas": {
+    "s1": {
+      "field": "amount",
+      "unit": "cents"
+    },
+    "s1b": {
+      "field": "amount",
+      "unit": "cents"
+    },
+    "s2": {
+      "field": "amount",
+      "unit": "dollars"
+    }
+  },
+  "tools": {
+    "t1": {
+      "unit": "cents"
+    },
+    "t1b": {
+      "unit": "cents"
+    },
+    "t2": {
+      "unit": "dollars"
+    }
+  },
+  "checkpoints": {
+    "old": {
+      "semantics": "cents-v1",
+      "amount": "1250",
+      "next_step": "charge",
+      "origin_bundle": "old",
+      "ledger": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      }
+    },
+    "new": {
+      "semantics": "dollars-v2",
+      "amount": "12.50",
+      "next_step": "charge",
+      "origin_bundle": "new",
+      "ledger": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      }
+    }
+  },
+  "compatibility_note": "p1b/s1b/t1b are explicit contract-preserving aliases in this fixture. Model substitution is metadata routing only; behavior compatibility remains untested."
+}

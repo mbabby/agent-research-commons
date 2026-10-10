@@ -1,0 +1,122 @@
+{
+  "format_version": 1,
+  "record": {
+    "task": "synthetic-local-scenario",
+    "attempt": 1,
+    "prepared_at": "2026-10-10",
+    "author": "handoff-research (owner-managed session); scenario participants are fictional",
+    "status": "synthetic_draft"
+  },
+  "budget": {
+    "remaining": 1,
+    "unit": "local evidence comparison pass",
+    "basis": "scenario design limit, not a measured account balance",
+    "stop_when": "one pass ends, or evidence/permission is missing"
+  },
+  "permissions": {
+    "authority": "synthetic scenario scope only; does not grant any real authorization",
+    "allowed": [
+      "Read the supplied local text fixtures and draft a qualified finding."
+    ],
+    "requires_new_authorization": [
+      "Contact a source owner.",
+      "Spend money, request credentials, or publish a claim.",
+      "Change the task scope or acceptance condition."
+    ]
+  },
+  "goal": "Determine the completed-case count for S-17 on day 1.",
+  "acceptance": [
+    "A single count has a traceable primary record and a stated definition of completed."
+  ],
+  "attempts": [
+    {
+      "step": "Scenario sender compared fixture A and fixture B.",
+      "outcome": "Counts differ: 18 and 21; neither defines completed. This is a scripted scenario, not an actual historical research attempt.",
+      "evidence_ref": "S1, S2"
+    }
+  ],
+  "blocker": {
+    "condition": "Two supplied records disagree and neither establishes the counting definition.",
+    "affected_acceptance": [
+      0
+    ],
+    "unblocks_when": "An authorized source supplies a versioned correction or a definition and row-level reconciliation."
+  },
+  "artifacts": [
+    {
+      "path": "fixtures/conflict-a.txt",
+      "version": "sha256:940d0984d272250e426d3d24c4021f26ced65dd6d145912def6c0d5fbbb89580"
+    },
+    {
+      "path": "fixtures/conflict-b.txt",
+      "version": "sha256:c3ac5755124fe8f510375153d3870ea3185abc2bbb48c71f61f64d511d9b08b4"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "locator": "fixtures/conflict-a.txt",
+      "version": "sha256:940d0984d272250e426d3d24c4021f26ced65dd6d145912def6c0d5fbbb89580",
+      "accessed_at": "2026-10-10",
+      "published_at": null,
+      "provenance": "Locally authored synthetic fixture; not a real primary record.",
+      "access_status": "available_local",
+      "supports": [
+        "C1"
+      ],
+      "limits": "Can establish only what this fictional fixture says; missing counting definition."
+    },
+    {
+      "id": "S2",
+      "locator": "fixtures/conflict-b.txt",
+      "version": "sha256:c3ac5755124fe8f510375153d3870ea3185abc2bbb48c71f61f64d511d9b08b4",
+      "accessed_at": "2026-10-10",
+      "published_at": null,
+      "provenance": "Locally authored synthetic fixture; not a real primary record.",
+      "access_status": "available_local",
+      "supports": [
+        "C2"
+      ],
+      "limits": "Can establish only what this fictional fixture says; missing counting definition."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "fixture_observation",
+      "text": "Fixture A reports 18 completed cases.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "fixture_observation",
+      "text": "Fixture B reports 21 completed cases.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "C3",
+      "kind": "unknown",
+      "text": "The correct S-17 count and reason for the discrepancy are unresolved.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    }
+  ],
+  "resume": {
+    "next_action": "Verify both fixture hashes, compare scope and count definitions, then preserve the two attributed counts in a draft discrepancy note.",
+    "stop_conditions": [
+      "Do not select a count by majority, source order, or author status.",
+      "Stop before external contact or publication."
+    ],
+    "still_unresolved": [
+      "Which count is correct.",
+      "Whether records measure the same population.",
+      "Who can supply an authoritative correction."
+    ]
+  }
+}

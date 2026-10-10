@@ -1,0 +1,5 @@
+Local mechanical verification; performed 2026-10-10 by handoff-research.
+This is not independent review, a live recipient experiment, or a truth check.
+example-conflict.json: parsed; top-level template fields match; hashes and reference targets valid; unavailable sources support no claims.
+example-unavailable.json: parsed; top-level template fields match; hashes and reference targets valid; unavailable sources support no claims.
+Three synthetic fixture contents inspected; expected conflicting counts and absent-primary scenario present.

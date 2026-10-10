@@ -1,0 +1,648 @@
+{
+  "scope": "synthetic deterministic stubs; model IDs metadata only",
+  "results": [
+    {
+      "id": "original-pinned",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s1",
+        "tool": "t1",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t1",
+          "interpreted_unit": "cents",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "all-new-on-new-checkpoint",
+      "requested_bundle": {
+        "prompt": "p2",
+        "schema": "s2",
+        "tool": "t2",
+        "model": "model-new-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "dollars-v2",
+          "required": "dollars-v2"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p2",
+          "arguments": {
+            "amount": "12.50"
+          },
+          "model_id_metadata": "model-new-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s2",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t2",
+          "interpreted_unit": "dollars",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "new-on-old-checkpoint",
+      "requested_bundle": {
+        "prompt": "p2",
+        "schema": "s2",
+        "tool": "t2",
+        "model": "model-new-metadata"
+      },
+      "expected": {
+        "status": "checkpoint-rejected",
+        "charged_cents": 0
+      },
+      "observed": {
+        "status": "checkpoint-rejected",
+        "charged_cents": 0
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "dollars-v2"
+        }
+      ]
+    },
+    {
+      "id": "new-with-explicit-migration",
+      "requested_bundle": {
+        "prompt": "p2",
+        "schema": "s2",
+        "tool": "t2",
+        "model": "model-new-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "migration",
+          "implementation": "cents-to-dollars-v1",
+          "amount": "12.50"
+        },
+        {
+          "stage": "checkpoint",
+          "semantics": "dollars-v2",
+          "required": "dollars-v2"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p2",
+          "arguments": {
+            "amount": "12.50"
+          },
+          "model_id_metadata": "model-new-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s2",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t2",
+          "interpreted_unit": "dollars",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "compatible-prompt",
+      "requested_bundle": {
+        "prompt": "p1b",
+        "schema": "s1",
+        "tool": "t1",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1b",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t1",
+          "interpreted_unit": "cents",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "compatible-schema",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s1b",
+        "tool": "t1",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1b",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t1",
+          "interpreted_unit": "cents",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "compatible-tool",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s1",
+        "tool": "t1b",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t1b",
+          "interpreted_unit": "cents",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "compatible-model",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s1",
+        "tool": "t1",
+        "model": "model-alternative-metadata"
+      },
+      "expected": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "observed": {
+        "status": "charged",
+        "charged_cents": 1250
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 1250
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-alternative-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t1",
+          "interpreted_unit": "cents",
+          "added_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "mixed-prompt",
+      "requested_bundle": {
+        "prompt": "p2",
+        "schema": "s1",
+        "tool": "t1",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "checkpoint-rejected",
+        "charged_cents": 0
+      },
+      "observed": {
+        "status": "checkpoint-rejected",
+        "charged_cents": 0
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "dollars-v2"
+        }
+      ]
+    },
+    {
+      "id": "mixed-schema",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s2",
+        "tool": "t1",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "tool-contract-rejected",
+        "charged_cents": 0
+      },
+      "observed": {
+        "status": "tool-contract-rejected",
+        "charged_cents": 0
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s2",
+          "required_field": "amount"
+        }
+      ]
+    },
+    {
+      "id": "mixed-tool",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s1",
+        "tool": "t2",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "tool-contract-rejected",
+        "charged_cents": 0
+      },
+      "observed": {
+        "status": "tool-contract-rejected",
+        "charged_cents": 0
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        }
+      ]
+    },
+    {
+      "id": "bad-prompt-field",
+      "requested_bundle": {
+        "prompt": "p-bad-field",
+        "schema": "s1",
+        "tool": "t1",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "schema-rejected",
+        "charged_cents": 0
+      },
+      "observed": {
+        "status": "schema-rejected",
+        "charged_cents": 0
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p-bad-field",
+          "arguments": {
+            "amount_cents": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        }
+      ]
+    },
+    {
+      "id": "unsafe-tool-mix",
+      "requested_bundle": {
+        "prompt": "p1",
+        "schema": "s1",
+        "tool": "t2",
+        "model": "model-old-metadata"
+      },
+      "expected": {
+        "status": "wrong-charge",
+        "charged_cents": 125000
+      },
+      "observed": {
+        "status": "wrong-charge",
+        "charged_cents": 125000
+      },
+      "ledger_before": {
+        "reserved_items": 1,
+        "charged_cents": 0
+      },
+      "ledger_after": {
+        "reserved_items": 1,
+        "charged_cents": 125000
+      },
+      "trace": [
+        {
+          "stage": "checkpoint",
+          "semantics": "cents-v1",
+          "required": "cents-v1"
+        },
+        {
+          "stage": "prompt",
+          "implementation": "p1",
+          "arguments": {
+            "amount": "1250"
+          },
+          "model_id_metadata": "model-old-metadata",
+          "model_called": false
+        },
+        {
+          "stage": "schema",
+          "implementation": "s1",
+          "required_field": "amount"
+        },
+        {
+          "stage": "tool",
+          "implementation": "t2",
+          "interpreted_unit": "dollars",
+          "added_cents": 125000
+        }
+      ]
+    }
+  ],
+  "rollback_and_compensation": {
+    "before": {
+      "reserved_items": 1,
+      "charged_cents": 1250
+    },
+    "selected_deployment": {
+      "prompt": "p1",
+      "schema": "s1",
+      "tool": "t1",
+      "model": "model-old-metadata"
+    },
+    "after_deployment_rollback": {
+      "reserved_items": 1,
+      "charged_cents": 1250
+    },
+    "after_explicit_synthetic_compensation": {
+      "reserved_items": 0,
+      "charged_cents": 0
+    }
+  }
+}
