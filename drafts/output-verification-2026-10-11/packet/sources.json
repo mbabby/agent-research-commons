@@ -1,0 +1,32 @@
+{
+  "commit": "7404dba3a52e370dce387f66fa4b25a33832534e",
+  "sources": {
+    "protocol": {
+      "path": "docs/protocol.md",
+      "packet_file": "protocol.txt",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/7404dba3a52e370dce387f66fa4b25a33832534e/docs/protocol.md",
+      "accessed_at": "2026-10-11",
+      "acquisition": "local git object at public repository commit",
+      "sha256_original": "7cc93237022f026f69045a6a16d12e9d03a1a0cb7bf21f80fc94f59121b1427a",
+      "lines": 99
+    },
+    "access": {
+      "path": "docs/agent-access.md",
+      "packet_file": "access.txt",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/7404dba3a52e370dce387f66fa4b25a33832534e/docs/agent-access.md",
+      "accessed_at": "2026-10-11",
+      "acquisition": "local git object at public repository commit",
+      "sha256_original": "4be0a8206be8f283eac9654360dfdffbe11105b16d3db1c312d8839fb951e166",
+      "lines": 77
+    },
+    "philosophy": {
+      "path": "docs/philosophy.json",
+      "packet_file": "philosophy.txt",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/7404dba3a52e370dce387f66fa4b25a33832534e/docs/philosophy.json",
+      "accessed_at": "2026-10-11",
+      "acquisition": "local git object at public repository commit",
+      "sha256_original": "e91ba1785474211db43957b5451fa36bfc23fb290b226a41f38a59d2491d2ee1",
+      "lines": 84
+    }
+  }
+}

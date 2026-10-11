@@ -1,0 +1,633 @@
+{
+  "scope": "Descriptive scores for these 12 synthetic cases only; null precision means N/A. Supported-hit diagnosis is a separate independent audit.",
+  "locks": {
+    "SHA256SUMS": "3831fc244a2ee9045b9230ae0cd8ed32849fe77ed325094de804f74da51c9961",
+    "results/format-only.json": "01801bb9567a2e186513aa2c96c397bba1a1bf9e9d776e5134557b7062bd168f",
+    "results/source-check.json": "e6cc5c4bb91bb74d407c844487255e1e9c1e61a3492d40ae16b355dac60f49ff",
+    "results/independent-review.json": "422889613089bc692cdc302c9cfeb0c94e2c3beea045bba2fbe5b8e5a0daba83"
+  },
+  "conditions": [
+    {
+      "method": "format_only",
+      "counts": {
+        "TP": 0,
+        "FN": 9,
+        "FP": 0,
+        "TN": 3,
+        "U_positive": 0,
+        "U_negative": 0
+      },
+      "denominators": {
+        "all": 12,
+        "positive": 9,
+        "negative": 3,
+        "per_defect_class": 3
+      },
+      "rates": {
+        "FPR": 0.0,
+        "FNR": 1.0,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "precision": null,
+        "unresolved_or_missed": 1.0,
+        "coverage": 1.0
+      },
+      "per_class_detection": {
+        "numeric": {
+          "TP": 0,
+          "denominator": 3
+        },
+        "unsupported_citation": {
+          "TP": 0,
+          "denominator": 3
+        },
+        "omission": {
+          "TP": 0,
+          "denominator": 3
+        }
+      },
+      "protocol_deviations": [],
+      "runtime": {
+        "elapsed_seconds": 0.0001709580000000023
+      },
+      "cases": [
+        {
+          "case_id": "f822fa9d45",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "access:45",
+          "findings": []
+        },
+        {
+          "case_id": "a2fac62e73",
+          "gold_label": "omission",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "Output omits the explicitly requested fetch-failure distinction: a failed fetch does not establish an empty discussion. Statement about empty arrays is a separate condition.",
+          "reference": "access:15: A failed fetch is not an empty discussion.",
+          "findings": []
+        },
+        {
+          "case_id": "df99473f8a",
+          "gold_label": "numeric",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "c1 changes limit 100 to 200.",
+          "reference": "access:65",
+          "findings": []
+        },
+        {
+          "case_id": "0124ac98de",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "protocol:28",
+          "findings": []
+        },
+        {
+          "case_id": "e45c3f153b",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "access:57",
+          "findings": []
+        },
+        {
+          "case_id": "1fb5e9a30c",
+          "gold_label": "omission",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "Output omits that actual deliverable PR must already be reviewed and merged before acceptance. A review-operation reference does not imply merge occurred.",
+          "reference": "protocol:52-53",
+          "findings": []
+        },
+        {
+          "case_id": "2dbff0ee63",
+          "gold_label": "unsupported_citation",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "c1 is true elsewhere, but its sole cited line lists prerequisites and does not support the permission-control claim.",
+          "reference": "protocol:26; cited protocol:13 is not support",
+          "findings": []
+        },
+        {
+          "case_id": "c03c8e384f",
+          "gold_label": "omission",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "Output entirely omits that early budget exhaustion requires labeling collection incomplete; pagination instruction alone does not answer the requested stopping condition.",
+          "reference": "access:31: If your retrieval budget ends early, label the collection incomplete.",
+          "findings": []
+        },
+        {
+          "case_id": "ca624e56ac",
+          "gold_label": "numeric",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "c1 changes minimum Python 3.9+ to 3.8+.",
+          "reference": "protocol:13",
+          "findings": []
+        },
+        {
+          "case_id": "aa77077fb5",
+          "gold_label": "numeric",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "c1 changes explicitly stated first-assignment attempt from 1 to 2.",
+          "reference": "protocol:44",
+          "findings": []
+        },
+        {
+          "case_id": "73ff679915",
+          "gold_label": "unsupported_citation",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "c2 cites report resource formats, not participation exclusivity; claim is correct elsewhere.",
+          "reference": "access:11; cited protocol:22 is not support",
+          "findings": []
+        },
+        {
+          "case_id": "f757260c2a",
+          "gold_label": "unsupported_citation",
+          "verdict": "pass",
+          "outcome": "FN",
+          "expected_defect": "c1 cites index fields rather than the publication-date rule; claim is correct but its citation provides no support.",
+          "reference": "protocol:69; cited access:55 is not support",
+          "findings": []
+        }
+      ]
+    },
+    {
+      "method": "claim_by_claim",
+      "counts": {
+        "TP": 9,
+        "FN": 0,
+        "FP": 0,
+        "TN": 3,
+        "U_positive": 0,
+        "U_negative": 0
+      },
+      "denominators": {
+        "all": 12,
+        "positive": 9,
+        "negative": 3,
+        "per_defect_class": 3
+      },
+      "rates": {
+        "FPR": 0.0,
+        "FNR": 0.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "precision": 1.0,
+        "unresolved_or_missed": 0.0,
+        "coverage": 1.0
+      },
+      "per_class_detection": {
+        "numeric": {
+          "TP": 3,
+          "denominator": 3
+        },
+        "unsupported_citation": {
+          "TP": 3,
+          "denominator": 3
+        },
+        "omission": {
+          "TP": 3,
+          "denominator": 3
+        }
+      },
+      "protocol_deviations": [],
+      "runtime": {
+        "visible_model": "Codex; inherited runtime without model override; exact backend model not exposed",
+        "backend_revision": null,
+        "started_at": "2026-10-11T03:51:52Z",
+        "finished_at": "2026-10-11T03:52:03Z",
+        "read_tool_calls": 2,
+        "tokens": null,
+        "cost": null,
+        "budget_exceeded": false,
+        "notes": "One pass. First shell read covered the seven authorized packet files; a second shell read recovered protocol lines 40–56 truncated in the initial tool display. Each stated claim was compared with its exact cited lines, followed by semantic required-information checks. Times are UTC clock observations bracketing review; read_tool_calls counts packet-reading shell calls. No external sources or feedback used."
+      },
+      "cases": [
+        {
+          "case_id": "f822fa9d45",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "access:45",
+          "findings": []
+        },
+        {
+          "case_id": "a2fac62e73",
+          "gold_label": "omission",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "Output omits the explicitly requested fetch-failure distinction: a failed fetch does not establish an empty discussion. Statement about empty arrays is a separate condition.",
+          "reference": "access:15: A failed fetch is not an empty discussion.",
+          "findings": [
+            {
+              "kind": "omission",
+              "claim_id": null,
+              "reason": "The output identifies additional evidence locations but omits the required interpretation that a failed fetch does not establish an empty discussion.",
+              "source_id": "access",
+              "lines": "15"
+            }
+          ]
+        },
+        {
+          "case_id": "df99473f8a",
+          "gold_label": "numeric",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 changes limit 100 to 200.",
+          "reference": "access:65",
+          "findings": [
+            {
+              "kind": "factual",
+              "claim_id": "c1",
+              "reason": "The stated limit of 200 contradicts the source metadata coverage limit of 100. Claim c2 is supported.",
+              "source_id": "access",
+              "lines": "65"
+            }
+          ]
+        },
+        {
+          "case_id": "0124ac98de",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "protocol:28",
+          "findings": []
+        },
+        {
+          "case_id": "e45c3f153b",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "access:57",
+          "findings": []
+        },
+        {
+          "case_id": "1fb5e9a30c",
+          "gold_label": "omission",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "Output omits that actual deliverable PR must already be reviewed and merged before acceptance. A review-operation reference does not imply merge occurred.",
+          "reference": "protocol:52-53",
+          "findings": [
+            {
+              "kind": "omission",
+              "claim_id": null,
+              "reason": "Both stated claims are supported, but the output omits that the delivery PR must have been reviewed and merged before coordinator acceptance. Citing a passing review operation does not state the merge prerequisite.",
+              "source_id": "protocol",
+              "lines": "51–53"
+            }
+          ]
+        },
+        {
+          "case_id": "2dbff0ee63",
+          "gold_label": "unsupported_citation",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 is true elsewhere, but its sole cited line lists prerequisites and does not support the permission-control claim.",
+          "reference": "protocol:26; cited protocol:13 is not support",
+          "findings": [
+            {
+              "kind": "citation",
+              "claim_id": "c1",
+              "reason": "Cited line 13 states CLI prerequisites, not that GitHub accounts determine actual permissions. That claim is supported at line 26, which is not attached to c1. Claim c2 is supported by its own citation.",
+              "source_id": "protocol",
+              "lines": "13; 26"
+            }
+          ]
+        },
+        {
+          "case_id": "c03c8e384f",
+          "gold_label": "omission",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "Output entirely omits that early budget exhaustion requires labeling collection incomplete; pagination instruction alone does not answer the requested stopping condition.",
+          "reference": "access:31: If your retrieval budget ends early, label the collection incomplete.",
+          "findings": [
+            {
+              "kind": "omission",
+              "claim_id": null,
+              "reason": "Following rel=next is supported, but the output omits the required response to early termination: label the collection incomplete, rather than conclude collection is complete.",
+              "source_id": "access",
+              "lines": "31"
+            }
+          ]
+        },
+        {
+          "case_id": "ca624e56ac",
+          "gold_label": "numeric",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 changes minimum Python 3.9+ to 3.8+.",
+          "reference": "protocol:13",
+          "findings": [
+            {
+              "kind": "factual",
+              "claim_id": "c1",
+              "reason": "The minimum is Python 3.9+, not Python 3.8+. The other tool and package-installation claim is supported.",
+              "source_id": "protocol",
+              "lines": "13"
+            }
+          ]
+        },
+        {
+          "case_id": "aa77077fb5",
+          "gold_label": "numeric",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 changes explicitly stated first-assignment attempt from 1 to 2.",
+          "reference": "protocol:44",
+          "findings": [
+            {
+              "kind": "factual",
+              "claim_id": "c1",
+              "reason": "First assignment raises attempt to 1, not 2. The reassignment claim is supported.",
+              "source_id": "protocol",
+              "lines": "44"
+            }
+          ]
+        },
+        {
+          "case_id": "73ff679915",
+          "gold_label": "unsupported_citation",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c2 cites report resource formats, not participation exclusivity; claim is correct elsewhere.",
+          "reference": "access:11; cited protocol:22 is not support",
+          "findings": [
+            {
+              "kind": "citation",
+              "claim_id": "c2",
+              "reason": "Protocol line 22 describes reader resources and report formats, not non-exclusive intents. The non-exclusivity claim is true at access line 11 but is unsupported by its attached citation. Claim c1 is supported.",
+              "source_id": "protocol",
+              "lines": "22"
+            }
+          ]
+        },
+        {
+          "case_id": "f757260c2a",
+          "gold_label": "unsupported_citation",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 cites index fields rather than the publication-date rule; claim is correct but its citation provides no support.",
+          "reference": "protocol:69; cited access:55 is not support",
+          "findings": [
+            {
+              "kind": "citation",
+              "claim_id": "c1",
+              "reason": "Access line 55 lists question and artifact navigation fields and does not support null representation of unknown publication dates. That rule is at protocol line 69. Claim c2 is supported by its attached protocol citation.",
+              "source_id": "access",
+              "lines": "55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "method": "independent_review",
+      "counts": {
+        "TP": 9,
+        "FN": 0,
+        "FP": 0,
+        "TN": 3,
+        "U_positive": 0,
+        "U_negative": 0
+      },
+      "denominators": {
+        "all": 12,
+        "positive": 9,
+        "negative": 3,
+        "per_defect_class": 3
+      },
+      "rates": {
+        "FPR": 0.0,
+        "FNR": 0.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "precision": 1.0,
+        "unresolved_or_missed": 0.0,
+        "coverage": 1.0
+      },
+      "per_class_detection": {
+        "numeric": {
+          "TP": 3,
+          "denominator": 3
+        },
+        "unsupported_citation": {
+          "TP": 3,
+          "denominator": 3
+        },
+        "omission": {
+          "TP": 3,
+          "denominator": 3
+        }
+      },
+      "protocol_deviations": [],
+      "runtime": {
+        "visible_model": "Codex agent based on GPT-6; inherited runtime, no override",
+        "backend_revision": null,
+        "started_at": "2026-10-11T03:52:03Z",
+        "finished_at": "2026-10-11T03:52:18.460029+00:00",
+        "read_tool_calls": 2,
+        "tokens": null,
+        "cost": null,
+        "budget_exceeded": false,
+        "notes": "Two shell read calls read only the seven authorized packet files. Start clock was observed immediately following the first read in the same tool call; no earlier clock observation is available. One-pass review without feedback. Exact backend, token usage and financial cost are not exposed. Result hashing follows writing and does not revise judgments."
+      },
+      "cases": [
+        {
+          "case_id": "f822fa9d45",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "access:45",
+          "findings": []
+        },
+        {
+          "case_id": "a2fac62e73",
+          "gold_label": "omission",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "Output omits the explicitly requested fetch-failure distinction: a failed fetch does not establish an empty discussion. Statement about empty arrays is a separate condition.",
+          "reference": "access:15: A failed fetch is not an empty discussion.",
+          "findings": [
+            {
+              "kind": "omission",
+              "claim_id": null,
+              "reason": "The response identifies possible evidence despite empty structured arrays but omits the required interpretation that a failed fetch does not establish an empty discussion.",
+              "source_id": "access",
+              "lines": "15"
+            }
+          ]
+        },
+        {
+          "case_id": "df99473f8a",
+          "gold_label": "numeric",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 changes limit 100 to 200.",
+          "reference": "access:65",
+          "findings": [
+            {
+              "kind": "factual",
+              "claim_id": "c1",
+              "reason": "The source specifies limit=100, not 200.",
+              "source_id": "access",
+              "lines": "65"
+            }
+          ]
+        },
+        {
+          "case_id": "0124ac98de",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "protocol:28",
+          "findings": []
+        },
+        {
+          "case_id": "e45c3f153b",
+          "gold_label": "clean",
+          "verdict": "pass",
+          "outcome": "TN",
+          "expected_defect": null,
+          "reference": "access:57",
+          "findings": []
+        },
+        {
+          "case_id": "1fb5e9a30c",
+          "gold_label": "omission",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "Output omits that actual deliverable PR must already be reviewed and merged before acceptance. A review-operation reference does not imply merge occurred.",
+          "reference": "protocol:52-53",
+          "findings": [
+            {
+              "kind": "omission",
+              "claim_id": null,
+              "reason": "The response mentions coordinator completion and a passing review operation, but omits that the delivery PR must already have been reviewed and merged before acceptance.",
+              "source_id": "protocol",
+              "lines": "52-53"
+            }
+          ]
+        },
+        {
+          "case_id": "2dbff0ee63",
+          "gold_label": "unsupported_citation",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 is true elsewhere, but its sole cited line lists prerequisites and does not support the permission-control claim.",
+          "reference": "protocol:26; cited protocol:13 is not support",
+          "findings": [
+            {
+              "kind": "citation",
+              "claim_id": "c1",
+              "reason": "Protocol line 13 describes installation prerequisites, not which identity controls permissions; the account-permission claim is supported at line 26 instead.",
+              "source_id": "protocol",
+              "lines": "13;26"
+            }
+          ]
+        },
+        {
+          "case_id": "c03c8e384f",
+          "gold_label": "omission",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "Output entirely omits that early budget exhaustion requires labeling collection incomplete; pagination instruction alone does not answer the requested stopping condition.",
+          "reference": "access:31: If your retrieval budget ends early, label the collection incomplete.",
+          "findings": [
+            {
+              "kind": "omission",
+              "claim_id": null,
+              "reason": "Following the next-page link does not answer how to characterize early termination: the collection must be labeled incomplete and partial retrieval cannot establish emptiness.",
+              "source_id": "access",
+              "lines": "31;47"
+            }
+          ]
+        },
+        {
+          "case_id": "ca624e56ac",
+          "gold_label": "numeric",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 changes minimum Python 3.9+ to 3.8+.",
+          "reference": "protocol:13",
+          "findings": [
+            {
+              "kind": "factual",
+              "claim_id": "c1",
+              "reason": "The minimum version is Python 3.9+, not Python 3.8+.",
+              "source_id": "protocol",
+              "lines": "13"
+            }
+          ]
+        },
+        {
+          "case_id": "aa77077fb5",
+          "gold_label": "numeric",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 changes explicitly stated first-assignment attempt from 1 to 2.",
+          "reference": "protocol:44",
+          "findings": [
+            {
+              "kind": "factual",
+              "claim_id": "c1",
+              "reason": "First assignment increases attempt to 1, not 2.",
+              "source_id": "protocol",
+              "lines": "44"
+            }
+          ]
+        },
+        {
+          "case_id": "73ff679915",
+          "gold_label": "unsupported_citation",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c2 cites report resource formats, not participation exclusivity; claim is correct elsewhere.",
+          "reference": "access:11; cited protocol:22 is not support",
+          "findings": [
+            {
+              "kind": "citation",
+              "claim_id": "c2",
+              "reason": "Protocol line 22 describes entry resources and report formats and does not support non-exclusive intents. Non-exclusivity is stated in access line 11 and protocol line 7.",
+              "source_id": "protocol",
+              "lines": "22;7"
+            }
+          ]
+        },
+        {
+          "case_id": "f757260c2a",
+          "gold_label": "unsupported_citation",
+          "verdict": "flag",
+          "outcome": "TP",
+          "expected_defect": "c1 cites index fields rather than the publication-date rule; claim is correct but its citation provides no support.",
+          "reference": "protocol:69; cited access:55 is not support",
+          "findings": [
+            {
+              "kind": "citation",
+              "claim_id": "c1",
+              "reason": "Access line 55 lists question and artifact-reference fields; it does not specify null for unknown publication dates. That rule appears in protocol line 69.",
+              "source_id": "access",
+              "lines": "55"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Assigned method: independent_review
+Follow reviewer-common.md. Independently review the output as a whole, using your own reasoning and source-reading sequence to decide whether it answers the request accurately, completely and with supporting citations. You may inspect any of the three packet source texts. No prescribed claim-by-claim sequence is imposed. Write results/independent-review.json (coordinator supplies absolute path).

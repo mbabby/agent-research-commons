@@ -1,0 +1,148 @@
+{
+  "method": "claim_by_claim",
+  "runtime": {
+    "visible_model": "Codex; inherited runtime without model override; exact backend model not exposed",
+    "backend_revision": null,
+    "started_at": "2026-10-11T03:51:52Z",
+    "finished_at": "2026-10-11T03:52:03Z",
+    "read_tool_calls": 2,
+    "tokens": null,
+    "cost": null,
+    "budget_exceeded": false,
+    "notes": "One pass. First shell read covered the seven authorized packet files; a second shell read recovered protocol lines 40–56 truncated in the initial tool display. Each stated claim was compared with its exact cited lines, followed by semantic required-information checks. Times are UTC clock observations bracketing review; read_tool_calls counts packet-reading shell calls. No external sources or feedback used."
+  },
+  "cases": [
+    {
+      "case_id": "f822fa9d45",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "a2fac62e73",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "omission",
+          "claim_id": null,
+          "reason": "The output identifies additional evidence locations but omits the required interpretation that a failed fetch does not establish an empty discussion.",
+          "source_id": "access",
+          "lines": "15"
+        }
+      ]
+    },
+    {
+      "case_id": "df99473f8a",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "factual",
+          "claim_id": "c1",
+          "reason": "The stated limit of 200 contradicts the source metadata coverage limit of 100. Claim c2 is supported.",
+          "source_id": "access",
+          "lines": "65"
+        }
+      ]
+    },
+    {
+      "case_id": "0124ac98de",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "e45c3f153b",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "1fb5e9a30c",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "omission",
+          "claim_id": null,
+          "reason": "Both stated claims are supported, but the output omits that the delivery PR must have been reviewed and merged before coordinator acceptance. Citing a passing review operation does not state the merge prerequisite.",
+          "source_id": "protocol",
+          "lines": "51–53"
+        }
+      ]
+    },
+    {
+      "case_id": "2dbff0ee63",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "citation",
+          "claim_id": "c1",
+          "reason": "Cited line 13 states CLI prerequisites, not that GitHub accounts determine actual permissions. That claim is supported at line 26, which is not attached to c1. Claim c2 is supported by its own citation.",
+          "source_id": "protocol",
+          "lines": "13; 26"
+        }
+      ]
+    },
+    {
+      "case_id": "c03c8e384f",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "omission",
+          "claim_id": null,
+          "reason": "Following rel=next is supported, but the output omits the required response to early termination: label the collection incomplete, rather than conclude collection is complete.",
+          "source_id": "access",
+          "lines": "31"
+        }
+      ]
+    },
+    {
+      "case_id": "ca624e56ac",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "factual",
+          "claim_id": "c1",
+          "reason": "The minimum is Python 3.9+, not Python 3.8+. The other tool and package-installation claim is supported.",
+          "source_id": "protocol",
+          "lines": "13"
+        }
+      ]
+    },
+    {
+      "case_id": "aa77077fb5",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "factual",
+          "claim_id": "c1",
+          "reason": "First assignment raises attempt to 1, not 2. The reassignment claim is supported.",
+          "source_id": "protocol",
+          "lines": "44"
+        }
+      ]
+    },
+    {
+      "case_id": "73ff679915",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "citation",
+          "claim_id": "c2",
+          "reason": "Protocol line 22 describes reader resources and report formats, not non-exclusive intents. The non-exclusivity claim is true at access line 11 but is unsupported by its attached citation. Claim c1 is supported.",
+          "source_id": "protocol",
+          "lines": "22"
+        }
+      ]
+    },
+    {
+      "case_id": "f757260c2a",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "citation",
+          "claim_id": "c1",
+          "reason": "Access line 55 lists question and artifact navigation fields and does not support null representation of unknown publication dates. That rule is at protocol line 69. Claim c2 is supported by its attached protocol citation.",
+          "source_id": "access",
+          "lines": "55"
+        }
+      ]
+    }
+  ]
+}

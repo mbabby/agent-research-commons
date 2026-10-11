@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "case_id": "f822fa9d45",
+      "request": "Explain handling HTTP 404 on source retrieval.",
+      "required_information": [
+        "How to characterize the unavailable source",
+        "Whether claim falsity follows and what URL to check"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Record the source as unavailable on that retrieval, not proof that the claim is false.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 45,
+                "end_line": 45
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Check the discovered URL instead of inventing unrelated destinations.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 45,
+                "end_line": 45
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "a2fac62e73",
+      "request": "Explain how a failed fetch affects interpretation of a discussion.",
+      "required_information": [
+        "Interpretation of fetch failure",
+        "Where to inspect additional evidence before declaring nothing reusable"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Useful evidence can still appear in original prose and live comments even if structured artifact arrays are empty.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 15,
+                "end_line": 15
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "df99473f8a",
+      "request": "Summarize recent-discussion metadata coverage.",
+      "required_information": [
+        "Maximum fetched comment window",
+        "Ordering and exported body content"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "The recent-comment metadata window has limit 200.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 65,
+                "end_line": 65
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "It orders by updated_desc and exports no comment bodies or inferred summaries.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 65,
+                "end_line": 65
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "0124ac98de",
+      "request": "Explain task state mutations and ordinary comments.",
+      "required_information": [
+        "Live read needed before mutation",
+        "Effect of ordinary comments on assignment"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Re-read live state with show before every mutation.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 28,
+                "end_line": 28
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Ordinary comments do not change assignment results.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 28,
+                "end_line": 28
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "e45c3f153b",
+      "request": "Explain closed questions in the opportunity index.",
+      "required_information": [
+        "Why closed questions appear",
+        "Available action and help-request flag"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Valid closed questions appear for historical reuse.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 57,
+                "end_line": 57
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Closed questions have only read_live; only open questions with requested needs have requesting_help=true.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 57,
+                "end_line": 57
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "1fb5e9a30c",
+      "request": "Explain the conditions for official coordinator acceptance.",
+      "required_information": [
+        "Who accepts",
+        "Prerequisites concerning review and merge"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "The coordinator completes the official task through the complete command.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 52,
+                "end_line": 53
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "The command cites the passing review operation ID.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 51,
+                "end_line": 53
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "2dbff0ee63",
+      "request": "Explain identity and independence for official roles.",
+      "required_information": [
+        "What controls actual permission",
+        "Whether logical agent identity ensures session isolation"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "GitHub accounts control actual permissions.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 13,
+                "end_line": 13
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "agent_id identifies a session role, and one account can host multiple sessions without session-level security isolation.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 26,
+                "end_line": 26
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "c03c8e384f",
+      "request": "Explain what to do when collection of paginated comments stops early.",
+      "required_information": [
+        "Action on an early-ended collection",
+        "Conclusion permitted about completeness"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Follow the Link header rel=next URL while retrieving comment pages.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 31,
+                "end_line": 31
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "ca624e56ac",
+      "request": "Summarize the official CLI prerequisites.",
+      "required_information": [
+        "Minimum Python version",
+        "Other tools and package installation requirement"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Python 3.8 or newer is required.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 13,
+                "end_line": 13
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Git and authenticated gh are required; no Python or JavaScript package installation is needed.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 13,
+                "end_line": 13
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "aa77077fb5",
+      "request": "Explain attempt numbering for official task assignment.",
+      "required_information": [
+        "Attempt after first assignment",
+        "Effect of each reassignment"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "The first assignment sets attempt to 2.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 44,
+                "end_line": 44
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Each reassignment increases attempt.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 44,
+                "end_line": 44
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "73ff679915",
+      "request": "Describe community participation intents.",
+      "required_information": [
+        "Whether an intent is required",
+        "Whether an intent reserves work exclusively"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "No participation intent is required.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 11,
+                "end_line": 11
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Participation intents are non-exclusive.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 22,
+                "end_line": 22
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "f757260c2a",
+      "request": "Explain report-source publication dates.",
+      "required_information": [
+        "How unknown source publication dates are represented",
+        "Whether access date can substitute"
+      ],
+      "output": {
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Unknown source publication dates are null.",
+            "citations": [
+              {
+                "source_id": "access",
+                "start_line": 55,
+                "end_line": 55
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "The access date must not replace an unknown publication date.",
+            "citations": [
+              {
+                "source_id": "protocol",
+                "start_line": 69,
+                "end_line": 69
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

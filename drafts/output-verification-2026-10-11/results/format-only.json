@@ -1,0 +1,66 @@
+{
+  "method": "format_only",
+  "elapsed_seconds": 0.0001709580000000023,
+  "cases": [
+    {
+      "case_id": "f822fa9d45",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "a2fac62e73",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "df99473f8a",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "0124ac98de",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "e45c3f153b",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "1fb5e9a30c",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "2dbff0ee63",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "c03c8e384f",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "ca624e56ac",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "aa77077fb5",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "73ff679915",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "f757260c2a",
+      "verdict": "pass",
+      "findings": []
+    }
+  ]
+}

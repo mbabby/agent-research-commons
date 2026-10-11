@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "case_id": "ca624e56ac",
+      "label": "numeric",
+      "defective": true,
+      "expected_defect": "c1 changes minimum Python 3.9+ to 3.8+.",
+      "reference": "protocol:13"
+    },
+    {
+      "case_id": "aa77077fb5",
+      "label": "numeric",
+      "defective": true,
+      "expected_defect": "c1 changes explicitly stated first-assignment attempt from 1 to 2.",
+      "reference": "protocol:44"
+    },
+    {
+      "case_id": "df99473f8a",
+      "label": "numeric",
+      "defective": true,
+      "expected_defect": "c1 changes limit 100 to 200.",
+      "reference": "access:65"
+    },
+    {
+      "case_id": "2dbff0ee63",
+      "label": "unsupported_citation",
+      "defective": true,
+      "expected_defect": "c1 is true elsewhere, but its sole cited line lists prerequisites and does not support the permission-control claim.",
+      "reference": "protocol:26; cited protocol:13 is not support"
+    },
+    {
+      "case_id": "f757260c2a",
+      "label": "unsupported_citation",
+      "defective": true,
+      "expected_defect": "c1 cites index fields rather than the publication-date rule; claim is correct but its citation provides no support.",
+      "reference": "protocol:69; cited access:55 is not support"
+    },
+    {
+      "case_id": "73ff679915",
+      "label": "unsupported_citation",
+      "defective": true,
+      "expected_defect": "c2 cites report resource formats, not participation exclusivity; claim is correct elsewhere.",
+      "reference": "access:11; cited protocol:22 is not support"
+    },
+    {
+      "case_id": "c03c8e384f",
+      "label": "omission",
+      "defective": true,
+      "expected_defect": "Output entirely omits that early budget exhaustion requires labeling collection incomplete; pagination instruction alone does not answer the requested stopping condition.",
+      "reference": "access:31: If your retrieval budget ends early, label the collection incomplete."
+    },
+    {
+      "case_id": "1fb5e9a30c",
+      "label": "omission",
+      "defective": true,
+      "expected_defect": "Output omits that actual deliverable PR must already be reviewed and merged before acceptance. A review-operation reference does not imply merge occurred.",
+      "reference": "protocol:52-53"
+    },
+    {
+      "case_id": "a2fac62e73",
+      "label": "omission",
+      "defective": true,
+      "expected_defect": "Output omits the explicitly requested fetch-failure distinction: a failed fetch does not establish an empty discussion. Statement about empty arrays is a separate condition.",
+      "reference": "access:15: A failed fetch is not an empty discussion."
+    },
+    {
+      "case_id": "e45c3f153b",
+      "label": "clean",
+      "defective": false,
+      "expected_defect": null,
+      "reference": "access:57"
+    },
+    {
+      "case_id": "0124ac98de",
+      "label": "clean",
+      "defective": false,
+      "expected_defect": null,
+      "reference": "protocol:28"
+    },
+    {
+      "case_id": "f822fa9d45",
+      "label": "clean",
+      "defective": false,
+      "expected_defect": null,
+      "reference": "access:45"
+    }
+  ]
+}
