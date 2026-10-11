@@ -1,0 +1,148 @@
+{
+  "method": "independent_review",
+  "runtime": {
+    "visible_model": "Codex agent based on GPT-6; inherited runtime, no override",
+    "backend_revision": null,
+    "started_at": "2026-10-11T03:52:03Z",
+    "finished_at": "2026-10-11T03:52:18.460029+00:00",
+    "read_tool_calls": 2,
+    "tokens": null,
+    "cost": null,
+    "budget_exceeded": false,
+    "notes": "Two shell read calls read only the seven authorized packet files. Start clock was observed immediately following the first read in the same tool call; no earlier clock observation is available. One-pass review without feedback. Exact backend, token usage and financial cost are not exposed. Result hashing follows writing and does not revise judgments."
+  },
+  "cases": [
+    {
+      "case_id": "f822fa9d45",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "a2fac62e73",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "omission",
+          "claim_id": null,
+          "reason": "The response identifies possible evidence despite empty structured arrays but omits the required interpretation that a failed fetch does not establish an empty discussion.",
+          "source_id": "access",
+          "lines": "15"
+        }
+      ]
+    },
+    {
+      "case_id": "df99473f8a",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "factual",
+          "claim_id": "c1",
+          "reason": "The source specifies limit=100, not 200.",
+          "source_id": "access",
+          "lines": "65"
+        }
+      ]
+    },
+    {
+      "case_id": "0124ac98de",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "e45c3f153b",
+      "verdict": "pass",
+      "findings": []
+    },
+    {
+      "case_id": "1fb5e9a30c",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "omission",
+          "claim_id": null,
+          "reason": "The response mentions coordinator completion and a passing review operation, but omits that the delivery PR must already have been reviewed and merged before acceptance.",
+          "source_id": "protocol",
+          "lines": "52-53"
+        }
+      ]
+    },
+    {
+      "case_id": "2dbff0ee63",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "citation",
+          "claim_id": "c1",
+          "reason": "Protocol line 13 describes installation prerequisites, not which identity controls permissions; the account-permission claim is supported at line 26 instead.",
+          "source_id": "protocol",
+          "lines": "13;26"
+        }
+      ]
+    },
+    {
+      "case_id": "c03c8e384f",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "omission",
+          "claim_id": null,
+          "reason": "Following the next-page link does not answer how to characterize early termination: the collection must be labeled incomplete and partial retrieval cannot establish emptiness.",
+          "source_id": "access",
+          "lines": "31;47"
+        }
+      ]
+    },
+    {
+      "case_id": "ca624e56ac",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "factual",
+          "claim_id": "c1",
+          "reason": "The minimum version is Python 3.9+, not Python 3.8+.",
+          "source_id": "protocol",
+          "lines": "13"
+        }
+      ]
+    },
+    {
+      "case_id": "aa77077fb5",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "factual",
+          "claim_id": "c1",
+          "reason": "First assignment increases attempt to 1, not 2.",
+          "source_id": "protocol",
+          "lines": "44"
+        }
+      ]
+    },
+    {
+      "case_id": "73ff679915",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "citation",
+          "claim_id": "c2",
+          "reason": "Protocol line 22 describes entry resources and report formats and does not support non-exclusive intents. Non-exclusivity is stated in access line 11 and protocol line 7.",
+          "source_id": "protocol",
+          "lines": "22;7"
+        }
+      ]
+    },
+    {
+      "case_id": "f757260c2a",
+      "verdict": "flag",
+      "findings": [
+        {
+          "kind": "citation",
+          "claim_id": "c1",
+          "reason": "Access line 55 lists question and artifact-reference fields; it does not specify null for unknown publication dates. That rule appears in protocol line 69.",
+          "source_id": "access",
+          "lines": "55"
+        }
+      ]
+    }
+  ]
+}

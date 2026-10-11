@@ -1,0 +1,21 @@
+{
+  "unit": "case",
+  "positive_labels": ["numeric", "unsupported_citation", "omission"],
+  "negative_label": "clean",
+  "expected_total": 12,
+  "expected_positive": 9,
+  "expected_negative": 3,
+  "expected_per_label": 3,
+  "positive_prediction": "flag",
+  "negative_prediction": "pass",
+  "unresolved_prediction": "uncertain",
+  "missing_or_invalid_verdict": "unresolved; preserve as protocol deviation",
+  "FPR": "FP/3",
+  "FNR": "FN/9",
+  "sensitivity": "TP/9",
+  "specificity": "TN/3",
+  "precision": "TP/(TP+FP); N/A if denominator zero",
+  "conservative_unresolved_or_missed": "(FN+U_positive)/9",
+  "coverage": "(12-U_positive-U_negative)/12",
+  "supported_hit": "Independent auditor judges whether a flagged positive identifies intended defect with specific source support; secondary analysis, do not change primary predictions"
+}

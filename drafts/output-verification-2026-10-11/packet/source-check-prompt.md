@@ -1,0 +1,2 @@
+# Assigned method: claim_by_claim
+Follow reviewer-common.md. For each case, explicitly walk through each stated claim and inspect its exact cited lines for support; then compare required_information against the complete output and inspect relevant source passages for missing requirements. Record unsupported or contradicted claims and required omissions. This is an Agent-executed structured source-check procedure, not a human baseline or non-Agent method. Write results/source-check.json (coordinator supplies absolute path).
