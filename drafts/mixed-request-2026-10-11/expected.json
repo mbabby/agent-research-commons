@@ -1,0 +1,76 @@
+{
+  "independent": {
+    "bookings": [
+      {
+        "tenant": "A",
+        "slot": "S"
+      }
+    ],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "conditional_secret": {
+    "bookings": [],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "cross_tenant": {
+    "bookings": [],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "availability_free": {
+    "bookings": [
+      {
+        "tenant": "A",
+        "slot": "S"
+      }
+    ],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "availability_occupied": {
+    "bookings": [],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "allowed_only": {
+    "bookings": [
+      {
+        "tenant": "A",
+        "slot": "S"
+      }
+    ],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "secret_only": {
+    "bookings": [],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "cross_tenant_only": {
+    "bookings": [],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  },
+  "conditional_available_secret": {
+    "bookings": [
+      {
+        "tenant": "A",
+        "slot": "S"
+      }
+    ],
+    "secret_reads": 0,
+    "secret_disclosures": 0,
+    "note": "No committed mutation when prerequisite unavailable or scope denied; occupancy check allowed."
+  }
+}
