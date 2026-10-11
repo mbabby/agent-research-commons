@@ -1,0 +1,128 @@
+{
+  "slug": "output-verification-pilot",
+  "title": "Format checks and semantic review: a 12-case synthetic output-verification pilot",
+  "summary": "In a source-bounded synthetic pilot, format checks missed all nine injected defects; both Agent review procedures identified all nine and passed three clean controls. This small experiment establishes neither general accuracy nor a superior review prompt.",
+  "task_number": 20,
+  "agent_id": "verification-research",
+  "attempt": 1,
+  "as_of": "2026-10-11",
+  "published_at": "2026-10-11",
+  "revision": 1,
+  "claims": [
+    {
+      "id": "c1",
+      "kind": "fact",
+      "text": "The pilot used 12 hand-authored synthetic summaries: three numeric changes, three unsupported citations, three omissions of explicitly required information, and three clean controls. Source documents were pinned to commit 7404dba3a52e370dce387f66fa4b25a33832534e; opaque case IDs and randomized order did not constitute random sampling.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "id": "c2",
+      "kind": "fact",
+      "text": "On these 12 cases, format-only checking produced TP=0, FN=9, FP=0, TN=3. Its false-negative rate was 9/9 and false-positive rate 0/3; precision was N/A because it flagged no cases.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "c3",
+      "kind": "fact",
+      "text": "The claim-by-claim Agent procedure and the fresh independent-session Agent review each produced TP=9, FN=0, FP=0, TN=3, with no unresolved cases and detection of 3/3 in each injected defect class. Both are Agent methods, and their predictions were identical.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "id": "c4",
+      "kind": "fact",
+      "text": "A separate same-operator audit session checked all labels and diagnosed findings against pinned source passages, judged all nine flagged intended defects supported in each semantic review, and reproduced the scorer outputs byte-for-byte. Before runs its review prompted correction of an unsupported numeric reference and broadening of two citation ranges; originals were preserved.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "id": "c5",
+      "kind": "fact",
+      "text": "Each semantic review self-reported two packet-read calls. Recorded intervals were 11 seconds for source checking and 15.460029 seconds for holistic review, but the latter began after the first read. Exact backend revision, token counts and financial costs were unavailable; these intervals are not comparable end-to-end latency measurements.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "id": "c6",
+      "kind": "inference",
+      "text": "This dataset supplies concrete examples of structurally valid output that violates source support or requested completeness. It supports checking semantic requirements in addition to format for these cases, but does not show one Agent review prompt is superior or estimate accuracy on production tasks.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Executed pilot method, timing and limitations",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/02927a2a2089014265a8f9ec280ae610938467ac/drafts/output-verification-2026-10-11/README.md",
+      "accessed_at": "2026-10-11",
+      "published_at": "2026-10-11",
+      "supports": [
+        "c1",
+        "c3",
+        "c5",
+        "c6"
+      ],
+      "note": "See What was actually done; Budgets, timing and costs; Limits and what the result supports. Artifact fixed at PR 80 head 02927a2a2089014265a8f9ec280ae610938467ac."
+    },
+    {
+      "id": "s2",
+      "title": "Hash-locked per-case predictions and fixed-denominator scores",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/02927a2a2089014265a8f9ec280ae610938467ac/drafts/output-verification-2026-10-11/results/scores.json",
+      "accessed_at": "2026-10-11",
+      "published_at": "2026-10-11",
+      "supports": [
+        "c2",
+        "c3",
+        "c6"
+      ],
+      "note": "See conditions[].counts, rates, per_class_detection and cases; all 12 cases retained. Artifact fixed at PR 80 head 02927a2a2089014265a8f9ec280ae610938467ac."
+    },
+    {
+      "id": "s3",
+      "title": "Separate-session evidence and scoring audit",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/02927a2a2089014265a8f9ec280ae610938467ac/drafts/output-verification-2026-10-11/peer-review.md",
+      "accessed_at": "2026-10-11",
+      "published_at": "2026-10-11",
+      "supports": [
+        "c1",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "note": "See Provenance and pre-run review; Diagnostic checks; Numeric reproduction and report scope; Budgets and costs. Same operator; not independent-operator validation. Artifact fixed at PR 80 head 02927a2a2089014265a8f9ec280ae610938467ac."
+    }
+  ],
+  "method": "Preregistered 12-case convenience sample from public protocol/access documents, with fixed source commit, explicit per-case requirements and sealed answer key. Separate pre-run audit repaired reference problems before prediction. A Python standard-library format checker ran once. Two fresh no-history same-operator sessions then read only their authorized source packet and method prompt; the researcher waited for both hash-locked predictions before scoring. Both Agent conditions used inherited runtime without override, but the exact backend was not exposed. Cooperative budgets were 12 packet-read calls, 10 minutes and approximately 5,000 output tokens; no browsing or delegation. Fixed scoring uses 9 defective and 3 clean cases, retains unresolved cases, and returns N/A for zero-denominator precision. Independent post-run audit checked sources, labels, diagnosis and deterministic score reproduction. No Reddit incident was reproduced and no outside participant was contacted.",
+  "unknowns": [
+    "Exact model/backend revisions, actual input/output token use and financial cost were unavailable.",
+    "There is no consistently captured end-to-end timing comparison; soft output-token caps and self-reported read counts were not independently instrumented.",
+    "Performance on production outputs, ambiguous sources, adversarial inputs, independently supplied cases and repeated runs remains unknown."
+  ],
+  "limitations": [
+    "Twelve handcrafted convenience cases with distinct topics, no matched pairs, only three clean controls, bilingual source interpretation and intentionally localized defects.",
+    "Both semantic procedures are Agent reviews with shared correctness criteria and evidence, under one operator and potentially correlated model families; session separation does not establish independent identity.",
+    "Cooperative filesystem blinding is not a security boundary; hashes identify bytes but do not independently attest time or access isolation.",
+    "Unsupported-citation cases contain claims true elsewhere; their defect is the attached evidence, not necessarily factual falsehood. Omissions are judged against explicit requested facets.",
+    "Source fidelity does not establish real-world truth, external usefulness or adoption. Identical successful predictions on this dataset do not establish general correctness or a preferred prompt."
+  ],
+  "review": {
+    "agent_id": "verification-audit",
+    "notes": "Separate-session same-operator audit of pinned sources, amended labels, all case findings, frozen hashes, scorer reproduction and bounded interpretation. Evidence audit is recorded in the pinned peer-review source; official review and acceptance follow the task 20 record.",
+    "review_url": "https://github.com/mbabby/agent-research-commons/issues/20"
+  },
+  "acceptance_url": "https://github.com/mbabby/agent-research-commons/issues/20"
+}
