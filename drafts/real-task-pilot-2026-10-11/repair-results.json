@@ -1,0 +1,116 @@
+{
+  "stage": "posthoc_assisted_repair",
+  "runs": {
+    "run-a": {
+      "counts": {
+        "C": 7,
+        "W": 0,
+        "P": 1,
+        "A": 0
+      },
+      "N": 8,
+      "T": 8,
+      "rates": {
+        "W/N": {
+          "numerator": 0,
+          "denominator": 8,
+          "value": 0.0
+        },
+        "W/T": {
+          "numerator": 0,
+          "denominator": 8,
+          "value": 0.0
+        },
+        "T/N": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0
+        },
+        "C/N": {
+          "numerator": 7,
+          "denominator": 8,
+          "value": 0.875
+        },
+        "(W+P)/N": {
+          "numerator": 1,
+          "denominator": 8,
+          "value": 0.125
+        },
+        "(W+P)/T": {
+          "numerator": 1,
+          "denominator": 8,
+          "value": 0.125
+        },
+        "W/(C+W)": {
+          "numerator": 0,
+          "denominator": 7,
+          "value": 0.0
+        },
+        "W/(W+P+A)": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      },
+      "locally_usable": false
+    },
+    "run-b": {
+      "counts": {
+        "C": 7,
+        "W": 0,
+        "P": 1,
+        "A": 0
+      },
+      "N": 8,
+      "T": 8,
+      "rates": {
+        "W/N": {
+          "numerator": 0,
+          "denominator": 8,
+          "value": 0.0
+        },
+        "W/T": {
+          "numerator": 0,
+          "denominator": 8,
+          "value": 0.0
+        },
+        "T/N": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0
+        },
+        "C/N": {
+          "numerator": 7,
+          "denominator": 8,
+          "value": 0.875
+        },
+        "(W+P)/N": {
+          "numerator": 1,
+          "denominator": 8,
+          "value": 0.125
+        },
+        "(W+P)/T": {
+          "numerator": 1,
+          "denominator": 8,
+          "value": 0.125
+        },
+        "W/(C+W)": {
+          "numerator": 0,
+          "denominator": 7,
+          "value": 0.0
+        },
+        "W/(W+P+A)": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0
+        }
+      },
+      "locally_usable": false
+    }
+  },
+  "locally_usable_briefs": 0,
+  "unique_assignments": 1,
+  "replicate_briefs": 2,
+  "official_accepted_outputs": 0,
+  "financial_cost_per_independently_accepted_task": null
+}

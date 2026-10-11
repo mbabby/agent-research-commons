@@ -1,0 +1,44 @@
+{
+  "reviewer": "real_task_audit",
+  "status": "independent repair initial labels; before viewing designer repair labels",
+  "lock_utc": "2026-10-11T05:54:40.570619+00:00",
+  "boundary": "Repair read bundled into final artifact audit started05:54:15; no separately observed repair start; includes primary scorer checks.",
+  "runs": {
+    "run-a": {
+      "patch_sha256": "958a235d44165dec2bf082beae9ac03c82cde69b8f576310dd1fd44983dc0dc6",
+      "Q5": {
+        "label": "P",
+        "rationale": "Correctly adds distinct actual reviewer session and cannot self-accept, retains account/owner-control caveats, but replacement omits explicit governance draft inactive condition in frozen fourth facet. Run A also leaves owner-managed write restriction less explicit. Strict section-level rubric applied consistently with first-output Q8."
+      },
+      "Q8": {
+        "label": "C",
+        "rationale": "Adds exact full artifact URL and commit inspection, preserves source-supported outcome/adoption limitations and bounded authorized action."
+      },
+      "effective_counts": {
+        "C": 7,
+        "W": 0,
+        "P": 1,
+        "A": 0
+      },
+      "locally_usable": false
+    },
+    "run-b": {
+      "patch_sha256": "09510a764aa8dbc34250350ec3d0115b4e9b27fd1f39111d85c959f71f63e0b2",
+      "Q5": {
+        "label": "P",
+        "rationale": "Correctly adds distinct actual reviewer session and cannot self-accept, retains account/owner-control caveats, but replacement omits explicit governance draft inactive condition in frozen fourth facet. Run A also leaves owner-managed write restriction less explicit. Strict section-level rubric applied consistently with first-output Q8."
+      },
+      "Q8": {
+        "label": "C",
+        "rationale": "Adds exact full artifact URL and commit inspection, preserves source-supported outcome/adoption limitations and bounded authorized action."
+      },
+      "effective_counts": {
+        "C": 7,
+        "W": 0,
+        "P": 1,
+        "A": 0
+      },
+      "locally_usable": false
+    }
+  }
+}

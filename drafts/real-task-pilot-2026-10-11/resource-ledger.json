@@ -1,0 +1,124 @@
+{
+  "status": "observed nonfinancial resource ledger; same-runtime same-operator pilot",
+  "unique_assignments": 1,
+  "first_attempt_replicas": 2,
+  "local_runtime_comparison": "not performed; coordinator found no ollama/lms/llama-cli runtime",
+  "financial_cost_per_independently_accepted_task": null,
+  "unknowns": {
+    "exact_backend_model": null,
+    "token_usage": null,
+    "billed_charges": null,
+    "electricity_kwh": null,
+    "hardware_amortization": null,
+    "maintenance_effort": null,
+    "human_labor_minutes": null,
+    "design_start_utc": null
+  },
+  "first_attempts": [
+    {
+      "id": "run-a",
+      "output_bytes": 13153,
+      "output_sha256": "b106a54c888900c86ff73e338f00214ccbe60bea42cfd83275032823cbbcbb42",
+      "before_dispatch_utc": "2026-10-11T05:49:14Z",
+      "after_dispatch_observation_utc": "2026-10-11T05:49:28Z",
+      "final_received_by_utc": "2026-10-11T05:50:26Z",
+      "dispatch_to_common_observation_seconds": 72.0,
+      "completion_latency_upper_bound_seconds": 72.0,
+      "exact_completion_latency_seconds": null,
+      "self_reported_tool_calls": 3,
+      "self_reported_runtime": "Codex based on GPT-6; exact backend not exposed",
+      "initial_locally_usable": false,
+      "repairs_in_initial_attempt": 0
+    },
+    {
+      "id": "run-b",
+      "output_bytes": 12113,
+      "output_sha256": "06af284398a39b5b7c874d1aa0773d2be1f6860ddd00dc2442a35d574501fc9e",
+      "before_dispatch_utc": "2026-10-11T05:49:28Z",
+      "after_dispatch_observation_utc": "2026-10-11T05:49:42Z",
+      "final_received_by_utc": "2026-10-11T05:50:26Z",
+      "dispatch_to_common_observation_seconds": 58.0,
+      "completion_latency_upper_bound_seconds": 58.0,
+      "exact_completion_latency_seconds": null,
+      "self_reported_tool_calls": 3,
+      "self_reported_runtime": "Codex based on GPT-6; exact backend not exposed",
+      "initial_locally_usable": false,
+      "repairs_in_initial_attempt": 0
+    }
+  ],
+  "shared_overhead": [
+    {
+      "phase": "preflight",
+      "start_utc": "2026-10-11T05:47:37Z",
+      "end_utc": "2026-10-11T05:49:15Z",
+      "elapsed_seconds": 98,
+      "exec_command_calls": 10,
+      "boundary": "auditor observed wall interval including waits; earlier orientation reads excluded"
+    },
+    {
+      "phase": "design initial grading",
+      "start_utc": "2026-10-11T05:52:14Z",
+      "end_utc": "2026-10-11T05:52:35.025582Z",
+      "elapsed_seconds": 21.025582,
+      "exec_command_calls": 3,
+      "boundary": "first raw read through score persistence; includes failed dispatch-log path read, not active labor"
+    },
+    {
+      "phase": "audit initial grading and adjudication",
+      "start_utc": "2026-10-11T05:52:19Z",
+      "end_utc": "2026-10-11T05:52:59Z",
+      "elapsed_seconds": 40,
+      "exec_command_calls": 4,
+      "boundary": "auditor self-observed wall interval; overlaps designer review; includes message waits"
+    },
+    {
+      "phase": "designer repair grading",
+      "start_utc": "2026-10-11T05:54:23Z",
+      "end_utc": "2026-10-11T05:54:31.527401Z",
+      "elapsed_seconds": 8.527401,
+      "exec_command_calls": 2,
+      "boundary": "raw repair read through initial label persistence; agent-session wall interval, not labor"
+    },
+    {
+      "phase": "auditor final artifact verification including repair grading",
+      "start_utc": "2026-10-11T05:54:15Z",
+      "end_utc": "2026-10-11T05:55:41Z",
+      "elapsed_seconds": 86,
+      "exec_command_calls": 8,
+      "boundary": "Includes repair scoring, test/hash/result/assembly checks, adjudication and waits; later report writing/hash/publication overhead unmeasured; initial assembly check false failure from audit regex included numbered process notes and was corrected"
+    }
+  ],
+  "limitations": [
+    "Do not sum overlapping agent-session wall intervals as wall makespan or human labor.",
+    "3 tool calls per first attempt are performer self-reports, not independently instrumented full traces; initial source read truncated and an extra read recovered omitted text.",
+    "Exact final receipt times and active inference time were not observed. Dispatch-to-common-observation windows are upper bounds on completion latency from before-dispatch, not per-run runtimes.",
+    "First-output local usability passes =0; per-passing-brief resource and monetary rates remain null/N/A.",
+    "Post-hoc assisted repairs and archiving/report preparation are separate from initial run intervals; full end-to-end cost remains unknown."
+  ],
+  "posthoc_assisted_repairs": [
+    {
+      "id": "repair-a",
+      "output_bytes": 4294,
+      "output_sha256": "958a235d44165dec2bf082beae9ac03c82cde69b8f576310dd1fd44983dc0dc6",
+      "before_dispatch_utc": "2026-10-11T05:53:16Z",
+      "final_received_by_utc": "2026-10-11T05:53:45Z",
+      "completion_latency_upper_bound_seconds": 29.0,
+      "exact_completion_latency_seconds": null,
+      "self_reported_tool_invocations": 2,
+      "scope": "one assisted replacement attempt for Q5 and Q8, not a fresh independent run"
+    },
+    {
+      "id": "repair-b",
+      "output_bytes": 4447,
+      "output_sha256": "09510a764aa8dbc34250350ec3d0115b4e9b27fd1f39111d85c959f71f63e0b2",
+      "before_dispatch_utc": "2026-10-11T05:53:25Z",
+      "final_received_by_utc": "2026-10-11T05:53:53Z",
+      "completion_latency_upper_bound_seconds": 28.0,
+      "exact_completion_latency_seconds": null,
+      "self_reported_tool_invocations": 2,
+      "scope": "one assisted replacement attempt for Q5 and Q8, not a fresh independent run"
+    }
+  ],
+  "posthoc_locally_usable_briefs": 0,
+  "posthoc_financial_cost_per_independently_accepted_task": null
+}

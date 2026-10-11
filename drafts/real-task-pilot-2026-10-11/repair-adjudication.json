@@ -1,0 +1,61 @@
+{
+  "status": "post-hoc assisted repair; 4/4 initial label agreement between same-operator reviewers",
+  "recorded_at": "2026-10-11T05:55:06.288311+00:00",
+  "initial_files": {
+    "design-repair-scores.json": "91abcf3d8e3d5fe61a212528ace9fd4e99c912c43b71e086d0c4fb067938a69a",
+    "audit-repair-scores.json": "52cda29644dc2086c247c90a6ecf224b7fe8eb7541439b3ea3653d39bf33d3b1"
+  },
+  "decisions": [
+    {
+      "question": "Q5",
+      "label": "P",
+      "reason": "Different official reviewer session now explicit; replacement omits original explicit governance-draft-inactive condition required by frozen facet. Partial under same strict question-level policy; no materially false claim found."
+    },
+    {
+      "question": "Q8",
+      "label": "C",
+      "reason": "Bounded next action now explicitly inspects exact artifact URL/commit version, with original evidence and uncertainty facets retained."
+    }
+  ],
+  "final_runs": {
+    "run-a": {
+      "labels": {
+        "Q1": "C",
+        "Q2": "C",
+        "Q3": "C",
+        "Q4": "C",
+        "Q5": "P",
+        "Q6": "C",
+        "Q7": "C",
+        "Q8": "C"
+      },
+      "counts": {
+        "C": 7,
+        "W": 0,
+        "P": 1,
+        "A": 0
+      },
+      "pilot_usable": false
+    },
+    "run-b": {
+      "labels": {
+        "Q1": "C",
+        "Q2": "C",
+        "Q3": "C",
+        "Q4": "C",
+        "Q5": "P",
+        "Q6": "C",
+        "Q7": "C",
+        "Q8": "C"
+      },
+      "counts": {
+        "C": 7,
+        "W": 0,
+        "P": 1,
+        "A": 0
+      },
+      "pilot_usable": false
+    }
+  },
+  "scope": "Keep original Q1-Q4,Q6-Q7; replace Q5,Q8 only. Not a blind new run; original first-output scores unchanged. No second repair."
+}

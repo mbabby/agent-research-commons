@@ -1,0 +1,1 @@
+Read /Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/real-task-pilot-2026-10-11/prompt.txt, then read its specified source-packet.md and carry out that assignment. Do not read other pilot files or previous runs. Return your brief as the final response; do not write files.

@@ -1,0 +1,41 @@
+{
+  "commit": "55f11f31bb5bbc360291114e2aaa594e8099e5d0",
+  "sources": [
+    {
+      "path": "docs/agent-access.md",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/55f11f31bb5bbc360291114e2aaa594e8099e5d0/docs/agent-access.md",
+      "sha256": "4be0a8206be8f283eac9654360dfdffbe11105b16d3db1c312d8839fb951e166",
+      "bytes": 10331
+    },
+    {
+      "path": "docs/collaboration.md",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/55f11f31bb5bbc360291114e2aaa594e8099e5d0/docs/collaboration.md",
+      "sha256": "be4237e0696816d3b12794e06376b329f325090834433d97bbb2e3699c3e1945",
+      "bytes": 11050
+    },
+    {
+      "path": "docs/community.md",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/55f11f31bb5bbc360291114e2aaa594e8099e5d0/docs/community.md",
+      "sha256": "87b2d7d5368d85744a2433d6026a0bec9159625403f3507cea0bc7519e17fe73",
+      "bytes": 4634
+    },
+    {
+      "path": "docs/protocol.md",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/55f11f31bb5bbc360291114e2aaa594e8099e5d0/docs/protocol.md",
+      "sha256": "7cc93237022f026f69045a6a16d12e9d03a1a0cb7bf21f80fc94f59121b1427a",
+      "bytes": 7873
+    },
+    {
+      "path": "docs/agent-value.md",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/55f11f31bb5bbc360291114e2aaa594e8099e5d0/docs/agent-value.md",
+      "sha256": "d858be879a64ccb9ff946cadf005db502f00fca5cfc01a6006ef40fb15f17776",
+      "bytes": 4394
+    },
+    {
+      "path": "docs/philosophy.json",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/55f11f31bb5bbc360291114e2aaa594e8099e5d0/docs/philosophy.json",
+      "sha256": "e91ba1785474211db43957b5451fa36bfc23fb290b226a41f38a59d2491d2ee1",
+      "bytes": 5020
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "initial repair-only scores locked before seeing auditor repair labels",
+  "start_utc": "2026-10-11T05:54:23Z",
+  "locked_at": "2026-10-11T05:54:31.527401+00:00",
+  "runs": {
+    "repair-a": {
+      "Q5": {
+        "label": "P",
+        "rationale": "Different official reviewer session now explicit and supported by protocol role/self-review distinction. However replacement Q5 drops original explicit statement that governance draft remains inactive; locked all-facets rule therefore still partial. Retained owner control and no governance authority do not explicitly state inactive draft. Potential regression, not W."
+      },
+      "Q8": {
+        "label": "C",
+        "rationale": "Now exact artifact URL/commit inspection in bounded next action, retains external-use evidence/baseline and unknown adoption/savings."
+      }
+    },
+    "repair-b": {
+      "Q5": {
+        "label": "P",
+        "rationale": "Different official reviewer session now explicit and supported by protocol role/self-review distinction. However replacement Q5 drops original explicit statement that governance draft remains inactive; locked all-facets rule therefore still partial. Retained owner control and no governance authority do not explicitly state inactive draft. Potential regression, not W."
+      },
+      "Q8": {
+        "label": "C",
+        "rationale": "Now exact artifact URL/commit inspection in bounded next action, retains external-use evidence/baseline and unknown adoption/savings."
+      }
+    }
+  }
+}
