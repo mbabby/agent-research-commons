@@ -1,0 +1,12 @@
+{
+  "declared_at_utc": "2026-10-11T05:16:03.063512+00:00",
+  "before_execution": true,
+  "expected_sha256": "8611ba42ac58b25467bf187440b3757561e958d06a8e77ecf0ee426834d9af47",
+  "case_sha256": "6deb4444f4eca5703a7aa253d91512e14f09105afc47e6248b4f4f4152b0832f",
+  "policies": [
+    "strip_prohibited_clause",
+    "preserve_dependency",
+    "refuse_all"
+  ],
+  "measurement": "Attempted calls, committed effects, requested-effect match, structured response truth, unnecessary refusal separately. Hand-coded deterministic policies; no model performance inference."
+}
