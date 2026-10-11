@@ -1,0 +1,213 @@
+{
+  "agents": {
+    "A": {
+      "aa_denominator_illustration": {
+        "denominator": 8,
+        "numerator": 1,
+        "value": 0.125
+      },
+      "answer_coverage": {
+        "denominator": 10,
+        "numerator": 4,
+        "value": 0.4
+      },
+      "attempted_wrong": {
+        "denominator": 4,
+        "numerator": 1,
+        "value": 0.25
+      },
+      "counts": {
+        "abstain": 6,
+        "correct": 2,
+        "partial": 1,
+        "wrong": 1
+      },
+      "full_correct_completion": {
+        "denominator": 10,
+        "numerator": 2,
+        "value": 0.2
+      },
+      "partial_as_failure_attempted": {
+        "denominator": 4,
+        "numerator": 2,
+        "value": 0.5
+      },
+      "partial_as_failure_per_assigned": {
+        "denominator": 10,
+        "numerator": 2,
+        "value": 0.2
+      },
+      "partial_excluded_attempted_wrong": {
+        "denominator": 3,
+        "numerator": 1,
+        "value": 0.3333333333333333
+      },
+      "per_assigned_wrong": {
+        "denominator": 10,
+        "numerator": 1,
+        "value": 0.1
+      }
+    },
+    "B": {
+      "aa_denominator_illustration": {
+        "denominator": 4,
+        "numerator": 2,
+        "value": 0.5
+      },
+      "answer_coverage": {
+        "denominator": 10,
+        "numerator": 10,
+        "value": 1.0
+      },
+      "attempted_wrong": {
+        "denominator": 10,
+        "numerator": 2,
+        "value": 0.2
+      },
+      "counts": {
+        "abstain": 0,
+        "correct": 6,
+        "partial": 2,
+        "wrong": 2
+      },
+      "full_correct_completion": {
+        "denominator": 10,
+        "numerator": 6,
+        "value": 0.6
+      },
+      "partial_as_failure_attempted": {
+        "denominator": 10,
+        "numerator": 4,
+        "value": 0.4
+      },
+      "partial_as_failure_per_assigned": {
+        "denominator": 10,
+        "numerator": 4,
+        "value": 0.4
+      },
+      "partial_excluded_attempted_wrong": {
+        "denominator": 8,
+        "numerator": 2,
+        "value": 0.25
+      },
+      "per_assigned_wrong": {
+        "denominator": 10,
+        "numerator": 2,
+        "value": 0.2
+      }
+    }
+  },
+  "cases": [
+    {
+      "expected": [
+        3,
+        2
+      ],
+      "id": "Q01",
+      "outcomes": {
+        "A": "correct",
+        "B": "correct"
+      }
+    },
+    {
+      "expected": [
+        5,
+        6
+      ],
+      "id": "Q02",
+      "outcomes": {
+        "A": "correct",
+        "B": "correct"
+      }
+    },
+    {
+      "expected": [
+        7,
+        12
+      ],
+      "id": "Q03",
+      "outcomes": {
+        "A": "wrong",
+        "B": "correct"
+      }
+    },
+    {
+      "expected": [
+        9,
+        20
+      ],
+      "id": "Q04",
+      "outcomes": {
+        "A": "partial",
+        "B": "correct"
+      }
+    },
+    {
+      "expected": [
+        11,
+        30
+      ],
+      "id": "Q05",
+      "outcomes": {
+        "A": "abstain",
+        "B": "correct"
+      }
+    },
+    {
+      "expected": [
+        13,
+        42
+      ],
+      "id": "Q06",
+      "outcomes": {
+        "A": "abstain",
+        "B": "correct"
+      }
+    },
+    {
+      "expected": [
+        15,
+        56
+      ],
+      "id": "Q07",
+      "outcomes": {
+        "A": "abstain",
+        "B": "wrong"
+      }
+    },
+    {
+      "expected": [
+        17,
+        72
+      ],
+      "id": "Q08",
+      "outcomes": {
+        "A": "abstain",
+        "B": "wrong"
+      }
+    },
+    {
+      "expected": [
+        19,
+        90
+      ],
+      "id": "Q09",
+      "outcomes": {
+        "A": "abstain",
+        "B": "partial"
+      }
+    },
+    {
+      "expected": [
+        21,
+        110
+      ],
+      "id": "Q10",
+      "outcomes": {
+        "A": "abstain",
+        "B": "partial"
+      }
+    }
+  ],
+  "kind": "constructed_toy_not_model_run"
+}

@@ -1,0 +1,2975 @@
+{
+  "status": "synthetic arithmetic; not observed savings",
+  "scenarios": [
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 0.2,
+          "per_accepted": 0.06666666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.1000000000000005,
+          "per_accepted": 2.0333333333333337
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 20.2,
+          "per_accepted": 6.733333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.099999999999998,
+          "per_accepted": 5.366666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 60.2,
+          "per_accepted": 20.066666666666666
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.099999999999994,
+          "per_accepted": 12.033333333333331
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 0.4,
+          "per_accepted": 0.13333333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.200000000000001,
+          "per_accepted": 2.066666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 20.4,
+          "per_accepted": 6.8
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.2,
+          "per_accepted": 5.3999999999999995
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 60.4,
+          "per_accepted": 20.133333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.199999999999996,
+          "per_accepted": 12.066666666666665
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 1.0,
+          "per_accepted": 0.3333333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.500000000000001,
+          "per_accepted": 2.166666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 21.0,
+          "per_accepted": 7.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.5,
+          "per_accepted": 5.5
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 61.0,
+          "per_accepted": 20.333333333333332
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.5,
+          "per_accepted": 12.166666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 0.2,
+          "per_accepted": 0.06666666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.1000000000000005,
+          "per_accepted": 2.0333333333333337
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 20.2,
+          "per_accepted": 6.733333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.099999999999998,
+          "per_accepted": 5.366666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 60.2,
+          "per_accepted": 20.066666666666666
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.099999999999994,
+          "per_accepted": 12.033333333333331
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 0.4,
+          "per_accepted": 0.13333333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.200000000000001,
+          "per_accepted": 2.066666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 20.4,
+          "per_accepted": 6.8
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.2,
+          "per_accepted": 5.3999999999999995
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 60.4,
+          "per_accepted": 20.133333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.199999999999996,
+          "per_accepted": 12.066666666666665
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 1.0,
+          "per_accepted": 0.3333333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.500000000000001,
+          "per_accepted": 2.166666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 21.0,
+          "per_accepted": 7.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.5,
+          "per_accepted": 5.5
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 61.0,
+          "per_accepted": 20.333333333333332
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.5,
+          "per_accepted": 12.166666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 0.2,
+          "per_accepted": 0.06666666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.1000000000000005,
+          "per_accepted": 2.0333333333333337
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 20.2,
+          "per_accepted": 6.733333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.099999999999998,
+          "per_accepted": 5.366666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 60.2,
+          "per_accepted": 20.066666666666666
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.099999999999994,
+          "per_accepted": 12.033333333333331
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 0.4,
+          "per_accepted": 0.13333333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.200000000000001,
+          "per_accepted": 2.066666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 20.4,
+          "per_accepted": 6.8
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.2,
+          "per_accepted": 5.3999999999999995
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 60.4,
+          "per_accepted": 20.133333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.199999999999996,
+          "per_accepted": 12.066666666666665
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 1.0,
+          "per_accepted": 0.3333333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 0
+          },
+          "total": 6.500000000000001,
+          "per_accepted": 2.166666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hybrid",
+        "hosted",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 0
+          },
+          "total": 21.0,
+          "per_accepted": 7.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 0
+          },
+          "total": 16.5,
+          "per_accepted": 5.5
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "marginal",
+      "utilization": 1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 0
+          },
+          "total": 61.0,
+          "per_accepted": 20.333333333333332
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 0
+          },
+          "total": 36.5,
+          "per_accepted": 12.166666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 20.0
+          },
+          "total": 20.2,
+          "per_accepted": 6.733333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 10.0
+          },
+          "total": 16.1,
+          "per_accepted": 5.366666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 20.0
+          },
+          "total": 40.2,
+          "per_accepted": 13.4
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 10.0
+          },
+          "total": 26.099999999999998,
+          "per_accepted": 8.7
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 20.0
+          },
+          "total": 80.2,
+          "per_accepted": 26.733333333333334
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 10.0
+          },
+          "total": 46.099999999999994,
+          "per_accepted": 15.366666666666665
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 20.0
+          },
+          "total": 20.4,
+          "per_accepted": 6.8
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 10.0
+          },
+          "total": 16.200000000000003,
+          "per_accepted": 5.400000000000001
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 20.0
+          },
+          "total": 40.4,
+          "per_accepted": 13.466666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 10.0
+          },
+          "total": 26.2,
+          "per_accepted": 8.733333333333333
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 20.0
+          },
+          "total": 80.4,
+          "per_accepted": 26.8
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 10.0
+          },
+          "total": 46.199999999999996,
+          "per_accepted": 15.399999999999999
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 20.0
+          },
+          "total": 21.0,
+          "per_accepted": 7.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 10.0
+          },
+          "total": 16.5,
+          "per_accepted": 5.5
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 20.0
+          },
+          "total": 41.0,
+          "per_accepted": 13.666666666666666
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 10.0
+          },
+          "total": 26.5,
+          "per_accepted": 8.833333333333334
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 20.0
+          },
+          "total": 81.0,
+          "per_accepted": 27.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 10.0
+          },
+          "total": 46.5,
+          "per_accepted": 15.5
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 4.0
+          },
+          "total": 4.2,
+          "per_accepted": 1.4000000000000001
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 2.0
+          },
+          "total": 8.100000000000001,
+          "per_accepted": 2.7000000000000006
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 4.0
+          },
+          "total": 24.2,
+          "per_accepted": 8.066666666666666
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 2.0
+          },
+          "total": 18.099999999999998,
+          "per_accepted": 6.033333333333332
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 4.0
+          },
+          "total": 64.2,
+          "per_accepted": 21.400000000000002
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 2.0
+          },
+          "total": 38.099999999999994,
+          "per_accepted": 12.699999999999998
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 4.0
+          },
+          "total": 4.4,
+          "per_accepted": 1.4666666666666668
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 2.0
+          },
+          "total": 8.200000000000001,
+          "per_accepted": 2.733333333333334
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 4.0
+          },
+          "total": 24.4,
+          "per_accepted": 8.133333333333333
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 2.0
+          },
+          "total": 18.2,
+          "per_accepted": 6.066666666666666
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 4.0
+          },
+          "total": 64.4,
+          "per_accepted": 21.46666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 2.0
+          },
+          "total": 38.199999999999996,
+          "per_accepted": 12.733333333333333
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 4.0
+          },
+          "total": 5.0,
+          "per_accepted": 1.6666666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 2.0
+          },
+          "total": 8.5,
+          "per_accepted": 2.8333333333333335
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 4.0
+          },
+          "total": 25.0,
+          "per_accepted": 8.333333333333334
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 2.0
+          },
+          "total": 18.5,
+          "per_accepted": 6.166666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 0.5,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 4.0
+          },
+          "total": 65.0,
+          "per_accepted": 21.666666666666668
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 2.0
+          },
+          "total": 38.5,
+          "per_accepted": 12.833333333333334
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 2.0
+          },
+          "total": 2.2,
+          "per_accepted": 0.7333333333333334
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 1.0
+          },
+          "total": 7.1000000000000005,
+          "per_accepted": 2.3666666666666667
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 2.0
+          },
+          "total": 22.2,
+          "per_accepted": 7.3999999999999995
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 1.0
+          },
+          "total": 17.099999999999998,
+          "per_accepted": 5.699999999999999
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.1,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 2.0
+          },
+          "total": 62.2,
+          "per_accepted": 20.733333333333334
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.1,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 1.0
+          },
+          "total": 37.099999999999994,
+          "per_accepted": 12.366666666666665
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 2.0
+          },
+          "total": 2.4,
+          "per_accepted": 0.7999999999999999
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 1.0
+          },
+          "total": 7.200000000000001,
+          "per_accepted": 2.4000000000000004
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 2.0
+          },
+          "total": 22.4,
+          "per_accepted": 7.466666666666666
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 1.0
+          },
+          "total": 17.2,
+          "per_accepted": 5.733333333333333
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.2,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.4,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 2.0
+          },
+          "total": 62.4,
+          "per_accepted": 20.8
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.2,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 1.0
+          },
+          "total": 37.199999999999996,
+          "per_accepted": 12.399999999999999
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 0,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "local",
+        "hybrid",
+        "hosted"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 0.0,
+            "hardware": 2.0
+          },
+          "total": 3.0,
+          "per_accepted": 1.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 0.0,
+            "hardware": 0.0
+          },
+          "total": 12.000000000000002,
+          "per_accepted": 4.000000000000001
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 0.0,
+            "hardware": 1.0
+          },
+          "total": 7.500000000000001,
+          "per_accepted": 2.5000000000000004
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 20,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 20.0,
+            "hardware": 2.0
+          },
+          "total": 23.0,
+          "per_accepted": 7.666666666666667
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 5.0,
+            "hardware": 0.0
+          },
+          "total": 17.0,
+          "per_accepted": 5.666666666666667
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 9.999999999999998,
+            "hardware": 1.0
+          },
+          "total": 17.5,
+          "per_accepted": 5.833333333333333
+        }
+      ]
+    },
+    {
+      "synthetic": true,
+      "accounting": "amortized",
+      "utilization": 1,
+      "electricity_per_kwh": 0.5,
+      "human_hourly_rate": 60,
+      "comparable": true,
+      "comparison_basis": "assumed identical rubric, workload and accepted task IDs",
+      "ranking": [
+        "hosted",
+        "hybrid",
+        "local"
+      ],
+      "modes": [
+        {
+          "mode": "local",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 1.0,
+            "api": 0.0,
+            "human": 60.0,
+            "hardware": 2.0
+          },
+          "total": 63.0,
+          "per_accepted": 21.0
+        },
+        {
+          "mode": "hosted",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.0,
+            "api": 12.000000000000002,
+            "human": 15.0,
+            "hardware": 0.0
+          },
+          "total": 27.0,
+          "per_accepted": 9.0
+        },
+        {
+          "mode": "hybrid",
+          "attempts": 5,
+          "accepted": 3,
+          "parts": {
+            "electricity": 0.5,
+            "api": 6.000000000000001,
+            "human": 29.999999999999996,
+            "hardware": 1.0
+          },
+          "total": 37.5,
+          "per_accepted": 12.5
+        }
+      ]
+    }
+  ]
+}

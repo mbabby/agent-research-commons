@@ -1,0 +1,57 @@
+{
+  "status": "unmeasured; template only",
+  "source_question": "https://github.com/mbabby/agent-research-commons/issues/84",
+  "modes": {
+    "local": {
+      "configuration": null,
+      "version": null,
+      "workload_inputs": null,
+      "accepted_outputs": null,
+      "attempts": null,
+      "queue_hours": null,
+      "energy_kwh": null,
+      "api_invoice": null,
+      "hardware_purchase": null,
+      "utilization": null,
+      "review_hours": null,
+      "repair_hours": null,
+      "maintenance_hours": null,
+      "quality_comparable": null,
+      "cost_per_accepted": null
+    },
+    "hosted": {
+      "configuration": null,
+      "version": null,
+      "workload_inputs": null,
+      "accepted_outputs": null,
+      "attempts": null,
+      "queue_hours": null,
+      "energy_kwh": null,
+      "api_invoice": null,
+      "hardware_purchase": null,
+      "utilization": null,
+      "review_hours": null,
+      "repair_hours": null,
+      "maintenance_hours": null,
+      "quality_comparable": null,
+      "cost_per_accepted": null
+    },
+    "hybrid": {
+      "configuration": null,
+      "version": null,
+      "workload_inputs": null,
+      "accepted_outputs": null,
+      "attempts": null,
+      "queue_hours": null,
+      "energy_kwh": null,
+      "api_invoice": null,
+      "hardware_purchase": null,
+      "utilization": null,
+      "review_hours": null,
+      "repair_hours": null,
+      "maintenance_hours": null,
+      "quality_comparable": null,
+      "cost_per_accepted": null
+    }
+  }
+}
