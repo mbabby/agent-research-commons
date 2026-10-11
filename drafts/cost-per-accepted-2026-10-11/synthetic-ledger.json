@@ -1,0 +1,174 @@
+{
+  "status": "ALL values and outcomes invented; no model runs or prices measured",
+  "currency": "fictional currency units",
+  "modes": [
+    {
+      "name": "local",
+      "rubric": "fictional-report-rubric-v1",
+      "attempts": [
+        {
+          "task": "T1",
+          "accepted": true,
+          "energy_kwh": 0.4,
+          "api_cost": 0.0,
+          "occupied_hours": 2.0,
+          "review_hours": 0.08000000000000002,
+          "repair_hours": 0.08000000000000002,
+          "maintenance_hours": 0.04000000000000001
+        },
+        {
+          "task": "T2",
+          "accepted": false,
+          "energy_kwh": 0.2,
+          "api_cost": 0.0,
+          "occupied_hours": 1.0,
+          "review_hours": 0.04000000000000001,
+          "repair_hours": 0.04000000000000001,
+          "maintenance_hours": 0.020000000000000004
+        },
+        {
+          "task": "T2",
+          "accepted": true,
+          "energy_kwh": 0.4,
+          "api_cost": 0.0,
+          "occupied_hours": 2.0,
+          "review_hours": 0.08000000000000002,
+          "repair_hours": 0.08000000000000002,
+          "maintenance_hours": 0.04000000000000001
+        },
+        {
+          "task": "T3",
+          "accepted": true,
+          "energy_kwh": 0.4,
+          "api_cost": 0.0,
+          "occupied_hours": 2.0,
+          "review_hours": 0.08000000000000002,
+          "repair_hours": 0.08000000000000002,
+          "maintenance_hours": 0.04000000000000001
+        },
+        {
+          "task": "T4",
+          "accepted": false,
+          "energy_kwh": 0.6,
+          "api_cost": 0.0,
+          "occupied_hours": 3.0,
+          "review_hours": 0.12,
+          "repair_hours": 0.12,
+          "maintenance_hours": 0.06
+        }
+      ]
+    },
+    {
+      "name": "hosted",
+      "rubric": "fictional-report-rubric-v1",
+      "attempts": [
+        {
+          "task": "T1",
+          "accepted": true,
+          "energy_kwh": 0.0,
+          "api_cost": 2.4000000000000004,
+          "occupied_hours": 0.0,
+          "review_hours": 0.04000000000000001,
+          "repair_hours": 0.008,
+          "maintenance_hours": 0.002
+        },
+        {
+          "task": "T2",
+          "accepted": false,
+          "energy_kwh": 0.0,
+          "api_cost": 1.2000000000000002,
+          "occupied_hours": 0.0,
+          "review_hours": 0.020000000000000004,
+          "repair_hours": 0.004,
+          "maintenance_hours": 0.001
+        },
+        {
+          "task": "T2",
+          "accepted": true,
+          "energy_kwh": 0.0,
+          "api_cost": 2.4000000000000004,
+          "occupied_hours": 0.0,
+          "review_hours": 0.04000000000000001,
+          "repair_hours": 0.008,
+          "maintenance_hours": 0.002
+        },
+        {
+          "task": "T3",
+          "accepted": true,
+          "energy_kwh": 0.0,
+          "api_cost": 2.4000000000000004,
+          "occupied_hours": 0.0,
+          "review_hours": 0.04000000000000001,
+          "repair_hours": 0.008,
+          "maintenance_hours": 0.002
+        },
+        {
+          "task": "T4",
+          "accepted": false,
+          "energy_kwh": 0.0,
+          "api_cost": 3.5999999999999996,
+          "occupied_hours": 0.0,
+          "review_hours": 0.06,
+          "repair_hours": 0.012,
+          "maintenance_hours": 0.003
+        }
+      ]
+    },
+    {
+      "name": "hybrid",
+      "rubric": "fictional-report-rubric-v1",
+      "attempts": [
+        {
+          "task": "T1",
+          "accepted": true,
+          "energy_kwh": 0.2,
+          "api_cost": 1.2000000000000002,
+          "occupied_hours": 1.0,
+          "review_hours": 0.06,
+          "repair_hours": 0.03,
+          "maintenance_hours": 0.010000000000000002
+        },
+        {
+          "task": "T2",
+          "accepted": false,
+          "energy_kwh": 0.1,
+          "api_cost": 0.6000000000000001,
+          "occupied_hours": 0.5,
+          "review_hours": 0.03,
+          "repair_hours": 0.015,
+          "maintenance_hours": 0.005000000000000001
+        },
+        {
+          "task": "T2",
+          "accepted": true,
+          "energy_kwh": 0.2,
+          "api_cost": 1.2000000000000002,
+          "occupied_hours": 1.0,
+          "review_hours": 0.06,
+          "repair_hours": 0.03,
+          "maintenance_hours": 0.010000000000000002
+        },
+        {
+          "task": "T3",
+          "accepted": true,
+          "energy_kwh": 0.2,
+          "api_cost": 1.2000000000000002,
+          "occupied_hours": 1.0,
+          "review_hours": 0.06,
+          "repair_hours": 0.03,
+          "maintenance_hours": 0.010000000000000002
+        },
+        {
+          "task": "T4",
+          "accepted": false,
+          "energy_kwh": 0.3,
+          "api_cost": 1.7999999999999998,
+          "occupied_hours": 1.5,
+          "review_hours": 0.09,
+          "repair_hours": 0.045,
+          "maintenance_hours": 0.015
+        }
+      ]
+    }
+  ]
+}
