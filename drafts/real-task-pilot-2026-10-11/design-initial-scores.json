@@ -1,0 +1,92 @@
+{
+  "reviewer": "real_task_design same-operator separate session",
+  "started_at": "2026-10-11T05:52:14Z",
+  "initial_labels_locked_at": "2026-10-11T05:52:35.025582+00:00",
+  "status": "initial scores before viewing auditor labels; Q5 equivalence requires adjudication",
+  "runs": {
+    "run-a": [
+      {
+        "question": "Q1",
+        "label": "C",
+        "rationale": "Manifest/index/context workflow, help flag and live freshness; empty artifacts limitation supported."
+      },
+      {
+        "question": "Q2",
+        "label": "C",
+        "rationale": "Ordinary comment, user authorization, no prior approval/checkout/assignment/intent and nonexclusive intent supported."
+      },
+      {
+        "question": "Q3",
+        "label": "C",
+        "rationale": "Contribution version/URL constraints, templates/markers, four review scopes/verdict evidence and revision specificity supplied."
+      },
+      {
+        "question": "Q4",
+        "label": "C",
+        "rationale": "Bounded 100-comment window versus unavailable/failure; selected API pagination, incompleteness and retained provenance supplied."
+      },
+      {
+        "question": "Q5",
+        "label": "P",
+        "rationale": "Correct community same-account limit, official independent review/merged delivery/host completion and owner control. The locked facet explicitly asks for a different official reviewer session and not merely relabeling; this is not explicitly stated. Initial conservative P pending independent adjudication of whether independent review plus cited role limits is equivalent wording."
+      },
+      {
+        "question": "Q6",
+        "label": "C",
+        "rationale": "Structured correction with dated evidence and exact version, marker withdrawal/refresh limits and export gaps/retention supplied; B states closure does not obsolete record in correction context rather than withdrawal context, but requisite marker mechanism clear."
+      },
+      {
+        "question": "Q7",
+        "label": "C",
+        "rationale": "Missing monetary/timing numbers recognized; no credit entitlement; clarify real terms and measure rather than invent."
+      },
+      {
+        "question": "Q8",
+        "label": "C",
+        "rationale": "Attributable external outcome plus baseline, no adoption/savings amount established, bounded authorized next read/action supplied."
+      }
+    ],
+    "run-b": [
+      {
+        "question": "Q1",
+        "label": "C",
+        "rationale": "Manifest/index/context workflow, help flag and live freshness; empty artifacts limitation supported."
+      },
+      {
+        "question": "Q2",
+        "label": "C",
+        "rationale": "Ordinary comment, user authorization, no prior approval/checkout/assignment/intent and nonexclusive intent supported."
+      },
+      {
+        "question": "Q3",
+        "label": "C",
+        "rationale": "Contribution version/URL constraints, templates/markers, four review scopes/verdict evidence and revision specificity supplied."
+      },
+      {
+        "question": "Q4",
+        "label": "C",
+        "rationale": "Bounded 100-comment window versus unavailable/failure; selected API pagination, incompleteness and retained provenance supplied."
+      },
+      {
+        "question": "Q5",
+        "label": "P",
+        "rationale": "Correct community same-account limit, official independent review/merged delivery/host completion and owner control. The locked facet explicitly asks for a different official reviewer session and not merely relabeling; this is not explicitly stated. Initial conservative P pending independent adjudication of whether independent review plus cited role limits is equivalent wording."
+      },
+      {
+        "question": "Q6",
+        "label": "C",
+        "rationale": "Structured correction with dated evidence and exact version, marker withdrawal/refresh limits and export gaps/retention supplied; B states closure does not obsolete record in correction context rather than withdrawal context, but requisite marker mechanism clear."
+      },
+      {
+        "question": "Q7",
+        "label": "C",
+        "rationale": "Missing monetary/timing numbers recognized; no credit entitlement; clarify real terms and measure rather than invent."
+      },
+      {
+        "question": "Q8",
+        "label": "C",
+        "rationale": "Attributable external outcome plus baseline, no adoption/savings amount established, bounded authorized next read/action supplied."
+      }
+    ]
+  }
+}

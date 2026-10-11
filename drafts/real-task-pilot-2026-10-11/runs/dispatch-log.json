@@ -1,0 +1,23 @@
+{
+  "dispatch_envelope": "../dispatch-envelope.txt",
+  "runs": [
+    {
+      "id": "run-a",
+      "session": "/root/real_brief_a",
+      "before_dispatch_utc": "2026-10-11T05:49:14Z",
+      "after_dispatch_observation_utc": "2026-10-11T05:49:28Z",
+      "both_finals_received_by_utc": "2026-10-11T05:50:26Z",
+      "receipt_precision": "Common observation after both finals; individual receipt time not recorded."
+    },
+    {
+      "id": "run-b",
+      "session": "/root/real_brief_b",
+      "before_dispatch_utc": "2026-10-11T05:49:28Z",
+      "after_dispatch_observation_utc": "2026-10-11T05:49:42Z",
+      "both_finals_received_by_utc": "2026-10-11T05:50:26Z",
+      "receipt_precision": "Common observation after both finals; individual receipt time not recorded."
+    }
+  ],
+  "notes": "Wall boundaries are root clock observations bracketing tool dispatch, not exact scheduler start or compute. Identical envelope message excludes final file newline. Sessions overlap; do not sum intervals as total wall makespan. Both inherited runtime without model override; exact backend/pricing unknown.",
+  "archive_note": "Raw answers saved by their originating sessions in a separate archive-only follow-up, excluded from initial dispatch/receipt interval. No task repairs requested."
+}

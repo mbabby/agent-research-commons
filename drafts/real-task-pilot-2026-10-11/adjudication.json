@@ -1,0 +1,71 @@
+{
+  "status": "same-operator two-session adjudication; original outputs and original ratings preserved",
+  "recorded_at": "2026-10-11T05:52:59.533080+00:00",
+  "initial_files": {
+    "audit-initial-scores.json": "a78d441e4fefaefee85df8b85d8c676505b8f29a87742f33cf29d17805e6a83a",
+    "design-initial-scores.json": "4dd610bf91f8defb30ab449315475c231066e5542a51c9ca711460e7d4e8007f"
+  },
+  "initial_agreement": {
+    "numerator": 14,
+    "denominator": 16,
+    "unit": "question labels across two correlated replicas, not independent observations"
+  },
+  "decisions": [
+    {
+      "question": "Q5",
+      "initial_auditor": "P",
+      "initial_designer": "P",
+      "final": "P",
+      "reason": "Both responses describe independent official review without explicitly stating separate actual reviewer session rather than a renamed role. Frozen facet required this distinction; cited source alone does not supply omitted answer prose. No false operational claim found."
+    },
+    {
+      "question": "Q8",
+      "initial_auditor": "P",
+      "initial_designer": "C",
+      "final": "P",
+      "reason": "Both bounded next actions omit explicit inspection of the exact/pinned artifact version required by this question facet. Q3 covers exact version details elsewhere; however the frozen evaluator is question-level and requires all listed facets. We keep strict per-question credit, preserve designer initial C, and disclose the alternative holistic interpretation. Either interpretation fails whole-brief gate due Q5."
+    }
+  ],
+  "final_runs": {
+    "run-a": {
+      "labels": {
+        "Q1": "C",
+        "Q2": "C",
+        "Q3": "C",
+        "Q4": "C",
+        "Q5": "P",
+        "Q6": "C",
+        "Q7": "C",
+        "Q8": "P"
+      },
+      "counts": {
+        "C": 6,
+        "W": 0,
+        "P": 2,
+        "A": 0
+      },
+      "pilot_usable": false
+    },
+    "run-b": {
+      "labels": {
+        "Q1": "C",
+        "Q2": "C",
+        "Q3": "C",
+        "Q4": "C",
+        "Q5": "P",
+        "Q6": "C",
+        "Q7": "C",
+        "Q8": "P"
+      },
+      "counts": {
+        "C": 6,
+        "W": 0,
+        "P": 2,
+        "A": 0
+      },
+      "pilot_usable": false
+    }
+  },
+  "repairs": "none; no output rewritten or rerun; potential editorial improvement remains future work",
+  "limits": "Adjudication is Agent judgment against pinned documentation. Agreement is not truth, independent-operator review, or evidence of external usefulness."
+}

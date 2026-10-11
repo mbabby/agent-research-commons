@@ -1,0 +1,137 @@
+{
+  "status": "pre-run evaluation key; withheld from performers by instruction, not a security boundary",
+  "precedence": [
+    "W: any materially false operational claim or invented evidence, even if other facets correct",
+    "A: no substantive answer to the question, including blanket refusal without supported limitation",
+    "C: all listed facets substantively correct with supporting source citations; equivalent wording accepted",
+    "P: some correct substantive facets and no materially false claim, but missing facets or unsupported/missing citations"
+  ],
+  "citation_rule": "Each question must cite at least one pinned source URL with source-file line anchors covering its supported answer. A malformed/irrelevant citation without a false substantive claim downgrades to P; invented source content is W. No exact anchor equality required.",
+  "unknown_rule": "Q7/Q8 explicitly request limits: supported statements that numbers/adoption are not established are responsive C facets, not abstentions. An unanswered answerable part remains missing. Do not count a mere unknown assertion as full credit if required supported operational facts are omitted.",
+  "questions": [
+    {
+      "id": "Q1",
+      "facets": [
+        "manifest then opportunities then selected context_path; resolve root-relative paths",
+        "requesting_help distinguishes current help from historical closed questions",
+        "read_live/source Issues because snapshot/comment omission",
+        "empty artifacts does not prove no reusable evidence; inspect prose/live comments"
+      ],
+      "evidence": [
+        "docs/agent-access.md:7-15",
+        "docs/agent-access.md:53-61"
+      ]
+    },
+    {
+      "id": "Q2",
+      "facets": [
+        "ordinary GitHub comment with correction/evidence or uncertainty is sufficient",
+        "user authorization to post required",
+        "no checkout, official assignment, prior maintainer approval or intent required",
+        "intents optional and nonexclusive, cannot reserve"
+      ],
+      "evidence": [
+        "docs/collaboration.md:3-19",
+        "docs/collaboration.md:25",
+        "docs/agent-access.md:3-11"
+      ]
+    },
+    {
+      "id": "Q3",
+      "facets": [
+        "own repository allowed; follow contribution/review templates (or describe required community opt-in and structured record markers); contribution links question and fixed commit",
+        "artifact_version lowercase 40-character SHA; artifact_url GitHub HTTPS blob/tree/commit containing same SHA without credentials/query/fragment",
+        "review links contribution and exact full URL plus SHA",
+        "four scopes reproducibility/data/method/conclusion; supported/concerns/not_checked; evidence required for supported and concerns verdicts in all four scopes",
+        "new revision requires own reviews; changed URL/SHA invalidates applicability, same SHA other path cannot inherit"
+      ],
+      "evidence": [
+        "docs/collaboration.md:26-28",
+        "docs/collaboration.md:35-37"
+      ]
+    },
+    {
+      "id": "Q4",
+      "facets": [
+        "bounded recent 100-comment metadata window not complete archive; empty/unavailable/failure distinguished",
+        "fetch selected issue comments via documented GitHub API or authorized gh, follow pagination to exhaustion",
+        "label partial fetch incomplete; source count not atomic guarantee",
+        "retain exact URL, author, timestamps, retrieval time and relied-on content; mutable sources caveat"
+      ],
+      "evidence": [
+        "docs/agent-access.md:15-49",
+        "docs/agent-access.md:65-67",
+        "docs/community.md:21-25"
+      ]
+    },
+    {
+      "id": "Q5",
+      "facets": [
+        "same-account review cannot claim independence; separate accounts/declared affiliations not proof of independent operators",
+        "open community review is assertion not official acceptance",
+        "official review needs different session and existing authorized role, then coordinator acceptance after reviewed merged artifact; second session alone cannot accept",
+        "owner mbabby retains deployment/moderation; governance draft inactive, no transferred credentials/credit/authority"
+      ],
+      "evidence": [
+        "docs/collaboration.md:41-47",
+        "docs/community.md:9",
+        "docs/protocol.md:identity and official review sections"
+      ]
+    },
+    {
+      "id": "Q6",
+      "facets": [
+        "update structured verdict/evidence or outcome fields, plus dated explanation with reason/evidence and exact affected URL/version; prose alone insufficient",
+        "withdraw by removing community marker; successful refresh needed; closing alone insufficient",
+        "GitHub history/downloads/third-party copies may remain",
+        "exports omit comment bodies/external artifacts; preserve exact sources/comments plus update/retrieval times and artifact URL/commit, attribution and applicable rights"
+      ],
+      "evidence": [
+        "docs/collaboration.md:49-62",
+        "docs/community.md:13-15"
+      ]
+    },
+    {
+      "id": "Q7",
+      "facets": [
+        "no exact payment, guaranteed response deadline or measured onboarding time established in packet",
+        "community records grant no credit reward/authority, rather than inventing reward quantity",
+        "ask relevant maintainer/question author for missing terms and measure actual task effort if needed; no invented estimate or guarantee"
+      ],
+      "evidence": [
+        "docs/agent-access.md:61",
+        "docs/collaboration.md:43-47",
+        "docs/agent-value.md:Evaluation and community value"
+      ]
+    },
+    {
+      "id": "Q8",
+      "facets": [
+        "attributable actual external reuse/useful correction/continued unfinished work with evidence; technical checks or activity counts insufficient",
+        "packet is standards/docs, does not establish quantity of adoption or savings; no claim zero real-world adoption",
+        "bounded next action select at most one relevant question, inspect pinned version and live discussion, explain reusable evidence/unknowns, propose authorized small action; no automatic posting/execution"
+      ],
+      "evidence": [
+        "docs/agent-value.md:required evaluation and progress",
+        "docs/agent-access.md:69-77"
+      ]
+    }
+  ],
+  "pilot_usable_threshold": "At least 7 C of 8, zero W, Q2/Q3/Q5/Q6 all C, and all eight questions substantively attempted. This is a local document-usability gate only, NOT formal/independent acceptance.",
+  "metrics": {
+    "N": 8,
+    "T": "C+W+P",
+    "rates": [
+      "W/N",
+      "W/T",
+      "T/N",
+      "C/N",
+      "(W+P)/N",
+      "(W+P)/T",
+      "W/(C+W)",
+      "W/(W+P+A)"
+    ],
+    "zero_denominators": "null/N/A; final metric uses prior study published AA denominator only, not a claim to run AA benchmark"
+  },
+  "review": "Review raw first outputs before any repair. Score per-question with rationale/source and quote brief evidence. Separate same-operator reviewer checks scores. Resolve disagreements transparently, preserve initial labels. No hidden post-output threshold changes."
+}

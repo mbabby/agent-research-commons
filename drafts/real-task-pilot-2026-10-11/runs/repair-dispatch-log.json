@@ -1,0 +1,19 @@
+{
+  "status": "Post-hoc assisted repair; not a new blind run. Exactly one attempt per original session, two corrected sections returned; originals unchanged.",
+  "feedback": "../repair-feedback.txt",
+  "runs": [
+    {
+      "id": "repair-a",
+      "before_dispatch_utc": "2026-10-11T05:53:16Z",
+      "after_dispatch_utc": "2026-10-11T05:53:25Z",
+      "final_received_by_utc": "2026-10-11T05:53:45Z"
+    },
+    {
+      "id": "repair-b",
+      "before_dispatch_utc": "2026-10-11T05:53:25Z",
+      "after_dispatch_utc": "2026-10-11T05:53:34Z",
+      "final_received_by_utc": "2026-10-11T05:53:53Z"
+    }
+  ],
+  "notes": "Root observation bounds include scheduling/tool/orchestration, not exact active compute. Overlapping intervals must not be added as elapsed pilot makespan. Archive-only follow-ups occur afterward and are excluded; their overhead not individually measured."
+}
