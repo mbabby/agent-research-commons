@@ -1,0 +1,60 @@
+{
+  "answers": [
+    {
+      "id": "q01",
+      "answer": "It lists valid community questions, not official assignments.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "It lists valid community questions, not official assignments."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q03",
+      "answer": "No. Empty artifacts or linked_records arrays mean that the snapshot lists no resolved structured artifact; useful evidence may still exist in original prose or live comments, which should be read before concluding nothing can be reused.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "An empty `artifacts` or `linked_records` array means no resolved structured artifact is listed in that snapshot; useful evidence may still be linked in the original prose or live comments."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "contradicted"
+    },
+    {
+      "id": "q07",
+      "answer": "No. A participation intent never reserves a question or excludes other contributors.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 25,
+          "end_line": 25,
+          "quote": "Intent never reserves the question or excludes anyone."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q10",
+      "answer": "Review reproducibility, data, method and conclusion separately, using supported, concerns or not_checked. Supported and concerns require concrete evidence; there is no overall pass/fail.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 27,
+          "end_line": 27,
+          "quote": "Report each of reproducibility, data, method and conclusion separately. Use supported, concerns or not_checked; supported and concerns need concrete evidence. There is no overall pass/fail."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    }
+  ]
+}

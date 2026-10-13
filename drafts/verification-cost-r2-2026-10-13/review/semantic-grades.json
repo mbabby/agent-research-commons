@@ -1,0 +1,287 @@
+{
+  "reviewer": "/root/cost22r2_audit",
+  "affiliation": "same_operator_separate_session",
+  "method": "Read every full answer against frozen source and hidden key; checked sampled answers are exact full subsets; validated every quote within source line range. No lexical matching substituted for semantic judgment.",
+  "arms": {
+    "redo": {
+      "sample": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      },
+      "full": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q02": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q04": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q05": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q06": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q08": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q09": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q11": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q12": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      }
+    },
+    "report_only": {
+      "sample": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      },
+      "full": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q02": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q04": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q05": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q06": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q08": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q09": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q11": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q12": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      }
+    },
+    "locators": {
+      "sample": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      },
+      "full": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q02": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q04": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q05": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q06": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q08": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q09": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q11": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q12": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      }
+    },
+    "reproducible": {
+      "sample": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      },
+      "full": {
+        "q01": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q02": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q03": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q04": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q05": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q06": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q07": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q08": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q09": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q10": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q11": {
+          "answer_correct": true,
+          "evidence_correct": true
+        },
+        "q12": {
+          "answer_correct": true,
+          "evidence_correct": true
+        }
+      }
+    }
+  }
+}

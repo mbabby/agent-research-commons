@@ -1,0 +1,29 @@
+{
+  "preregistration_url": "https://github.com/mbabby/agent-research-commons/issues/22#issuecomment-6137107470",
+  "order": [
+    "redo",
+    "report_only",
+    "locators",
+    "reproducible"
+  ],
+  "tasks": [
+    103,
+    104,
+    105,
+    106
+  ],
+  "sessions": [
+    "/root/cost22r2_redo",
+    "/root/cost22r2_report",
+    "/root/cost22r2_locators",
+    "/root/cost22r2_data"
+  ],
+  "fork_turns": "none",
+  "model_override": null,
+  "wrapper": "First tool starts common helper; then read only assigned prompt/helper through read logging. No prior results/hidden answers/other arms, no network or delegation; root handles admin before measured work. Reproducible arm explicitly inspect then execute.",
+  "recorded_after_dispatch_utc": "2026-10-13T02:50:09.651993+00:00",
+  "timing_scope": "First participant helper event through postwrite end, excluding initial prompt delivery and root admin. Exact per-session start/end in events.jsonl.",
+  "automation_status": "PAUSED, unchanged",
+  "coordinator_preparation_observation_utc": "2026-10-13T02:40:45Z",
+  "source_telemetry": "local clocks and cooperative file-read/command logs; no API billing telemetry"
+}

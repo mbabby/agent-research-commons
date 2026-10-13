@@ -1,0 +1,75 @@
+{
+  "first_action_utc": "2026-10-13T02:41:14+00:00",
+  "freeze_verified_end_utc": "2026-10-13T02:48:12.656730+00:00",
+  "total_session_elapsed_seconds": 418.65673000000004,
+  "phases": [
+    {
+      "phase": "instruction_setup",
+      "start": "2026-10-13T02:41:14+00:00",
+      "end": "2026-10-13T02:41:37.293203+00:00",
+      "wall_seconds": 23.293203
+    },
+    {
+      "phase": "common_corpus_questions_candidate_hidden_labels",
+      "start": "2026-10-13T02:41:37.293203+00:00",
+      "end": "2026-10-13T02:42:23.578282+00:00",
+      "wall_seconds": 46.285079
+    },
+    {
+      "phase": "report_only_packaging",
+      "start": "2026-10-13T02:42:23.578282+00:00",
+      "end": "2026-10-13T02:42:38.295451+00:00",
+      "wall_seconds": 14.717169
+    },
+    {
+      "phase": "locators_packaging",
+      "start": "2026-10-13T02:42:38.295451+00:00",
+      "end": "2026-10-13T02:42:44.439452+00:00",
+      "wall_seconds": 6.144001
+    },
+    {
+      "phase": "reproducible_package_script_packaging",
+      "start": "2026-10-13T02:42:44.439452+00:00",
+      "end": "2026-10-13T02:42:59.937419+00:00",
+      "wall_seconds": 15.497967
+    },
+    {
+      "phase": "protocol_prompts_common_measurement_QA",
+      "start": "2026-10-13T02:42:59.937419+00:00",
+      "end": "2026-10-13T02:45:31.158752+00:00",
+      "wall_seconds": 151.221333
+    },
+    {
+      "phase": "pre_run_review_wait",
+      "start": "2026-10-13T02:45:31.158752+00:00",
+      "end": "2026-10-13T02:45:58.943310+00:00",
+      "wall_seconds": 27.784558
+    },
+    {
+      "phase": "pre_run_corrections_and_freeze",
+      "start": "2026-10-13T02:45:58.943310+00:00",
+      "end": "2026-10-13T02:48:12.656730+00:00",
+      "wall_seconds": 133.71342
+    }
+  ],
+  "components_seconds": {
+    "C_inseparable_shared": 69.578282,
+    "H_experimental_overhead": 284.934753,
+    "R_report_packaging": 14.717169,
+    "L_incremental_locators": 6.144001,
+    "X_incremental_reproducible": 15.497967,
+    "review_wait": 27.784558
+  },
+  "primary_conservative_reuse_preparation_seconds": {
+    "report_only": 369.230204,
+    "locators": 375.374205,
+    "reproducible": 390.87217200000003
+  },
+  "caveats": [
+    "Wall time, not active CPU or human labor.",
+    "Historical project/prior research creation excluded as unmeasured sunk inputs.",
+    "Do not assign C+H as required redo cost; primary redo comparator is reader-only.",
+    "Final ledger-summary serialization and handoff follow measured freeze endpoint; report separately if measured by coordinator.",
+    "Instruction bootstrap phase label attached at first persistent log, original start clock before reading is preserved."
+  ]
+}

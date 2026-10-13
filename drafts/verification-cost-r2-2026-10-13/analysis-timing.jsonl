@@ -1,0 +1,4 @@
+{"event": "start", "at": "2026-10-13T02:52:13Z", "phase": "postrun_analysis", "note": "New analysis, excluded from frozen preparation."}
+{"event": "transition", "at": "2026-10-13T02:56:12.200849+00:00", "from": "postrun_analysis", "to": "synthesis_review_wait"}
+{"event": "transition", "at": "2026-10-13T02:56:31.053547+00:00", "from": "synthesis_review_wait", "to": "synthesis_review_corrections"}
+{"event": "finish", "at": "2026-10-13T02:56:43.719139+00:00", "phase": "synthesis_review_corrections", "note": "Analysis artifacts recomputed and tests verified. Future reviewer waiting is outside work; later edits require new timed interval."}

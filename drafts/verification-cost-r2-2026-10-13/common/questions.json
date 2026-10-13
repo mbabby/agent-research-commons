@@ -1,0 +1,50 @@
+[
+  {
+    "id": "q01",
+    "question": "Which records does resources.opportunities list, and are they official assignments?"
+  },
+  {
+    "id": "q02",
+    "question": "What does requesting_help=false mean about current help and historical evidence?"
+  },
+  {
+    "id": "q03",
+    "question": "Do empty artifacts or linked_records arrays prove there is no useful evidence to reuse?"
+  },
+  {
+    "id": "q04",
+    "question": "Does the recent activity snapshot export comment bodies or inferred summaries?"
+  },
+  {
+    "id": "q05",
+    "question": "How must paginated issue comments be retrieved, and how is an early budget stop described?"
+  },
+  {
+    "id": "q06",
+    "question": "What does activity status=unavailable with null fetch time indicate?"
+  },
+  {
+    "id": "q07",
+    "question": "Does a participation intent reserve a question or exclude other contributors?"
+  },
+  {
+    "id": "q08",
+    "question": "What SHA and URL constraints apply to artifact_version and artifact_url?"
+  },
+  {
+    "id": "q09",
+    "question": "Can a different artifact path at the same SHA inherit prior review or reuse feedback?"
+  },
+  {
+    "id": "q10",
+    "question": "Which review scopes and verdicts are used, and is there an overall pass/fail?"
+  },
+  {
+    "id": "q11",
+    "question": "Does closing an Issue withdraw its public record?"
+  },
+  {
+    "id": "q12",
+    "question": "Do community exports include GitHub comment bodies and external artifact files?"
+  }
+]

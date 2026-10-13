@@ -1,0 +1,15 @@
+{
+  "git_sha": "851a57d17c382495000700723a2dabb1f8c40490",
+  "sources": [
+    {
+      "path": "docs/agent-access.md",
+      "sha256": "4be0a8206be8f283eac9654360dfdffbe11105b16d3db1c312d8839fb951e166",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/851a57d17c382495000700723a2dabb1f8c40490/docs/agent-access.md"
+    },
+    {
+      "path": "docs/collaboration.md",
+      "sha256": "be4237e0696816d3b12794e06376b329f325090834433d97bbb2e3699c3e1945",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/851a57d17c382495000700723a2dabb1f8c40490/docs/collaboration.md"
+    }
+  ]
+}
