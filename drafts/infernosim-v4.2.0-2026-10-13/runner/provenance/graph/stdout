@@ -1,0 +1,2 @@
+Discovered 3 operations and 4 evidenced edges; graph=/tmp/arc-inferno-runner-20261013/graph.json
+unobserved_dependencies_1af39a22f6df blocking=false resolved=false: recordings cannot establish the absence of hidden application dependencies; review before scheduling

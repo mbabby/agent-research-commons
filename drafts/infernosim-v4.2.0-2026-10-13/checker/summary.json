@@ -1,0 +1,2931 @@
+{
+  "source_sha": "f26b5522bbb20f2904d7534b879fa2896bdf1302",
+  "seed": 7100,
+  "affiliation": "same_operator_distinct_sessions",
+  "groups": [
+    {
+      "mode": "safe",
+      "passed": 60,
+      "failed": 0,
+      "invalid": 0,
+      "observations": [
+        {
+          "response_lost": false,
+          "outbox_rows": 1,
+          "passed": true,
+          "count": 30
+        },
+        {
+          "response_lost": true,
+          "outbox_rows": 1,
+          "passed": true,
+          "count": 30
+        }
+      ]
+    },
+    {
+      "mode": "unsafe",
+      "passed": 30,
+      "failed": 30,
+      "invalid": 0,
+      "observations": [
+        {
+          "response_lost": false,
+          "outbox_rows": 1,
+          "passed": true,
+          "count": 30
+        },
+        {
+          "response_lost": true,
+          "outbox_rows": 2,
+          "passed": false,
+          "count": 30
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "mode": "safe",
+      "case_id": "explore_1e4a2a9910efb1ff4903",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_bfe16e873546bb3334a9",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_c8460c29048da4288011",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_672c1b37920433545d4b",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_d2fbc635b8748cbe22c6",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_e8ac53db32f77b21a870",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_2d8c84a2cf824a78bfe3",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_fbf1d9fe937c5397281a",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_5005e30499d1d973eda5",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_246fa68370ac59a9d6a7",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_d2973e154abf22f21f56",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0d380252a1e225de9cec",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_51536cb97e5dd66cb17a",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_74109de01168096cec18",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_b52128507f8c9abb13b7",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_48c3b87a13a9171d8b76",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0a2c7160e23d1fe11054",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0b8d2d8fc98b7d40871a",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_66a11816f4735ee82540",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_22a65ec10654fc92ac70",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_3042df8f09b5b668cd18",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_cb64a9b0390341cab968",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_88f7d304795d4e48122c",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_7c0b51d10704b722329d",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_c148163509c630bfe3cb",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_bde74b7af213b6d26244",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_9b4b7da670383a7db922",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0dc59b206e1a67bcc7fa",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_f943eea82f9d4530d2bf",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_4978b5de050042ae3527",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_b4e9b737c710beace032",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_63e573e84d1fbf11ccde",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_deb19413ed785bc6d1b7",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0b04f2da0b247c141a3b",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_2163288e4571ce0691e4",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0aa0244cbb76a6907d36",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_53d88bc30f368db14d3b",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_b9dd493e4ac3f926c2f6",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_49769971ac44fcffd6c3",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_0c20c09efef1a8c476d8",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_060f7b9f109c18854609",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_789879ed1690da5bb925",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_c1de6ead05541fd7560e",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_f5a047e52bff8284c504",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_928240ebebf61d936503",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_359c0efa6186592d6bca",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_00dad617595597a7dece",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_c70b3cc1ea16969e3c78",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_b8cf827b82f7d3b66bc5",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_8490cc513534eecad4af",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_53c68fae8b61c2d401e3",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_8ec7624986b038e0772b",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_84528ec3a035b06f85fb",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_a48a1ca3cb02d236f8b1",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_69a27bd8ea035710a8b4",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_2f6a3d3115beb69386e8",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_e08b66fae4c69f7b1a79",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_5b346c8c1b0f8fcc0b9e",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_6f637d87c3be118c9e25",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "safe",
+      "case_id": "explore_dc3e43de1b9dd6af7a4e",
+      "response_lost": true,
+      "outbox_rows": 1,
+      "idempotency_rows": 1,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_1e4a2a9910efb1ff4903",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_bfe16e873546bb3334a9",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_c8460c29048da4288011",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_672c1b37920433545d4b",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_d2fbc635b8748cbe22c6",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_e8ac53db32f77b21a870",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_2d8c84a2cf824a78bfe3",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_fbf1d9fe937c5397281a",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_5005e30499d1d973eda5",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_246fa68370ac59a9d6a7",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_d2973e154abf22f21f56",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0d380252a1e225de9cec",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_51536cb97e5dd66cb17a",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_74109de01168096cec18",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_b52128507f8c9abb13b7",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_48c3b87a13a9171d8b76",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0a2c7160e23d1fe11054",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0b8d2d8fc98b7d40871a",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_66a11816f4735ee82540",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_22a65ec10654fc92ac70",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_3042df8f09b5b668cd18",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_cb64a9b0390341cab968",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_88f7d304795d4e48122c",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_7c0b51d10704b722329d",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_c148163509c630bfe3cb",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_bde74b7af213b6d26244",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_9b4b7da670383a7db922",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0dc59b206e1a67bcc7fa",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_f943eea82f9d4530d2bf",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_4978b5de050042ae3527",
+      "response_lost": false,
+      "outbox_rows": 1,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": true,
+        "state:filesystem": true
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_b4e9b737c710beace032",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_63e573e84d1fbf11ccde",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_deb19413ed785bc6d1b7",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0b04f2da0b247c141a3b",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_2163288e4571ce0691e4",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0aa0244cbb76a6907d36",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_53d88bc30f368db14d3b",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_b9dd493e4ac3f926c2f6",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_49769971ac44fcffd6c3",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_0c20c09efef1a8c476d8",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_060f7b9f109c18854609",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_789879ed1690da5bb925",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_c1de6ead05541fd7560e",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_f5a047e52bff8284c504",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_928240ebebf61d936503",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_359c0efa6186592d6bca",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_5214d6a77bb79611bd90": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "audit:release",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_00dad617595597a7dece",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_fb60bda67e75d9900ae8": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_fb60bda67e75d9900ae8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_c70b3cc1ea16969e3c78",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_3b667050353e49f3a4dc": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_3b667050353e49f3a4dc",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_b8cf827b82f7d3b66bc5",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_ef585b53605fc5991460": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_ef585b53605fc5991460",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_8490cc513534eecad4af",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_d1e0394359e4a2e27168": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "audit:admit",
+        "refund:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_d1e0394359e4a2e27168",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_53c68fae8b61c2d401e3",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_65840a7072b18f6d2f9f": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "audit:release",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_65840a7072b18f6d2f9f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_8ec7624986b038e0772b",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_db18a9a6167377b53ef2": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_db18a9a6167377b53ef2",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_84528ec3a035b06f85fb",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_18c2c2c1534339757c8f": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_18c2c2c1534339757c8f",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_a48a1ca3cb02d236f8b1",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_6603ed8a0abae0d3b32e": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "audit:admit",
+        "refund:release",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_6603ed8a0abae0d3b32e",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_69a27bd8ea035710a8b4",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_e99158d35048ce607421": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "audit:release",
+        "refund_status:admit",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_e99158d35048ce607421",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_2f6a3d3115beb69386e8",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_908860a720baef3ad0c6": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_908860a720baef3ad0c6",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_e08b66fae4c69f7b1a79",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_023fc83700ef4e1025a8": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "audit:admit",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_023fc83700ef4e1025a8",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_5b346c8c1b0f8fcc0b9e",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_2af40d7038fb9aba2ca9": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "refund_status:release",
+        "audit:admit",
+        "audit:release"
+      ],
+      "schedule_id": "causal_2af40d7038fb9aba2ca9",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_6f637d87c3be118c9e25",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_745718052ae078c9ff7a": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "audit:release",
+        "refund_status:release"
+      ],
+      "schedule_id": "causal_745718052ae078c9ff7a",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    },
+    {
+      "mode": "unsafe",
+      "case_id": "explore_dc3e43de1b9dd6af7a4e",
+      "response_lost": true,
+      "outbox_rows": 2,
+      "idempotency_rows": 0,
+      "assertions": {
+        "recorded-only": true,
+        "remote-once": true,
+        "schedule:causal_b53fcd69a191a8621d8c": true,
+        "state:database": false,
+        "state:filesystem": false
+      },
+      "observed": [
+        "refund:admit",
+        "refund:release",
+        "refund_status:admit",
+        "audit:admit",
+        "refund_status:release",
+        "audit:release"
+      ],
+      "schedule_id": "causal_b53fcd69a191a8621d8c",
+      "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b"
+    }
+  ],
+  "graph_file_sha256": "0e95a8f7d187dabba87d657cab26ebfdd2a27f9a957f038cc19731fc3b5cd74e",
+  "binary_sha256": "195b9b833ea7855dbba602fad03ae748fecbbedcfe14b588645b4ee5b02e57e7"
+}

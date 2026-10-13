@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/tmp/arc-inferno-runner-20261013/go/bin/go",
+    "version"
+  ],
+  "cwd": "/tmp/arc-inferno-source-20261013",
+  "environment": {
+    "PATH": "/tmp/arc-inferno-runner-20261013/go/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/tmp/arc-inferno-runner-20261013/home",
+    "TMPDIR": "/tmp/arc-inferno-runner-20261013/tmp",
+    "GOPATH": "/tmp/arc-inferno-runner-20261013/gopath",
+    "GOCACHE": "/tmp/arc-inferno-runner-20261013/gocache",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "https://goproxy.cn",
+    "EVIDENCE_DIR": "/tmp/arc-inferno-runner-20261013/go-version/evidence"
+  },
+  "start_utc": "2026-10-13T14:13:44.106230+00:00",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "source_sha": "f26b5522bbb20f2904d7534b879fa2896bdf1302"
+}

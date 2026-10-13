@@ -1,0 +1,164 @@
+{
+  "causal_execution": {
+    "schedule_id": "causal_5214d6a77bb79611bd90",
+    "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b",
+    "observed": [
+      "audit:admit",
+      "audit:release",
+      "refund:admit",
+      "refund:release",
+      "refund_status:admit",
+      "refund_status:release"
+    ],
+    "bindings": [
+      {
+        "operation": "audit",
+        "runtime_id_hash": "a2084cd6800d93637f026edd0bda2937309792e979d8fd24ea4f0a03b3548354"
+      },
+      {
+        "operation": "refund",
+        "runtime_id_hash": "937e54b154fd7abe338ef9b6fe185a2bde89941c5b1284cafe7f38b5ac1e7560"
+      },
+      {
+        "operation": "refund_status",
+        "runtime_id_hash": "1c21df170b98e89d233e6b4f87f46fd8614df54b8132ef0f318f17f0445d97f5"
+      }
+    ],
+    "completed": true
+  },
+  "version": 1,
+  "case": {
+    "id": "explore_1e4a2a9910efb1ff4903",
+    "description": "causal admission and response-release exploration",
+    "category": "exploration",
+    "severity": "high",
+    "schedule_id": "causal_5214d6a77bb79611bd90"
+  },
+  "passed": true,
+  "duration": 51262000,
+  "process": {
+    "exit_code": 0,
+    "output_truncated": false,
+    "timed_out": false,
+    "restarted": false
+  },
+  "simulator": {
+    "expected": 3,
+    "observed": 3,
+    "unexpected": false,
+    "agent": {
+      "causal": {
+        "schedule_id": "causal_5214d6a77bb79611bd90",
+        "graph_hash": "3c7cc81a8dd3aa71310e34060f8d5a6a32f33550886257d885f5b6353e30a02b",
+        "observed": [
+          "audit:admit",
+          "audit:release",
+          "refund:admit",
+          "refund:release",
+          "refund_status:admit",
+          "refund_status:release"
+        ],
+        "bindings": [
+          {
+            "operation": "audit",
+            "runtime_id_hash": "a2084cd6800d93637f026edd0bda2937309792e979d8fd24ea4f0a03b3548354"
+          },
+          {
+            "operation": "refund",
+            "runtime_id_hash": "937e54b154fd7abe338ef9b6fe185a2bde89941c5b1284cafe7f38b5ac1e7560"
+          },
+          {
+            "operation": "refund_status",
+            "runtime_id_hash": "1c21df170b98e89d233e6b4f87f46fd8614df54b8132ef0f318f17f0445d97f5"
+          }
+        ],
+        "completed": true
+      },
+      "version": 1,
+      "calls": [
+        {
+          "admission_boundary": 1,
+          "release_boundary": 2,
+          "sequence": 1,
+          "kind": "mcp_tool_result",
+          "tool": "audit",
+          "call_id": "audit",
+          "usage_known": false
+        },
+        {
+          "admission_boundary": 3,
+          "release_boundary": 4,
+          "sequence": 2,
+          "kind": "mcp_tool_result",
+          "tool": "refund",
+          "call_id": "refund",
+          "usage_known": false
+        },
+        {
+          "admission_boundary": 5,
+          "release_boundary": 6,
+          "sequence": 3,
+          "kind": "mcp_tool_result",
+          "tool": "refund_status",
+          "call_id": "refund_status",
+          "usage_known": false
+        }
+      ],
+      "effects": [
+        {
+          "sequence": 2,
+          "effect": "refund",
+          "tool": "refund",
+          "identity_hash": "9c748a945f7e931b07649b5a1fa7c77c",
+          "idempotency_hash": "9c748a945f7e931b07649b5a1fa7c77c",
+          "committed": true,
+          "response_delivered": true,
+          "response_lost": false
+        }
+      ],
+      "limit_exceeded": false,
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "schedule_steps": 6,
+      "schedule_completed": 6
+    }
+  },
+  "assertions": [
+    {
+      "id": "recorded-only",
+      "type": "no_unexpected_calls",
+      "passed": true,
+      "message": "all agent outbound calls stayed within the recorded universe",
+      "coverage": "exercised"
+    },
+    {
+      "id": "remote-once",
+      "type": "exactly_once_effect",
+      "passed": true,
+      "message": "effect refund committed 1 time(s); expected exactly 1",
+      "coverage": "exercised"
+    },
+    {
+      "id": "schedule:causal_5214d6a77bb79611bd90",
+      "type": "schedule_complete",
+      "passed": true,
+      "message": "schedule admitted 6/6 steps",
+      "coverage": "exercised"
+    },
+    {
+      "id": "state:database",
+      "type": "application_state",
+      "passed": true,
+      "message": "independent application-state check passed",
+      "coverage": "exercised"
+    },
+    {
+      "id": "state:filesystem",
+      "type": "application_state",
+      "passed": true,
+      "message": "independent application-state check passed",
+      "coverage": "exercised"
+    }
+  ],
+  "scope_hash": "ae48ac04add5d407706eec98d2f82885adbf6da0ba901adb5ded9e8140d5496b",
+  "state_check_hash": "035942eb30b276f1d3b0a99bc630c543db6bea05814ccb357b9c8d75e7e424ba"
+}

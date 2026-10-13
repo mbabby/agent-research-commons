@@ -1,0 +1,11 @@
+Running fc_7f156dc1dc12e3a0 (response-lost)...
+  exercised recorded-only: all agent outbound calls stayed within the recorded universe
+  exercised remote-once: effect refund committed 1 time(s); expected exactly 1
+  exercised state:database: independent application-state check passed
+  exercised state:filesystem: independent application-state check passed
+FAIL fc_7f156dc1dc12e3a0 47ms: agent command exited with code 1
+Results: /tmp/arc-inferno-runner-20261013/response-lost-safe/reports/infernosim-agent-results.json
+Surface: /tmp/arc-inferno-runner-20261013/response-lost-safe/reports/infernosim-agent-surface.json
+Report: /tmp/arc-inferno-runner-20261013/response-lost-safe/reports/infernosim-report.junit.xml
+Report: /tmp/arc-inferno-runner-20261013/response-lost-safe/reports/infernosim-report.sarif
+Report: /tmp/arc-inferno-runner-20261013/response-lost-safe/reports/infernosim-report.html

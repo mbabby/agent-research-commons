@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "operations": [
+    {
+      "id": "audit",
+      "protocol": "http",
+      "fingerprint": "80ed3a2561614f633c2d7258b2777e9538f2fbf7e77daf3e0c80997c13999a2d",
+      "record": "event:audit",
+      "request_id": "\"audit\""
+    },
+    {
+      "id": "refund",
+      "protocol": "http",
+      "fingerprint": "7cc6c49e40c9d63a7975774f9cace3d89fa737656a2f4f1bf754f3ec63203e30",
+      "record": "event:refund",
+      "request_id": "\"refund\""
+    },
+    {
+      "id": "refund_status",
+      "protocol": "http",
+      "fingerprint": "767813841f58954f78e366a86265c686cecd3e1295e49ac591725a816690e20b",
+      "record": "event:refund_status",
+      "request_id": "\"refund_status\""
+    }
+  ],
+  "edges": [
+    {
+      "from": "audit:admit",
+      "to": "audit:release",
+      "evidence": [
+        {
+          "rule": "request_before_response",
+          "source": "event:audit",
+          "sha256": "e0ea069dbeebe980405ec6d7b69f63e6e5cfde883d48b9d1a49ea35271a1922e"
+        }
+      ]
+    },
+    {
+      "from": "refund:admit",
+      "to": "refund:release",
+      "evidence": [
+        {
+          "rule": "request_before_response",
+          "source": "event:refund",
+          "sha256": "9e3839ecf9be7b1df5b8dfc339d67b34a14c5ed13762f966cee1cd09f14c9ca4"
+        }
+      ]
+    },
+    {
+      "from": "refund:release",
+      "to": "refund_status:admit",
+      "evidence": [
+        {
+          "rule": "user_declaration",
+          "source": "declarations",
+          "sha256": "6b46fc33b72d8f24ec23f10bb732775ef4ceaf2b33bf4cbe518a00e25a1c73ea",
+          "detail": "application awaits this response before issuing the continuation"
+        }
+      ]
+    },
+    {
+      "from": "refund_status:admit",
+      "to": "refund_status:release",
+      "evidence": [
+        {
+          "rule": "request_before_response",
+          "source": "event:refund_status",
+          "sha256": "378ca2f55341cd8dad007af5c62474ad2c6f21608a3fbfa68acf4d0525a663b7"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "unobserved_dependencies_1af39a22f6df",
+      "kind": "unobserved_dependencies",
+      "detail": "recordings cannot establish the absence of hidden application dependencies; review before scheduling",
+      "blocking": false
+    }
+  ],
+  "review": "fixture dependencies are explicitly declared; remaining requests are independent"
+}

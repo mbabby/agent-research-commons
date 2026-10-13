@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/arc-inferno-source-20261013/examples/concurrencylab/app.py", line 300, in <module>
+    run(args.scenario, args.mode == "safe")
+  File "/tmp/arc-inferno-source-20261013/examples/concurrencylab/app.py", line 188, in run
+    if post("refund") is None:
+  File "/tmp/arc-inferno-source-20261013/examples/concurrencylab/app.py", line 100, in post
+    raise RuntimeError("response correlation changed")
+RuntimeError: response correlation changed

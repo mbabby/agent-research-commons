@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "${SOURCE_ROOT}/examples/concurrencylab/app.py",
+    "--scenario",
+    "retry",
+    "--init",
+    "${CHECKER_ROOT}/incident"
+  ],
+  "cwd": "${CHECKER_ROOT}",
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "${CHECKER_ROOT}/home",
+    "TMPDIR": "${CHECKER_ROOT}/tmp",
+    "CHECKER_EVIDENCE": "${CHECKER_ROOT}/init/evidence"
+  },
+  "start_utc": "2026-10-13T14:14:56.922794+00:00",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "source_sha": "f26b5522bbb20f2904d7534b879fa2896bdf1302"
+}
