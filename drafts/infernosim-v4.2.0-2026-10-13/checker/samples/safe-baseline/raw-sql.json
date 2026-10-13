@@ -1,0 +1,22 @@
+{
+  "outbox": [
+    [
+      "396f9aae-af55-4a65-8762-64ec4c00a78e",
+      "payment-1"
+    ]
+  ],
+  "idempotency": [
+    [
+      "payment-1"
+    ]
+  ],
+  "account": [
+    [
+      1,
+      0,
+      100
+    ]
+  ],
+  "reservations": [],
+  "case_id": "explore_1e4a2a9910efb1ff4903"
+}

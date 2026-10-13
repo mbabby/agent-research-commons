@@ -1,0 +1,8 @@
+{
+  "source_commit": "f26b5522bbb20f2904d7534b879fa2896bdf1302",
+  "source_status": "",
+  "binary_sha256": "195b9b833ea7855dbba602fad03ae748fecbbedcfe14b588645b4ee5b02e57e7",
+  "app_sha256": "59f8a490d05ecb95d5341f393c95a950a34f940aa704968bd24c97289e936748",
+  "go_mod_sha256": "c9e754b484bc7e22d94c86c864447b0f80e10d633e4e259f078de6dbe625a6b1",
+  "go_sum_sha256": "25abccd435c1b07f83a2d48368237fc138aa00d39eea0993f27413a81d5fef08"
+}

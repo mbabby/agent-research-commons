@@ -1,0 +1,127 @@
+{
+  "source_commit": "f26b5522bbb20f2904d7534b879fa2896bdf1302",
+  "seed": 7100,
+  "schedules": 15,
+  "summary": {
+    "safe": {
+      "passed": 60,
+      "failed": 0,
+      "invalid": 0,
+      "truncated": false,
+      "raw_sql_groups": [
+        {
+          "faults": [],
+          "outbox": 1,
+          "idempotency": 1,
+          "passed": true,
+          "count": 15
+        },
+        {
+          "faults": [
+            "noise"
+          ],
+          "outbox": 1,
+          "idempotency": 1,
+          "passed": true,
+          "count": 15
+        },
+        {
+          "faults": [
+            "response-lost"
+          ],
+          "outbox": 1,
+          "idempotency": 1,
+          "passed": true,
+          "count": 15
+        },
+        {
+          "faults": [
+            "noise",
+            "response-lost"
+          ],
+          "outbox": 1,
+          "idempotency": 1,
+          "passed": true,
+          "count": 15
+        }
+      ]
+    },
+    "unsafe": {
+      "passed": 30,
+      "failed": 30,
+      "invalid": 0,
+      "truncated": false,
+      "raw_sql_groups": [
+        {
+          "faults": [],
+          "outbox": 1,
+          "idempotency": 0,
+          "passed": true,
+          "count": 15
+        },
+        {
+          "faults": [
+            "noise"
+          ],
+          "outbox": 1,
+          "idempotency": 0,
+          "passed": true,
+          "count": 15
+        },
+        {
+          "faults": [
+            "response-lost"
+          ],
+          "outbox": 2,
+          "idempotency": 0,
+          "passed": false,
+          "count": 15
+        },
+        {
+          "faults": [
+            "noise",
+            "response-lost"
+          ],
+          "outbox": 2,
+          "idempotency": 0,
+          "passed": false,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "representatives": [
+    {
+      "mode": "safe",
+      "faults": [],
+      "case_id": "explore_1e4a2a9910efb1ff4903",
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "directory": "representatives/safe-baseline"
+    },
+    {
+      "mode": "safe",
+      "faults": [
+        "response-lost"
+      ],
+      "case_id": "explore_b4e9b737c710beace032",
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "directory": "representatives/safe-loss"
+    },
+    {
+      "mode": "unsafe",
+      "faults": [],
+      "case_id": "explore_1e4a2a9910efb1ff4903",
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "directory": "representatives/unsafe-baseline"
+    },
+    {
+      "mode": "unsafe",
+      "faults": [
+        "response-lost"
+      ],
+      "case_id": "explore_b4e9b737c710beace032",
+      "schedule_id": "causal_5214d6a77bb79611bd90",
+      "directory": "representatives/unsafe-loss"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "agent": {
+    "enabled": true,
+    "adapters": {
+      "mcp": true
+    },
+    "limits": {
+      "max_calls": 32
+    },
+    "assertions": [
+      {
+        "id": "recorded-only",
+        "type": "no_unexpected_calls"
+      },
+      {
+        "id": "remote-once",
+        "type": "exactly_once_effect",
+        "effect": "refund"
+      }
+    ],
+    "faults": [
+      {
+        "id": "noise",
+        "select": {
+          "tool": "audit"
+        },
+        "headers": {
+          "X-Fixture-Noise": "yes"
+        }
+      },
+      {
+        "id": "response-lost",
+        "select": {
+          "tool": "refund"
+        },
+        "committed_response_lost": true
+      }
+    ],
+    "effects": [
+      {
+        "name": "refund",
+        "select": {
+          "tool": "refund"
+        },
+        "identity": [
+          "$.arguments.business_key"
+        ],
+        "deduplicate_by": [
+          "$.arguments.business_key"
+        ]
+      }
+    ]
+  }
+}

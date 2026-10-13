@@ -1,0 +1,11 @@
+Running fc_f2f562661cb01e02 (recorded baseline)...
+  exercised recorded-only: all agent outbound calls stayed within the recorded universe
+  exercised remote-once: effect refund committed 1 time(s); expected exactly 1
+  exercised state:database: independent application-state check passed
+  exercised state:filesystem: independent application-state check passed
+FAIL fc_f2f562661cb01e02 47ms: agent command exited with code 1
+Results: /tmp/arc-inferno-runner-20261013/baseline-safe/reports/infernosim-agent-results.json
+Surface: /tmp/arc-inferno-runner-20261013/baseline-safe/reports/infernosim-agent-surface.json
+Report: /tmp/arc-inferno-runner-20261013/baseline-safe/reports/infernosim-report.junit.xml
+Report: /tmp/arc-inferno-runner-20261013/baseline-safe/reports/infernosim-report.sarif
+Report: /tmp/arc-inferno-runner-20261013/baseline-safe/reports/infernosim-report.html

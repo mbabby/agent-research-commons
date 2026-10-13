@@ -1,0 +1,21 @@
+{
+  "account": [
+    [
+      1,
+      0,
+      100
+    ]
+  ],
+  "outbox": [
+    [
+      "55f9fa6c-491d-4538-a357-3f56d0aca77a",
+      "payment-1"
+    ],
+    [
+      "2b4fce10-b48d-44cf-bd26-c0c2ef79c3f7",
+      "payment-1"
+    ]
+  ],
+  "idempotency": [],
+  "reservations": []
+}

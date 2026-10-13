@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "safe",
+    "cases": 60,
+    "passed": 60,
+    "failed": 0,
+    "invalid": 0,
+    "raw_database_observations": [
+      {
+        "response_lost": false,
+        "rows": 1,
+        "idempotency": 1,
+        "count": 30
+      },
+      {
+        "response_lost": true,
+        "rows": 1,
+        "idempotency": 1,
+        "count": 30
+      }
+    ]
+  },
+  {
+    "mode": "unsafe",
+    "cases": 60,
+    "passed": 30,
+    "failed": 30,
+    "invalid": 0,
+    "raw_database_observations": [
+      {
+        "response_lost": false,
+        "rows": 1,
+        "idempotency": 0,
+        "count": 30
+      },
+      {
+        "response_lost": true,
+        "rows": 2,
+        "idempotency": 0,
+        "count": 30
+      }
+    ]
+  }
+]

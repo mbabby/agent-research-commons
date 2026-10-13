@@ -1,0 +1,101 @@
+[
+  {
+    "version": 1,
+    "case": {
+      "id": "fc_7f156dc1dc12e3a0",
+      "fault_id": "response-lost",
+      "description": "response-lost",
+      "category": "custom",
+      "severity": "medium"
+    },
+    "passed": false,
+    "duration": 46652291,
+    "process": {
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/arc-inferno-source-20261013/examples/concurrencylab/app.py\", line 300, in \u003cmodule\u003e\n    run(args.scenario, args.mode == \"safe\")\n  File \"/tmp/arc-inferno-source-20261013/examples/concurrencylab/app.py\", line 191, in run\n    post(\"refund_status\")\n  File \"/tmp/arc-inferno-source-20261013/examples/concurrencylab/app.py\", line 100, in post\n    raise RuntimeError(\"response correlation changed\")\nRuntimeError: response correlation changed\n",
+      "output_truncated": false,
+      "timed_out": false,
+      "restarted": false
+    },
+    "simulator": {
+      "expected": 3,
+      "observed": 3,
+      "unexpected": false,
+      "agent": {
+        "version": 1,
+        "calls": [
+          {
+            "sequence": 1,
+            "kind": "mcp_tool_result",
+            "tool": "audit",
+            "call_id": "8c404103-02c9-4cff-aae8-6458f1da7e8a",
+            "usage_known": false
+          },
+          {
+            "sequence": 2,
+            "kind": "mcp_tool_result",
+            "tool": "refund",
+            "call_id": "ec605b81-c4f1-4af7-8863-9d39fe8e64bf",
+            "usage_known": false
+          },
+          {
+            "sequence": 3,
+            "kind": "mcp_tool_result",
+            "tool": "refund_status",
+            "call_id": "6eb73e7e-8797-45ae-871c-d63586d9e79d",
+            "usage_known": false
+          }
+        ],
+        "effects": [
+          {
+            "sequence": 2,
+            "effect": "refund",
+            "tool": "refund",
+            "identity_hash": "9c748a945f7e931b07649b5a1fa7c77c",
+            "idempotency_hash": "9c748a945f7e931b07649b5a1fa7c77c",
+            "committed": true,
+            "response_delivered": false,
+            "response_lost": true
+          }
+        ],
+        "applied_faults": [
+          "response-lost"
+        ],
+        "limit_exceeded": false
+      }
+    },
+    "assertions": [
+      {
+        "id": "recorded-only",
+        "type": "no_unexpected_calls",
+        "passed": true,
+        "message": "all agent outbound calls stayed within the recorded universe",
+        "coverage": "exercised"
+      },
+      {
+        "id": "remote-once",
+        "type": "exactly_once_effect",
+        "passed": true,
+        "message": "effect refund committed 1 time(s); expected exactly 1",
+        "coverage": "exercised"
+      },
+      {
+        "id": "state:database",
+        "type": "application_state",
+        "passed": true,
+        "message": "independent application-state check passed",
+        "coverage": "exercised"
+      },
+      {
+        "id": "state:filesystem",
+        "type": "application_state",
+        "passed": true,
+        "message": "independent application-state check passed",
+        "coverage": "exercised"
+      }
+    ],
+    "failure": "agent command exited with code 1",
+    "scope_hash": "a6c39b74af42af3d4f48c7bded1c66c4bebcc9ba67cebdd9b3161341875c6017",
+    "state_check_hash": "c747e53872248144821cd2dea27a4d993a91e24c9e0f88570171c6c366ec7086"
+  }
+]

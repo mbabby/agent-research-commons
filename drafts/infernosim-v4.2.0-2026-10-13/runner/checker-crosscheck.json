@@ -1,0 +1,25 @@
+{
+  "safe": {
+    "report": {
+      "passed": 60,
+      "failed": 0,
+      "invalid": 0
+    },
+    "databases": 60,
+    "sql_counts": {
+      "(1, 1)": 60
+    }
+  },
+  "unsafe": {
+    "report": {
+      "passed": 30,
+      "failed": 30,
+      "invalid": 0
+    },
+    "databases": 60,
+    "sql_counts": {
+      "(2, 0)": 30,
+      "(1, 0)": 30
+    }
+  }
+}
