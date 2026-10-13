@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_dispatch",
+  "frozen_at": "2026-10-13T02:48:12.654784+00:00",
+  "study": "verification-cost-r2-2026-10-13",
+  "source_git_sha": "851a57d17c382495000700723a2dabb1f8c40490",
+  "sample_ids": [
+    "q01",
+    "q03",
+    "q07",
+    "q10"
+  ],
+  "all_ids": [
+    "q01",
+    "q02",
+    "q03",
+    "q04",
+    "q05",
+    "q06",
+    "q07",
+    "q08",
+    "q09",
+    "q10",
+    "q11",
+    "q12"
+  ],
+  "seeded_error_count": 4,
+  "arm_order": [
+    "redo",
+    "report_only",
+    "locators",
+    "reproducible"
+  ],
+  "budget": {
+    "outer_tool_calls": 20,
+    "wall_minutes": 12
+  },
+  "files": {
+    "common/candidate.json": "5bd091a85f949a1af2b37a0670a9e1d8a273b5893c065f0d34848924d742c03b",
+    "common/corpus.json": "77ea6d3e604d3087fa459c00b537385fd31e83466919b8d9ef8f55b6acc61011",
+    "common/docs/agent-access.md": "4be0a8206be8f283eac9654360dfdffbe11105b16d3db1c312d8839fb951e166",
+    "common/docs/collaboration.md": "be4237e0696816d3b12794e06376b329f325090834433d97bbb2e3699c3e1945",
+    "common/measure.py": "2ea905576a5fdee022d724f45d2d5e6a81daa2de949e13ab4cbc7860a6952701",
+    "common/questions.json": "d32d3869fa463b681648bc3b5332a31fa1568ffed0c277a332c5a7582b5f0238",
+    "hidden/answer-key.json": "f8e769b098cbb269089e0090f0abb8196068e8d11f60cd9798eae59c2882fb7d",
+    "hidden/locator-plan.json": "5dd2d5e31eb9eed5632ba7b3c5b73b3305f6ebb92685618ac621d4e4f610feff",
+    "arms/locators/locators.json": "5dd2d5e31eb9eed5632ba7b3c5b73b3305f6ebb92685618ac621d4e4f610feff",
+    "arms/locators/prompt.md": "4dad4318c1db6615a8158831cbbb6bed069235659630b437c12840922632f624",
+    "arms/locators/report.md": "22e8858a6cbfc6e28acaefdab2b34bb680ddf583785baa8b577914fb644dd7e5",
+    "arms/redo/prompt.md": "d39eebff4e0d32f8ca17d72006fde0504715ebf2c42e0c4b758ef55a2f99ed47",
+    "arms/report_only/prompt.md": "3fdbc1454046cff198853aca8dd620bdedfef7d80e38c8af2596ca2a891b95bd",
+    "arms/report_only/report.md": "22e8858a6cbfc6e28acaefdab2b34bb680ddf583785baa8b577914fb644dd7e5",
+    "arms/reproducible/extract.py": "9a4f5b4ba3af200818a9718bfb94972253b92759587c858ee5ac2afb564a3a3f",
+    "arms/reproducible/locators.json": "5dd2d5e31eb9eed5632ba7b3c5b73b3305f6ebb92685618ac621d4e4f610feff",
+    "arms/reproducible/prompt.md": "f0c41aa04f3376e1d669ee6902e7076bdb780df7038d7c73c12ace8b157e50d5",
+    "arms/reproducible/report.md": "22e8858a6cbfc6e28acaefdab2b34bb680ddf583785baa8b577914fb644dd7e5",
+    "protocol.md": "4c59876440490c5031af649d2eb48f16ce2e8f296eb3be507a714c4cfd5d4b22",
+    "author-qa.json": "2af74469c2fb2183f3c82edadfbc847c233e3d781d5559df3893dde52a941d94"
+  },
+  "exclusions": "Run outputs, later independent review, timing ledger/derived summaries, manifest self-hash and final handoff are not participant materials. All frozen material hashes must remain unchanged through trials."
+}

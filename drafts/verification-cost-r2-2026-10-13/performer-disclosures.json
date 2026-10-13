@@ -1,0 +1,16 @@
+{
+  "source": "Final messages of actual experiment sessions, recorded by coordinator after end. Claims of no unlogged reads are self-reported, not OS tracing.",
+  "outer_tool_calls": {
+    "redo": 7,
+    "report_only": 8,
+    "locators": 5,
+    "reproducible": 8
+  },
+  "all_reported_incomplete_items": [],
+  "all_reported_deviations": [],
+  "all_reported_no_post_end_answer_changes": true,
+  "model_identifier": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "billed_usd": null
+}

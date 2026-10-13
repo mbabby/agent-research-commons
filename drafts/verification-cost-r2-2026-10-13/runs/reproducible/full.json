@@ -1,0 +1,172 @@
+{
+  "answers": [
+    {
+      "id": "q01",
+      "answer": "It lists valid community questions, not official assignments.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "It lists valid community questions, not official assignments."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q02",
+      "answer": "requesting_help=false means there is no current help request, although historical evidence may still be useful.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "`requesting_help=false` means no current help request, although historical evidence may be useful."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q03",
+      "answer": "No. Empty arrays mean no resolved structured artifact is listed in that snapshot. Useful evidence may remain in original prose or live comments; read those before concluding there is nothing to reuse.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "An empty `artifacts` or `linked_records` array means no resolved structured artifact is listed in that snapshot; useful evidence may still be linked in the original prose or live comments. Read those sources before concluding there is nothing to reuse."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "contradicted"
+    },
+    {
+      "id": "q04",
+      "answer": "No. The recent activity snapshot exports neither comment bodies nor inferred summaries.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 65,
+          "end_line": 65,
+          "quote": "It exports no comment bodies or inferred summaries."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q05",
+      "answer": "Follow the response Link header's rel=\"next\" URL until absent, keeping requests on the selected repository's comments endpoint at api.github.com. If the retrieval budget ends early, label the collection incomplete.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "Follow the response `Link` header's `rel=\"next\"` URL until absent. Keep requests scoped to the selected repository's comments endpoint on `api.github.com`. If your retrieval budget ends early, label the collection incomplete."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q06",
+      "answer": "It indicates that no activity snapshot was supplied for an offline build. Fetch errors stop publication; previously published data may be stale.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 67,
+          "end_line": 67,
+          "quote": "`status=unavailable` with null fetch time indicates no activity snapshot was supplied for an offline build. Fetch errors stop publication; prior published data may be stale."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "contradicted"
+    },
+    {
+      "id": "q07",
+      "answer": "No. A participation intent never reserves a question or excludes anyone.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 25,
+          "end_line": 25,
+          "quote": "Intent never reserves the question or excludes anyone."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q08",
+      "answer": "artifact_version must be the exact lowercase 40-character SHA. artifact_url must be a GitHub HTTPS blob/tree/commit URL containing the same SHA, without credentials, query or fragment.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 26,
+          "end_line": 26,
+          "quote": "Copy the exact lowercase 40-character SHA into `artifact_version` and the GitHub HTTPS blob/tree/commit URL into `artifact_url`. The URL must contain that same SHA, without credentials, query or fragment."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q09",
+      "answer": "No. Reviews and reuse claims apply to the named contribution and version. Changing the full artifact URL or commit SHA makes prior review and reuse links unresolved; a different path at the same SHA cannot inherit feedback.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 28,
+          "end_line": 28,
+          "quote": "Reviews and reuse claims apply to the contribution and version named, never automatically to a revision. Changing a referenced full artifact URL or commit SHA makes old review and reuse links unresolved; another artifact path at the same SHA cannot inherit feedback."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "contradicted"
+    },
+    {
+      "id": "q10",
+      "answer": "Report reproducibility, data, method and conclusion separately using supported, concerns or not_checked. supported and concerns require concrete evidence. There is no overall pass/fail.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 27,
+          "end_line": 27,
+          "quote": "Report each of reproducibility, data, method and conclusion separately. Use supported, concerns or not_checked; supported and concerns need concrete evidence. There is no overall pass/fail."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q11",
+      "answer": "No. Closing an Issue does not withdraw its public record; historical contributions can still be consulted.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 37,
+          "end_line": 37,
+          "quote": "Closing an Issue does not withdraw its public record; historical contributions can still be consulted."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "supported"
+    },
+    {
+      "id": "q12",
+      "answer": "No. Exports contain eligible Issue body snapshots and structured links/version metadata, but exclude GitHub comment bodies and external artifact files. They are not a complete research archive.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 62,
+          "end_line": 62,
+          "quote": "Community exports contain eligible Issue body snapshots and structured links/version metadata; they do not contain GitHub comment bodies or external artifact files. They are not a complete research archive."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": "contradicted"
+    }
+  ]
+}

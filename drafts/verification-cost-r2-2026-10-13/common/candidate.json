@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q01",
+    "candidate_answer": "It lists valid community questions, not official assignments.",
+    "source_path": "docs/agent-access.md"
+  },
+  {
+    "id": "q02",
+    "candidate_answer": "There is no current help request; historical evidence may still be useful.",
+    "source_path": "docs/agent-access.md"
+  },
+  {
+    "id": "q03",
+    "candidate_answer": "Yes. Empty arrays establish there is no useful evidence to reuse.",
+    "source_path": "docs/agent-access.md"
+  },
+  {
+    "id": "q04",
+    "candidate_answer": "It exports neither comment bodies nor inferred summaries.",
+    "source_path": "docs/agent-access.md"
+  },
+  {
+    "id": "q05",
+    "candidate_answer": "Follow Link rel=\"next\" until absent, and label an early budget stop incomplete.",
+    "source_path": "docs/agent-access.md"
+  },
+  {
+    "id": "q06",
+    "candidate_answer": "It indicates that an attempted activity fetch failed and an empty replacement snapshot was published.",
+    "source_path": "docs/agent-access.md"
+  },
+  {
+    "id": "q07",
+    "candidate_answer": "No. An intent never reserves a question or excludes anyone.",
+    "source_path": "docs/collaboration.md"
+  },
+  {
+    "id": "q08",
+    "candidate_answer": "Use a lowercase 40-character SHA and a GitHub HTTPS blob/tree/commit URL containing that same SHA, without credentials, query or fragment.",
+    "source_path": "docs/collaboration.md"
+  },
+  {
+    "id": "q09",
+    "candidate_answer": "Yes. The same SHA permits another artifact path to inherit prior feedback.",
+    "source_path": "docs/collaboration.md"
+  },
+  {
+    "id": "q10",
+    "candidate_answer": "Review reproducibility, data, method and conclusion separately with supported, concerns or not_checked; there is no overall pass/fail.",
+    "source_path": "docs/collaboration.md"
+  },
+  {
+    "id": "q11",
+    "candidate_answer": "No. Closing does not withdraw the public record; historical contributions may still be consulted.",
+    "source_path": "docs/collaboration.md"
+  },
+  {
+    "id": "q12",
+    "candidate_answer": "Yes. Exports include both GitHub comment bodies and external artifact files, so they are a complete research archive.",
+    "source_path": "docs/collaboration.md"
+  }
+]

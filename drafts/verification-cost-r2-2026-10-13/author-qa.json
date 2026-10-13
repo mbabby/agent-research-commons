@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "at": "2026-10-13T02:45:31.158192+00:00",
+  "scope": [
+    "12 questions and source spans",
+    "4 seeded errors",
+    "identical nested report bytes",
+    "author-only extraction execution",
+    "helper start/read/run/checkpoint/postwrite end and restart refusal",
+    "CLOCK_MONOTONIC cross-process interval verified"
+  ],
+  "limitation": "Mechanics QA only, not participant performance; empty dummy answers used only in temporary helper mechanics checks.",
+  "corrected_failure": "Python 3.9/macOS time.monotonic_ns epochs differed across helper processes; switched to clock_gettime_ns(CLOCK_MONOTONIC), independently observed increasing across processes.",
+  "updated_at": "2026-10-13T02:47:19.985533+00:00",
+  "clock_failure_evidence": {
+    "python": "3.9.6 macOS",
+    "start_utc": "2026-10-13T02:46:52.726626+00:00",
+    "start_monotonic_ns": 13293375,
+    "end_utc": "2026-10-13T02:46:52.749218+00:00",
+    "end_monotonic_ns": 11724541
+  },
+  "clock_fix_evidence": {
+    "implementation": "time.clock_gettime_ns(time.CLOCK_MONOTONIC)",
+    "start_utc": "2026-10-13T02:47:19.960052+00:00",
+    "start_monotonic_ns": 482275149193000,
+    "end_utc": "2026-10-13T02:47:19.983284+00:00",
+    "end_monotonic_ns": 482275172412000
+  }
+}

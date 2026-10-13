@@ -1,0 +1,499 @@
+{
+  "status": "independent_semantic_review_available",
+  "integrity": {
+    "frozen_materials": {
+      "ok": true,
+      "checked": 20,
+      "failed": []
+    },
+    "locked_runs": {
+      "ok": true,
+      "checked": 15,
+      "failed": []
+    }
+  },
+  "preregistration_url": "https://github.com/mbabby/agent-research-commons/issues/22#issuecomment-6137107470",
+  "arms": {
+    "redo": {
+      "start_utc": "2026-10-13T02:49:43.045028+00:00",
+      "sample_utc": "2026-10-13T02:50:25.551031+00:00",
+      "end_utc": "2026-10-13T02:50:55.096063+00:00",
+      "seconds": {
+        "start_to_sample": 42.50601,
+        "sample_to_full": 29.545029,
+        "start_to_full": 72.051039
+      },
+      "outer_tool_calls_reported": 7,
+      "within_20_tools_reported": true,
+      "within_720_seconds_observed": true,
+      "reads": {
+        "all_helper_file_reads": 11,
+        "all_helper_bytes": 77534,
+        "source_helper_reads": 6,
+        "source_helper_bytes": 64143,
+        "per_source_helper_reads": {
+          "common/docs/agent-access.md": 3,
+          "common/docs/collaboration.md": 3
+        },
+        "repeat_source_helper_reads": 4,
+        "repeat_source_helper_bytes": 42762,
+        "script_internal_source_reads": 0,
+        "script_internal_source_bytes": 0,
+        "script_internal_other_reads": [],
+        "script_internal_other_bytes": 0,
+        "note": "Internal script I/O reconstructed from inspected frozen code plus actual execution receipt, not per-read instrumented. Bytes are file I/O volumes, not tokens or cognition."
+      },
+      "outputs": {
+        "sample": {
+          "items": 4,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 4,
+            "evidence_correct": 4,
+            "joint_correct": 4,
+            "denominator": 4,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [],
+            "false_positive_ids": [],
+            "unassessed": 4,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 1,
+            "report_wide_detection_fraction": null,
+            "checked_error_recall": null,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        },
+        "full": {
+          "items": 12,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 12,
+            "evidence_correct": 12,
+            "joint_correct": 12,
+            "denominator": 12,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [],
+            "false_positive_ids": [],
+            "unassessed": 12,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 4,
+            "report_wide_detection_fraction": null,
+            "checked_error_recall": null,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        }
+      },
+      "cost_seconds": {
+        "reader_only": 72.051039,
+        "primary_conservative_total": 72.051039,
+        "sensitivity_including_explicit_wait": 72.051039,
+        "sensitivity_excluding_H": 72.051039
+      }
+    },
+    "report_only": {
+      "start_utc": "2026-10-13T02:49:45.668132+00:00",
+      "sample_utc": "2026-10-13T02:50:27.914215+00:00",
+      "end_utc": "2026-10-13T02:50:58.465940+00:00",
+      "seconds": {
+        "start_to_sample": 42.246083,
+        "sample_to_full": 30.551723,
+        "start_to_full": 72.797806
+      },
+      "outer_tool_calls_reported": 8,
+      "within_20_tools_reported": true,
+      "within_720_seconds_observed": true,
+      "reads": {
+        "all_helper_file_reads": 12,
+        "all_helper_bytes": 77907,
+        "source_helper_reads": 6,
+        "source_helper_bytes": 64143,
+        "per_source_helper_reads": {
+          "common/docs/agent-access.md": 3,
+          "common/docs/collaboration.md": 3
+        },
+        "repeat_source_helper_reads": 4,
+        "repeat_source_helper_bytes": 42762,
+        "script_internal_source_reads": 0,
+        "script_internal_source_bytes": 0,
+        "script_internal_other_reads": [],
+        "script_internal_other_bytes": 0,
+        "note": "Internal script I/O reconstructed from inspected frozen code plus actual execution receipt, not per-read instrumented. Bytes are file I/O volumes, not tokens or cognition."
+      },
+      "outputs": {
+        "sample": {
+          "items": 4,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 4,
+            "evidence_correct": 4,
+            "joint_correct": 4,
+            "denominator": 4,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [
+              "q03"
+            ],
+            "false_positive_ids": [],
+            "unassessed": 0,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 1,
+            "report_wide_detection_fraction": 0.25,
+            "checked_error_recall": 1.0,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        },
+        "full": {
+          "items": 12,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 12,
+            "evidence_correct": 12,
+            "joint_correct": 12,
+            "denominator": 12,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [
+              "q03",
+              "q06",
+              "q09",
+              "q12"
+            ],
+            "false_positive_ids": [],
+            "unassessed": 0,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 4,
+            "report_wide_detection_fraction": 1.0,
+            "checked_error_recall": 1.0,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        }
+      },
+      "cost_seconds": {
+        "reader_only": 72.797806,
+        "primary_conservative_total": 442.02801,
+        "sensitivity_including_explicit_wait": 469.812568,
+        "sensitivity_excluding_H": 157.093257
+      }
+    },
+    "locators": {
+      "start_utc": "2026-10-13T02:49:55.184214+00:00",
+      "sample_utc": "2026-10-13T02:50:25.283934+00:00",
+      "end_utc": "2026-10-13T02:50:50.685967+00:00",
+      "seconds": {
+        "start_to_sample": 30.099722,
+        "sample_to_full": 25.402025,
+        "start_to_full": 55.501747
+      },
+      "outer_tool_calls_reported": 5,
+      "within_20_tools_reported": true,
+      "within_720_seconds_observed": true,
+      "reads": {
+        "all_helper_file_reads": 7,
+        "all_helper_bytes": 33704,
+        "source_helper_reads": 2,
+        "source_helper_bytes": 21381,
+        "per_source_helper_reads": {
+          "common/docs/agent-access.md": 1,
+          "common/docs/collaboration.md": 1
+        },
+        "repeat_source_helper_reads": 0,
+        "repeat_source_helper_bytes": 0,
+        "script_internal_source_reads": 0,
+        "script_internal_source_bytes": 0,
+        "script_internal_other_reads": [],
+        "script_internal_other_bytes": 0,
+        "note": "Internal script I/O reconstructed from inspected frozen code plus actual execution receipt, not per-read instrumented. Bytes are file I/O volumes, not tokens or cognition."
+      },
+      "outputs": {
+        "sample": {
+          "items": 4,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 4,
+            "evidence_correct": 4,
+            "joint_correct": 4,
+            "denominator": 4,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [
+              "q03"
+            ],
+            "false_positive_ids": [],
+            "unassessed": 0,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 1,
+            "report_wide_detection_fraction": 0.25,
+            "checked_error_recall": 1.0,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        },
+        "full": {
+          "items": 12,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 12,
+            "evidence_correct": 12,
+            "joint_correct": 12,
+            "denominator": 12,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [
+              "q03",
+              "q06",
+              "q09",
+              "q12"
+            ],
+            "false_positive_ids": [],
+            "unassessed": 0,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 4,
+            "report_wide_detection_fraction": 1.0,
+            "checked_error_recall": 1.0,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        }
+      },
+      "cost_seconds": {
+        "reader_only": 55.501747,
+        "primary_conservative_total": 430.87595200000004,
+        "sensitivity_including_explicit_wait": 458.66051000000004,
+        "sensitivity_excluding_H": 145.941199
+      }
+    },
+    "reproducible": {
+      "start_utc": "2026-10-13T02:50:02.149184+00:00",
+      "sample_utc": "2026-10-13T02:50:51.209500+00:00",
+      "end_utc": "2026-10-13T02:51:00.020611+00:00",
+      "seconds": {
+        "start_to_sample": 49.06032,
+        "sample_to_full": 8.8111,
+        "start_to_full": 57.87142
+      },
+      "outer_tool_calls_reported": 8,
+      "within_20_tools_reported": true,
+      "within_720_seconds_observed": true,
+      "reads": {
+        "all_helper_file_reads": 7,
+        "all_helper_bytes": 14961,
+        "source_helper_reads": 0,
+        "source_helper_bytes": 0,
+        "per_source_helper_reads": {},
+        "repeat_source_helper_reads": 0,
+        "repeat_source_helper_bytes": 0,
+        "script_internal_source_reads": 2,
+        "script_internal_source_bytes": 21381,
+        "script_internal_other_reads": [
+          "common/corpus.json",
+          "arms/reproducible/locators.json"
+        ],
+        "script_internal_other_bytes": 1854,
+        "note": "Internal script I/O reconstructed from inspected frozen code plus actual execution receipt, not per-read instrumented. Bytes are file I/O volumes, not tokens or cognition."
+      },
+      "outputs": {
+        "sample": {
+          "items": 4,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 4,
+            "evidence_correct": 4,
+            "joint_correct": 4,
+            "denominator": 4,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [
+              "q03"
+            ],
+            "false_positive_ids": [],
+            "unassessed": 0,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 1,
+            "report_wide_detection_fraction": 0.25,
+            "checked_error_recall": 1.0,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        },
+        "full": {
+          "items": 12,
+          "schema_complete": true,
+          "all_quotes_lexically_match": true,
+          "semantic_review": {
+            "answer_correct": 12,
+            "evidence_correct": 12,
+            "joint_correct": 12,
+            "denominator": 12,
+            "source": "review/semantic-grades.json"
+          },
+          "assessments": {
+            "true_positive_ids": [
+              "q03",
+              "q06",
+              "q09",
+              "q12"
+            ],
+            "false_positive_ids": [],
+            "unassessed": 0,
+            "report_error_denominator": 4,
+            "checked_error_denominator": 4,
+            "report_wide_detection_fraction": 1.0,
+            "checked_error_recall": 1.0,
+            "note": "Null redo assessment is not a failure; substantive correction belongs to semantic review. Unchecked report errors are unobserved, not checked false negatives."
+          }
+        }
+      },
+      "cost_seconds": {
+        "reader_only": 57.87142,
+        "primary_conservative_total": 448.74359200000004,
+        "sensitivity_including_explicit_wait": 476.52815000000004,
+        "sensitivity_excluding_H": 163.80883900000003
+      }
+    }
+  },
+  "execution": {
+    "receipt": {
+      "command": [
+        "python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-r2-2026-10-13/arms/reproducible/extract.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "7767549e3f739a8755aa8a47f5be5758f42988c9709e3ea6bc8320b3d138dba9",
+      "finished_at": "2026-10-13T02:50:19.410915+00:00",
+      "source_sha256": {
+        "docs/agent-access.md": "4be0a8206be8f283eac9654360dfdffbe11105b16d3db1c312d8839fb951e166",
+        "docs/collaboration.md": "be4237e0696816d3b12794e06376b329f325090834433d97bbb2e3699c3e1945"
+      }
+    },
+    "seconds": 0.021674,
+    "before_sample": true,
+    "stdout_bytes": 7968,
+    "excerpt_text_bytes": 6070
+  },
+  "preparation": {
+    "phases": [
+      {
+        "phase": "instruction_setup",
+        "start": "2026-10-13T02:41:14+00:00",
+        "end": "2026-10-13T02:41:37.293203+00:00",
+        "seconds": 23.293203
+      },
+      {
+        "phase": "common_corpus_questions_candidate_hidden_labels",
+        "start": "2026-10-13T02:41:37.293203+00:00",
+        "end": "2026-10-13T02:42:23.578282+00:00",
+        "seconds": 46.285079
+      },
+      {
+        "phase": "report_only_packaging",
+        "start": "2026-10-13T02:42:23.578282+00:00",
+        "end": "2026-10-13T02:42:38.295451+00:00",
+        "seconds": 14.717169
+      },
+      {
+        "phase": "locators_packaging",
+        "start": "2026-10-13T02:42:38.295451+00:00",
+        "end": "2026-10-13T02:42:44.439452+00:00",
+        "seconds": 6.144001
+      },
+      {
+        "phase": "reproducible_package_script_packaging",
+        "start": "2026-10-13T02:42:44.439452+00:00",
+        "end": "2026-10-13T02:42:59.937419+00:00",
+        "seconds": 15.497967
+      },
+      {
+        "phase": "protocol_prompts_common_measurement_QA",
+        "start": "2026-10-13T02:42:59.937419+00:00",
+        "end": "2026-10-13T02:45:31.158752+00:00",
+        "seconds": 151.221333
+      },
+      {
+        "phase": "pre_run_review_wait",
+        "start": "2026-10-13T02:45:31.158752+00:00",
+        "end": "2026-10-13T02:45:58.943310+00:00",
+        "seconds": 27.784558
+      },
+      {
+        "phase": "pre_run_corrections_and_freeze",
+        "start": "2026-10-13T02:45:58.943310+00:00",
+        "end": "2026-10-13T02:48:12.656730+00:00",
+        "seconds": 133.71342
+      }
+    ],
+    "full_session_elapsed_seconds": 418.65673000000004,
+    "explicit_review_wait_seconds": 27.784558,
+    "C": 69.578282,
+    "H": 284.934753,
+    "R": 14.717169,
+    "L": 6.144001,
+    "X": 15.497967,
+    "conservative_preparation_charges": {
+      "redo": 0,
+      "report_only": 369.230204,
+      "locators": 375.374205,
+      "reproducible": 390.87217200000003
+    },
+    "interpretation": "Redo zero preparation charge means reader-only operational comparator, not zero experiment setup. C inseparably includes experimental questions/key and candidate authoring. H exclusion is sensitivity, not true net cost. Full elapsed includes explicit wait; waiting is separately visible and excluded only from per-format preparation allocation."
+  },
+  "review_overhead": {
+    "known_measured_intervals": [
+      {
+        "start": "2026-10-13T02:41:49Z",
+        "end": "2026-10-13T02:42:04Z",
+        "seconds": 15
+      },
+      {
+        "start": "2026-10-13T02:45:17Z",
+        "end": "2026-10-13T02:47:38Z",
+        "seconds": 141
+      },
+      {
+        "start": "2026-10-13T02:49:16Z",
+        "end": "2026-10-13T02:49:26Z",
+        "seconds": 10
+      },
+      {
+        "start": "2026-10-13T02:51:36Z",
+        "end": "2026-10-13T02:54:18Z",
+        "seconds": 162
+      }
+    ],
+    "sources": [
+      "review/design-audit.md",
+      "review/results-audit.md"
+    ],
+    "note": "Intervals overlap author/session wall time; do not sum as calendar duration. Closing prose, postrun review, coordinator administration and publication are separate, incompletely measured overhead."
+  },
+  "semantic_review_provenance": {
+    "path": "review/semantic-grades.json",
+    "sha256": "bbc0e3758582c8cbc3d549987d5fb77e160ae8d2e9003ef84f39aa1e1e6b9cde"
+  },
+  "telemetry": {
+    "model_identifier": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "billed_usd": null
+  },
+  "limitations": [
+    "One run per workflow, same operator, no randomization or causal/population claim.",
+    "Sessions overlapped after fixed dispatch order; resource/concurrency effects are uncontrolled.",
+    "Sample timing is four-output checkpoint; sources/extraction can expose all twelve beforehand.",
+    "Read logs are cooperative, not OS tracing. Protocol deviation: promised transcript tool-count audit could not be completed; 7/8/5/8 are self-reported counts, not independently verified. Ledger events are not equivalent outer tool counts.",
+    "Historical project/prior-study creation is unmeasured sunk input. Round 1 remains intact.",
+    "Author analysis and independent semantic review occur after frozen preparation and are separate overhead."
+  ]
+}

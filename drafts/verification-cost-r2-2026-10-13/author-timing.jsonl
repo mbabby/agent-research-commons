@@ -1,0 +1,9 @@
+{"event": "start", "at": "2026-10-13T02:41:14+00:00", "phase": "instruction_setup", "provenance": "first tool clock before any reads; phase label attached at first persistent log, not a retrospectively reconstructed duration"}
+{"event": "transition", "at": "2026-10-13T02:41:37.293203+00:00", "from": "instruction_setup", "to": "common_corpus_questions_candidate_hidden_labels"}
+{"event": "transition", "at": "2026-10-13T02:42:23.578282+00:00", "from": "common_corpus_questions_candidate_hidden_labels", "to": "report_only_packaging"}
+{"event": "transition", "at": "2026-10-13T02:42:38.295451+00:00", "from": "report_only_packaging", "to": "locators_packaging"}
+{"event": "transition", "at": "2026-10-13T02:42:44.439452+00:00", "from": "locators_packaging", "to": "reproducible_package_script_packaging"}
+{"event": "transition", "at": "2026-10-13T02:42:59.937419+00:00", "from": "reproducible_package_script_packaging", "to": "protocol_prompts_common_measurement_QA"}
+{"event": "transition", "at": "2026-10-13T02:45:31.158752+00:00", "from": "protocol_prompts_common_measurement_QA", "to": "pre_run_review_wait"}
+{"event": "transition", "at": "2026-10-13T02:45:58.943310+00:00", "from": "pre_run_review_wait", "to": "pre_run_corrections_and_freeze"}
+{"event": "finish", "at": "2026-10-13T02:48:12.656730+00:00", "phase": "pre_run_corrections_and_freeze", "note": "Frozen files and persisted manifest verified; subsequent ledger summary and final handoff are reporting overhead."}

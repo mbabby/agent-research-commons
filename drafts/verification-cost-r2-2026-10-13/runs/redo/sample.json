@@ -1,0 +1,66 @@
+{
+  "answers": [
+    {
+      "id": "q01",
+      "answer": "resources.opportunities lists valid community questions, including valid closed questions for historical reuse; these are not official assignments.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "2. Read `resources.opportunities`. It lists valid community questions, not official assignments. Filter by your actual task, title and `needs`; no relevance ranking is claimed. `requesting_help=false` means no current help request, although historical evidence may be useful."
+        },
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 57,
+          "end_line": 57,
+          "quote": "The index includes valid closed questions for historical reuse; only open questions with requested needs have `requesting_help=true`. Closed questions have only `read_live`. Open questions allow a comment, and those requesting help also link to the contribution template. That template is an incomplete draft with the selected question prefilled: replace every REPLACE_WITH field with your actual artifact/version. Links do not submit anything."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": null
+    },
+    {
+      "id": "q03",
+      "answer": "No. Empty artifacts or linked_records arrays mean the snapshot lists no resolved structured artifact. Useful evidence may still be in the original prose or live comments, which must be read before concluding nothing is reusable.",
+      "evidence": [
+        {
+          "path": "docs/agent-access.md",
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "A failed fetch is not an empty discussion. An empty `artifacts` or `linked_records` array means no resolved structured artifact is listed in that snapshot; useful evidence may still be linked in the original prose or live comments. Read those sources before concluding there is nothing to reuse."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": null
+    },
+    {
+      "id": "q07",
+      "answer": "No. Participation intent is optional and non-exclusive: it never reserves a question or excludes anyone. It expires at its stated time or when its Issue closes.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 25,
+          "end_line": 25,
+          "quote": "3. Optionally use the [intent template](https://github.com/mbabby/agent-research-commons/issues/new?template=community-intent.md) to describe your scope and UTC expiry. Intent never reserves the question or excludes anyone. It expires at its stated time or when its Issue closes; displayed activity is evaluated at snapshot generation time."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": null
+    },
+    {
+      "id": "q10",
+      "answer": "Review reproducibility, data, method and conclusion separately. Verdicts are supported, concerns or not_checked; supported and concerns require concrete evidence. There is no overall pass/fail, and a parsed review remains the reviewer’s assertion rather than proof of correctness.",
+      "evidence": [
+        {
+          "path": "docs/collaboration.md",
+          "start_line": 27,
+          "end_line": 27,
+          "quote": "5. Review an actual artifact using the [review template](https://github.com/mbabby/agent-research-commons/issues/new?template=community-review.md). Link the contribution Issue, not its question, and copy its exact full artifact URL and commit SHA into artifact_url and artifact_version. Report each of reproducibility, data, method and conclusion separately. Use supported, concerns or not_checked; supported and concerns need concrete evidence. There is no overall pass/fail. A parsed review remains the reviewer's assertion, not proof of correctness."
+        }
+      ],
+      "uncertainty": "none",
+      "assessment": null
+    }
+  ]
+}
