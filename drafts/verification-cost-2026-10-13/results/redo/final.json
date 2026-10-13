@@ -1,0 +1,302 @@
+{
+  "stage": "redo",
+  "claims": [
+    {
+      "id": "C01",
+      "answer": "No. Anyone with a GitHub account, or an Agent authorized to use one, may post in the open discussion layer without prior maintainer approval or a contribution threshold.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 5,
+          "line_end": 5
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C02",
+      "answer": "English and Chinese are welcome. Translation is optional and is not required to participate.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 5,
+          "line_end": 5
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C03",
+      "answer": "No. Closing an Issue alone does not remove its Community post. Removing the opt-in marker or moderator exclusion affects future successful snapshots.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 13,
+          "line_end": 13
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C04",
+      "answer": "Replies remain on GitHub.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 7,
+          "line_end": 7
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C05",
+      "answer": "The repository owner controls moderation and deployment.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 15,
+          "line_end": 15
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C06",
+      "answer": "Each successful fetch initially reads only the first 100 repository issue comments, sorted by update time descending, including edits, then checks current Issue visibility.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 23,
+          "line_end": 23
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C07",
+      "answer": "Neither. The recent-discussion export supplies metadata without copying comment bodies or generating summaries.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 21,
+          "line_end": 21
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C08",
+      "answer": "Failed API reads or builds leave the previous published snapshot intact. Publication stops on API or validation failures, so withdrawals can be delayed; failures are not converted into empty results.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 15,
+          "line_end": 15
+        },
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+          "line_start": 25,
+          "line_end": 25
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C09",
+      "answer": "Yes. An Agent can read and leave without joining or posting.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/agent-value.md",
+          "line_start": 9,
+          "line_end": 9
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C10",
+      "answer": "No. Technical access tests alone are not proof of external benefit. Community value requires observed external use of evidence or a useful correction with an attributable outcome record.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/agent-value.md",
+          "line_start": 24,
+          "line_end": 24
+        },
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/agent-value.md",
+          "line_start": 37,
+          "line_end": 39
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C11",
+      "answer": "Claims of time, token or cost savings require a stated baseline and actual observations. Evaluation should define a before/after task and observable outcome, stating what is measured and unmeasured.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/agent-value.md",
+          "line_start": 20,
+          "line_end": 20
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    },
+    {
+      "id": "C12",
+      "answer": "No. Adopting the development standard does not make the community autonomous; owner-controlled deployment and moderation remain.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/agent-value.md",
+          "line_start": 41,
+          "line_end": 41
+        }
+      ],
+      "uncertainty": "No material ambiguity in the supplied pinned source; this answer describes that source version only."
+    }
+  ],
+  "measurement": {
+    "first_work_start_utc": "2026-10-13T02:23:45.980892+00:00",
+    "sample_completion_utc": null,
+    "final_completion_utc": "2026-10-13T02:25:03.811552+00:00",
+    "elapsed_seconds": 77.83066,
+    "invocation_count": 4,
+    "invocation_definition": "Each grouped functions.exec call with one nested exec_command and one Python script counts as one invocation. Three official CLI administrative calls are excluded.",
+    "command_read_event_ledger": [
+      {
+        "invocation": 1,
+        "command": "Python: first UTC clock read; read and print assigned PROMPT.txt",
+        "events": [
+          {
+            "kind": "file_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/PROMPT.txt",
+            "bytes_read": 2964
+          },
+          {
+            "kind": "script_stdout_read",
+            "path": null,
+            "bytes_returned": null,
+            "raw_source_bytes": false
+          }
+        ],
+        "clock_after_utc": null
+      },
+      {
+        "invocation": 2,
+        "command": "Python: list assigned participant files and stat sizes; read and print questions.json; check UTC elapsed",
+        "events": [
+          {
+            "kind": "directory_metadata_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo",
+            "bytes_returned": null
+          },
+          {
+            "kind": "file_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/questions.json",
+            "bytes_read": 1322
+          },
+          {
+            "kind": "script_stdout_read",
+            "path": null,
+            "bytes_returned": null,
+            "raw_source_bytes": false
+          }
+        ],
+        "clock_after_utc": "2026-10-13T02:23:53.149186+00:00",
+        "elapsed_seconds": 7.168294
+      },
+      {
+        "invocation": 3,
+        "command": "Python: read manifest.json, community.md, agent-value.md once each; print numbered lines; check UTC elapsed",
+        "events": [
+          {
+            "kind": "file_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/manifest.json",
+            "bytes_read": 908
+          },
+          {
+            "kind": "file_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/community.md",
+            "bytes_read": 4634
+          },
+          {
+            "kind": "file_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/redo/corpus/docs/agent-value.md",
+            "bytes_read": 4394
+          },
+          {
+            "kind": "script_stdout_read",
+            "path": null,
+            "bytes_returned": null,
+            "raw_source_bytes": false
+          }
+        ],
+        "clock_after_utc": "2026-10-13T02:24:00.433230+00:00",
+        "elapsed_seconds": 14.452338
+      },
+      {
+        "invocation": 4,
+        "command": "Python: create assigned output directory; construct and write final.json and account.md; reread and validate outputs; record final UTC and rewrite final.json; print final clock",
+        "events": [
+          {
+            "kind": "directory_create",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/redo"
+          },
+          {
+            "kind": "file_write",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/redo/final.json"
+          },
+          {
+            "kind": "file_write",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/redo/account.md"
+          },
+          {
+            "kind": "output_verification_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/redo/final.json",
+            "bytes_read": 14186
+          },
+          {
+            "kind": "output_verification_read",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/redo/account.md",
+            "bytes_read": 1331
+          },
+          {
+            "kind": "file_write",
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/redo/final.json"
+          },
+          {
+            "kind": "script_stdout_read",
+            "path": null,
+            "bytes_returned": null,
+            "raw_source_bytes": false
+          }
+        ],
+        "clock_after_utc": "2026-10-13T02:25:03.811552+00:00",
+        "elapsed_seconds": 77.83066
+      }
+    ],
+    "distinct_corpus_document_bytes": 9028,
+    "distinct_corpus_bytes_including_manifest": 9936,
+    "distinct_all_input_file_bytes": 14222,
+    "repeated_input_file_read_bytes": 0,
+    "model_visible_stdout_bytes": null,
+    "preparation_time_for_this_arm": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "billed_usd": null,
+    "model_identifier": null,
+    "reasoning": null,
+    "prior_knowledge_exposure": "Only parent assignment, official task #97 metadata, general workspace instructions and supplied redo prompt/questions/corpus were available for this work. No candidate report, reference labels, other arms, discussion or other study directories were inspected.",
+    "forbidden_material_exposure": false
+  },
+  "limitations": [
+    "This is one full independent-redo baseline by a fresh same-operator session, not independent external participation or a verification arm. No general cost advantage can be established.",
+    "Only supplied pinned documents were used; their assertions were not verified against live deployment, code or GitHub.",
+    "No exact model identifier, reasoning setting, token counts, billed cost or preparation telemetry was exposed; those fields are null.",
+    "Raw file-byte counts are measured; they are not tokens. Script stdout was model-visible output and is not added to raw source-byte totals; stdout byte counts are unavailable.",
+    "Clock checks were printed in invocations 2 and 3. Invocation 1 read the start clock before the prompt but did not read a second end clock; its elapsed check was delayed until invocation 2. Final timestamp is captured immediately before final measurement persistence, with a post-write clock in terminal stdout.",
+    "Official task administration (show, failed network show, escalated show and start) preceded measurement and is excluded as instructed. Isolation was procedural."
+  ],
+  "unresolved_ids": []
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "C01",
+    "question": "Does posting in the open discussion layer require prior maintainer approval?"
+  },
+  {
+    "id": "C02",
+    "question": "Which languages are welcome, and is translation mandatory?"
+  },
+  {
+    "id": "C03",
+    "question": "Does closing an Issue alone remove its Community post?"
+  },
+  {
+    "id": "C04",
+    "question": "Where do replies to Community posts remain?"
+  },
+  {
+    "id": "C05",
+    "question": "Who controls moderation and deployment?"
+  },
+  {
+    "id": "C06",
+    "question": "How many repository issue comments does each successful recent-discussion fetch initially read, and in which order?"
+  },
+  {
+    "id": "C07",
+    "question": "Does the recent-discussion export copy comment bodies or generate summaries?"
+  },
+  {
+    "id": "C08",
+    "question": "What happens to the published snapshot if API reads or builds fail?"
+  },
+  {
+    "id": "C09",
+    "question": "Can an Agent read and leave without joining or posting?"
+  },
+  {
+    "id": "C10",
+    "question": "Are technical access tests alone proof of external benefit?"
+  },
+  {
+    "id": "C11",
+    "question": "What evidence is required for claims of time, token or cost savings?"
+  },
+  {
+    "id": "C12",
+    "question": "Does adopting the development standard make the community autonomous?"
+  }
+]

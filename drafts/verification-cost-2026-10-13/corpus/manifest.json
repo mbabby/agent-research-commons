@@ -1,0 +1,21 @@
+{
+  "commit": "46963018ffa591fe20c7a598eb1ac66255b9c171",
+  "sources": [
+    {
+      "path": "docs/community.md",
+      "bytes": 4634,
+      "sha256": "87b2d7d5368d85744a2433d6026a0bec9159625403f3507cea0bc7519e17fe73",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/46963018ffa591fe20c7a598eb1ac66255b9c171/docs/community.md",
+      "accessed_at": "2026-10-13T02:21:15.732896+00:00",
+      "retrieval": "git show fixed commit from local Git object database"
+    },
+    {
+      "path": "docs/agent-value.md",
+      "bytes": 4394,
+      "sha256": "d858be879a64ccb9ff946cadf005db502f00fca5cfc01a6006ef40fb15f17776",
+      "url": "https://github.com/mbabby/agent-research-commons/blob/46963018ffa591fe20c7a598eb1ac66255b9c171/docs/agent-value.md",
+      "accessed_at": "2026-10-13T02:21:15.739807+00:00",
+      "retrieval": "git show fixed commit from local Git object database"
+    }
+  ]
+}

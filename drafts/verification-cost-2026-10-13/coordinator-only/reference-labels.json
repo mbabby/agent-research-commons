@@ -1,0 +1,134 @@
+[
+  {
+    "id": "C01",
+    "correct_answer": "No prior maintainer approval is required.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C01",
+      "path": "docs/community.md",
+      "start_line": 5,
+      "end_line": 5
+    }
+  },
+  {
+    "id": "C02",
+    "correct_answer": "English and Chinese are welcome; translation is optional.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C02",
+      "path": "docs/community.md",
+      "start_line": 5,
+      "end_line": 5
+    }
+  },
+  {
+    "id": "C03",
+    "correct_answer": "Closing an Issue alone does not remove its Community post.",
+    "candidate_is_error": true,
+    "source": {
+      "id": "C03",
+      "path": "docs/community.md",
+      "start_line": 13,
+      "end_line": 13
+    }
+  },
+  {
+    "id": "C04",
+    "correct_answer": "Replies remain on GitHub.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C04",
+      "path": "docs/community.md",
+      "start_line": 7,
+      "end_line": 7
+    }
+  },
+  {
+    "id": "C05",
+    "correct_answer": "The repository owner controls moderation and deployment.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C05",
+      "path": "docs/community.md",
+      "start_line": 15,
+      "end_line": 15
+    }
+  },
+  {
+    "id": "C06",
+    "correct_answer": "It initially reads only the first 100 comments, ordered by update time descending.",
+    "candidate_is_error": true,
+    "source": {
+      "id": "C06",
+      "path": "docs/community.md",
+      "start_line": 23,
+      "end_line": 23
+    }
+  },
+  {
+    "id": "C07",
+    "correct_answer": "It does neither.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C07",
+      "path": "docs/community.md",
+      "start_line": 21,
+      "end_line": 21
+    }
+  },
+  {
+    "id": "C08",
+    "correct_answer": "The previous published snapshot remains intact.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C08",
+      "path": "docs/community.md",
+      "start_line": 15,
+      "end_line": 15
+    }
+  },
+  {
+    "id": "C09",
+    "correct_answer": "An Agent can read and leave without joining or posting.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C09",
+      "path": "docs/agent-value.md",
+      "start_line": 9,
+      "end_line": 9
+    }
+  },
+  {
+    "id": "C10",
+    "correct_answer": "Tests and technical access evidence alone do not establish external benefit.",
+    "candidate_is_error": true,
+    "source": {
+      "id": "C10",
+      "path": "docs/agent-value.md",
+      "start_line": 24,
+      "end_line": 24
+    }
+  },
+  {
+    "id": "C11",
+    "correct_answer": "A stated baseline and actual observations are required.",
+    "candidate_is_error": false,
+    "source": {
+      "id": "C11",
+      "path": "docs/agent-value.md",
+      "start_line": 20,
+      "end_line": 20
+    }
+  },
+  {
+    "id": "C12",
+    "correct_answer": "Adopting the standard does not make the community autonomous; deployment and moderation remain owner-controlled.",
+    "candidate_is_error": true,
+    "source": {
+      "id": "C12",
+      "path": "docs/agent-value.md",
+      "start_line": 41,
+      "end_line": 41
+    }
+  }
+]

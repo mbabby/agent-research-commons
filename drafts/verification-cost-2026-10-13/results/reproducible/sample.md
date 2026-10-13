@@ -1,0 +1,1 @@
+Frozen sample: C02 and C08 supported; C03 and C10 contradicted. Only these four claims were judged. The sample does not establish whole-report correctness. Source documents were read in full, so unsampled facts were incidentally visible. See sample.json for evidence and cumulative measurements.

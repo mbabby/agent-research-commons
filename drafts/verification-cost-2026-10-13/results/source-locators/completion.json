@@ -1,0 +1,26 @@
+{
+  "first_work_start_utc": "2026-10-13T02:24:01.117047+00:00",
+  "sample_write_completed_elapsed_seconds": 57.270773,
+  "final_completion_utc": "2026-10-13T02:25:55.027864+00:00",
+  "total_elapsed_seconds": 113.910817,
+  "full_stage_incremental_elapsed_seconds": 56.640043999999996,
+  "invocation_count": 7,
+  "verification_reads": [
+    {
+      "path": "drafts/verification-cost-2026-10-13/results/source-locators/final.json",
+      "bytes": 13444,
+      "kind": "own_result"
+    },
+    {
+      "path": "drafts/verification-cost-2026-10-13/results/source-locators/sample.json",
+      "bytes": 7570,
+      "kind": "own_result_repeat"
+    }
+  ],
+  "script_stdout_read_event": {
+    "bytes": null,
+    "kind": "script_output_not_raw_source"
+  },
+  "sample_frozen_sha256": "5e6d70d74251995cada4df9249f09c3b2dd343c84db783ce644b49c6672ca127",
+  "endpoint_note": "Endpoint captured after final and account writes and validation, immediately before completion.json write and stdout emission."
+}

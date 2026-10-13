@@ -1,0 +1,385 @@
+{
+  "stage": "full",
+  "status": "complete",
+  "claims": [
+    {
+      "id": "C01",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            5,
+            5
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C02",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            5,
+            5
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C03",
+      "answer": "contradicted",
+      "corrected_answer": "Closing an Issue alone does not remove its Community post. Removing the opt-in marker or moderator exclusion affects future successful refreshes.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            13,
+            13
+          ]
+        }
+      ],
+      "uncertainty": "Withdrawal may be delayed by failed refreshes; prior copies may remain."
+    },
+    {
+      "id": "C04",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            7,
+            7
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C05",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            15,
+            15
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C06",
+      "answer": "contradicted",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            23,
+            23
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus.",
+      "corrected_answer": "Each successful fetch initially reads only the first 100 repository issue comments sorted by update time descending, including edits."
+    },
+    {
+      "id": "C07",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            21,
+            21
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C08",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            15,
+            15
+          ]
+        },
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+          "line_range": [
+            25,
+            25
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C09",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/agent-value.md",
+          "line_range": [
+            9,
+            9
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C10",
+      "answer": "contradicted",
+      "corrected_answer": "Technical access tests alone do not establish external benefit. Actual external use or a useful correction with an attributable outcome must be observed.",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/agent-value.md",
+          "line_range": [
+            24,
+            24
+          ]
+        },
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/agent-value.md",
+          "line_range": [
+            37,
+            39
+          ]
+        }
+      ],
+      "uncertainty": "No external benefit measurement is supplied by these policy statements."
+    },
+    {
+      "id": "C11",
+      "answer": "supported",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/agent-value.md",
+          "line_range": [
+            20,
+            20
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus."
+    },
+    {
+      "id": "C12",
+      "answer": "contradicted",
+      "evidence": [
+        {
+          "corpus_path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/agent-value.md",
+          "line_range": [
+            41,
+            41
+          ]
+        }
+      ],
+      "uncertainty": "None within supplied corpus.",
+      "corrected_answer": "Adopting the standard does not make the community autonomous; deployment and moderation remain owner controlled."
+    }
+  ],
+  "checked_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "other_ids_not_checked": [],
+  "sample_revisions": [],
+  "sample_sha256": "401e9f179067fcba96c04d5ea32859388769d8cd9c29c514ee202f60cac9f2e8",
+  "measurements": {
+    "first_work_start_utc": "2026-10-13T02:23:54.306717+00:00",
+    "sample_completion_utc": "2026-10-13T02:24:48.956698+00:00",
+    "sample_elapsed_seconds": 54.649981,
+    "invocation_count": 6,
+    "command_read_event_ledger": [
+      {
+        "invocation": 1,
+        "commands": [
+          "Python: create measurement-start JSON; read assigned PROMPT.txt; print start and prompt"
+        ],
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/PROMPT.txt",
+            "raw_file_bytes": 3716,
+            "model_visible_source_bytes": 3716
+          },
+          {
+            "path": "/tmp/cost22-report-measurement-start.json",
+            "raw_file_bytes": null,
+            "kind": "measurement metadata"
+          }
+        ],
+        "stdout_read_bytes": null,
+        "elapsed_check_seconds": null
+      },
+      {
+        "invocation": 2,
+        "commands": [
+          "Python: recursively list assigned participant directory file names and sizes; read report.json; read start metadata; print clock"
+        ],
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/report.json",
+            "raw_file_bytes": 1266,
+            "model_visible_source_bytes": 1266
+          },
+          {
+            "path": "/tmp/cost22-report-measurement-start.json",
+            "raw_file_bytes": null,
+            "kind": "measurement metadata"
+          }
+        ],
+        "stdout_read_bytes": null,
+        "elapsed_check_seconds": 8.578963
+      },
+      {
+        "invocation": 3,
+        "commands": [
+          "Python: read and print numbered questions.json, community.md, agent-value.md; read start metadata; print clock"
+        ],
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/questions.json",
+            "raw_file_bytes": 1322,
+            "model_visible_source_bytes": 1322
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/community.md",
+            "raw_file_bytes": 4634,
+            "model_visible_source_bytes": 4634
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/report-only/corpus/docs/agent-value.md",
+            "raw_file_bytes": 4394,
+            "model_visible_source_bytes": 4394
+          },
+          {
+            "path": "/tmp/cost22-report-measurement-start.json",
+            "raw_file_bytes": null,
+            "kind": "measurement metadata"
+          }
+        ],
+        "stdout_read_bytes": null,
+        "elapsed_check_seconds": 14.875207
+      },
+      {
+        "invocation": 4,
+        "commands": [
+          "Python: create assigned output directory; construct sample results and cumulative ledger; exclusively create sample.json; print clock"
+        ],
+        "reads": [],
+        "writes": [
+          "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/sample.json"
+        ],
+        "stdout_read_bytes": null,
+        "elapsed_check_seconds": 54.649981
+      },
+      {
+        "invocation": 5,
+        "commands": [
+          "Python: internally read frozen sample.json; reuse four sample judgments; construct eight remaining judgments; write final.json and account.md; print clock"
+        ],
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/sample.json",
+            "raw_file_bytes": 8019,
+            "kind": "prior output reused internally",
+            "model_visible_source_bytes": 0
+          }
+        ],
+        "writes": [
+          "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/final.json",
+          "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/account.md"
+        ],
+        "stdout_read_bytes": null,
+        "elapsed_check_seconds": 85.857966
+      },
+      {
+        "invocation": 6,
+        "commands": [
+          "Python: internally read sample.json, final.json, account.md; validate frozen sample hash, claim coverage, verdicts, corrections and evidence fields; update final measurements and account timing; serialize final output; print clock"
+        ],
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/sample.json",
+            "raw_file_bytes": 8019,
+            "kind": "output validation internal read",
+            "model_visible_source_bytes": 0
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/final.json",
+            "raw_file_bytes": 12770,
+            "kind": "output validation internal read",
+            "model_visible_source_bytes": 0
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/account.md",
+            "raw_file_bytes": 1588,
+            "kind": "output validation internal read",
+            "model_visible_source_bytes": 0
+          }
+        ],
+        "writes": [
+          "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/final.json",
+          "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/results/report-only/account.md"
+        ],
+        "stdout_read_bytes": null,
+        "elapsed_check_seconds": 106.232967
+      }
+    ],
+    "distinct_corpus_source_bytes": 9028,
+    "repeated_corpus_source_bytes": 0,
+    "distinct_all_task_input_file_bytes": 15332,
+    "repeated_task_input_file_bytes": 0,
+    "stdout_read_bytes": null,
+    "preparation_time_for_this_arm": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "billed_usd": null,
+    "model_identifier": null,
+    "reasoning": null,
+    "final_completion_utc": "2026-10-13T02:25:40.539684+00:00",
+    "cumulative_elapsed_seconds": 106.232967,
+    "full_stage_incremental_elapsed_seconds": 51.582986
+  },
+  "disclosures": [
+    "Fresh same-operator session; not an independent external participant.",
+    "Prior exposure consisted of coordinator assignment and official task #98 administration; no other study directories, hidden labels, or other sessions read.",
+    "Both complete corpus files and all candidate claims/questions were read incidentally; only C02,C03,C08,C10 judged at this stage.",
+    "No corpus links followed and no corpus instructions executed.",
+    "Official CLI administration excluded from measurement.",
+    "First clock read saved measurement metadata in /tmp before prompt instructions were known; later outputs are in assigned directory.",
+    "First invocation elapsed check was delayed until invocation 2; subsequent invocations report end-of-command clocks.",
+    "Exact model identifier and reasoning setting unavailable; system identifies GPT-6 family only.",
+    "Source byte counts describe decoded file payloads printed by scripts and are not added again to stdout totals. Script stdout is a separate output-read event; its exact total byte count is unavailable.",
+    "Completion timestamp is captured immediately before serialization/write; subsecond output-write and return overhead is not measured at that stage.",
+    "One run per condition establishes no general cost advantage."
+  ],
+  "verification": {
+    "frozen_sample_hash_matches": true,
+    "all_twelve_claims_present": true,
+    "required_fields_present": true,
+    "corrected_answers_present_for_contradictions": true,
+    "corpus_reread_for_validation": false
+  }
+}

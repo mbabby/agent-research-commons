@@ -1,0 +1,204 @@
+{
+  "stage": "sample",
+  "claims": [
+    {
+      "id": "C02",
+      "verdict": "supported",
+      "answer": "English and Chinese are welcome; translation is optional.",
+      "evidence": [
+        {
+          "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/community.md",
+          "start_line": 5,
+          "end_line": 5
+        }
+      ],
+      "uncertainty": "None for comparison with supplied pinned source; current external behavior was not tested."
+    },
+    {
+      "id": "C03",
+      "verdict": "contradicted",
+      "answer": "Closing an Issue alone does not remove its Community post. Withdrawal requires removing the opt-in marker or moderation and a successful refresh.",
+      "evidence": [
+        {
+          "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/community.md",
+          "start_line": 13,
+          "end_line": 13
+        }
+      ],
+      "uncertainty": "None for comparison with supplied pinned source; current external behavior was not tested."
+    },
+    {
+      "id": "C08",
+      "verdict": "supported",
+      "answer": "Failed API reads or builds leave the previous published snapshot intact.",
+      "evidence": [
+        {
+          "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/community.md",
+          "start_line": 15,
+          "end_line": 15
+        }
+      ],
+      "uncertainty": "None for comparison with supplied pinned source; current external behavior was not tested."
+    },
+    {
+      "id": "C10",
+      "verdict": "contradicted",
+      "answer": "Technical access tests alone do not prove external benefit; actual external use or useful correction with an attributable outcome must be observed.",
+      "evidence": [
+        {
+          "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/agent-value.md",
+          "start_line": 24,
+          "end_line": 24
+        },
+        {
+          "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/agent-value.md",
+          "start_line": 37,
+          "end_line": 39
+        }
+      ],
+      "uncertainty": "None for comparison with supplied pinned source; current external behavior was not tested."
+    }
+  ],
+  "checked_ids": [
+    "C02",
+    "C03",
+    "C08",
+    "C10"
+  ],
+  "other_ids_not_checked": [
+    "C01",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C09",
+    "C11",
+    "C12"
+  ],
+  "measurements": {
+    "first_work_start_utc": "2026-10-13T02:24:07.563917+00:00",
+    "sample_completion_utc": "2026-10-13T02:24:58.276484+00:00",
+    "final_completion_utc": null,
+    "elapsed_seconds": 50.71256685256958,
+    "tool_invocation_count": 5,
+    "ledger": [
+      {
+        "invocation": 1,
+        "command": "Python: start clock; write temporary timestamp; read PROMPT.txt",
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/PROMPT.txt",
+            "bytes": 3718,
+            "category": "instructions"
+          }
+        ],
+        "output_read": {
+          "kind": "script stdout",
+          "bytes": null
+        },
+        "elapsed_check_seconds": null
+      },
+      {
+        "invocation": 2,
+        "command": "Python: enumerate assigned directory files and sizes; read temporary clock",
+        "reads": [
+          {
+            "path": "/tmp/cost22-data-measurement-start.txt",
+            "bytes": null,
+            "category": "measurement"
+          }
+        ],
+        "output_read": {
+          "kind": "script stdout",
+          "bytes": null
+        },
+        "elapsed_check_seconds": 5.898990631103516
+      },
+      {
+        "invocation": 3,
+        "command": "Python: read report, questions, locators, reproduction code",
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/report.json",
+            "bytes": 1266,
+            "category": "task aid"
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/questions.json",
+            "bytes": 1322,
+            "category": "task aid"
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/locators.json",
+            "bytes": 1203,
+            "category": "task aid"
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/reproduce.py",
+            "bytes": 774,
+            "category": "task aid"
+          }
+        ],
+        "output_read": {
+          "kind": "script stdout",
+          "bytes": null
+        },
+        "elapsed_check_seconds": 12.727983713150024
+      },
+      {
+        "invocation": 4,
+        "command": "Python: read manifest and both corpus documents; print numbered lines",
+        "reads": [
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/manifest.json",
+            "bytes": 908,
+            "category": "manifest"
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/community.md",
+            "bytes": 4634,
+            "category": "source"
+          },
+          {
+            "path": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/verification-cost-2026-10-13/participants/reproducible/corpus/docs/agent-value.md",
+            "bytes": 4394,
+            "category": "source"
+          }
+        ],
+        "output_read": {
+          "kind": "script stdout",
+          "bytes": null
+        },
+        "elapsed_check_seconds": 18.409788846969604
+      },
+      {
+        "invocation": 5,
+        "command": "Python: write frozen sample.json and sample.md from observed evidence",
+        "reads": [],
+        "output_read": {
+          "kind": "script stdout",
+          "bytes": null
+        },
+        "elapsed_check_seconds": 50.71256685256958
+      }
+    ],
+    "distinct_source_bytes": 9028,
+    "repeated_source_read_bytes": 0,
+    "source_bytes_returned_as_text": 9028,
+    "model_visible_stdout_bytes": null,
+    "preparation_time_for_this_arm": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "billed_usd": null,
+    "model_identifier": null,
+    "reasoning_setting": null,
+    "exposure": "Fresh same-operator session; official task #100 metadata and assignment known. All candidate claims/questions/locators and both complete supplied source documents were read, incidentally exposing unsampled facts. No judgments for unsampled claims at this stage. No hidden labels, other arms, or discussions read.",
+    "limitations": [
+      "Protocol isolation is procedural. One paired run cannot establish general cost advantage.",
+      "Timestamp was written to /tmp before reading the prompt restricting work to assigned directories, and read once for timing. No study material outside assigned directory was inspected.",
+      "First invocation printed start time but did not perform a second clock check after prompt read; later invocations check elapsed time.",
+      "Exact model identifier, reasoning setting, tokens, billing and stdout byte telemetry unavailable.",
+      "Official CLI show/start administration excluded from arm timer and invocation count."
+    ]
+  }
+}
