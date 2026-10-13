@@ -1,0 +1,28 @@
+{
+  "preregistration_url": "https://github.com/mbabby/agent-research-commons/issues/22#issuecomment-6136819642",
+  "sessions": {
+    "redo": {
+      "task": 97,
+      "session": "/root/cost22_redo"
+    },
+    "report-only": {
+      "task": 98,
+      "session": "/root/cost22_report"
+    },
+    "source-locators": {
+      "task": 99,
+      "session": "/root/cost22_locators"
+    },
+    "reproducible": {
+      "task": 100,
+      "session": "/root/cost22_data"
+    }
+  },
+  "fork_turns": "none",
+  "model_override": null,
+  "model_runtime_telemetry": null,
+  "administrative_wrapper": "Show assigned task; verify agent ID and attempt 1; start via arc.cli before experimental timer; read only assigned PROMPT.txt and materials, begin clock before prompt read; no other study directories or discussions; no spawning; root handles submission.",
+  "wrapper_deviation": "Reproducible wrapper initially included a duplicated repository path followed immediately by the explicit correct path; no retry or outcome-based rerun authorized.",
+  "created_at": "2026-10-13T02:23:58.117374+00:00",
+  "automation": "PAUSED; unchanged"
+}

@@ -1,0 +1,449 @@
+{
+  "status": "bounded pilot; not full task acceptance",
+  "integrity": {
+    "FROZEN-MANIFEST.json": {
+      "manifest_sha256": "177736fd2ba446cc9fb72a29186539125c8ce2dd5a27728fd1e64f04bdf00b70",
+      "verified_file_count": 35
+    },
+    "RESULTS-LOCK.json": {
+      "manifest_sha256": "bc44034bbdacc3cab9057d569af834af5fcaf115248bb6eef61271c1611eac97",
+      "verified_file_count": 13
+    }
+  },
+  "preregistration_url": "https://github.com/mbabby/agent-research-commons/issues/22#issuecomment-6136819642",
+  "author_preparation": {
+    "role": "material designer, not participant",
+    "measurement_start": "2026-10-13T02:19:45+00:00",
+    "measurement_end": "2026-10-13T02:22:36.807927+00:00",
+    "measured_elapsed_seconds": 171.807927,
+    "pre_timer_work": "Preliminary instruction, live task and corpus reading occurred before the timer; duration unknown, not zero.",
+    "input_tokens": null,
+    "output_tokens": null,
+    "billed_usd": null,
+    "per_format_total_author_cost": null,
+    "tool_work": "See author-package-build-events.json for mechanical intervals. Measured interval includes design, prompt/protocol writing and mechanics QA. Shell-reported process times are not Agent labor.",
+    "validation": "equal report content; pinned source hashes in all four inputs; 12 script source excerpts; four reference errors",
+    "participant_runs_started": false
+  },
+  "arms": {
+    "redo": {
+      "full_raw_elapsed_seconds": 77.83066,
+      "full_postwrite_elapsed_seconds": null,
+      "comparison_elapsed_seconds": 77.83066,
+      "comparison_timing_boundary": "raw final recorded boundary; last persistence may be excluded",
+      "invocations": 4,
+      "source_read_proxy": {
+        "source_file_read_events": 2,
+        "source_file_bytes_read": 9028,
+        "distinct_source_file_bytes": 9028,
+        "repeated_source_file_read_bytes": 0,
+        "events": [
+          {
+            "path": "community.md",
+            "bytes": 4634,
+            "visibility": "file_read"
+          },
+          {
+            "path": "agent-value.md",
+            "bytes": 4394,
+            "visibility": "file_read"
+          }
+        ],
+        "note": "File I/O proxy only; may include internal reads. Not model attention, tokens, or billing."
+      },
+      "answer_record_count": 12,
+      "semantic_correct_answers": null,
+      "semantic_supported_answers": null,
+      "detection_metrics": null
+    },
+    "report-only": {
+      "full_raw_elapsed_seconds": 106.232967,
+      "full_postwrite_elapsed_seconds": null,
+      "comparison_elapsed_seconds": 106.232967,
+      "comparison_timing_boundary": "raw final recorded boundary; last persistence may be excluded",
+      "invocations": 6,
+      "source_read_proxy": {
+        "source_file_read_events": 2,
+        "source_file_bytes_read": 9028,
+        "distinct_source_file_bytes": 9028,
+        "repeated_source_file_read_bytes": 0,
+        "events": [
+          {
+            "path": "community.md",
+            "bytes": 4634,
+            "visibility": null
+          },
+          {
+            "path": "agent-value.md",
+            "bytes": 4394,
+            "visibility": null
+          }
+        ],
+        "note": "File I/O proxy only; may include internal reads. Not model attention, tokens, or billing."
+      },
+      "answer_record_count": 12,
+      "semantic_correct_answers": null,
+      "semantic_supported_answers": null,
+      "sample": {
+        "tp": 2,
+        "fn_report_wide": 2,
+        "fp": 0,
+        "error_denominator_report_wide": 4,
+        "recall_report_wide": 0.5,
+        "error_denominator_checked_only": 2,
+        "recall_checked_only": 1.0,
+        "correct_denominator_report_wide": 8,
+        "false_positive_rate_report_wide": 0.0,
+        "correct_denominator_checked_only": 2,
+        "false_positive_rate_checked_only": 0.0,
+        "checked": 4,
+        "unchecked": 8,
+        "unresolved_checked": 0,
+        "wrong_validations": 0,
+        "flagged_ids": [
+          "C03",
+          "C10"
+        ],
+        "normalized_verdicts": {
+          "C02": "supported",
+          "C03": "contradicted",
+          "C08": "supported",
+          "C10": "contradicted"
+        },
+        "semantic_answer_accuracy": null,
+        "semantic_grading_status": "not computed here; see independent_audit"
+      },
+      "full": {
+        "tp": 4,
+        "fn_report_wide": 0,
+        "fp": 0,
+        "error_denominator_report_wide": 4,
+        "recall_report_wide": 1.0,
+        "error_denominator_checked_only": 4,
+        "recall_checked_only": 1.0,
+        "correct_denominator_report_wide": 8,
+        "false_positive_rate_report_wide": 0.0,
+        "correct_denominator_checked_only": 8,
+        "false_positive_rate_checked_only": 0.0,
+        "checked": 12,
+        "unchecked": 0,
+        "unresolved_checked": 0,
+        "wrong_validations": 0,
+        "flagged_ids": [
+          "C03",
+          "C06",
+          "C10",
+          "C12"
+        ],
+        "normalized_verdicts": {
+          "C01": "supported",
+          "C02": "supported",
+          "C03": "contradicted",
+          "C04": "supported",
+          "C05": "supported",
+          "C06": "contradicted",
+          "C07": "supported",
+          "C08": "supported",
+          "C09": "supported",
+          "C10": "contradicted",
+          "C11": "supported",
+          "C12": "contradicted"
+        },
+        "semantic_answer_accuracy": null,
+        "semantic_grading_status": "not computed here; see independent_audit"
+      },
+      "sample_raw_elapsed_seconds": 54.649981,
+      "sample_postwrite_elapsed_seconds": null,
+      "full_incremental_raw_seconds": 51.582986000000005,
+      "sample_revisions_raw": [],
+      "sample_verdict_changes_computed": [],
+      "measured_shared_author_plus_comparison_seconds": 278.040894,
+      "verifier_only_time_ratio_to_redo": 1.3649244012578077
+    },
+    "source-locators": {
+      "full_raw_elapsed_seconds": 113.910203,
+      "full_postwrite_elapsed_seconds": 113.910817,
+      "comparison_elapsed_seconds": 113.910817,
+      "comparison_timing_boundary": "Endpoint captured after final and account writes and validation, immediately before completion.json write and stdout emission.",
+      "invocations": 7,
+      "source_read_proxy": {
+        "source_file_read_events": 4,
+        "source_file_bytes_read": 18056,
+        "distinct_source_file_bytes": 9028,
+        "repeated_source_file_read_bytes": 9028,
+        "events": [
+          {
+            "path": "community.md",
+            "bytes": 4634,
+            "visibility": "internal_source"
+          },
+          {
+            "path": "agent-value.md",
+            "bytes": 4394,
+            "visibility": "internal_source"
+          },
+          {
+            "path": "community.md",
+            "bytes": 4634,
+            "visibility": "internal_source"
+          },
+          {
+            "path": "agent-value.md",
+            "bytes": 4394,
+            "visibility": "internal_source"
+          }
+        ],
+        "note": "File I/O proxy only; may include internal reads. Not model attention, tokens, or billing."
+      },
+      "answer_record_count": 12,
+      "semantic_correct_answers": null,
+      "semantic_supported_answers": null,
+      "sample": {
+        "tp": 2,
+        "fn_report_wide": 2,
+        "fp": 0,
+        "error_denominator_report_wide": 4,
+        "recall_report_wide": 0.5,
+        "error_denominator_checked_only": 2,
+        "recall_checked_only": 1.0,
+        "correct_denominator_report_wide": 8,
+        "false_positive_rate_report_wide": 0.0,
+        "correct_denominator_checked_only": 2,
+        "false_positive_rate_checked_only": 0.0,
+        "checked": 4,
+        "unchecked": 8,
+        "unresolved_checked": 0,
+        "wrong_validations": 0,
+        "flagged_ids": [
+          "C03",
+          "C10"
+        ],
+        "normalized_verdicts": {
+          "C02": "supported",
+          "C03": "contradicted",
+          "C08": "supported",
+          "C10": "contradicted"
+        },
+        "semantic_answer_accuracy": null,
+        "semantic_grading_status": "not computed here; see independent_audit"
+      },
+      "full": {
+        "tp": 4,
+        "fn_report_wide": 0,
+        "fp": 0,
+        "error_denominator_report_wide": 4,
+        "recall_report_wide": 1.0,
+        "error_denominator_checked_only": 4,
+        "recall_checked_only": 1.0,
+        "correct_denominator_report_wide": 8,
+        "false_positive_rate_report_wide": 0.0,
+        "correct_denominator_checked_only": 8,
+        "false_positive_rate_checked_only": 0.0,
+        "checked": 12,
+        "unchecked": 0,
+        "unresolved_checked": 0,
+        "wrong_validations": 0,
+        "flagged_ids": [
+          "C03",
+          "C06",
+          "C10",
+          "C12"
+        ],
+        "normalized_verdicts": {
+          "C01": "supported",
+          "C02": "supported",
+          "C03": "contradicted",
+          "C04": "supported",
+          "C05": "supported",
+          "C06": "contradicted",
+          "C07": "supported",
+          "C08": "supported",
+          "C09": "supported",
+          "C10": "contradicted",
+          "C11": "supported",
+          "C12": "contradicted"
+        },
+        "semantic_answer_accuracy": null,
+        "semantic_grading_status": "not computed here; see independent_audit"
+      },
+      "sample_raw_elapsed_seconds": 57.270466,
+      "sample_postwrite_elapsed_seconds": 57.270773,
+      "full_incremental_raw_seconds": 56.639737,
+      "sample_revisions_raw": [],
+      "sample_verdict_changes_computed": [],
+      "full_incremental_postwrite_seconds": 56.640043999999996,
+      "measured_shared_author_plus_comparison_seconds": 285.718744,
+      "verifier_only_time_ratio_to_redo": 1.4635725432625137
+    },
+    "reproducible": {
+      "full_raw_elapsed_seconds": 87.90403985977173,
+      "full_postwrite_elapsed_seconds": null,
+      "comparison_elapsed_seconds": 87.90403985977173,
+      "comparison_timing_boundary": "raw final recorded boundary; last persistence may be excluded",
+      "invocations": 6,
+      "source_read_proxy": {
+        "source_file_read_events": 4,
+        "source_file_bytes_read": 18056,
+        "distinct_source_file_bytes": 9028,
+        "repeated_source_file_read_bytes": 9028,
+        "events": [
+          {
+            "path": "community.md",
+            "bytes": 4634,
+            "visibility": null
+          },
+          {
+            "path": "agent-value.md",
+            "bytes": 4394,
+            "visibility": null
+          },
+          {
+            "path": "community.md",
+            "bytes": 4634,
+            "visibility": "script-internal hash verification only"
+          },
+          {
+            "path": "agent-value.md",
+            "bytes": 4394,
+            "visibility": "script-internal hash verification only"
+          }
+        ],
+        "note": "File I/O proxy only; may include internal reads. Not model attention, tokens, or billing."
+      },
+      "answer_record_count": 12,
+      "semantic_correct_answers": null,
+      "semantic_supported_answers": null,
+      "sample": {
+        "tp": 2,
+        "fn_report_wide": 2,
+        "fp": 0,
+        "error_denominator_report_wide": 4,
+        "recall_report_wide": 0.5,
+        "error_denominator_checked_only": 2,
+        "recall_checked_only": 1.0,
+        "correct_denominator_report_wide": 8,
+        "false_positive_rate_report_wide": 0.0,
+        "correct_denominator_checked_only": 2,
+        "false_positive_rate_checked_only": 0.0,
+        "checked": 4,
+        "unchecked": 8,
+        "unresolved_checked": 0,
+        "wrong_validations": 0,
+        "flagged_ids": [
+          "C03",
+          "C10"
+        ],
+        "normalized_verdicts": {
+          "C02": "supported",
+          "C03": "contradicted",
+          "C08": "supported",
+          "C10": "contradicted"
+        },
+        "semantic_answer_accuracy": null,
+        "semantic_grading_status": "not computed here; see independent_audit"
+      },
+      "full": {
+        "tp": 4,
+        "fn_report_wide": 0,
+        "fp": 0,
+        "error_denominator_report_wide": 4,
+        "recall_report_wide": 1.0,
+        "error_denominator_checked_only": 4,
+        "recall_checked_only": 1.0,
+        "correct_denominator_report_wide": 8,
+        "false_positive_rate_report_wide": 0.0,
+        "correct_denominator_checked_only": 8,
+        "false_positive_rate_checked_only": 0.0,
+        "checked": 12,
+        "unchecked": 0,
+        "unresolved_checked": 0,
+        "wrong_validations": 0,
+        "flagged_ids": [
+          "C03",
+          "C06",
+          "C10",
+          "C12"
+        ],
+        "normalized_verdicts": {
+          "C01": "supported",
+          "C02": "supported",
+          "C03": "contradicted",
+          "C04": "supported",
+          "C05": "supported",
+          "C06": "contradicted",
+          "C07": "supported",
+          "C08": "supported",
+          "C09": "supported",
+          "C10": "contradicted",
+          "C11": "supported",
+          "C12": "contradicted"
+        },
+        "semantic_answer_accuracy": null,
+        "semantic_grading_status": "not computed here; see independent_audit"
+      },
+      "sample_raw_elapsed_seconds": 50.71256685256958,
+      "sample_postwrite_elapsed_seconds": null,
+      "full_incremental_raw_seconds": 37.19147300720215,
+      "sample_revisions_raw": [],
+      "sample_verdict_changes_computed": [],
+      "measured_shared_author_plus_comparison_seconds": 259.71196685977174,
+      "script_execution": "Provided reproduction script inspected, not executed; package-available condition only.",
+      "internal_hash_read_bytes_reported": 9028,
+      "script_potential_reads_not_observed": {
+        "read_events": 14,
+        "bytes": 63676,
+        "note": "Design-auditor calculation if reproduce.py ran; not participant usage and excluded from measured I/O."
+      },
+      "verifier_only_time_ratio_to_redo": 1.1294268847234719
+    }
+  },
+  "semantic_quality": "Designer does not grade semantic answers; see separately attributed independent_audit.",
+  "input_tokens": null,
+  "output_tokens": null,
+  "billed_usd": null,
+  "independent_audit": {
+    "path": "review/results-audit.md",
+    "sha256": "79f65841222a98855c19e964be6e576393ade3e7ac67df2e8f494c08cfdb54d8",
+    "reviewer": "/root/cost22_auditor",
+    "relationship": "separate session, same operator",
+    "reported_redo_correct_answers": 12,
+    "reported_redo_evidence_supported_answers": 12,
+    "reported_full_verifier_correct_answers_each": 12,
+    "reported_full_verifier_correct_corrections_each": 4,
+    "reported_sample_correct_answers_each": 4,
+    "disposition": "reviewed partial pilot; full #22 acceptance not recommended",
+    "provenance_note": "These numbers transcribe the separate auditor finding; analyze.py does not perform semantic grading."
+  },
+  "separate_review_measurements": [
+    {
+      "path": "review/design-audit.md",
+      "elapsed_seconds": 97,
+      "boundary": "initial prose writing; unknown bootstrap excluded"
+    },
+    {
+      "path": "review/results-audit.md",
+      "elapsed_seconds": 125,
+      "start_utc": "2026-10-13T02:26:29Z",
+      "end_utc": "2026-10-13T02:28:34Z"
+    },
+    {
+      "path": "review/redo-checks-report.md",
+      "elapsed_seconds": 58.497169,
+      "start_utc": "2026-10-13T02:26:37.354820+00:00",
+      "end_utc": "2026-10-13T02:27:35.851989+00:00"
+    },
+    {
+      "path": "review/report-checks-redo-locators.md",
+      "elapsed_seconds": 73.583732,
+      "start_utc": "2026-10-13T02:26:41.116637+00:00",
+      "end_utc": "2026-10-13T02:27:54.700369+00:00"
+    },
+    {
+      "path": "review/locators-checks-data.md",
+      "elapsed_seconds": 54.16662,
+      "start_utc": "2026-10-13T02:26:49.113003+00:00",
+      "end_utc": "2026-10-13T02:27:43.279623+00:00"
+    }
+  ],
+  "coordinator_total_seconds": null
+}

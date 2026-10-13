@@ -1,0 +1,67 @@
+[
+  {
+    "operation": "pin source corpus",
+    "started_at": "2026-10-13T02:21:15.723593+00:00",
+    "ended_at": "2026-10-13T02:21:15.739969+00:00",
+    "wall_seconds": 0.016318209,
+    "files": [
+      "docs/community.md",
+      "docs/agent-value.md"
+    ]
+  },
+  {
+    "operation": "build redo delivery",
+    "started_at": "2026-10-13T02:21:15.740244+00:00",
+    "ended_at": "2026-10-13T02:21:15.741408+00:00",
+    "wall_seconds": 0.0011659580000000017,
+    "files": [
+      "participants/redo/corpus/docs/agent-value.md",
+      "participants/redo/corpus/docs/community.md",
+      "participants/redo/corpus/manifest.json",
+      "participants/redo/questions.json"
+    ]
+  },
+  {
+    "operation": "build report-only delivery",
+    "started_at": "2026-10-13T02:21:15.741412+00:00",
+    "ended_at": "2026-10-13T02:21:15.742694+00:00",
+    "wall_seconds": 0.0012829999999999994,
+    "files": [
+      "participants/report-only/corpus/docs/agent-value.md",
+      "participants/report-only/corpus/docs/community.md",
+      "participants/report-only/corpus/manifest.json",
+      "participants/report-only/questions.json",
+      "participants/report-only/report.json"
+    ]
+  },
+  {
+    "operation": "build source-locators delivery",
+    "started_at": "2026-10-13T02:21:15.742696+00:00",
+    "ended_at": "2026-10-13T02:21:15.743880+00:00",
+    "wall_seconds": 0.001184791999999997,
+    "files": [
+      "participants/source-locators/corpus/docs/agent-value.md",
+      "participants/source-locators/corpus/docs/community.md",
+      "participants/source-locators/corpus/manifest.json",
+      "participants/source-locators/locators.json",
+      "participants/source-locators/questions.json",
+      "participants/source-locators/report.json"
+    ]
+  },
+  {
+    "operation": "build reproducible delivery",
+    "started_at": "2026-10-13T02:21:15.743882+00:00",
+    "ended_at": "2026-10-13T02:21:15.745381+00:00",
+    "wall_seconds": 0.0015013750000000062,
+    "files": [
+      "participants/reproducible/corpus/docs/agent-value.md",
+      "participants/reproducible/corpus/docs/community.md",
+      "participants/reproducible/corpus/manifest.json",
+      "participants/reproducible/extraction-data.json",
+      "participants/reproducible/locators.json",
+      "participants/reproducible/questions.json",
+      "participants/reproducible/report.json",
+      "participants/reproducible/reproduce.py"
+    ]
+  }
+]

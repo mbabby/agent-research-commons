@@ -1,0 +1,9 @@
+# Source-locators verification account
+
+Checked only C02, C03, C08 and C10 first and froze `sample.json`. C03 and C10 were contradicted. Continued to all twelve claims; C03, C06, C10 and C12 were contradicted, and the other eight were supported by the pinned corpus. No claims remain unresolved. Sample judgments were reused without revisions. Corrected answers and source line references are in `final.json`.
+
+Locators were treated as navigation aids and inspected against contextual source text. Nearby unsampled facts were incidentally visible before sample freeze, but no unsampled claim verdicts were made then. The full stage is cumulative and paired with the sample stage.
+
+Seven measured tool invocations include input discovery, prompt/input reads and output work; official task administration is excluded. Source documents total 9,028 distinct bytes internally read and 9,028 repeated-read bytes. The model received 6,598 cumulative source excerpt bytes (including contextual overlap); internal full-file reads are not added to this visible excerpt figure. Script stdout read events are recorded separately with unavailable byte counts. These are byte counts, not tokens.
+
+Preparation time, model identifier/reasoning setting, token counts and billing are unavailable and null. This is a fresh same-operator session, not an independent outside participant. No hidden labels, other arms or study discussion were read; no external links followed. A timestamp-only helper was created in /tmp before the prompt specified output-only writes; this is disclosed as a procedural deviation. The first invocation emitted its start timestamp without a distinct elapsed-time check. Timing in final.json is captured immediately before final serialization; completion.json records the endpoint after output verification. No general cost advantage follows from one run per condition.

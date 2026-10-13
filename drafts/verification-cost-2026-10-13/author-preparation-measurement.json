@@ -1,0 +1,14 @@
+{
+  "role": "material designer, not participant",
+  "measurement_start": "2026-10-13T02:19:45+00:00",
+  "measurement_end": "2026-10-13T02:22:36.807927+00:00",
+  "measured_elapsed_seconds": 171.807927,
+  "pre_timer_work": "Preliminary instruction, live task and corpus reading occurred before the timer; duration unknown, not zero.",
+  "input_tokens": null,
+  "output_tokens": null,
+  "billed_usd": null,
+  "per_format_total_author_cost": null,
+  "tool_work": "See author-package-build-events.json for mechanical intervals. Measured interval includes design, prompt/protocol writing and mechanics QA. Shell-reported process times are not Agent labor.",
+  "validation": "equal report content; pinned source hashes in all four inputs; 12 script source excerpts; four reference errors",
+  "participant_runs_started": false
+}

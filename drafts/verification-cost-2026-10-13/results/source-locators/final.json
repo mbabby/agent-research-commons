@@ -1,0 +1,403 @@
+{
+  "stage": "full",
+  "claims": [
+    {
+      "id": "C01",
+      "verdict": "supported",
+      "answer": "No prior maintainer approval is required for the open discussion layer.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 5,
+          "end_line": 5
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C02",
+      "verdict": "supported",
+      "answer": "English and Chinese are welcome; translation is optional.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 5,
+          "end_line": 5
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C03",
+      "verdict": "contradicted",
+      "answer": "Closing an Issue alone does not remove its Community post. Remove the opt-in marker or use moderation exclusion; withdrawal requires a successful refresh.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 13,
+          "end_line": 13
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C04",
+      "verdict": "supported",
+      "answer": "Replies remain on GitHub.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 7,
+          "end_line": 7
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C05",
+      "verdict": "supported",
+      "answer": "The repository owner controls moderation and deployment.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 15,
+          "end_line": 15
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C06",
+      "verdict": "contradicted",
+      "answer": "Each successful fetch initially reads only the first 100 repository issue comments, sorted by update time descending, including edits.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 23,
+          "end_line": 23
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C07",
+      "verdict": "supported",
+      "answer": "The recent-discussion export neither copies comment bodies nor generates summaries.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 21,
+          "end_line": 21
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C08",
+      "verdict": "supported",
+      "answer": "Failed API reads or builds leave the previous published snapshot intact.",
+      "evidence": [
+        {
+          "path": "corpus/docs/community.md",
+          "start_line": 15,
+          "end_line": 15
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C09",
+      "verdict": "supported",
+      "answer": "An Agent can read and leave without joining or posting.",
+      "evidence": [
+        {
+          "path": "corpus/docs/agent-value.md",
+          "start_line": 9,
+          "end_line": 9
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C10",
+      "verdict": "contradicted",
+      "answer": "Technical access tests alone do not establish external benefit; value requires evidence beyond tests or deployment.",
+      "evidence": [
+        {
+          "path": "corpus/docs/agent-value.md",
+          "start_line": 24,
+          "end_line": 24
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C11",
+      "verdict": "supported",
+      "answer": "Time, token or cost savings require a stated baseline and actual observations.",
+      "evidence": [
+        {
+          "path": "corpus/docs/agent-value.md",
+          "start_line": 20,
+          "end_line": 20
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    },
+    {
+      "id": "C12",
+      "verdict": "contradicted",
+      "answer": "Adopting the development standard does not make the community autonomous; owner-controlled deployment and moderation remain.",
+      "evidence": [
+        {
+          "path": "corpus/docs/agent-value.md",
+          "start_line": 41,
+          "end_line": 41
+        }
+      ],
+      "uncertainty": "None identified in supplied pinned text."
+    }
+  ],
+  "checked_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "unresolved_ids": [],
+  "sample_revisions": [],
+  "sample_frozen_sha256": "5e6d70d74251995cada4df9249f09c3b2dd343c84db783ce644b49c6672ca127",
+  "measurements": {
+    "first_work_start_utc": "2026-10-13T02:24:01.117047+00:00",
+    "sample_completion_utc": "2026-10-13T02:24:58.387513+00:00",
+    "final_completion_utc": "2026-10-13T02:25:55.027250+00:00",
+    "elapsed_seconds": 113.910203,
+    "invocation_count": 7,
+    "ledger": [
+      {
+        "invocation": 1,
+        "command": "Python timestamp capture, write temporary timestamp, read assigned PROMPT.txt",
+        "reads": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/PROMPT.txt",
+            "bytes": 3724,
+            "kind": "prompt"
+          }
+        ],
+        "elapsed_check_seconds": 0.0,
+        "note": "First invocation captured start but did not emit a separate elapsed check; start timestamp was emitted.",
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        },
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        }
+      },
+      {
+        "invocation": 2,
+        "command": "Python inventory of assigned participant directory and file sizes; read start timestamp",
+        "reads": [],
+        "elapsed_check_seconds": 8.155381,
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        },
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        }
+      },
+      {
+        "invocation": 3,
+        "command": "Python read questions.json, report.json and locators.json; read start timestamp",
+        "reads": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/questions.json",
+            "bytes": 1322,
+            "kind": "input"
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/report.json",
+            "bytes": 1266,
+            "kind": "input"
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/locators.json",
+            "bytes": 1203,
+            "kind": "input"
+          }
+        ],
+        "elapsed_check_seconds": 16.486637,
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        },
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        }
+      },
+      {
+        "invocation": 4,
+        "command": "Python internal reads of two source documents, emit selected contextual lines; read start timestamp",
+        "reads": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/community.md",
+            "bytes": 4634,
+            "kind": "internal_source"
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/agent-value.md",
+            "bytes": 4394,
+            "kind": "internal_source"
+          }
+        ],
+        "model_visible_source_ranges": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/community.md",
+            "start_line": 3,
+            "end_line": 7,
+            "bytes": 860
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/community.md",
+            "start_line": 11,
+            "end_line": 15,
+            "bytes": 1239
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/agent-value.md",
+            "start_line": 22,
+            "end_line": 26,
+            "bytes": 559
+          }
+        ],
+        "elapsed_check_seconds": 24.521652,
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        },
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        }
+      },
+      {
+        "invocation": 5,
+        "command": "Python read start timestamp, create output directory, construct and exclusively write sample.json",
+        "reads": [],
+        "elapsed_check_seconds": 57.270466,
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        },
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        },
+        "elapsed_check_seconds_after_write": 57.270773
+      },
+      {
+        "invocation": 6,
+        "command": "Python internal reads of both source documents and emit remaining contextual excerpts; read start timestamp",
+        "reads": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/community.md",
+            "bytes": 4634,
+            "kind": "internal_source"
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/agent-value.md",
+            "bytes": 4394,
+            "kind": "internal_source"
+          }
+        ],
+        "model_visible_source_ranges": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/community.md",
+            "start_line": 19,
+            "end_line": 25,
+            "bytes": 1760
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/agent-value.md",
+            "start_line": 7,
+            "end_line": 11,
+            "bytes": 496
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/agent-value.md",
+            "start_line": 18,
+            "end_line": 22,
+            "bytes": 1184
+          },
+          {
+            "path": "drafts/verification-cost-2026-10-13/participants/source-locators/corpus/docs/agent-value.md",
+            "start_line": 39,
+            "end_line": 41,
+            "bytes": 500
+          }
+        ],
+        "elapsed_check_seconds": 67.722177,
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        },
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        }
+      },
+      {
+        "invocation": 7,
+        "command": "Python read frozen sample.json and timestamp; construct final results, write account.md and final.json, validate final claims and sample digest; write completion.json",
+        "reads": [
+          {
+            "path": "drafts/verification-cost-2026-10-13/results/source-locators/sample.json",
+            "bytes": 7570,
+            "kind": "own_result"
+          }
+        ],
+        "script_stdout_read_event": {
+          "bytes": null,
+          "kind": "script_output_not_raw_source"
+        },
+        "timing_file_read": {
+          "path": "/tmp/cost22-locators-measurement-start.txt",
+          "bytes": 19
+        },
+        "elapsed_check_seconds": 113.910203
+      }
+    ],
+    "distinct_source_bytes_internally_read": 9028,
+    "repeated_source_read_bytes": 9028,
+    "model_visible_source_excerpt_bytes": 6598,
+    "preparation_time_for_this_arm": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "billed_usd": null,
+    "actual_model_identifier": null,
+    "reasoning_setting": null,
+    "prior_knowledge_exposure": "Fresh same-operator child session; saw assigned official task 99 metadata and experiment prompt only. No other study directories, labels or other-session results read. Nearby unsampled facts incidentally visible in sampled context; no unsampled judgments yet.",
+    "limitations": [
+      "Procedural isolation only.",
+      "Timestamp helper written to /tmp before prompt specified assigned output-only writes; no research content stored there.",
+      "Script stdout bytes unavailable; not counted as source bytes.",
+      "Timing timestamps captured immediately before result serialization/write; final timing log will include write completion.",
+      "Official CLI show/start excluded; no telemetry for tokens or billed cost.",
+      "One run per condition cannot establish general cost advantage."
+    ],
+    "sample_write_completed_elapsed_seconds": 57.270773,
+    "full_stage_incremental_elapsed_seconds": 56.63943
+  }
+}

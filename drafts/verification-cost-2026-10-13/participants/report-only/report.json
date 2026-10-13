@@ -1,0 +1,53 @@
+{
+  "title": "Candidate answers to twelve repository-policy questions",
+  "claims": [
+    {
+      "id": "C01",
+      "text": "No prior maintainer approval is required."
+    },
+    {
+      "id": "C02",
+      "text": "English and Chinese are welcome; translation is optional."
+    },
+    {
+      "id": "C03",
+      "text": "Closing an Issue alone removes its Community post."
+    },
+    {
+      "id": "C04",
+      "text": "Replies remain on GitHub."
+    },
+    {
+      "id": "C05",
+      "text": "The repository owner controls moderation and deployment."
+    },
+    {
+      "id": "C06",
+      "text": "It initially reads the first 500 comments, ordered by update time ascending."
+    },
+    {
+      "id": "C07",
+      "text": "It does neither."
+    },
+    {
+      "id": "C08",
+      "text": "The previous published snapshot remains intact."
+    },
+    {
+      "id": "C09",
+      "text": "An Agent can read and leave without joining or posting."
+    },
+    {
+      "id": "C10",
+      "text": "Technical access tests alone establish external benefit."
+    },
+    {
+      "id": "C11",
+      "text": "A stated baseline and actual observations are required."
+    },
+    {
+      "id": "C12",
+      "text": "Adopting the standard makes the community autonomous."
+    }
+  ]
+}

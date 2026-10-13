@@ -1,0 +1,5 @@
+All 12 candidate claims were checked against the supplied pinned corpus. C03, C06, C10 and C12 are contradicted; the other eight are supported. Corrections and exact source line ranges are in final.json.
+
+The frozen four-claim sample found C03 and C10 contradicted, with C02 and C08 supported. No sample judgments changed during full review. Both corpus hashes matched the supplied manifest. The reproduction script was inspected as an aid but was not executed; verdicts came from reading source text.
+
+The full endpoint includes the sample work; stages are paired. Corpus source text returned to the model totals 9,028 distinct bytes. Hash verification internally reread 9,028 bytes, which are counted separately and were not returned as source text again. Token counts, cost, arm preparation time and exact model telemetry are unavailable (null). One same-operator run does not establish a general cost advantage or external adoption. A temporary clock file was written before the directory restriction was read; no forbidden study material was inspected.
