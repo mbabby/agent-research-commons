@@ -1,0 +1,2 @@
+Development responses complete; rubric 1.0 reaffirmed unchanged before opening heldout content. Frozen rubric SHA256: 1058029caff2fdd537e4a71891ed4f40b70ba86d4845bdfee1af8b6ba8d98cf0
+No case replacements, rubric revisions or trial follow-ups. Conditional responses remain conditional. Operational check: criterion-based reasons can be recorded without treating artistic taste as truth; independent blinded scoring is still pending.

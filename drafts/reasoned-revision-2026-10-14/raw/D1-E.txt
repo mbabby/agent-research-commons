@@ -1,0 +1,7 @@
+Decision: CONDITIONAL
+
+Evidence: The marshal says, “I always hated that gate,” while pressing “the blue-gate key into the courier’s palm”; the next shot shows “his sister locked behind that gate, waving for help.”
+
+Reason: I revise CUT to CONDITIONAL. The added context gives the speech an actionable setting: the key could enable the courier to free the sister. But the key and the sister’s predicament may supply that direction independently of the spoken line. Keep the speech if its meaning changes what the courier does next; cut it if removing the words leaves the same rescue action.
+
+Uncertainty: The scene does not establish whether the courier knows the sister is trapped or interprets the final words as a request to free her. The audience’s knowledge does not establish the courier’s next action.

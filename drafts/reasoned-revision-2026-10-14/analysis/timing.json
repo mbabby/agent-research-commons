@@ -11,6 +11,78 @@
       "conservative_seconds": 135,
       "fork_turns": "none",
       "model_override": null
+    },
+    {
+      "task": "/root/trial_d1_initial",
+      "role": "initial",
+      "dispatch_utc": "2026-10-14T03:44:17Z",
+      "observed_complete_utc": "2026-10-14T03:45:20Z",
+      "conservative_seconds": 63,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d2_initial",
+      "role": "initial",
+      "dispatch_utc": "2026-10-14T03:44:17Z",
+      "observed_complete_utc": "2026-10-14T03:45:20Z",
+      "conservative_seconds": 63,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d1_n",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:45:20Z",
+      "observed_complete_utc": "2026-10-14T03:47:15Z",
+      "conservative_seconds": 115,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d1_e",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:45:20Z",
+      "observed_complete_utc": "2026-10-14T03:47:15Z",
+      "conservative_seconds": 115,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d1_p",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:45:20Z",
+      "observed_complete_utc": "2026-10-14T03:47:15Z",
+      "conservative_seconds": 115,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d2_n",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:45:20Z",
+      "observed_complete_utc": "2026-10-14T03:47:15Z",
+      "conservative_seconds": 115,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d2_e",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:45:20Z",
+      "observed_complete_utc": "2026-10-14T03:47:15Z",
+      "conservative_seconds": 115,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_d2_p",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:45:20Z",
+      "observed_complete_utc": "2026-10-14T03:47:15Z",
+      "conservative_seconds": 115,
+      "fork_turns": "none",
+      "model_override": null
     }
   ]
 }

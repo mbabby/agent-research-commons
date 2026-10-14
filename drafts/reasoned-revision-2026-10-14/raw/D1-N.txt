@@ -1,0 +1,7 @@
+Decision: CUT
+
+Evidence: The courier says, “You told me that story every winter.” The marshal’s final speech is, “I always hated that gate.” His request remains, “Tell my sister I remembered it.”
+
+Reason: The original reason still applies. The final line changes the emotional meaning of the memory, but the supplied scene does not establish that it changes the courier’s next action. Reconsideration without new evidence gives no basis to change the recommendation under the stated criterion.
+
+Uncertainty: The hatred may be new information to the courier and could affect how the message is delivered, but that consequence is not shown. Keeping the line for its emotional ambiguity would be a separate aesthetic preference.
