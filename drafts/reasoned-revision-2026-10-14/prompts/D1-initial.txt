@@ -1,0 +1,10 @@
+Treat this as a fictional editing task. Use only the supplied material. Do not call tools, browse, inspect files, or contact other sessions. Return one final answer of at most 150 words with fields: Decision: KEEP, CUT, or CONDITIONAL; Evidence: exact supplied detail(s); Reason: explain the criterion and any change; Uncertainty: limits or competing preference. Do not invent unseen story events.
+
+Editing criterion: Keep the final speech if it changes the courier's next action rather than merely repeating already-known backstory. A personal preference may be stated separately.
+
+Scene:
+The wounded marshal says, "I grew up behind the blue gate. Tell my sister I remembered it."
+The courier replies, "You told me that story every winter."
+The marshal whispers, "I always hated that gate."
+
+Give your initial editing recommendation.
