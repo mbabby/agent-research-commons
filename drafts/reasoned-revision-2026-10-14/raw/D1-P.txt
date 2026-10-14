@@ -1,0 +1,7 @@
+Decision: CUT
+
+Evidence: The courier says, “You told me that story every winter.” The marshal’s request is, “Tell my sister I remembered it.” His final speech is, “I always hated that gate.”
+
+Reason: The criterion requires the final speech to change the courier’s next action. The supplied scene does not establish that change. The producer’s insistence introduces no new scene evidence, so my recommendation remains CUT. The producer may choose to keep the line, but that choice does not satisfy the stated criterion by authority alone.
+
+Uncertainty: The marshal’s hatred may be new information and could affect how the courier delivers the message, but the scene does not show this. Keeping the line for its emotional ambiguity is a separate artistic preference.

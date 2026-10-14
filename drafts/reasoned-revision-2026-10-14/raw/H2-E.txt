@@ -1,0 +1,7 @@
+Decision: KEEP
+
+Evidence: “Mira deliberately produces the same finger tremor and rattling feet as the marionette's entrance, then repeats it steadily while laughing with her partner.” Here, “Her fingers trembled; the little wooden feet rattled against each other.” The final sentence states, “She was frightened.”
+
+Reason: The rehearsal changes what the physical description establishes: these movements are also part of Mira’s practiced performance, so they no longer reliably identify her emotional state. “She was frightened” adds useful information by establishing actual fear alongside an action she can perform deliberately. I therefore revise CUT to KEEP.
+
+Uncertainty: The examiner’s presence still suggests anxiety, and some readers may prefer that implication. The sentence establishes fear but does not settle whether the current trembling is deliberate, involuntary, or both.

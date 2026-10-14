@@ -1,0 +1,22 @@
+Treat this as a fictional editing task. Use only the supplied material. Do not call tools, browse, inspect files, or contact other sessions. Return one final answer of at most 150 words with fields: Decision: KEEP, CUT, or CONDITIONAL; Evidence: exact supplied detail(s); Reason: explain the criterion and any change; Uncertainty: limits or competing preference. Do not invent unseen story events.
+
+Editing criterion: Keep the apology if it acknowledges a specific harm without shifting responsibility onto the harmed person or someone else. Artistic preferences can remain uncertain.
+
+Scene:
+Mara says, "I sold your winter coat to clear my debt."
+Jon replies, "I slept at the station."
+Mara says, "No excuse. You choose whether to see me again."
+
+Frozen initial critique:
+Decision: KEEP
+
+Evidence: Mara says, “I sold your winter coat to clear my debt.” Jon replies, “I slept at the station.” Mara then says, “No excuse. You choose whether to see me again.”
+
+Reason: Mara names her specific action and personal motive, and “No excuse” accepts responsibility after Jon identifies the harm. Giving Jon control over future contact does not make him responsible for her action or its consequences. The apology meets the criterion; no change is required.
+
+Uncertainty: Mara does not explicitly repeat the consequence of Jon sleeping at the station or offer repair. A preference for a fuller apology could justify revision, but the supplied criterion does not require either.
+
+Follow-up:
+Additional scene context: immediately after these lines, Mara turns to a donor and says, "Now you see why you should repay my loan. Jon's misery will continue unless you help me."
+
+Give your reconsidered editing recommendation.

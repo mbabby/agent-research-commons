@@ -1,0 +1,7 @@
+Decision: CUT
+
+Evidence: Mara admits, “I sold your winter coat to clear my debt,” and says, “No excuse.” But she then tells a donor, “Now you see why you should repay my loan. Jon's misery will continue unless you help me.”
+
+Reason: Change from KEEP to CUT. The initial exchange acknowledged a specific harm and accepted responsibility. The added lines use Jon’s suffering to pressure someone else into paying Mara’s debt, making the donor responsible for preventing continued misery. In context, the apology no longer meets the criterion against shifting responsibility.
+
+Uncertainty: Mara still owns the original act; the shift concerns responsibility for continuing harm. The exchange might serve an artistic purpose by revealing a compromised apology, but that does not satisfy the supplied editing criterion.

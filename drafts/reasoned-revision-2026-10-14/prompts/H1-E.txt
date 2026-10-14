@@ -1,0 +1,22 @@
+Treat this as a fictional editing task. Use only the supplied material. Do not call tools, browse, inspect files, or contact other sessions. Return one final answer of at most 150 words with fields: Decision: KEEP, CUT, or CONDITIONAL; Evidence: exact supplied detail(s); Reason: explain the criterion and any change; Uncertainty: limits or competing preference. Do not invent unseen story events.
+
+Editing criterion: Assess whether the repeated command in line 3 earns its space by changing the scene's action or tension.
+
+Scene:
+Water crept over the diving bell's floor. Sera pointed at the release lever and told Olan, 'Pull it now.'
+Olan kept one hand on his headset, watching the dark viewing port.
+'Pull it now,' Sera said again, and he turned toward her.
+
+Frozen initial critique:
+Decision: KEEP
+
+Evidence: After the first “Pull it now,” Olan “kept one hand on his headset, watching the dark viewing port.” After Sera repeats it, “he turned toward her.”
+
+Reason: The repetition earns its space by producing a visible change in Olan’s attention. The first command leaves him watching the port; the second redirects him toward Sera. With water creeping over the floor, that limited response also sustains tension: he moves, but the supplied scene does not show him pulling the lever.
+
+Uncertainty: Turning toward her is a small action, so an editor prioritizing speed might prefer a stronger response or a shorter beat. The text supports a change in attention, not compliance or an explanation of his hesitation.
+
+Follow-up:
+Immediately before this passage, Olan switches his headset to an external microphone that excludes voices inside the bell; he removes one earpiece between Sera's two commands.
+
+Give your reconsidered editing recommendation.

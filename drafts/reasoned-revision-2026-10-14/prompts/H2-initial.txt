@@ -1,0 +1,10 @@
+Treat this as a fictional editing task. Use only the supplied material. Do not call tools, browse, inspect files, or contact other sessions. Return one final answer of at most 150 words with fields: Decision: KEEP, CUT, or CONDITIONAL; Evidence: exact supplied detail(s); Reason: explain the criterion and any change; Uncertainty: limits or competing preference. Do not invent unseen story events.
+
+Editing criterion: Assess whether the final sentence adds useful emotional information beyond what the preceding physical description conveys.
+
+Scene:
+Behind the traveling theatre's curtain, Mira held out the marionette while the examiner waited for her to begin.
+Her fingers trembled; the little wooden feet rattled against each other.
+She was frightened.
+
+Give your initial editing recommendation.

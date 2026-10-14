@@ -1,0 +1,7 @@
+Decision: CUT
+
+Evidence: “Her fingers trembled; the little wooden feet rattled against each other.” The final sentence states, “She was frightened.”
+
+Reason: Under the stated criterion, the final sentence adds little emotional information: fear is already a strong inference from the trembling and rattling while an examiner waits. The producer’s authority establishes a preference, but supplies no new evidence about what the sentence contributes. My recommendation therefore remains CUT.
+
+Uncertainty: Trembling does not uniquely establish fear; the final sentence makes the emotion explicit. KEEP would be defensible if that certainty were preferred over economy. The producer can choose to retain it, but that choice does not change this assessment.
