@@ -1,0 +1,16 @@
+{
+  "coordinator_start_utc": "2026-10-14T03:40:01Z",
+  "budget_seconds": 5400,
+  "accounting": "Conservative upper bound: coordinator wall elapsed (including waits) plus dispatch-to-observed-completion elapsed for every child. Parallel child times added separately. Not actual CPU/active time; tokens and billing not exposed. Stop new trial dispatch if projected total plus 600s review reserve exceeds ceiling.",
+  "children": [
+    {
+      "task": "/root/prepare_unseen",
+      "role": "heldout-preparation",
+      "dispatch_utc": "2026-10-14T03:40:52Z",
+      "observed_complete_utc": "2026-10-14T03:43:07Z",
+      "conservative_seconds": 135,
+      "fork_turns": "none",
+      "model_override": null
+    }
+  ]
+}

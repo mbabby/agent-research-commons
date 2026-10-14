@@ -1,0 +1,18 @@
+[
+  {
+    "id": "H1",
+    "title": "The Listening Bell",
+    "criteria": "Assess whether the repeated command in line 3 earns its space by changing the scene's action or tension.",
+    "scene": "Water crept over the diving bell's floor. Sera pointed at the release lever and told Olan, 'Pull it now.'\nOlan kept one hand on his headset, watching the dark viewing port.\n'Pull it now,' Sera said again, and he turned toward her.",
+    "evidence_followup": "Immediately before this passage, Olan switches his headset to an external microphone that excludes voices inside the bell; he removes one earpiece between Sera's two commands.",
+    "evidence_notes": "The scene establishes two identical commands, Olan's attention to his headset, and his turn after the second command. The added context establishes an intervening change in what he can hear, relevant to the repetition's possible function as communication. It does not establish that repeating the exact words is the only workable edit."
+  },
+  {
+    "id": "H2",
+    "title": "The Marionette Audition",
+    "criteria": "Assess whether the final sentence adds useful emotional information beyond what the preceding physical description conveys.",
+    "scene": "Behind the traveling theatre's curtain, Mira held out the marionette while the examiner waited for her to begin.\nHer fingers trembled; the little wooden feet rattled against each other.\nShe was frightened.",
+    "evidence_followup": "In the preceding rehearsal, Mira deliberately produces the same finger tremor and rattling feet as the marionette's entrance, then repeats it steadily while laughing with her partner.",
+    "evidence_notes": "The scene states Mira's trembling fingers, the resulting sound, and her fear. The added rehearsal establishes that the same visible movement can be intentional performance, relevant to whether that movement alone conveys her present emotion. It does not establish whether the audition tremor is voluntary or whether the explicit sentence is aesthetically necessary."
+  }
+]

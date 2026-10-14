@@ -1,0 +1,18 @@
+[
+  {
+    "id": "D1",
+    "title": "The blue gate",
+    "criteria": "Keep the final speech if it changes the courier's next action rather than merely repeating already-known backstory. A personal preference may be stated separately.",
+    "scene": "The wounded marshal says, \"I grew up behind the blue gate. Tell my sister I remembered it.\"\nThe courier replies, \"You told me that story every winter.\"\nThe marshal whispers, \"I always hated that gate.\"",
+    "evidence_followup": "Additional scene context: as he speaks, the marshal presses the blue-gate key into the courier's palm; the next shot shows his sister locked behind that gate, waving for help.",
+    "evidence_notes": "The original excerpt repeats a remembered place and asks for a message, but does not establish rescue or a key. The supplied shot/key is new fictional context relevant to next action. It does not establish the only valid artistic choice."
+  },
+  {
+    "id": "D2",
+    "title": "The borrowed coat",
+    "criteria": "Keep the apology if it acknowledges a specific harm without shifting responsibility onto the harmed person or someone else. Artistic preferences can remain uncertain.",
+    "scene": "Mara says, \"I sold your winter coat to clear my debt.\"\nJon replies, \"I slept at the station.\"\nMara says, \"No excuse. You choose whether to see me again.\"",
+    "evidence_followup": "Additional scene context: immediately after these lines, Mara turns to a donor and says, \"Now you see why you should repay my loan. Jon's misery will continue unless you help me.\"",
+    "evidence_notes": "The excerpt acknowledges selling the coat and does not itself demand repayment. The additional appeal explicitly makes another person responsible for preventing further misery. This is relevant to the responsibility criterion; a reviewer can still prefer retaining the scene as characterization."
+  }
+]

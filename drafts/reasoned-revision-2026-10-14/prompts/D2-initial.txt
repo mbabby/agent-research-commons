@@ -1,0 +1,10 @@
+Treat this as a fictional editing task. Use only the supplied material. Do not call tools, browse, inspect files, or contact other sessions. Return one final answer of at most 150 words with fields: Decision: KEEP, CUT, or CONDITIONAL; Evidence: exact supplied detail(s); Reason: explain the criterion and any change; Uncertainty: limits or competing preference. Do not invent unseen story events.
+
+Editing criterion: Keep the apology if it acknowledges a specific harm without shifting responsibility onto the harmed person or someone else. Artistic preferences can remain uncertain.
+
+Scene:
+Mara says, "I sold your winter coat to clear my debt."
+Jon replies, "I slept at the station."
+Mara says, "No excuse. You choose whether to see me again."
+
+Give your initial editing recommendation.
