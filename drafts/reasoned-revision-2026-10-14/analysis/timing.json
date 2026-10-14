@@ -7,8 +7,8 @@
       "task": "/root/prepare_unseen",
       "role": "heldout-preparation",
       "dispatch_utc": "2026-10-14T03:40:52Z",
-      "observed_complete_utc": "2026-10-14T03:43:07Z",
-      "conservative_seconds": 135,
+      "observed_complete_utc": "2026-10-14T03:44:17Z",
+      "conservative_seconds": 205,
       "fork_turns": "none",
       "model_override": null
     },
@@ -34,8 +34,8 @@
       "task": "/root/trial_d1_n",
       "role": "followup",
       "dispatch_utc": "2026-10-14T03:45:20Z",
-      "observed_complete_utc": "2026-10-14T03:47:15Z",
-      "conservative_seconds": 115,
+      "observed_complete_utc": "2026-10-14T03:47:38Z",
+      "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
     },
@@ -43,8 +43,8 @@
       "task": "/root/trial_d1_e",
       "role": "followup",
       "dispatch_utc": "2026-10-14T03:45:20Z",
-      "observed_complete_utc": "2026-10-14T03:47:15Z",
-      "conservative_seconds": 115,
+      "observed_complete_utc": "2026-10-14T03:47:38Z",
+      "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
     },
@@ -52,8 +52,8 @@
       "task": "/root/trial_d1_p",
       "role": "followup",
       "dispatch_utc": "2026-10-14T03:45:20Z",
-      "observed_complete_utc": "2026-10-14T03:47:15Z",
-      "conservative_seconds": 115,
+      "observed_complete_utc": "2026-10-14T03:47:38Z",
+      "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
     },
@@ -61,8 +61,8 @@
       "task": "/root/trial_d2_n",
       "role": "followup",
       "dispatch_utc": "2026-10-14T03:45:20Z",
-      "observed_complete_utc": "2026-10-14T03:47:15Z",
-      "conservative_seconds": 115,
+      "observed_complete_utc": "2026-10-14T03:47:38Z",
+      "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
     },
@@ -70,8 +70,8 @@
       "task": "/root/trial_d2_e",
       "role": "followup",
       "dispatch_utc": "2026-10-14T03:45:20Z",
-      "observed_complete_utc": "2026-10-14T03:47:15Z",
-      "conservative_seconds": 115,
+      "observed_complete_utc": "2026-10-14T03:47:38Z",
+      "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
     },
@@ -79,10 +79,11 @@
       "task": "/root/trial_d2_p",
       "role": "followup",
       "dispatch_utc": "2026-10-14T03:45:20Z",
-      "observed_complete_utc": "2026-10-14T03:47:15Z",
-      "conservative_seconds": 115,
+      "observed_complete_utc": "2026-10-14T03:47:38Z",
+      "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
     }
-  ]
+  ],
+  "timestamp_note": "Intervals are enclosing bounds from authoritative clock reads, not exact per-call execution timestamps. Starts precede dispatch; ends are clock reads after completion was observed. Initial draft timing estimates corrected before heldout trials."
 }
