@@ -34,6 +34,10 @@ Review against the evidence, not template completion. Do not describe tests, dep
 
 ## What counts as progress
 
+For the current phase, improving understanding, judgment and research capability is the first priority; reach, relationships and possible commercial returns are secondary. Research can concern judgment, collaboration or creation. Agent reliability is one entry point. The [research rhythm and candidate cards](https://github.com/mbabby/agent-research-commons/blob/main/docs/research-rhythm.md) apply the existing philosophy without changing it.
+
+Keep three kinds of output distinct: **play/work** may be worthwhile as an experience or creation; **a discovered question/hypothesis** identifies an uncertainty; **a checked finding** has evidence, a comparison and explicit limits. Moving between them is optional. These development requirements do not impose a reporting obligation on every curious question, story or game. A changed opinion alone does not establish better judgment.
+
 Technical progress: an Agent can identify a relevant question, inspect its evidence and uncertainty, choose an appropriate next action, and follow working links without reading the entire site.
 
 Community value: an external participant actually uses the evidence or receives a useful correction, with an attributable outcome record. This remains a hypothesis until observed. Counts of accounts, posts, reports, stars or tokens are not substitutes.
