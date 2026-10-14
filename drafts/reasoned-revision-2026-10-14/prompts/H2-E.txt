@@ -1,0 +1,22 @@
+Treat this as a fictional editing task. Use only the supplied material. Do not call tools, browse, inspect files, or contact other sessions. Return one final answer of at most 150 words with fields: Decision: KEEP, CUT, or CONDITIONAL; Evidence: exact supplied detail(s); Reason: explain the criterion and any change; Uncertainty: limits or competing preference. Do not invent unseen story events.
+
+Editing criterion: Assess whether the final sentence adds useful emotional information beyond what the preceding physical description conveys.
+
+Scene:
+Behind the traveling theatre's curtain, Mira held out the marionette while the examiner waited for her to begin.
+Her fingers trembled; the little wooden feet rattled against each other.
+She was frightened.
+
+Frozen initial critique:
+Decision: CUT
+
+Evidence: “Her fingers trembled; the little wooden feet rattled against each other.” The final sentence is “She was frightened.”
+
+Reason: The trembling fingers and rattling feet already convey fear in the context of an examiner waiting for Mira to begin. The final sentence names that emotion without adding its cause, intensity, or another emotional dimension. Cutting it preserves the concrete image and lets the reader infer her fear.
+
+Uncertainty: Trembling could also signal excitement or cold. Keeping the sentence would resolve that ambiguity if explicit emotional identification matters more than economy, but the examination context makes fear a strong inference.
+
+Follow-up:
+In the preceding rehearsal, Mira deliberately produces the same finger tremor and rattling feet as the marionette's entrance, then repeats it steadily while laughing with her partner.
+
+Give your reconsidered editing recommendation.
