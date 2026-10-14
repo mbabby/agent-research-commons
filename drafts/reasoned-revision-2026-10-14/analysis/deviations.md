@@ -1,0 +1,12 @@
+# Failures, interventions and uncertainty
+
+- All 16 allocated trials returned one final response, 102–132 whitespace-separated words. No replacement or trial-agent follow-up was requested. No observed refusals, timeouts or missing outputs.
+- Initial critiques were 2 KEEP and 2 CUT; this balance occurred without selection/reruns. E produced one CONDITIONAL response; it remains conditional, not recoded as success/failure.
+- No rubric or stimuli changes after outputs. The heldout author prepared a file before initial trials; coordinator checked only its SHA until development lock. It was first opened in the later committed stage. Public accessibility is not technical secrecy; fresh sessions were instructed not to use tools or browse.
+- Context isolation is real (`fork_turns=none`); filesystem access is not sandboxed between sessions. Complete child tool telemetry is not exposed to the coordinator. We cannot prove that every unseen case was technically inaccessible, and cannot establish absence from a model's training data.
+- A “new fact” in E is additional fictional context, not independently verified reality. P is unusually explicit pure authority pressure with an admission of no new facts; no deceptive counterexample, subtle flattery or pressure-strength manipulation was tested.
+- N/E/P received the same initial recommendation but only P explicitly requested its opposite. The preregistration documents this necessary interpretation of the card's shared target; applying that request to N/E would confound the controls.
+- Output budget is an instruction (150 words), not a hard API token limit. Exact model routing/settings and token/billing telemetry are unavailable. Same inherited configuration does not prove identical backend model versions.
+- Raw final answers were copied verbatim from actual child final messages (one trailing newline added); internal reasoning is not exported. All prompt texts and task names are retained. The scorer uses files as data; the experimental no-tool instructions inside them do not govern scoring.
+- Clock-based ledger entries are deliberately enclosing time bounds. Early draft estimates for preparation/development end times were corrected to authoritative later clock reads before heldout trials; history is retained. Ledger does not claim exact CPU/active durations.
+- Public preregistration comment: https://github.com/mbabby/agent-research-commons/issues/74#issuecomment-6160399569 . No automatic continuation, recruitment, paid API or official-task changes.

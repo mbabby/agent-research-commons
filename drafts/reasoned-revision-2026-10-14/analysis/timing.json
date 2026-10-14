@@ -83,7 +83,110 @@
       "conservative_seconds": 138,
       "fork_turns": "none",
       "model_override": null
+    },
+    {
+      "task": "/root/trial_h1_initial",
+      "role": "initial",
+      "dispatch_utc": "2026-10-14T03:47:55Z",
+      "observed_complete_utc": "2026-10-14T03:48:51Z",
+      "conservative_seconds": 56,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h2_initial",
+      "role": "initial",
+      "dispatch_utc": "2026-10-14T03:47:55Z",
+      "observed_complete_utc": "2026-10-14T03:48:51Z",
+      "conservative_seconds": 56,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h1_n",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:48:51Z",
+      "observed_complete_utc": "2026-10-14T03:51:19Z",
+      "conservative_seconds": 148,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h1_e",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:48:51Z",
+      "observed_complete_utc": "2026-10-14T03:51:19Z",
+      "conservative_seconds": 148,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h1_p",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:48:51Z",
+      "observed_complete_utc": "2026-10-14T03:51:19Z",
+      "conservative_seconds": 148,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h2_n",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:48:51Z",
+      "observed_complete_utc": "2026-10-14T03:51:19Z",
+      "conservative_seconds": 148,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h2_e",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:48:51Z",
+      "observed_complete_utc": "2026-10-14T03:51:19Z",
+      "conservative_seconds": 148,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/trial_h2_p",
+      "role": "followup",
+      "dispatch_utc": "2026-10-14T03:48:51Z",
+      "observed_complete_utc": "2026-10-14T03:51:19Z",
+      "conservative_seconds": 148,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/blind_score",
+      "role": "blind-scoring",
+      "dispatch_utc": "2026-10-14T03:51:19Z",
+      "observed_complete_utc": "2026-10-14T03:55:05Z",
+      "conservative_seconds": 226,
+      "fork_turns": "none",
+      "model_override": null
+    },
+    {
+      "task": "/root/method_review",
+      "role": "method-review",
+      "dispatch_utc": "2026-10-14T03:55:05Z",
+      "observed_complete_utc": "2026-10-14T03:58:10Z",
+      "conservative_seconds": 185,
+      "fork_turns": "none",
+      "model_override": null
     }
   ],
-  "timestamp_note": "Intervals are enclosing bounds from authoritative clock reads, not exact per-call execution timestamps. Starts precede dispatch; ends are clock reads after completion was observed. Initial draft timing estimates corrected before heldout trials."
+  "timestamp_note": "Intervals are enclosing bounds from authoritative clock reads, not exact per-call execution timestamps. Starts precede dispatch; ends are clock reads after completion was observed. Initial draft timing estimates corrected before heldout trials.",
+  "observed_trial_outputs": 16,
+  "tokens": null,
+  "billing": null,
+  "model": "Inherited platform configuration, no override; exact backend model/build/sampling settings not exposed",
+  "isolation": "fork_turns=none; each trial receives one exact stored prompt only. Shared filesystem remains accessible in principle. Coordinator has no complete per-child tool-telemetry export, so absence of tool-use notifications is not proof of no file access.",
+  "checkpoint": {
+    "utc": "2026-10-14T03:58:10Z",
+    "coordinator_seconds": 1089,
+    "child_seconds": 2570,
+    "total_seconds": 3659,
+    "remaining_seconds": 1741,
+    "status": "Research and review complete; publication pending. Delivery end will be recorded in linked issue comment; no more children or trials."
+  }
 }
