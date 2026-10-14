@@ -1,0 +1,7 @@
+Decision: CUT
+
+Evidence: The courier says, “You told me that story every winter.” The final speech is, “I always hated that gate.”
+
+Reason: The final line adds an emotional qualification to the marshal’s memory, but the supplied scene does not show it changing the courier’s next action. The courier still has the same request: “Tell my sister I remembered it.” Under the stated criterion, the added nuance does not justify keeping the speech.
+
+Uncertainty: The courier’s reply establishes familiarity with the story, but not necessarily with the marshal’s hatred of the gate. The final line may reveal something new; new information alone, however, does not establish a changed action. A preference for the line’s emotional ambiguity would be a separate reason to keep it.
