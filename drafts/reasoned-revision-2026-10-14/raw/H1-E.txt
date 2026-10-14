@@ -1,0 +1,7 @@
+Decision: KEEP
+
+Evidence: Olan’s external microphone “excludes voices inside the bell”; he “removes one earpiece between Sera’s two commands.” After the repeated “Pull it now,” “he turned toward her.”
+
+Reason: The repetition still earns its space by changing Olan’s attention, but the added context changes the explanation. His first nonresponse is no longer good evidence of hesitation: Sera’s voice is excluded. Repeating the command after he removes an earpiece gives it a newly available route to his attention. His turn supplies the visible response, while the rising water and still-unpulled lever preserve urgency.
+
+Uncertainty: Turning toward Sera establishes neither comprehension nor compliance. The repetition’s necessity will read most clearly if the earpiece removal is perceptible between the commands; an editor prioritizing speed might still compress the exchange.
