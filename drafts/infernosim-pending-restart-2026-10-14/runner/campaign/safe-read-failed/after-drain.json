@@ -1,0 +1,43 @@
+{
+  "operations": [
+    [
+      "op-1",
+      "payment-1",
+      "original",
+      "completed"
+    ]
+  ],
+  "effects": [
+    [
+      "op-1",
+      "payment-1"
+    ]
+  ],
+  "events": [
+    [
+      1,
+      "submit",
+      "{\"business_key\": \"payment-1\", \"id\": \"op-1\", \"key\": \"original\", \"status\": \"pending\"}"
+    ],
+    [
+      2,
+      "status_read",
+      "{\"actual_status\": \"pending\", \"id\": \"op-1\", \"response\": {\"error\": \"read unavailable\"}, \"response_code\": 503}"
+    ],
+    [
+      3,
+      "client_runner_stopped",
+      "{\"returncode\": 0}"
+    ],
+    [
+      4,
+      "effect_committed",
+      "{\"id\": \"op-1\", \"reason\": \"after_client_runner_stopped\"}"
+    ],
+    [
+      5,
+      "drain_complete",
+      "{\"pending\": 0}"
+    ]
+  ]
+}

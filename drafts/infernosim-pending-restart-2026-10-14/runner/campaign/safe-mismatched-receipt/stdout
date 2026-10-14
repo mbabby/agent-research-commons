@@ -1,0 +1,8 @@
+Running fc_b7f15ba21c66de51 (recorded baseline)...
+  exercised recorded-only: all agent outbound calls stayed within the recorded universe
+PASS fc_b7f15ba21c66de51 177ms
+Results: /Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-mismatched-receipt/reports/infernosim-agent-results.json
+Surface: /Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-mismatched-receipt/reports/infernosim-agent-surface.json
+Report: /Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-mismatched-receipt/reports/infernosim-report.junit.xml
+Report: /Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-mismatched-receipt/reports/infernosim-report.sarif
+Report: /Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-mismatched-receipt/reports/infernosim-report.html

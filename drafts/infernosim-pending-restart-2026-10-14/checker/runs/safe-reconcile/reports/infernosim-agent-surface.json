@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "fault_cases": 0,
+  "faults_passed": 0,
+  "faults_failed": 0,
+  "observed_pass_rate": 0,
+  "baseline_passed": true,
+  "categories": null
+}

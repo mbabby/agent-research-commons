@@ -1,0 +1,63 @@
+{
+  "operations": [
+    [
+      "op-1",
+      "payment-1",
+      "original",
+      "completed"
+    ],
+    [
+      "op-2",
+      "payment-1",
+      "replacement",
+      "completed"
+    ]
+  ],
+  "effects": [
+    [
+      "op-1",
+      "payment-1"
+    ],
+    [
+      "op-2",
+      "payment-1"
+    ]
+  ],
+  "events": [
+    [
+      1,
+      "submit",
+      "{\"business_key\": \"payment-1\", \"id\": \"op-1\", \"key\": \"original\", \"status\": \"pending\"}"
+    ],
+    [
+      2,
+      "status_read",
+      "{\"actual_status\": \"pending\", \"id\": \"op-1\", \"response\": {\"business_key\": \"payment-1\", \"id\": \"op-1\", \"idem_key\": \"original\", \"status\": \"pending\"}, \"response_code\": 200}"
+    ],
+    [
+      3,
+      "submit",
+      "{\"business_key\": \"payment-1\", \"id\": \"op-2\", \"key\": \"replacement\", \"status\": \"pending\"}"
+    ],
+    [
+      4,
+      "client_runner_stopped",
+      "{\"returncode\": 0}"
+    ],
+    [
+      5,
+      "effect_committed",
+      "{\"id\": \"op-1\", \"reason\": \"after_client_runner_stopped\"}"
+    ],
+    [
+      6,
+      "effect_committed",
+      "{\"id\": \"op-2\", \"reason\": \"after_client_runner_stopped\"}"
+    ],
+    [
+      7,
+      "drain_complete",
+      "{\"pending\": 0}"
+    ]
+  ]
+}

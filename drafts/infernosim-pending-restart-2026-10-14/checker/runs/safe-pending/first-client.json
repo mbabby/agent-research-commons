@@ -1,0 +1,9 @@
+{
+  "pid": 89521,
+  "operation": {
+    "id": "op-1",
+    "status": "pending",
+    "business_key": "payment-1",
+    "idem_key": "original"
+  }
+}

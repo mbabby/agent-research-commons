@@ -1,0 +1,10 @@
+{
+  "initial_sandbox_attempt": {
+    "case": "safe-pending",
+    "exit": 1,
+    "error": "PermissionError: [Errno 1] Operation not permitted",
+    "location": "HTTPServer bind 127.0.0.1:0 before client launch"
+  },
+  "subsequent_permitted_attempts": "Five initial cases exited 0. Fixture identity checks were being finalized; all excluded from final table and superseded by frozen six-case campaign. Retained only as setup diagnostics, not added as independent samples.",
+  "omitted": "Generated Python HOME/Library cache and empty tmp directories are not evidence."
+}

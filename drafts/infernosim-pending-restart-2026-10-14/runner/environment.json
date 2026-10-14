@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-10-14T02:12:30.620622+00:00",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "sqlite": "3.51.0",
+  "infernosim_binary": "/tmp/arc-inferno-runner-20261013/infernosim",
+  "binary_sha256": "195b9b833ea7855dbba602fad03ae748fecbbedcfe14b588645b4ee5b02e57e7",
+  "upstream_sha": "f26b5522bbb20f2904d7534b879fa2896bdf1302",
+  "toolchain": "go1.26.9 darwin/arm64",
+  "scope": "Same operator, separate runner session. Deterministic local fixture, not independent statistical samples. No external provider."
+}

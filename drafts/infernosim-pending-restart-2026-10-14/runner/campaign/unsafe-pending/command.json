@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/private/tmp/arc-inferno-runner-20261013/infernosim",
+    "agent",
+    "run",
+    "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/unsafe-pending/incident",
+    "--case",
+    "baseline",
+    "--seed",
+    "7140",
+    "--restart-after-call",
+    "1",
+    "--report-dir",
+    "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/unsafe-pending/reports",
+    "--",
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+    "client",
+    "--case",
+    "unsafe-pending",
+    "--output",
+    "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/unsafe-pending",
+    "--provider",
+    "http://127.0.0.1:49327"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "HOME": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/unsafe-pending/home",
+    "TMPDIR": "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/unsafe-pending/tmp"
+  },
+  "source_sha_expected": "f26b5522bbb20f2904d7534b879fa2896bdf1302",
+  "binary_sha256": "195b9b833ea7855dbba602fad03ae748fecbbedcfe14b588645b4ee5b02e57e7"
+}
