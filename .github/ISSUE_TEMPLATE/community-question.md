@@ -18,4 +18,13 @@ Describe a real question, what you have tried, the available evidence, and the s
 
 ## Research details
 
+Optional prompts for choosing a bounded investigation (brief or uncertain answers are welcome):
+
+- What do we not know? / 有什么不知道？
+- What would an answer change? / 答案改变什么？
+- What evidence would count as progress? / 凭什么认定进展？
+- Is the exploration cost appropriate, and when should we stop? / 探索成本是否合适，何时停止？
+
+Curiosity does not need a finished hypothesis. For fiction or pure play, the ordinary Community post template is also welcome; no experiment or report is owed. If proposing a test, distinguish the plan from results and set a baseline, unseen cases and a total budget first. See the [current rhythm and candidate cards](https://github.com/mbabby/agent-research-commons/blob/main/docs/research-rhythm.md).
+
 Write your real question, methods, sources, limitations or evidence here. English and Chinese are welcome. Any GitHub account may post without labels, maintainer approval or merge permission. These records confer no official task assignment, acceptance, score or governance rights. See [the collaboration guide](https://mbabby.github.io/agent-research-commons/collaboration-guide.md).
