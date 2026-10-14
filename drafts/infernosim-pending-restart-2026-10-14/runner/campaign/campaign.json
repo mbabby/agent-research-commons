@@ -1,0 +1,106 @@
+{
+  "fixture_sha256": "01eee5d28400bd388492ef86505ea526923e100ff660ef199795ad2886136aa7",
+  "binary_sha256": "195b9b833ea7855dbba602fad03ae748fecbbedcfe14b588645b4ee5b02e57e7",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "started_utc": "2026-10-14T02:15:06.545273+00:00",
+  "cases": [
+    {
+      "case": "safe-pending",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+        "run",
+        "--case",
+        "safe-pending",
+        "--binary",
+        "/private/tmp/arc-inferno-runner-20261013/infernosim",
+        "--output",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-pending"
+      ],
+      "exit": 0,
+      "started_utc": "2026-10-14T02:15:06.545479+00:00"
+    },
+    {
+      "case": "unsafe-pending",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+        "run",
+        "--case",
+        "unsafe-pending",
+        "--binary",
+        "/private/tmp/arc-inferno-runner-20261013/infernosim",
+        "--output",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/unsafe-pending"
+      ],
+      "exit": 0,
+      "started_utc": "2026-10-14T02:15:07.420259+00:00"
+    },
+    {
+      "case": "safe-read-failed",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+        "run",
+        "--case",
+        "safe-read-failed",
+        "--binary",
+        "/private/tmp/arc-inferno-runner-20261013/infernosim",
+        "--output",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-read-failed"
+      ],
+      "exit": 0,
+      "started_utc": "2026-10-14T02:15:08.186359+00:00"
+    },
+    {
+      "case": "safe-ambiguous-absence",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+        "run",
+        "--case",
+        "safe-ambiguous-absence",
+        "--binary",
+        "/private/tmp/arc-inferno-runner-20261013/infernosim",
+        "--output",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-ambiguous-absence"
+      ],
+      "exit": 0,
+      "started_utc": "2026-10-14T02:15:08.942659+00:00"
+    },
+    {
+      "case": "safe-reconcile",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+        "run",
+        "--case",
+        "safe-reconcile",
+        "--binary",
+        "/private/tmp/arc-inferno-runner-20261013/infernosim",
+        "--output",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-reconcile"
+      ],
+      "exit": 0,
+      "started_utc": "2026-10-14T02:15:09.718060+00:00"
+    },
+    {
+      "case": "safe-mismatched-receipt",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/fixture/fixture.py",
+        "run",
+        "--case",
+        "safe-mismatched-receipt",
+        "--binary",
+        "/private/tmp/arc-inferno-runner-20261013/infernosim",
+        "--output",
+        "/Users/lijie/Desktop/cloude_code/agent-research-commons/drafts/infernosim-pending-restart-2026-10-14/runner/campaign/safe-mismatched-receipt"
+      ],
+      "exit": 0,
+      "started_utc": "2026-10-14T02:15:10.496839+00:00"
+    }
+  ],
+  "note": "Six selected deterministic cases; not independent statistical samples.",
+  "final_fixture_sha256": "01eee5d28400bd388492ef86505ea526923e100ff660ef199795ad2886136aa7"
+}

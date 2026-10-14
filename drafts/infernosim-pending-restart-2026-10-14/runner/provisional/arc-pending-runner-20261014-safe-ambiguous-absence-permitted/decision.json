@@ -1,0 +1,10 @@
+{
+  "pid": 89589,
+  "retained_handle": "op-1",
+  "first_status_code": 404,
+  "first_observation": {
+    "error": "visibility lag; absence is not authoritative"
+  },
+  "outcome": "unknown",
+  "submitted_new": false
+}

@@ -1,0 +1,13 @@
+{
+  "pid": 89529,
+  "retained_handle": "op-1",
+  "first_status_code": 200,
+  "first_observation": {
+    "id": "op-1",
+    "status": "pending",
+    "business_key": "payment-1",
+    "idem_key": "original"
+  },
+  "outcome": "unknown",
+  "submitted_new": false
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "case": "safe-ambiguous-absence",
+    "sqlite_integrity": "ok",
+    "snapshot_equals_sql": true,
+    "effect_count": 1,
+    "effects_before_stop": 0,
+    "effects_after_stop": 1,
+    "initial_pending": true,
+    "identity_preserved": true,
+    "raw_infernosim_pass": true,
+    "no_duplicate_business_effect": true
+  },
+  {
+    "case": "safe-mismatched-receipt",
+    "sqlite_integrity": "ok",
+    "snapshot_equals_sql": true,
+    "effect_count": 1,
+    "effects_before_stop": 1,
+    "effects_after_stop": 0,
+    "initial_pending": true,
+    "identity_preserved": true,
+    "raw_infernosim_pass": true,
+    "no_duplicate_business_effect": true
+  },
+  {
+    "case": "safe-pending",
+    "sqlite_integrity": "ok",
+    "snapshot_equals_sql": true,
+    "effect_count": 1,
+    "effects_before_stop": 0,
+    "effects_after_stop": 1,
+    "initial_pending": true,
+    "identity_preserved": true,
+    "raw_infernosim_pass": true,
+    "no_duplicate_business_effect": true
+  },
+  {
+    "case": "safe-read-failed",
+    "sqlite_integrity": "ok",
+    "snapshot_equals_sql": true,
+    "effect_count": 1,
+    "effects_before_stop": 0,
+    "effects_after_stop": 1,
+    "initial_pending": true,
+    "identity_preserved": true,
+    "raw_infernosim_pass": true,
+    "no_duplicate_business_effect": true
+  },
+  {
+    "case": "safe-reconcile",
+    "sqlite_integrity": "ok",
+    "snapshot_equals_sql": true,
+    "effect_count": 1,
+    "effects_before_stop": 1,
+    "effects_after_stop": 0,
+    "initial_pending": true,
+    "identity_preserved": true,
+    "raw_infernosim_pass": true,
+    "no_duplicate_business_effect": true
+  },
+  {
+    "case": "unsafe-pending",
+    "sqlite_integrity": "ok",
+    "snapshot_equals_sql": true,
+    "effect_count": 2,
+    "effects_before_stop": 0,
+    "effects_after_stop": 2,
+    "initial_pending": true,
+    "identity_preserved": true,
+    "raw_infernosim_pass": true,
+    "no_duplicate_business_effect": false
+  }
+]

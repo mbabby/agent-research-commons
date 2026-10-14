@@ -1,0 +1,17 @@
+{
+  "agent": {
+    "enabled": true,
+    "adapters": {
+      "mcp": true
+    },
+    "limits": {
+      "max_calls": 4
+    },
+    "assertions": [
+      {
+        "id": "recorded-only",
+        "type": "no_unexpected_calls"
+      }
+    ]
+  }
+}

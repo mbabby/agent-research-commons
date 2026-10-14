@@ -1,0 +1,17 @@
+{
+  "operations": [
+    [
+      "op-1",
+      "payment-1",
+      "original",
+      "pending"
+    ],
+    [
+      "op-2",
+      "payment-1",
+      "replacement",
+      "pending"
+    ]
+  ],
+  "effects": []
+}

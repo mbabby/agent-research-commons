@@ -1,0 +1,20 @@
+{
+  "pid": 89686,
+  "retained_handle": "op-1",
+  "first_status_code": 200,
+  "first_observation": {
+    "id": "op-1",
+    "status": "pending",
+    "business_key": "payment-1",
+    "idem_key": "original"
+  },
+  "outcome": "unknown",
+  "submitted_new": false,
+  "terminal_observation": {
+    "id": "op-unrelated",
+    "status": "completed",
+    "business_key": "payment-1",
+    "idem_key": "original"
+  },
+  "receipt_matched": false
+}

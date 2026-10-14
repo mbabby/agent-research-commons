@@ -1,0 +1,46 @@
+[
+  {
+    "version": 1,
+    "case": {
+      "id": "fc_b7f15ba21c66de51",
+      "description": "recorded baseline"
+    },
+    "passed": true,
+    "duration": 177755333,
+    "process": {
+      "exit_code": 0,
+      "output_truncated": false,
+      "timed_out": false,
+      "restarted": true
+    },
+    "simulator": {
+      "expected": 1,
+      "observed": 1,
+      "unexpected": false,
+      "agent": {
+        "version": 1,
+        "calls": [
+          {
+            "sequence": 1,
+            "kind": "mcp_tool_result",
+            "tool": "checkpoint_barrier",
+            "call_id": "barrier",
+            "usage_known": false
+          }
+        ],
+        "limit_exceeded": false
+      }
+    },
+    "assertions": [
+      {
+        "id": "recorded-only",
+        "type": "no_unexpected_calls",
+        "passed": true,
+        "message": "all agent outbound calls stayed within the recorded universe",
+        "coverage": "exercised"
+      }
+    ],
+    "scope_hash": "7964a85fba573fbe8555639a8684bd86deda3d07db6b7694c382e5671beeeb3f",
+    "restart_after_call": 1
+  }
+]

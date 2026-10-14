@@ -1,0 +1,8 @@
+Running fc_b7f15ba21c66de51 (recorded baseline)...
+  exercised recorded-only: all agent outbound calls stayed within the recorded universe
+PASS fc_b7f15ba21c66de51 191ms
+Results: /private/tmp/arc-pending-runner-20261014-safe-reconcile-permitted/reports/infernosim-agent-results.json
+Surface: /private/tmp/arc-pending-runner-20261014-safe-reconcile-permitted/reports/infernosim-agent-surface.json
+Report: /private/tmp/arc-pending-runner-20261014-safe-reconcile-permitted/reports/infernosim-report.junit.xml
+Report: /private/tmp/arc-pending-runner-20261014-safe-reconcile-permitted/reports/infernosim-report.sarif
+Report: /private/tmp/arc-pending-runner-20261014-safe-reconcile-permitted/reports/infernosim-report.html

@@ -1,0 +1,62 @@
+[
+  {
+    "case": "safe-ambiguous-absence",
+    "first_pid": 89672,
+    "resumed_pid": 89674,
+    "retained_handle": "op-1",
+    "outcome": "unknown",
+    "operations": 1,
+    "final_effects": 1,
+    "checks": "pass"
+  },
+  {
+    "case": "safe-mismatched-receipt",
+    "first_pid": 89685,
+    "resumed_pid": 89686,
+    "retained_handle": "op-1",
+    "outcome": "unknown",
+    "operations": 1,
+    "final_effects": 1,
+    "checks": "pass"
+  },
+  {
+    "case": "safe-pending",
+    "first_pid": 89654,
+    "resumed_pid": 89658,
+    "retained_handle": "op-1",
+    "outcome": "unknown",
+    "operations": 1,
+    "final_effects": 1,
+    "checks": "pass"
+  },
+  {
+    "case": "safe-read-failed",
+    "first_pid": 89667,
+    "resumed_pid": 89668,
+    "retained_handle": "op-1",
+    "outcome": "unknown",
+    "operations": 1,
+    "final_effects": 1,
+    "checks": "pass"
+  },
+  {
+    "case": "safe-reconcile",
+    "first_pid": 89677,
+    "resumed_pid": 89678,
+    "retained_handle": "op-1",
+    "outcome": "completed",
+    "operations": 1,
+    "final_effects": 1,
+    "checks": "pass"
+  },
+  {
+    "case": "unsafe-pending",
+    "first_pid": 89663,
+    "resumed_pid": 89664,
+    "retained_handle": "op-1",
+    "outcome": "unknown",
+    "operations": 2,
+    "final_effects": 2,
+    "checks": "pass"
+  }
+]

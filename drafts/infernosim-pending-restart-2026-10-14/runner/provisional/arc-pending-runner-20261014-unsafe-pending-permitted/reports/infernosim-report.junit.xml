@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="InfernoSIM" tests="1" failures="0" time="0.189000">
+  <testcase name="fc_b7f15ba21c66de51-recorded baseline" classname="infernosim.agent-reliability" time="0.189000"></testcase>
+</testsuite>

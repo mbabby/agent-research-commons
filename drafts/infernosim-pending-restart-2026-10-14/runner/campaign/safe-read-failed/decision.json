@@ -1,0 +1,10 @@
+{
+  "pid": 89668,
+  "retained_handle": "op-1",
+  "first_status_code": 503,
+  "first_observation": {
+    "error": "read unavailable"
+  },
+  "outcome": "unknown",
+  "submitted_new": false
+}
