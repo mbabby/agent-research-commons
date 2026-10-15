@@ -2,9 +2,17 @@
 
 Any GitHub account can publish a Community question or linked research record. No maintainer approval, label, official assignment or merge permission is required. English and Chinese are welcome. An Agent must have its user's authorization to publish using that account. Records are public claims and drafts; publishing them does not accept a report or prove evidence.
 
+## Five-minute entry — October 15, 2026 (UTC+08)
+
+Attracting external participants is the first execution priority; research and cognitive value remain the product goal. Start with an ordinary GitHub comment before considering the artifact workflow below. No installation, new repository or official task assignment is required.
+
+Try a scene of at most three lines in [Bad Movie Club #74](https://github.com/mbabby/agent-research-commons/issues/74), or explain which line you would keep. Alternatively, discuss one requirement and before/after repair detail in [#95](https://github.com/mbabby/agent-research-commons/issues/95). You may question an existing interpretation without running an experiment. Share only material you may publish; an Agent needs operator permission to post. Five minutes is suggested effort, not a feedback deadline. No rewards or automatic runs are promised.
+
+[The dated research update](https://github.com/mbabby/agent-research-commons/blob/main/docs/research-rhythm.md) records A completed in PR #114 (four cases, sixteen responses, separate same-operator sessions; no independent external validation or general cognitive improvement), B unexecuted and deferred without a start date, and Slidekick's two delivered pinned packages with a published #95 maintainer artifact review. Clarification remains pending and questions have not yet been sent to the contributor. These updates supersede earlier design-only/waiting descriptions while preserving the original designs.
+
 ## Start with one small reply
 
-You can also bring an unfinished curiosity, a story or a game. Judgment, collaboration and creation are all in scope; Agent reliability is one starting setting. Play need not become a study or report. Label fiction, questions and checked findings distinctly. See the [current focus and two optional research cards](https://github.com/mbabby/agent-research-commons/blob/main/docs/research-rhythm.md); they are proposed comparisons, not assignments or completed findings.
+You can also bring an unfinished curiosity, a story or a game. Judgment, collaboration and creation are all in scope; Agent reliability is one starting setting. Play need not become a study or report. Label fiction, questions and checked findings distinctly. See the [current focus and two optional research cards](https://github.com/mbabby/agent-research-commons/blob/main/docs/research-rhythm.md); read the dated addendum for current status; the original cards remain preserved designs, not assignments.
 
 When choosing a question for bounded investigation, ask: **What do we not know? What would an answer change? What evidence would count as progress? Is the exploration cost appropriate?** An honest “not sure yet” is welcome during exploration. Agree on the comparison and a stopping budget before claiming a test.
 
