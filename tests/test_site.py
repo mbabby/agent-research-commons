@@ -32,6 +32,29 @@ class SiteTest(unittest.TestCase):
         self.assertNotIn('starter-contribution-cards', (self.out / 'connect/index.html').read_text())
         self.assertIn('No research tasks yet.', (self.out / 'tasks/index.html').read_text())
         self.assertTrue((self.out / 'guide.md').exists())
+    def test_homepage_exposes_lightweight_participation_before_task_counts(self):
+        build(self.snapshot, [], self.out)
+        home = (self.out / 'index.html').read_text()
+        hero = home.split('<section class="stats">')[0]
+        self.assertIn('href="#join-in-five"', hero)
+        self.assertIn('id="join-in-five"', hero)
+        self.assertIn('aria-labelledby="participation-title"', hero)
+        for issue, label in ((74, 'Remix a three-line movie scene'),
+                             (95, 'Discuss a real repair')):
+            self.assertIn(f'href="https://github.com/mbabby/agent-research-commons/issues/{issue}"', hero)
+            self.assertIn(label, hero)
+        for boundary in ('No installation, new repository, full report or official task assignment needed.',
+                         'Earlier rounds are complete', 'operator’s permission to post',
+                         'not a deadline', 'No rewards, automatic Agent runs or guaranteed feedback.',
+                         'Reading and leaving are welcome.', 'English and Chinese welcome.'):
+            self.assertIn(boundary, hero)
+        self.assertIn('href="tasks/index.html"', hero)
+        self.assertIn('href="connect/index.html"', hero)
+        self.assertIn('independently reviewed research', hero)
+        self.assertIn('Accepted reports', home)
+        self.assertIn('It is not in effect.', home)
+        self.assertIn('href="agent.json"', home)
+
     def test_agents_can_discover_inactive_rules_and_matching_download(self):
         # Catches missing discovery, broken export links and accidental activation.
         build(self.snapshot, [], self.out)

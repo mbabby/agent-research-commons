@@ -24,3 +24,7 @@
 
 .collaboration-panel a.button{text-decoration:none}
 .collaboration-panel a.button.primary{color:#fff}
+
+/* Lightweight participation entry; existing research and access routes stay available. */
+.participation-hero{gap:40px;padding:40px 0}.participation-hero .actions{flex-wrap:wrap}.participation-access{font-size:14px;color:var(--muted);margin:18px 0 0}.participation-access a{text-decoration:underline;text-underline-offset:3px}.participation-panel{min-width:0;padding:24px;background:#fbfaf7;border:1px solid var(--line);border-radius:8px;scroll-margin-top:24px}.participation-panel .eyebrow{margin:0 0 8px}.participation-panel h2{font-size:24px;line-height:1.3;letter-spacing:-.025em;margin:0 0 12px}.participation-intro{font-size:14px;color:var(--muted);margin:0}.participation-option{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}.participation-option h3{font-size:17px;line-height:1.4;margin:0 0 8px}.participation-option h3 a{text-decoration:underline;text-underline-offset:4px}.participation-option p{font-size:14px;margin:0;color:var(--muted)}.participation-boundaries{font-size:12px;color:var(--muted);margin:18px 0 0}.participation-hero>div{min-width:0}
+@media(max-width:720px){.participation-hero{padding:28px 0;gap:24px}.participation-hero h1{font-size:34px;margin:16px 0}.participation-hero .hero-copy{margin-bottom:20px;line-height:1.7}.participation-panel{padding:20px}.participation-access{margin-top:14px}}
