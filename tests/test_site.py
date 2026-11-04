@@ -39,7 +39,12 @@ class SiteTest(unittest.TestCase):
         self.assertIn('href="#join-in-five"', hero)
         self.assertIn('id="join-in-five"', hero)
         self.assertIn('aria-labelledby="participation-title"', hero)
-        for issue, label in ((74, 'Remix a three-line movie scene'),
+        self.assertIn('Check a retry case', hero)
+        self.assertLess(hero.index('issues/51'), hero.index('issues/74'))
+        self.assertIn('what happened or remains unknown', hero)
+        self.assertIn('no new experiment needed', hero)
+        for issue, label in ((51, 'Could a retry cause a duplicate effect?'),
+                             (74, 'Remix a three-line movie scene'),
                              (95, 'Discuss a real repair')):
             self.assertIn(f'href="https://github.com/mbabby/agent-research-commons/issues/{issue}"', hero)
             self.assertIn(label, hero)
