@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "provenance": "All task content, judgments, resolver identities and timestamps are deliberately synthetic, not observed Agent behavior or independently authenticated review.",
+  "rule": {
+    "revision": "synthetic-explicit-resolution-v1",
+    "authorized_resolvers": [
+      "synthetic-resolver-a",
+      "synthetic-resolver-b"
+    ]
+  },
+  "inputs": {
+    "outline-v1": "Report needs a Summary section.",
+    "outline-v2": "Report needs Summary and Risks sections."
+  },
+  "rubrics": {
+    "rubric-v1": "Each section named by the required outline must contain a substantive statement. For Risks, name at least one concrete risk. No mitigation is required."
+  },
+  "assigned_tasks": [
+    {
+      "task_id": "A",
+      "required_input_revision": "outline-v1",
+      "rubric_revision": "rubric-v1"
+    },
+    {
+      "task_id": "B",
+      "required_input_revision": "outline-v1",
+      "rubric_revision": "rubric-v1"
+    }
+  ],
+  "checkpoints": {
+    "T0_both_passed": 4,
+    "T1_input_changed": 5,
+    "T2_same_output_passes": 6,
+    "T3_conflicting_evaluations": 7,
+    "T4_invalid_resolutions": 9,
+    "T5_explicit_rejection": 10,
+    "T6_conflicting_resolutions": 11,
+    "T7_explicit_joint_resolution": 12
+  },
+  "events": [
+    {
+      "seq": 1,
+      "id": "O-A-r1",
+      "kind": "output",
+      "task_id": "A",
+      "output_revision": "report-r1",
+      "attempt_id": "A-attempt-1",
+      "produced_input_revision": "outline-v1",
+      "text": "Summary: Publish a weekly report. Risks: The supplier may deliver data late."
+    },
+    {
+      "seq": 2,
+      "id": "E-A-v1",
+      "kind": "evaluation",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v1",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-evaluator-2",
+      "outcome": "passed",
+      "reason": "The Summary section is present.",
+      "evaluated_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "seq": 3,
+      "id": "O-B-r1",
+      "kind": "output",
+      "task_id": "B",
+      "output_revision": "report-r1",
+      "attempt_id": "B-attempt-1",
+      "produced_input_revision": "outline-v1",
+      "text": "Summary: Review the monthly inventory."
+    },
+    {
+      "seq": 4,
+      "id": "E-B-v1",
+      "kind": "evaluation",
+      "key": {
+        "task_id": "B",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v1",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-evaluator-4",
+      "outcome": "passed",
+      "reason": "The Summary section is present.",
+      "evaluated_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "seq": 5,
+      "id": "I-A-v2",
+      "kind": "requirement",
+      "task_id": "A",
+      "required_input_revision": "outline-v2",
+      "rubric_revision": "rubric-v1"
+    },
+    {
+      "seq": 6,
+      "id": "E-A-v2-pass",
+      "kind": "evaluation",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-evaluator-6",
+      "outcome": "passed",
+      "reason": "The unchanged report already includes a concrete risk about late supplier data.",
+      "evaluated_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "seq": 7,
+      "id": "E-A-v2-reject",
+      "kind": "evaluation",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-evaluator-7",
+      "outcome": "rejected",
+      "reason": "This invented evaluator believes a risk statement needs a mitigation, which the report lacks.",
+      "evaluated_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "seq": 8,
+      "id": "R-unauthorized",
+      "kind": "resolution",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-outsider",
+      "rule_revision": "synthetic-explicit-resolution-v1",
+      "outcome": "passed",
+      "conflicting_evaluation_ids": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "supersedes": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "reason": "Attempted override by someone not on the declared resolver list.",
+      "evaluated_at": "2025-12-01T00:00:00Z"
+    },
+    {
+      "seq": 9,
+      "id": "R-cross-key",
+      "kind": "resolution",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-resolver-a",
+      "rule_revision": "synthetic-explicit-resolution-v1",
+      "outcome": "passed",
+      "conflicting_evaluation_ids": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "supersedes": [
+        "E-A-v2-pass",
+        "E-A-v2-reject",
+        "E-B-v1"
+      ],
+      "reason": "Invalid attempt to include task B evidence in an A resolution.",
+      "evaluated_at": "2025-12-01T00:00:00Z"
+    },
+    {
+      "seq": 10,
+      "id": "R-reject",
+      "kind": "resolution",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-resolver-a",
+      "rule_revision": "synthetic-explicit-resolution-v1",
+      "outcome": "rejected",
+      "conflicting_evaluation_ids": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "supersedes": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "reason": "Synthetic resolver A selects the stricter interpretation; this is a contestable judgment.",
+      "evaluated_at": "2025-12-01T00:00:00Z"
+    },
+    {
+      "seq": 11,
+      "id": "R-pass",
+      "kind": "resolution",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-resolver-b",
+      "rule_revision": "synthetic-explicit-resolution-v1",
+      "outcome": "passed",
+      "conflicting_evaluation_ids": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "supersedes": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "reason": "Synthetic resolver B selects the literal rubric, which does not demand mitigation. This does not supersede R-reject.",
+      "evaluated_at": "2025-12-01T00:00:00Z"
+    },
+    {
+      "seq": 12,
+      "id": "R-both",
+      "kind": "resolution",
+      "key": {
+        "task_id": "A",
+        "output_revision": "report-r1",
+        "required_input_revision": "outline-v2",
+        "rubric_revision": "rubric-v1"
+      },
+      "author": "synthetic-resolver-a",
+      "rule_revision": "synthetic-explicit-resolution-v1",
+      "outcome": "passed",
+      "conflicting_evaluation_ids": [
+        "E-A-v2-pass",
+        "E-A-v2-reject"
+      ],
+      "supersedes": [
+        "R-reject",
+        "R-pass"
+      ],
+      "reason": "Explicitly addresses both resolutions: the declared rubric requires a concrete risk, not mitigation.",
+      "evaluated_at": "2025-12-01T00:00:00Z"
+    }
+  ]
+}

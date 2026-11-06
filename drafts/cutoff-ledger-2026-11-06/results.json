@@ -1,0 +1,647 @@
+{
+  "T0_both_passed": {
+    "cutoff": 4,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 2,
+      "rejected": 0,
+      "disputed": 0
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-A-v1"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1"
+    ],
+    "invalid_events": [],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T1_input_changed": {
+    "cutoff": 5,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 1,
+      "unevaluated": 0,
+      "passed": 1,
+      "rejected": 0,
+      "disputed": 0
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "stale",
+        "active_evidence_ids": []
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2"
+    ],
+    "invalid_events": [],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T2_same_output_passes": {
+    "cutoff": 6,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 2,
+      "rejected": 0,
+      "disputed": 0
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-A-v2-pass"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2",
+      "E-A-v2-pass"
+    ],
+    "invalid_events": [],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T3_conflicting_evaluations": {
+    "cutoff": 7,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 1,
+      "rejected": 0,
+      "disputed": 1
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "disputed",
+        "active_evidence_ids": [
+          "E-A-v2-pass",
+          "E-A-v2-reject"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2",
+      "E-A-v2-pass",
+      "E-A-v2-reject"
+    ],
+    "invalid_events": [],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T4_invalid_resolutions": {
+    "cutoff": 9,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 1,
+      "rejected": 0,
+      "disputed": 1
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "disputed",
+        "active_evidence_ids": [
+          "E-A-v2-pass",
+          "E-A-v2-reject"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2",
+      "E-A-v2-pass",
+      "E-A-v2-reject",
+      "R-unauthorized",
+      "R-cross-key"
+    ],
+    "invalid_events": [
+      {
+        "seq": 8,
+        "id": "R-unauthorized",
+        "code": "unauthorized_resolver",
+        "detail": "author is not in the frozen resolver list"
+      },
+      {
+        "seq": 9,
+        "id": "R-cross-key",
+        "code": "cross_key_reference",
+        "detail": "different evaluation key: E-B-v1"
+      }
+    ],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T5_explicit_rejection": {
+    "cutoff": 10,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 1,
+      "rejected": 1,
+      "disputed": 0
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "rejected",
+        "active_evidence_ids": [
+          "R-reject"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2",
+      "E-A-v2-pass",
+      "E-A-v2-reject",
+      "R-unauthorized",
+      "R-cross-key",
+      "R-reject"
+    ],
+    "invalid_events": [
+      {
+        "seq": 8,
+        "id": "R-unauthorized",
+        "code": "unauthorized_resolver",
+        "detail": "author is not in the frozen resolver list"
+      },
+      {
+        "seq": 9,
+        "id": "R-cross-key",
+        "code": "cross_key_reference",
+        "detail": "different evaluation key: E-B-v1"
+      }
+    ],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T6_conflicting_resolutions": {
+    "cutoff": 11,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 1,
+      "rejected": 0,
+      "disputed": 1
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "disputed",
+        "active_evidence_ids": [
+          "R-reject",
+          "R-pass"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2",
+      "E-A-v2-pass",
+      "E-A-v2-reject",
+      "R-unauthorized",
+      "R-cross-key",
+      "R-reject",
+      "R-pass"
+    ],
+    "invalid_events": [
+      {
+        "seq": 8,
+        "id": "R-unauthorized",
+        "code": "unauthorized_resolver",
+        "detail": "author is not in the frozen resolver list"
+      },
+      {
+        "seq": 9,
+        "id": "R-cross-key",
+        "code": "cross_key_reference",
+        "detail": "different evaluation key: E-B-v1"
+      }
+    ],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  },
+  "T7_explicit_joint_resolution": {
+    "cutoff": 12,
+    "rule": {
+      "revision": "synthetic-explicit-resolution-v1",
+      "authorized_resolvers": [
+        "synthetic-resolver-a",
+        "synthetic-resolver-b"
+      ]
+    },
+    "current_input_acceptance": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "ever_passed_at_checkpoint": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "counts": {
+      "stale": 0,
+      "unevaluated": 0,
+      "passed": 2,
+      "rejected": 0,
+      "disputed": 0
+    },
+    "tasks": {
+      "A": {
+        "key": {
+          "task_id": "A",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v2",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "R-both"
+        ]
+      },
+      "B": {
+        "key": {
+          "task_id": "B",
+          "output_revision": "report-r1",
+          "required_input_revision": "outline-v1",
+          "rubric_revision": "rubric-v1"
+        },
+        "state": "passed",
+        "active_evidence_ids": [
+          "E-B-v1"
+        ]
+      }
+    },
+    "visible_event_ids": [
+      "O-A-r1",
+      "E-A-v1",
+      "O-B-r1",
+      "E-B-v1",
+      "I-A-v2",
+      "E-A-v2-pass",
+      "E-A-v2-reject",
+      "R-unauthorized",
+      "R-cross-key",
+      "R-reject",
+      "R-pass",
+      "R-both"
+    ],
+    "invalid_events": [
+      {
+        "seq": 8,
+        "id": "R-unauthorized",
+        "code": "unauthorized_resolver",
+        "detail": "author is not in the frozen resolver list"
+      },
+      {
+        "seq": 9,
+        "id": "R-cross-key",
+        "code": "cross_key_reference",
+        "detail": "different evaluation key: E-B-v1"
+      }
+    ],
+    "measurements": {
+      "human_correction_minutes": null,
+      "evaluation_minutes": null,
+      "waiting_minutes": null,
+      "latency_seconds": null,
+      "intervention_count": null,
+      "total_cost": null,
+      "cost_per_accepted_outcome": null,
+      "manual_baseline_minutes": null
+    }
+  }
+}
