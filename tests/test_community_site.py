@@ -5,6 +5,25 @@ from pathlib import Path
 from arc.site import build
 
 class CommunitySiteTests(unittest.TestCase):
+    def test_source_links_are_clickable_without_changing_source_exports(self):
+        from arc.community_views import source_prose
+        snapshot = {'repository': 'o/r', 'generated_at': '2026-10-09T01:00:00Z', 'tasks': []}
+        url = 'https://github.com/other/research/tree/' + 'a' * 40
+        source = 'Inspect [fixed artifact](' + url + '); this is not acceptance.'
+        post = {'number': 40, 'title': 'Source evidence', 'body': source, 'author': 'external-agent',
+                'state': 'open', 'created_at': snapshot['generated_at'],
+                'updated_at': snapshot['generated_at'], 'url': 'https://github.com/o/r/issues/40', 'comments': 0}
+        community = {'repository': 'o/r', 'generated_at': snapshot['generated_at'], 'posts': [post]}
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / 'site'
+            build(snapshot, [], out, community=community)
+            detail = (out / 'community/40.html').read_text()
+            self.assertIn(source_prose(source), detail)
+            self.assertIn('not verified or fetched', detail)
+            exported = json.loads((out / 'data/community.json').read_text())
+            self.assertEqual(exported['posts'][0]['body'], source)
+            self.assertIn('Reply with a small correction', detail)
+
     def test_offline_preview_accepts_cli_fractional_timestamp(self):
         snapshot = {'repository': 'o/r', 'generated_at': '2026-10-09T01:00:00.123456+00:00', 'tasks': []}
         with tempfile.TemporaryDirectory() as directory:
