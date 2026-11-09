@@ -2,7 +2,7 @@
 from html import escape
 import json
 import re
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, urlsplit
 from arc.collaboration import derive, display_body
 from arc.languages import language
 
@@ -13,6 +13,69 @@ def esc(value):
 
 def prose(value):
     return '<span lang="{}">{}</span>'.format(language(value), esc(value))
+
+
+_SOURCE_LINK = re.compile(
+    r'(?P<ticks>`+)|'
+    r'(?<![!\\])\[[^\[\]\n]+\]\((?P<url>https://[^\s()<>"\'\\]+)\)')
+
+
+def source_prose(value):
+    """Preserve source text; make only explicit, simple HTTPS links navigable.
+
+    This is not a Markdown renderer. Unsupported syntax, raw HTML, images,
+    code and bare URLs remain escaped text. Never fetch a source or embed it.
+    The visible destination is kept, rather than trusting an arbitrary label.
+    """
+    lines = []
+    fence = None
+    inline_ticks = None
+    for line in value.splitlines(keepends=True):
+        marker = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)', line)
+        if fence is not None:
+            lines.append(esc(line))
+            if (marker and marker[1][0] == fence[0]
+                    and len(marker[1]) >= len(fence) and not marker[2].strip()):
+                fence = None
+            continue
+        if marker and inline_ticks is None:
+            fence = marker[1]
+            lines.append(esc(line))
+            continue
+        if (line.startswith(('    ', '\t')) or re.match(r'^ {0,3}>', line)
+                or re.search(r'\[[^\]\n]*\[', line)):
+            # Conservative fallback for quoted blocks and nested link syntax.
+            lines.append(esc(line))
+            continue
+        parts, cursor = [], 0
+        for match in _SOURCE_LINK.finditer(line):
+            if match['ticks'] is not None:
+                width = len(match['ticks'])
+                if inline_ticks is None:
+                    inline_ticks = width
+                elif width == inline_ticks:
+                    inline_ticks = None
+                continue
+            url = match['url']
+            if inline_ticks is not None:
+                continue
+            try:
+                parsed = urlsplit(url)
+                safe = (parsed.scheme == 'https' and parsed.hostname
+                        and parsed.username is None and parsed.password is None
+                        and not any(ord(c) < 32 or ord(c) == 127 for c in url))
+                parsed.port  # Reject malformed ports without changing the source.
+            except ValueError:
+                safe = False
+            if not safe:
+                continue
+            start, end = match.span('url')
+            parts.extend((esc(line[cursor:start]),
+                          '<a href="{}" rel="noreferrer nofollow">{}</a>'.format(esc(url), esc(url))))
+            cursor = end
+        parts.append(esc(line[cursor:]))
+        lines.append(''.join(parts))
+    return '<span lang="{}">{}</span>'.format(language(value), ''.join(lines))
 
 
 def external(url, text, css=''):
@@ -94,7 +157,8 @@ def render(posts, snapshot, repository, page, graph=None):
         updates = dict.fromkeys(re.findall(re.escape(post['url']) + r'#issuecomment-[0-9]+\b', post['body']))
         if updates:
             detail += '<section class="collaboration-panel"><h2>Linked discussion updates</h2><p>Links supplied in this Issue body; not independently verified.</p>' + ''.join(external(url, 'Open linked experiment or discussion update', 'button') for url in updates) + '</section>'
-        detail += '<article class="prose community-body">' + prose(display_body(post['body'])) + '</article>'
+        detail += '<p>Issue body preserved as text. Explicit HTTPS source links are clickable, but are not verified or fetched by this site. Check the visible destination before opening.</p>'
+        detail += '<article class="prose community-body">' + source_prose(display_body(post['body'])) + '</article>'
         if item:
             detail += panel(item)
         timelines = [ids for ids in graph['timelines'].values() if number in ids]
