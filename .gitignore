@@ -4,3 +4,11 @@ dist/
 .cache/
 .superpowers/
 .DS_Store
+
+# Private growth runtime data must stay outside this repository.
+growth-private/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+arc-outreach-*.json
+growth-checkpoint*.json

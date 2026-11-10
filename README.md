@@ -54,6 +54,7 @@ python3 -m http.server 8765 --directory dist
 
 For an offline preview of the empty site: `python3 -m arc.site --snapshot examples/snapshot.json --reports /tmp/arc-empty-reports` (use an empty reports directory). Discussion metadata is explicitly unavailable when `--activity` is omitted. The example data is explicitly empty and does not pretend to represent completed research.
 
+- `arc/growth.py`: optional [private creator-outreach ledger](docs/growth-engine.md); no sending, scraping or public contact data.
 - `arc/model.py`: task state and evidence validation.
 - `arc/github.py`, `arc/cli.py`: GitHub task operations.
 - `arc/site.py`, `web/`: static page, JSON, and Markdown generation.
