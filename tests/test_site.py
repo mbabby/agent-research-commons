@@ -60,6 +60,76 @@ class SiteTest(unittest.TestCase):
         self.assertIn('It is not in effect.', home)
         self.assertIn('href="agent.json"', home)
 
+    def test_homepage_separates_formal_inventory_from_community(self):
+        build(self.snapshot, [], self.out)
+        home = (self.out / 'index.html').read_text()
+        self.assertIn('<span>Formal tasks</span>', home)
+        self.assertIn('<span>Unfinished tasks</span>', home)
+        self.assertIn('not Community participation or adoption', home)
+        self.assertIn('href="community/recent.html"', home)
+        self.assertIn('href="community/needs.html"', home)
+        self.assertNotIn('Research in progress', home)
+        self.assertNotIn('Active tasks', home)
+
+    def test_homepage_does_not_fill_unfinished_queue_with_terminal_tasks(self):
+        from test_model import ReportTests, task
+        from arc.model import transition
+        completed, report = ReportTests().fixture()
+        opened = {**task(), 'number': 2, 'title': 'Unassigned question'}
+        cancelled = transition({**task(), 'number': 3}, 'cancel', 'host', 'cancel-3')
+        snapshot = {**self.snapshot, 'tasks': [completed, cancelled, opened]}
+        build(snapshot, [report], self.out)
+        home = (self.out / 'index.html').read_text()
+        self.assertIn('<strong>3</strong><span>Formal tasks</span>', home)
+        self.assertIn('<strong>1</strong><span>Unfinished tasks</span>', home)
+        self.assertIn('<strong>1</strong><span>Accepted reports</span>', home)
+        self.assertIn('href="tasks/2.html"', home)
+        self.assertNotIn('href="tasks/1.html"', home)
+        self.assertNotIn('href="tasks/3.html"', home)
+        self.assertEqual(home.count('class="task-row"'), 1)
+        self.assertIn('Open tasks may be unassigned', home)
+        self.assertIn('Unassigned', home)
+        self.assertIn('href="reports/example.html"', home)
+        # Terminal records remain available in the complete board.
+        board = (self.out / 'tasks/index.html').read_text()
+        self.assertIn('href="../tasks/1.html"', board)
+        self.assertIn('href="../tasks/3.html"', board)
+
+    def test_homepage_entirely_terminal_queue_has_an_honest_empty_state(self):
+        from test_model import ReportTests, task
+        from arc.model import transition
+        completed, report = ReportTests().fixture()
+        cancelled = transition({**task(), 'number': 2}, 'cancel', 'host', 'cancel-2')
+        for tasks, reports in (([], []), ([completed, cancelled], [report])):
+            with self.subTest(task_count=len(tasks)):
+                build({**self.snapshot, 'tasks': tasks}, reports, self.out)
+                home = (self.out / 'index.html').read_text()
+                self.assertIn('<strong>0</strong><span>Unfinished tasks</span>', home)
+                self.assertIn('No unfinished formal tasks.', home)
+                self.assertIn('Browse all tasks for completed and cancelled records.', home)
+                self.assertNotIn('class="task-row"', home)
+                self.assertIn('href="tasks/index.html"', home)
+
+    def test_homepage_unfinished_includes_each_nonterminal_status(self):
+        from test_model import task
+        from arc.model import transition
+        opened = task()
+        assigned = transition(opened, 'assign', 'host', 'assign', agent_id='researcher')
+        started = transition(assigned, 'start', 'researcher', 'start', attempt=1)
+        submitted = transition(started, 'submit', 'researcher', 'submit', attempt=1,
+                               artifact_url='https://github.com/o/r/pull/1')
+        changes = transition(submitted, 'review', 'reviewer', 'review', attempt=1,
+                             verdict='changes_requested', notes='More evidence')
+        blocked = transition(started, 'block', 'researcher', 'block', attempt=1,
+                             notes='Missing source')
+        for record in (opened, assigned, started, submitted, changes, blocked):
+            with self.subTest(status=record['status']):
+                build({**self.snapshot, 'tasks': [record]}, [], self.out)
+                home = (self.out / 'index.html').read_text()
+                self.assertIn('<strong>1</strong><span>Unfinished tasks</span>', home)
+                self.assertIn('data-status="' + record['status'] + '"', home)
+                self.assertEqual(home.count('class="task-row"'), 1)
+
     def test_agents_can_discover_inactive_rules_and_matching_download(self):
         # Catches missing discovery, broken export links and accidental activation.
         build(self.snapshot, [], self.out)
