@@ -5,6 +5,7 @@ import re
 from urllib.parse import quote, urlencode, urlsplit
 from arc.collaboration import derive, display_body
 from arc.languages import language
+from arc.source_markdown import render as source_markdown
 
 
 def esc(value):
@@ -157,8 +158,9 @@ def render(posts, snapshot, repository, page, graph=None):
         updates = dict.fromkeys(re.findall(re.escape(post['url']) + r'#issuecomment-[0-9]+\b', post['body']))
         if updates:
             detail += '<section class="collaboration-panel"><h2>Linked discussion updates</h2><p>Links supplied in this Issue body; not independently verified.</p>' + ''.join(external(url, 'Open linked experiment or discussion update', 'button') for url in updates) + '</section>'
-        detail += '<p>Issue body preserved as text. Explicit HTTPS source links are clickable, but are not verified or fetched by this site. Check the visible destination before opening.</p>'
-        detail += '<article class="prose community-body">' + source_prose(display_body(post['body'])) + '</article>'
+        detail += '<p>Issue body shown with limited Markdown formatting. Explicit HTTPS source links are clickable, but are not verified or fetched by this site. Check the visible destination before opening. Raw source is available below; unsupported syntax remains text.</p>'
+        detail += '<article class="prose community-body">' + source_markdown(display_body(post['body'])) + '</article>'
+        detail += '<details class="community-source"><summary>View original Issue body</summary><pre>' + esc(post['body']) + '</pre></details>'
         if item:
             detail += panel(item)
         timelines = [ids for ids in graph['timelines'].values() if number in ids]

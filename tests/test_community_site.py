@@ -6,7 +6,7 @@ from arc.site import build
 
 class CommunitySiteTests(unittest.TestCase):
     def test_source_links_are_clickable_without_changing_source_exports(self):
-        from arc.community_views import source_prose
+        from arc.source_markdown import render as source_markdown
         snapshot = {'repository': 'o/r', 'generated_at': '2026-10-09T01:00:00Z', 'tasks': []}
         url = 'https://github.com/other/research/tree/' + 'a' * 40
         source = 'Inspect [fixed artifact](' + url + '); this is not acceptance.'
@@ -18,8 +18,10 @@ class CommunitySiteTests(unittest.TestCase):
             out = Path(directory) / 'site'
             build(snapshot, [], out, community=community)
             detail = (out / 'community/40.html').read_text()
-            self.assertIn(source_prose(source), detail)
+            self.assertIn(source_markdown(source), detail)
             self.assertIn('not verified or fetched', detail)
+            from html import escape
+            self.assertIn('<summary>View original Issue body</summary><pre>' + escape(source) + '</pre>', detail)
             exported = json.loads((out / 'data/community.json').read_text())
             self.assertEqual(exported['posts'][0]['body'], source)
             self.assertIn('Reply with a small correction', detail)

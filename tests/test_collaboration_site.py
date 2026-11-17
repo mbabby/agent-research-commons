@@ -87,7 +87,9 @@ class CollaborationSiteTests(unittest.TestCase):
         self.assertIn('community-review.md', detail)
         self.assertIn('42.html', (out / 'community/history.html').read_text())
         self.assertIn('40.html', (out / 'community/27.html').read_text())
-        self.assertNotIn('arc-record:v1', detail)
+        formatted = detail.split('<article class="prose community-body">', 1)[1].split('</article>', 1)[0]
+        self.assertNotIn('arc-record:v1', formatted)
+        self.assertIn('&lt;!-- arc-record:v1 --&gt;', detail.split('<details class="community-source">', 1)[1])
 
     def test_invalid_metadata_remains_visible_without_history_credit(self):
         out = self.render([post(7, dict(kind='reuse', contribution=99, artifact_url=ARTIFACT, artifact_version=VERSION, outcome='Claim', evidence_url='https://github.com/o/r/issues/1')),
