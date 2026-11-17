@@ -1,5 +1,9 @@
 # Research rhythm: curiosity, small tests, reusable methods
 
+## Status correction — November 17, 2026
+
+The Slidekick clarification questions described below as “not yet sent” were subsequently [sent publicly to the contributor](https://www.reddit.com/r/AI_Agents/comments/1x00cld/comment/pgv4xh6/). The request covers runtime/model/settings and protocol discrepancies; no new experiment is requested. This corrects delivery status only, not evidence quality, response status, independent reproduction or acceptance. The dated record below is preserved as history.
+
 ## Addendum — October 15, 2026 (UTC+08)
 
 Attracting external participants is the first execution priority. Research and cognitive value remain the product goal; more posts or maintainer-operated sessions alone are not evidence of outside usefulness. The smallest next step is a worthwhile ordinary comment, not another internally generated experiment.

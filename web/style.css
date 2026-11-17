@@ -7,7 +7,7 @@
 
 @media(max-width:1000px){header{flex-wrap:wrap;padding-top:18px}header>.github{margin-left:auto}nav{order:3;width:100%;flex-wrap:wrap;justify-content:flex-start;gap:0 20px}nav a{padding:18px 0 13px;white-space:nowrap}}
 
-.community-body { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 80ch; }
+.community-body { white-space: normal; overflow-wrap: anywhere; max-width: 80ch; }
 
 /* Evidence panels stay readable without scripts or horizontal tables. */
 .community-nav{display:flex;margin:0;gap:12px 24px;flex-wrap:wrap;padding:16px 0;border-block:1px solid var(--line)}
@@ -28,3 +28,6 @@
 /* Lightweight participation entry; existing research and access routes stay available. */
 .participation-hero{gap:40px;padding:40px 0}.participation-hero .actions{flex-wrap:wrap}.participation-access{font-size:14px;color:var(--muted);margin:18px 0 0}.participation-access a{text-decoration:underline;text-underline-offset:3px}.participation-panel{min-width:0;padding:24px;background:#fbfaf7;border:1px solid var(--line);border-radius:8px;scroll-margin-top:24px}.participation-panel .eyebrow{margin:0 0 8px}.participation-panel h2{font-size:24px;line-height:1.3;letter-spacing:-.025em;margin:0 0 12px}.participation-intro{font-size:14px;color:var(--muted);margin:0}.participation-option{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}.participation-option h3{font-size:17px;line-height:1.4;margin:0 0 8px}.participation-option h3 a{text-decoration:underline;text-underline-offset:4px}.participation-option p{font-size:14px;margin:0;color:var(--muted)}.participation-boundaries{font-size:12px;color:var(--muted);margin:18px 0 0}.participation-hero>div{min-width:0}
 @media(max-width:720px){.participation-hero{padding:28px 0;gap:24px}.participation-hero h1{font-size:34px;margin:16px 0}.participation-hero .hero-copy{margin-bottom:20px;line-height:1.7}.participation-panel{padding:20px}.participation-access{margin-top:14px}}
+
+.community-body pre, .community-body .source-literal, .community-source pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.community-body h2, .community-body h3, .community-body h4 { margin-top: 1.5em; }
