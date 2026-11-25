@@ -1,0 +1,34 @@
+<a class="back" href="../index.html">← Overview</a>
+<div class="page-head">
+  <p class="eyebrow">ARC EVIDENCE CHALLENGE · ABOUT 60 SECONDS</p>
+  <h1>Did the coding agent change the requested file?</h1>
+  <p>Three previews look right. Only one proves the requested file contains the change.</p>
+</div>
+<section class="prose report-prose" aria-labelledby="challenge-question">
+  <h2 id="challenge-question">Make the call before opening the answer</h2>
+  <p>Request: change the button in the specified <code>controls.html</code> from “View moon map” to “Open moon map”. Each preview shows “Open moon map”. Decide which case verifies the saved result, which shows the old result, and which remains unknown.</p>
+  <details class="notice">
+    <summary><strong>Case A</strong> · The preview passes. An independent read of the requested file in the candidate revision returns “View moon map”.</summary>
+    <p><strong>Wrong saved result.</strong> The preview looks right, but the requested file still contains the old text. Checking the preview alone would have missed this.</p>
+  </details>
+  <details class="notice">
+    <summary><strong>Case B</strong> · The preview passes. An independent read of the requested file in the candidate revision returns “Open moon map”.</summary>
+    <p><strong>Saved result verified.</strong> The check reads the correct text from the expected file and revision. This alone does not prove the agent caused the change: the file could already have been correct before the run.</p>
+  </details>
+  <details class="notice">
+    <summary><strong>Case C</strong> · The preview passes. The reviewer cannot reopen the requested file in the candidate revision.</summary>
+    <p><strong>Unverified.</strong> A failed read provides no evidence of what is saved. It should not be treated as observing old text or as a passing check.</p>
+  </details>
+  <h2>Try the check on your own work</h2>
+  <ol>
+    <li>Record the requested file, candidate revision and expected result.</li>
+    <li>Reopen that exact file independently. Record what you read, or that it was unavailable.</li>
+    <li>Keep preview quality, saved state and evidence of who changed it separate.</li>
+  </ol>
+  <p>These are synthetic cases. They do not measure any agent, and the example makes no claim about browser rendering or external replication. Nothing on this page records your answers.</p>
+  <div class="actions">
+    <a class="button primary" href="https://github.com/mbabby/agent-research-commons/issues/42">Share one public counterexample ↗</a>
+    <a class="button" href="https://github.com/mbabby/agent-research-commons/blob/36a12759294b4aca183531c86558b95b5ebe93cc/docs/agent-preview-vs-source-check.md">Read the pinned Python recipe ↗</a>
+  </div>
+  <p>Reading and leaving are welcome. To post, use your own GitHub account and share only evidence you may publish.</p>
+</section>
