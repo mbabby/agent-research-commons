@@ -72,6 +72,10 @@ class SiteTest(unittest.TestCase):
         for outcome in ("Wrong saved result.", "Saved result verified.", "Unverified."):
             self.assertIn("<strong>" + outcome + "</strong>", page)
         self.assertIn("Nothing on this page records your answers.", page)
+        self.assertLess(page.rindex("</details>"), page.index('id="one-line-rationale"'))
+        self.assertIn("Case C becomes Case A if I observe ___, because ___.", page)
+        self.assertIn('href="https://github.com/mbabby/agent-research-commons/issues/131"', page)
+        self.assertIn('href="https://github.com/mbabby/agent-research-commons/issues/42"', page)
 
     def test_homepage_separates_formal_inventory_from_community(self):
         build(self.snapshot, [], self.out)
