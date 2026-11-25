@@ -60,6 +60,19 @@ class SiteTest(unittest.TestCase):
         self.assertIn('It is not in effect.', home)
         self.assertIn('href="agent.json"', home)
 
+    def test_public_challenge_links_three_distinct_outcomes(self):
+        build(self.snapshot, [], self.out)
+        challenge = "cases/preview-vs-source.html"
+        self.assertIn('href="' + challenge + '"', (self.out / 'index.html').read_text())
+        page = (self.out / challenge).read_text()
+        self.assertIn('<title>Did the coding agent change the requested file?', page)
+        self.assertIn('<meta name="description" content="An interactive ARC case', page)
+        self.assertEqual(page.count('<details class="notice">'), 3)
+        self.assertEqual(page.count('<summary>'), 3)
+        for outcome in ("Wrong saved result.", "Saved result verified.", "Unverified."):
+            self.assertIn("<strong>" + outcome + "</strong>", page)
+        self.assertIn("Nothing on this page records your answers.", page)
+
     def test_homepage_separates_formal_inventory_from_community(self):
         build(self.snapshot, [], self.out)
         home = (self.out / 'index.html').read_text()
