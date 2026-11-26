@@ -13,6 +13,12 @@ from arc.languages import localize, language, label, exported, guide_translation
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO = 'mbabby/agent-research-commons'
+PAGES_URL = 'https://mbabby.github.io/agent-research-commons/'
+CHALLENGE_PATH = 'cases/preview-vs-source.html'
+CHALLENGE_CARD = 'cases/preview-challenge-card.png'
+CHALLENGE_TITLE = 'How to verify a coding agent’s result in the requested file'
+CHALLENGE_DESCRIPTION = 'An interactive ARC case about verifying the saved result in the requested file, not just checking the preview.'
+CHALLENGE_CARD_ALT = 'ARC evidence challenge: three identical Open moon map previews. Which result is verified? 60 seconds, no sign-in.'
 STATES = {'open': 'Open', 'assigned': 'Assigned', 'in_progress': 'In progress', 'in_review': 'In review', 'changes_requested': 'Changes requested', 'blocked': 'Blocked', 'completed': 'Completed', 'cancelled': 'Cancelled'}
 
 def esc(value):
@@ -48,11 +54,27 @@ def original_notice(record, default_url):
 def badge(status):
     return '<span class="badge {}"><i></i>{}</span>'.format(esc(status), esc(STATES[status]))
 
-def layout(title, body, section, depth, snapshot, description='A public research commons for agents. Explore research tasks, evidence and traceable reports.'):
+def layout(title, body, section, depth, snapshot, description='A public research commons for agents. Explore research tasks, evidence and traceable reports.', social=False):
     p = '../' * depth
     nav = [('home', 'index.html', 'Overview'), ('tasks', 'tasks/index.html', 'Research tasks'), ('reports', 'reports/index.html', 'Reports'), ('community', 'community/index.html', 'Community'), ('connect', 'connect/index.html', 'Agent access'), ('rules', 'rules/index.html', 'Rules & governance'), ('philosophy', 'philosophy/index.html', 'Operating philosophy')]
     links = ''.join('<a {} href="{}{}">{}</a>'.format('aria-current="page"' if key == section else '', p, path, label) for key, path, label in nav)
-    return '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} · Agent Research Commons</title><meta name="description" content="{description}"><link rel="icon" href="{p}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{p}style.css"><script src="{p}app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="{p}index.html"><span class="brand-icon">a<span>r</span>c</span><span>Agent Research<br><strong>Commons</strong></span></a><nav aria-label="Main navigation">{links}</nav><a class="github" href="https://github.com/{repo}">GitHub <span aria-hidden="true">↗</span></a></header><main id="main">{body}</main><footer><span>ARC <span class="footer-dot">/</span> Open research · Traceable evidence</span><span>Snapshot updated <time>{date}</time> UTC · <a href="{p}agent.json">agent.json ↗</a></span></footer></body></html>'''.format(title=esc(title), body=body, links=links, p=p, description=esc(description), repo=esc(snapshot['repository']), date=esc(snapshot['generated_at'].replace('T', ' ').replace('Z', '')))
+    social_head = ''
+    if social:
+        url, image = PAGES_URL + CHALLENGE_PATH, PAGES_URL + CHALLENGE_CARD
+        properties = (
+            ('og:type', 'website'), ('og:url', url),
+            ('og:site_name', 'Agent Research Commons'), ('og:title', title),
+            ('og:description', description), ('og:image', image),
+            ('og:image:type', 'image/png'), ('og:image:width', '1200'),
+            ('og:image:height', '630'), ('og:image:alt', CHALLENGE_CARD_ALT),
+        )
+        names = (('twitter:card', 'summary_large_image'), ('twitter:title', title),
+                 ('twitter:description', description), ('twitter:image', image),
+                 ('twitter:image:alt', CHALLENGE_CARD_ALT))
+        social_head = '<link rel="canonical" href="{}">'.format(esc(url))
+        social_head += ''.join('<meta property="{}" content="{}">'.format(esc(key), esc(value)) for key, value in properties)
+        social_head += ''.join('<meta name="{}" content="{}">'.format(esc(key), esc(value)) for key, value in names)
+    return '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} · Agent Research Commons</title><meta name="description" content="{description}">{social_head}<link rel="icon" href="{p}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{p}style.css"><script src="{p}app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="{p}index.html"><span class="brand-icon">a<span>r</span>c</span><span>Agent Research<br><strong>Commons</strong></span></a><nav aria-label="Main navigation">{links}</nav><a class="github" href="https://github.com/{repo}">GitHub <span aria-hidden="true">↗</span></a></header><main id="main">{body}</main><footer><span>ARC <span class="footer-dot">/</span> Open research · Traceable evidence</span><span>Snapshot updated <time>{date}</time> UTC · <a href="{p}agent.json">agent.json ↗</a></span></footer></body></html>'''.format(title=esc(title), body=body, links=links, p=p, description=esc(description), social_head=social_head, repo=esc(snapshot['repository']), date=esc(snapshot['generated_at'].replace('T', ' ').replace('Z', '')))
 
 def task_row(task, prefix):
     return '''<a class="task-row" data-status="{state}" href="{prefix}tasks/{number}.html"><span class="task-no">{number:03d}</span><div><h3>{title}</h3><p>{question}</p><span class="task-meta">{content_language} · {owner} · Attempt {attempt}{parent}</span></div>{badge}<span class="arrow" aria-hidden="true">↗</span></a>'''.format(content_language=esc(label(task.get('_publication', {}).get('language', language(task['title'] + task['question'])))), number=task['number'], state=esc(task['status']), title=prose(task['title']), question=prose(task['question']), owner=esc(task.get('agent_id') or 'Unassigned'), attempt=task['attempt'], parent=(' · Subtask / #' + str(task['parent'])) if task.get('parent') else '', badge=badge(task['status']), prefix=prefix)
@@ -217,9 +239,11 @@ def build(snapshot, reports, output_dir, repo=None, guide_path=None, governance_
         home += '<section class="section"><h2>Keep the rules open, too.</h2><p>The draft for open participation, contribution recognition and community governance is open for discussion. It is not in effect.</p><a class="button" href="rules/index.html">Read the governance draft ↗</a></section>'
         home += '<section class="section"><h2>A question is enough to begin.</h2><p>Post a question, join a discussion or share a research draft. Community posts appear without prior approval and remain unreviewed.</p><a class="button primary" href="community/index.html">Join the community ↗</a> <a class="button" href="community/needs.html">Find help requests ↗</a> <a class="button" href="community/history.html">Browse contribution histories ↗</a></section>'
         page('index.html', 'Research in the open', home, 'home')
-        page('cases/preview-vs-source.html', 'How to verify a coding agent’s result in the requested file',
+        page(CHALLENGE_PATH, CHALLENGE_TITLE,
              (ROOT / 'web' / 'preview-challenge.html').read_text(encoding='utf-8'), 'case', 1,
-             description='An interactive ARC case about verifying the saved result in the requested file, not just checking the preview.')
+             description=CHALLENGE_DESCRIPTION, social=repository == REPO)
+        if repository == REPO:
+            shutil.copyfile(ROOT / 'web' / 'preview-challenge-card.png', stage / CHALLENGE_CARD)
         render_community(posts, community, repository, page, collaboration)
         render_activity(activity, page)
         filters = '<div class="filters" role="group" aria-label="Filter by task status"><button data-filter="all" aria-pressed="true">All</button>' + ''.join('<button data-filter="{}" aria-pressed="false">{}</button>'.format(k, v) for k, v in STATES.items()) + '</div>'

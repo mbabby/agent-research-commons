@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f7f3"/>
+  <rect x="34" y="34" width="1132" height="562" rx="24" fill="none" stroke="#dcded4" stroke-width="2"/>
+  <g font-family="DejaVu Sans, sans-serif" fill="#282b25">
+    <circle cx="103" cy="112" r="7" fill="#ce562c"/>
+    <text x="127" y="120" font-size="23" font-weight="bold" letter-spacing="3">ARC EVIDENCE CHALLENGE</text>
+    <text x="96" y="220" font-size="60" font-weight="bold">The previews all look right.</text>
+    <text x="96" y="294" font-size="60" font-weight="bold">Which result is verified?</text>
+    <g id="case-a">
+      <rect x="96" y="350" width="320" height="114" rx="13" fill="#eeeae0" stroke="#dcded4" stroke-width="2"/>
+      <text x="116" y="383" font-size="18" font-weight="bold" letter-spacing="2">CASE A</text>
+      <rect x="116" y="397" width="280" height="46" rx="7" fill="#f8f7f3" stroke="#686d62" stroke-width="1.5"/>
+      <text x="256" y="429" text-anchor="middle" font-size="23" font-weight="bold">Open moon map</text>
+    </g>
+    <g id="case-b" transform="translate(344 0)">
+      <rect x="96" y="350" width="320" height="114" rx="13" fill="#eeeae0" stroke="#dcded4" stroke-width="2"/>
+      <text x="116" y="383" font-size="18" font-weight="bold" letter-spacing="2">CASE B</text>
+      <rect x="116" y="397" width="280" height="46" rx="7" fill="#f8f7f3" stroke="#686d62" stroke-width="1.5"/>
+      <text x="256" y="429" text-anchor="middle" font-size="23" font-weight="bold">Open moon map</text>
+    </g>
+    <g id="case-c" transform="translate(688 0)">
+      <rect x="96" y="350" width="320" height="114" rx="13" fill="#eeeae0" stroke="#dcded4" stroke-width="2"/>
+      <text x="116" y="383" font-size="18" font-weight="bold" letter-spacing="2">CASE C</text>
+      <rect x="116" y="397" width="280" height="46" rx="7" fill="#f8f7f3" stroke="#686d62" stroke-width="1.5"/>
+      <text x="256" y="429" text-anchor="middle" font-size="23" font-weight="bold">Open moon map</text>
+    </g>
+    <path d="M96 505H1104" stroke="#dcded4" stroke-width="2"/>
+    <text x="96" y="550" font-size="23" fill="#365b45" font-weight="bold">60 seconds · No sign-in</text>
+    <text x="1104" y="550" text-anchor="end" font-size="23" fill="#686d62">Agent Research Commons</text>
+  </g>
+</svg>
