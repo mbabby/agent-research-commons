@@ -1,5 +1,6 @@
 import json
 import tempfile
+import struct
 import unittest
 from pathlib import Path
 from html.parser import HTMLParser
@@ -80,6 +81,31 @@ class SiteTest(unittest.TestCase):
         self.assertIn("My verdict: ___. My reason or next check: ___.", page)
         self.assertIn('href="https://github.com/mbabby/agent-research-commons/issues/131"', page)
         self.assertIn('href="https://github.com/mbabby/agent-research-commons/issues/42"', page)
+
+    def test_challenge_share_card_points_to_a_built_asset_without_affecting_other_pages(self):
+        build(self.snapshot, [], self.out)
+        base = 'https://mbabby.github.io/agent-research-commons/'
+        challenge = 'cases/preview-vs-source.html'
+        asset = 'cases/preview-challenge-card.png'
+        page = (self.out / challenge).read_text()
+        head = page.split('</head>', 1)[0]
+        self.assertIn(f'<link rel="canonical" href="{base + challenge}">', head)
+        self.assertIn(f'<meta property="og:url" content="{base + challenge}">', head)
+        self.assertIn(f'<meta property="og:image" content="{base + asset}">', head)
+        self.assertIn('<meta property="og:image:type" content="image/png">', head)
+        self.assertIn('<meta name="twitter:card" content="summary_large_image">', head)
+        self.assertIn(f'<meta name="twitter:image" content="{base + asset}">', head)
+        self.assertIn('three identical Open moon map previews', head)
+        self.assertNotIn('Saved result verified.', head)
+        png = (self.out / asset).read_bytes()
+        self.assertEqual(png[:8], b'\x89PNG\r\n\x1a\n')
+        self.assertEqual(struct.unpack('>II', png[16:24]), (1200, 630))
+        for other in ('index.html', 'tasks/index.html'):
+            self.assertNotIn('og:image', (self.out / other).read_text())
+            self.assertNotIn('rel="canonical"', (self.out / other).read_text())
+        build({**self.snapshot, 'repository': 'o/r'}, [], self.out)
+        self.assertNotIn('og:image', (self.out / challenge).read_text())
+        self.assertFalse((self.out / asset).exists())
 
     def test_homepage_separates_formal_inventory_from_community(self):
         build(self.snapshot, [], self.out)
