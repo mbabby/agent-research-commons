@@ -40,6 +40,9 @@ class SiteTest(unittest.TestCase):
         self.assertIn('id="join-in-five"', hero)
         self.assertIn('aria-labelledby="participation-title"', hero)
         self.assertIn('Check a retry case', hero)
+        self.assertEqual(hero.count('class="button primary"'), 1)
+        self.assertIn('class="button primary" href="cases/preview-vs-source.html"', hero)
+        self.assertIn('No sign-in to play.', hero)
         self.assertLess(hero.index('issues/51'), hero.index('issues/74'))
         self.assertIn('what happened or remains unknown', hero)
         self.assertIn('no new experiment needed', hero)
@@ -65,7 +68,7 @@ class SiteTest(unittest.TestCase):
         challenge = "cases/preview-vs-source.html"
         self.assertIn('href="' + challenge + '"', (self.out / 'index.html').read_text())
         page = (self.out / challenge).read_text()
-        self.assertIn('<title>Did the coding agent change the requested file?', page)
+        self.assertIn('<title>How to verify a coding agent’s result in the requested file', page)
         self.assertIn('<meta name="description" content="An interactive ARC case', page)
         self.assertEqual(page.count('<details class="notice">'), 3)
         self.assertEqual(page.count('<summary>'), 3)
@@ -73,7 +76,8 @@ class SiteTest(unittest.TestCase):
             self.assertIn("<strong>" + outcome + "</strong>", page)
         self.assertIn("Nothing on this page records your answers.", page)
         self.assertLess(page.rindex("</details>"), page.index('id="one-line-rationale"'))
-        self.assertIn("Case C becomes Case A if I observe ___, because ___.", page)
+        self.assertIn("Your call: Would you record that as a failed check or an unverified result? What evidence would change your mind? One sentence is enough.", page)
+        self.assertIn("My verdict: ___. My reason or next check: ___.", page)
         self.assertIn('href="https://github.com/mbabby/agent-research-commons/issues/131"', page)
         self.assertIn('href="https://github.com/mbabby/agent-research-commons/issues/42"', page)
 
